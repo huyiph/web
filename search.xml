@@ -19,4 +19,32 @@
         <tag>博客</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Markdown 学习</title>
+    <url>/2020/04/06/start/</url>
+    <content><![CDATA[<h1 id="Markdown-语法学习"><a href="#Markdown-语法学习" class="headerlink" title="Markdown 语法学习"></a><strong>Markdown</strong> 语法学习</h1><h2 id="1-分级标题"><a href="#1-分级标题" class="headerlink" title="1. 分级标题"></a>1. 分级标题</h2><hr>
+<pre><code># 一级标题</code></pre><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题  "></a>六级标题  <!-- 最多六级标题 --></h6><blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题  &lt;!--最多6级标题--&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<h2 id="2-任务列表"><a href="#2-任务列表" class="headerlink" title="2. 任务列表"></a>2. 任务列表</h2><ul>
+<li><input disabled type="checkbox"> 任务一 未作任务 <code>- + 空格 + []</code> </li>
+<li><input checked disabled type="checkbox"> 任务二 已做任务 <code>- + 空格 + [x]</code></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">- </span>[ ] 任务一 未做任务 <span class="code">`- + 空格 + [ ]`</span></span><br><span class="line"><span class="bullet">- </span>[x] 任务二 已做任务 <span class="code">`- + 空格 + [x]`</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
 </search>
