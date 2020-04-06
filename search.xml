@@ -18,4 +18,22 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>first_upload</title>
+    <url>/2020/04/02/demo/</url>
+    <content><![CDATA[<p>$$sqrt{a}$$ </p>
+<p> some <strong>s</strong>jiuzai </p>
+<p>$$<br>J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例}<br>$$</p>
+<hr>
+<p>something</p>
+<hr>
+]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>博客           //多个标签可以这样添加</tag>
+        <tag>demo</tag>
+      </tags>
+  </entry>
 </search>
