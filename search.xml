@@ -58,9 +58,8 @@
 <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">$ c = \sqrt&#123;a^&#123;<span class="number">2</span>&#125;+b<span class="number">_</span>&#123;<span class="number">0</span>&#125;^&#123;<span class="number">2</span>&#125;+e^&#123;x&#125;&#125; $</span><br></pre></td></tr></table></figure>
 
 <p>$ c = \sqrt{a^{2}+b_{0}^{2}+e^{x}} $</p>
-<a id="more"></a>
 <ol>
-<li>块公式排版：</li>
+<li>块公式排版： <a id="more"></a></li>
 </ol>
 <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">$$ c = \sqrt&#123;a^&#123;<span class="number">2</span>&#125;+b<span class="number">_</span>&#123;<span class="number">0</span>&#125;^&#123;<span class="number">2</span>&#125; +e^&#123;x&#125;&#125; $$</span><br></pre></td></tr></table></figure>
 
