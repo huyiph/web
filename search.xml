@@ -540,11 +540,11 @@ cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>日志</category>
+        <category>logs</category>
       </categories>
       <tags>
-        <tag>日志</tag>
         <tag>flag</tag>
+        <tag>logs</tag>
       </tags>
   </entry>
 </search>
