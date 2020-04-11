@@ -34,17 +34,27 @@
 </ul>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">- </span>[ ] 任务一 未做任务 <span class="code">`- + 空格 + [ ]`</span></span><br><span class="line"><span class="bullet">- </span>[x] 任务二 已做任务 <span class="code">`- + 空格 + [x]`</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="3-画图-HEXO-不支持！！！"><a href="#3-画图-HEXO-不支持！！！" class="headerlink" title="3.画图(HEXO 不支持！！！)"></a>3.画图(HEXO 不支持！！！)</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">st=&gt;start: begin</span><br><span class="line">en=&gt;end: end</span><br><span class="line">op=&gt;operation: process</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;en</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
+<h2 id="3-画图-HEXO-不支持！！！"><a href="#3-画图-HEXO-不支持！！！" class="headerlink" title="3.画图(HEXO 不支持！！！)"></a>3.画图(HEXO 不支持！！！)</h2><div id="flowchart-0" class="flow-chart"></div>
+
+
+<pre class="mermaid">gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d</pre>
 
 
 
-<div id="flowchart-0" class="flow-chart"></div>
-
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```mermaid</span></span><br><span class="line"><span class="code">gantt</span></span><br><span class="line"><span class="code">        dateFormat  YYYY-MM-DD</span></span><br><span class="line"><span class="code">        title Project Plan</span></span><br><span class="line"><span class="code">        section task</span></span><br><span class="line"><span class="code">        done : done, des1, 2019-01-01,2019-01-05</span></span><br><span class="line"><span class="code">        on-going : active, des2, 2019-01-06, 3d</span></span><br><span class="line"><span class="code">        planned : des3, after des2, 5d</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gantt</span><br><span class="line">        dateFormat  YYYY-MM-DD</span><br><span class="line">        title Project Plan</span><br><span class="line">        section task</span><br><span class="line">        模拟 : done, des1, 2019-10-01,2020-02-15</span><br><span class="line">        实验 : done, des1, 2019-10-05, 2020-01-05</span><br><span class="line">        论文写作 : active, des2, 2020-02-16, 10d</span><br><span class="line">        计划 : des3, after des2, 5d</span><br></pre></td></tr></table></figure>
 
 
+<pre class="mermaid">graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]</pre>
 
 
 
