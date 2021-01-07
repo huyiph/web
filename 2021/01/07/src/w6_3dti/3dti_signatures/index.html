@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    src/w6_3dti/3dti_signatures |  O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="post-src/w6_3dti/3dti_signatures" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  src/w6_3dti/3dti_signatures
+</h1>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/01/07/src/w6_3dti/3dti_signatures/" class="article-date">
+  <time datetime="2021-01-07T09:11:06.855Z" itemprop="datePublished">2021-01-07</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">3.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">20 min</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> scipy.linalg <span class="keyword">as</span> sla</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> cm</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line"></span><br><span class="line">warnings.simplefilter(<span class="string">"ignore"</span>, UserWarning)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bhz</span><span class="params">(L, W, H, system_type)</span>:</span></span><br><span class="line">    <span class="string">"""A cuboid region of BHZ material with two leads attached.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    parameters for leads and scattering region can be defined separately</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># Onsite and hoppings matrices used for building BHZ model</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (p.C + <span class="number">2</span> * p.D1 + <span class="number">4</span> * p.D2) * pauli.s0s0 + (</span><br><span class="line">            p.M + <span class="number">2</span> * p.B1 + <span class="number">4</span> * p.B2</span><br><span class="line">        ) * pauli.s0sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopx</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.D2 * pauli.s0s0 - p.B2 * pauli.s0sz + p.A2 * <span class="number">0.5j</span> * pauli.sxsx</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopy</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.D2 * pauli.s0s0 - p.B2 * pauli.s0sz + p.A2 * <span class="number">0.5j</span> * pauli.sysx</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopz</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.D1 * pauli.s0s0 - p.B1 * pauli.s0sz + p.A1 * <span class="number">0.5j</span> * pauli.szsx</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shape_lead</span><span class="params">(pos)</span>:</span></span><br><span class="line">        (x, y, z) = pos</span><br><span class="line">        <span class="keyword">return</span> (<span class="number">0</span> &lt;= z &lt; H) <span class="keyword">and</span> (<span class="number">0</span> &lt;= y &lt; W)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shape_syst</span><span class="params">(pos)</span>:</span></span><br><span class="line">        (x, y, z) = pos</span><br><span class="line">        <span class="keyword">return</span> (<span class="number">0</span> &lt;= z &lt; H) <span class="keyword">and</span> (<span class="number">0</span> &lt;= y &lt; W) <span class="keyword">and</span> (<span class="number">0</span> &lt;= x &lt; L)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopx_phase</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        x1, y1, z1 = site1.pos</span><br><span class="line">        x2, y2, z2 = site2.pos</span><br><span class="line">        <span class="keyword">return</span> hopx(site1, site2, p) * np.exp(<span class="number">-0.5j</span> * p.Bz * (x1 - x2) * (y1 + y2))</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.general(np.identity(<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> system_type == <span class="string">"sys"</span>:</span><br><span class="line">        syst = kwant.Builder()</span><br><span class="line">        syst[lat.shape(shape_syst, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))] = <span class="keyword">lambda</span> site, p: onsite(</span><br><span class="line">            site, p</span><br><span class="line">        ) - p.mu_scat * np.eye(<span class="number">4</span>)</span><br><span class="line">    <span class="keyword">elif</span> system_type == <span class="string">"lead"</span>:</span><br><span class="line">        sym = kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line">        syst = kwant.Builder(sym)</span><br><span class="line">        syst[lat.shape(shape_lead, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))] = <span class="keyword">lambda</span> site, p: onsite(</span><br><span class="line">            site, p</span><br><span class="line">        ) - p.mu_lead * np.eye(<span class="number">4</span>)</span><br><span class="line">    <span class="keyword">elif</span> system_type == <span class="string">"infinite"</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="keyword">lambda</span> site, p: onsite(</span><br><span class="line">            site, p</span><br><span class="line">        ) - p.mu_lead * np.eye(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>), lat)] = hopx_phase</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>), lat)] = hopy</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>), lat)] = hopz</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bhz_scatter</span><span class="params">(L, W, H)</span>:</span></span><br><span class="line">    syst = bhz(L, W, H, <span class="string">"sys"</span>)</span><br><span class="line">    lead = bhz(L, W, H, <span class="string">"lead"</span>)</span><br><span class="line">    syst.attach_lead(lead)</span><br><span class="line">    syst.attach_lead(lead.reversed())</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cond_mu</span><span class="params">(p, L, W, H)</span>:</span></span><br><span class="line">    p.mu_lead = <span class="number">0.7</span></span><br><span class="line">    syst = bhz_scatter(L, W, H)</span><br><span class="line">    sys_leads_fixed = syst.finalized().precalculate(energy=<span class="number">0</span>, params=dict(p=p))</span><br><span class="line">    mus = np.linspace(<span class="number">-0.4</span>, <span class="number">0.4</span>, <span class="number">40</span>)</span><br><span class="line">    cond = [</span><br><span class="line">        kwant.smatrix(</span><br><span class="line">            sys_leads_fixed, energy=<span class="number">0</span>, params=dict(p=p.update(mu_scat=mu))</span><br><span class="line">        ).transmission(<span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">for</span> mu <span class="keyword">in</span> mus</span><br><span class="line">    ]</span><br><span class="line">    <span class="keyword">return</span> np.array(cond), mus</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_cond_mu</span><span class="params">(cond, mus)</span>:</span></span><br><span class="line">    xdim, ydim = [<span class="string">r"$\mu$"</span>, <span class="string">r"$G\,[e^2/h]$"</span>]</span><br><span class="line">    kwargs = &#123;<span class="string">"kdims"</span>: [xdim, ydim]&#125;</span><br><span class="line">    plot = holoviews.Path((mus, cond), **kwargs).opts(</span><br><span class="line">        plot=&#123;<span class="string">"xticks"</span>: <span class="number">3</span>, <span class="string">"yticks"</span>: [<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>]&#125;, style=&#123;<span class="string">"color"</span>: <span class="string">"r"</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> plot.redim.range(**&#123;xdim: (<span class="number">-0.4</span>, <span class="number">0.4</span>), ydim: (<span class="number">0</span>, <span class="number">8</span>)&#125;).relabel(<span class="string">"Conductance"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_bands</span><span class="params">(p, L, W, H)</span>:</span></span><br><span class="line">    lead = bhz(L, W, H, <span class="string">"lead"</span>)</span><br><span class="line">    kwargs = &#123;</span><br><span class="line">        <span class="string">"k_x"</span>: np.linspace(-np.pi / <span class="number">3</span>, np.pi / <span class="number">3</span>, <span class="number">101</span>),</span><br><span class="line">        <span class="string">"ylims"</span>: [<span class="number">-1</span>, <span class="number">1</span>],</span><br><span class="line">        <span class="string">"yticks"</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="string">"xticks"</span>: [(-np.pi / <span class="number">3</span>, <span class="string">r"$-\pi/3$"</span>), (<span class="number">0</span>, <span class="string">r"$0$"</span>), (np.pi / <span class="number">3</span>, <span class="string">r"$\pi/3$"</span>)],</span><br><span class="line">    &#125;</span><br><span class="line">    p.mu_lead = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> spectrum(lead, p, **kwargs)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_cond_spect</span><span class="params">(mu, cond_plot, bands_plot)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> cond_plot * holoviews.VLine(mu).opts(</span><br><span class="line">        style=&#123;<span class="string">"color"</span>: <span class="string">"b"</span>&#125;</span><br><span class="line">    ) + bands_plot.relabel(<span class="string">"Spectrum"</span>) * holoviews.HLine(mu).opts(style=&#123;<span class="string">"color"</span>: <span class="string">"b"</span>&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_warping</span><span class="params">(A=<span class="number">1.2</span>, B=<span class="number">1.8</span>, C=<span class="number">1.5</span>, Kmax=<span class="number">1.0</span>)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">evaluate_on_grid</span><span class="params">(X, Y, func)</span>:</span></span><br><span class="line">        <span class="string">""" X, Y should be in np.meshgrid form. It's enough for func to work on floats. """</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">for</span> xx, yy <span class="keyword">in</span> zip(X, Y):</span><br><span class="line">            data.append([func(i, j) <span class="keyword">for</span> i, j <span class="keyword">in</span> zip(xx, yy)])</span><br><span class="line">        data = np.array(data)</span><br><span class="line">        <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_energy_function</span><span class="params">(A, B, C)</span>:</span></span><br><span class="line">        <span class="string">""" Used for plotting of hexagonal warping. """</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(kx, ky)</span>:</span></span><br><span class="line">            matrix = (</span><br><span class="line">                A * (kx ** <span class="number">2</span> + ky ** <span class="number">2</span>) * pauli.s0</span><br><span class="line">                + B * (kx * pauli.sy - ky * pauli.sx)</span><br><span class="line">                + C * <span class="number">0.5</span> * ((kx + <span class="number">1j</span> * ky) ** <span class="number">3</span> + (kx - <span class="number">1j</span> * ky) ** <span class="number">3</span>) * pauli.sz</span><br><span class="line">            )</span><br><span class="line">            <span class="keyword">return</span> sla.eigh(matrix)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> func</span><br><span class="line"></span><br><span class="line">    zmin, zmax = <span class="number">-1.0</span>, <span class="number">3.5</span></span><br><span class="line">    xylims = (<span class="number">-1.2</span>, <span class="number">1.2</span>)</span><br><span class="line">    zlims = (<span class="number">-1.0</span>, <span class="number">3.5</span>)</span><br><span class="line">    kdims = [<span class="string">r"$k_x$"</span>, <span class="string">r"$k_y$"</span>]</span><br><span class="line">    vdims = [<span class="string">r"E"</span>]</span><br><span class="line">    <span class="comment"># Generate a circular mesh</span></span><br><span class="line">    N = <span class="number">100</span></span><br><span class="line">    r = np.linspace(<span class="number">0</span>, Kmax, N)</span><br><span class="line">    p = np.linspace(<span class="number">0</span>, <span class="number">2</span> * np.pi, N)</span><br><span class="line">    r, p = np.meshgrid(r, p)</span><br><span class="line">    x, y = r * np.cos(p), r * np.sin(p)</span><br><span class="line">    energies = evaluate_on_grid(x, y, func=get_energy_function(A, B, C))</span><br><span class="line"></span><br><span class="line">    xy_ticks = [<span class="number">-1.2</span>, <span class="number">0</span>, <span class="number">1.2</span>]</span><br><span class="line">    zticks = [<span class="number">-1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>]</span><br><span class="line">    style = &#123;<span class="string">"xticks"</span>: xy_ticks, <span class="string">"yticks"</span>: xy_ticks, <span class="string">"zticks"</span>: zticks&#125;</span><br><span class="line">    kwargs = &#123;</span><br><span class="line">        <span class="string">"extents"</span>: (xylims[<span class="number">0</span>], xylims[<span class="number">0</span>], zlims[<span class="number">0</span>], xylims[<span class="number">1</span>], xylims[<span class="number">1</span>], zlims[<span class="number">1</span>]),</span><br><span class="line">        <span class="string">"kdims"</span>: kdims,</span><br><span class="line">        <span class="string">"vdims"</span>: vdims,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># hex_cmap colormap is defined below.</span></span><br><span class="line">    plot = holoviews.Overlay(</span><br><span class="line">        [</span><br><span class="line">            holoviews.TriSurface(</span><br><span class="line">                (x.flat, y.flat, energies[:, :, i].flat), **kwargs</span><br><span class="line">            ).opts(style=dict(cmap=hex_cmap, linewidth=<span class="number">0</span>), plot=style)</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(energies.shape[<span class="number">-1</span>])</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> plot.opts(plot=&#123;<span class="string">"Overlay"</span>: &#123;<span class="string">"fig_size"</span>: <span class="number">350</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Custom colormap for the hexagonal warping plot</span></span><br><span class="line">cmap_list = [</span><br><span class="line">    ((value + <span class="number">1</span>) / <span class="number">4.0</span>, colour)</span><br><span class="line">    <span class="keyword">for</span> value, colour <span class="keyword">in</span> zip([<span class="number">-1.0</span>, <span class="number">0.0</span>, <span class="number">3.0</span>], [<span class="string">"Blue"</span>, <span class="string">"White"</span>, <span class="string">"Red"</span>])</span><br><span class="line">]</span><br><span class="line">hex_cmap = matplotlib.colors.LinearSegmentedColormap.from_list(<span class="string">"custom"</span>, cmap_list)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Introduction-searching-the-periodic-table-for-topological-materials"><a href="#Introduction-searching-the-periodic-table-for-topological-materials" class="headerlink" title="Introduction: searching the periodic table for topological materials"></a>Introduction: searching the periodic table for topological materials</h1><p>How do we find a topological insulator? In the first video of today, David Vanderbilt from Rutgers University will tell us more about the material science aspects of topological insulators research.</p>
+<p>This is an expertise that no one from the course team has, so pay close attention to it: this material stands apart from the rest.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"62ZObitJ4DM"</span>, src_location=<span class="string">"6.2-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>In the rest of the lecture, we will instead discuss the experimental signatures of 3D topological insulators, similarly to what we did in the previous week for their 2D counterparts.</p>
+<p>All the figures showing the experimental data are copyright of the Zahid Hasan lab, Princeton, 2015. They are available under CC-BY-NC-SA 4.0 International license.</p>
+<h1 id="Conductance-of-a-3D-topological-insulator"><a href="#Conductance-of-a-3D-topological-insulator" class="headerlink" title="Conductance of a 3D topological insulator"></a>Conductance of a 3D topological insulator</h1><p>Both the quantum Hall and quantum spin Hall states have striking conductance quantization properties, thanks to the presence of perfectly transmitting one-dimensional transport channels.</p>
+<p>The 3D topological insulators do not posses similar striking conductance properties. In a slab geometry, the surface states contribute with a finite density of propagating states. This density has a minimum at the Dirac point. The conductance increases roughly with a hyperbolic shape if the chemical potential is tuned away from the Dirac point as shown in the plot below:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(A1=<span class="number">1</span>, A2=<span class="number">1</span>, B1=<span class="number">1</span>, B2=<span class="number">1</span>, C=<span class="number">0</span>, D1=<span class="number">0</span>, D2=<span class="number">0</span>, M=<span class="number">-1</span>, Bz=<span class="number">0</span>, mu_scat=<span class="number">0</span>)</span><br><span class="line">L, W, H = <span class="number">10</span>, <span class="number">30</span>, <span class="number">6</span></span><br><span class="line">cond, mus = cond_mu(p, L, W, H)</span><br><span class="line">cond_plot = plot_cond_mu(cond, mus)</span><br><span class="line">bands_plot = plot_bands(p, L, W, H)</span><br><span class="line">mus = np.linspace(<span class="number">-0.4</span>, <span class="number">0.4</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;mu: plot_cond_spect(mu, cond_plot, bands_plot) <span class="keyword">for</span> mu <span class="keyword">in</span> mus&#125;, kdims=[<span class="string">r"$\mu$"</span>]</span><br><span class="line">).collate()</span><br></pre></td></tr></table></figure>
+
+<p>It is also the behavior that is observed experimentally. In the figure below, you see that the resistance of a 3D TI slab reaches a maximum and then decreases as the chemical potential difference between its top and bottom surfaces is varied.</p>
+<p><img src="/2021/01/07/src/w6_3dti/3dti_signatures/zero_field_Rxx.png" alt></p>
+<p>(copyright Hasan lab, Princeton, see license in the beginning of the chapter)</p>
+<p>Note that in such a measurement, you cannot separate contributions of states coming from the different surfaces, or potentially also from the sides or the sample, or even from the bulk - we’ll discuss this issue soon in more detail.</p>
+<p>Nevertheless, the observed maximum in resistance corresponds to the minimum in conductance computed just above, and it demonstrates the presence of a Dirac point between the conduction and valence bands.</p>
+<p>This behavior discussed above is not very striking. For instance, the same behavior is observed in graphene. The conductance is not sensitive to degeneracies in the electron spectrum in a qualitative way, so just from it, we cannot demonstrate that the surface of a 3D TI has a single Dirac cone, unlike graphene which has four. Hence, while the measurement above is a signature of a surface state, it is not a particularly striking one.</p>
+<p>Perhaps we will be more lucky with topological signatures of 3D topological insulators, if we look at the Hall conductance?</p>
+<h1 id="Landau-levels"><a href="#Landau-levels" class="headerlink" title="Landau levels"></a>Landau levels</h1><p>In last chapter, we saw that one single surface of a 3D topological insulator is characterized by a Hall conductance of $ (n+1/2), e^2/h$. We also pointed out that there are always two surfaces, say the top and bottom one of a slab, which gives a total Hall conductance of $(2n+1),e^2/h$ and makes it hard to observe the half-integer Hall conductance.</p>
+<p>You may say - OK, we can live with this and be happy with our $(2n+1)$ sequence. After all, it looks almost as unique as the $(n+1/2)$ sequence. Sure, it does not allow us to see directly the half-integer value, but it gives a step between plateaus which is twice the usual one, and no plateau with $n=0$. After all, measuring <em>twice</em> that sequence was a good enough probe for graphene.</p>
+<p>So let’s look at a Hall conductance measurements performed on a slab of a 3D TI, focusing for instance on the blue trace.</p>
+<p><img src="/2021/01/07/src/w6_3dti/3dti_signatures/LL_spectroscopy.png" alt></p>
+<p>(copyright Hasan lab, Princeton, see license in the beginning of the chapter)</p>
+<p>You see a sequence of plateaus with integer steps of a normal height $e^2/h$. Nothing special. Why did our prediction of a $(2n+1)$ sequence fail?</p>
+<p>The reason is that there is no symmetry at all between top and bottom surfaces, they are really independent. For instance, they might have different doping, and hence be characterized by different values $n_\textrm{top}$ and $n_\textrm{bottom}$ of the Chern integer.</p>
+<p>Therefore, rather than observing a sequence $e^2/h,(2n+1)$, we observe a more conventional sequence given by $e^2/h,(n_\textrm{top}+n_\textrm{bottom}+1)$, with the usual $e^2/h$ steps between different plateaus.</p>
+<p>So, even by studying the Landau levels experimentally, we do not get a topological signature. But do not despair, luckily there is a much better thing that we can do rather than just measuring conductance: looking at the energy spectrum of the surface states directly.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">"Which control parameter can remove the 0th plateau in the QHE measurement? "</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Increasing the magnetic field."</span>,</span><br><span class="line">    <span class="string">"Gate voltage difference (which controls difference in electron density) between the surfaces."</span>,</span><br><span class="line">    <span class="string">"Increasing topological mass."</span>,</span><br><span class="line">    <span class="string">"Adding an in-plane magnetic field."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"Gate voltage difference changes the filling of the individual states without shifting the total density of electrons. "</span></span><br><span class="line">    <span class="string">"This can therefore shift the plateaus of each surface. Magnetic field and topological mass are part of generating the "</span></span><br><span class="line">    <span class="string">" $0^&#123;th&#125;$ plateau to begin with so cannot eliminate it. "</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Spectroscopy-of-the-surface-of-a-3D-topological-insulator"><a href="#Spectroscopy-of-the-surface-of-a-3D-topological-insulator" class="headerlink" title="Spectroscopy of the surface of a 3D topological insulator"></a>Spectroscopy of the surface of a 3D topological insulator</h1><p>Amazingly, the surface states of a 3D topological insulator can be directly imaged experimentally using the technique of Angle Resolved Photo Emission Spectroscopy - or, in short, <a href="http://en.wikipedia.org/wiki/Angle-resolved_photoemission_spectroscopy" target="_blank" rel="noopener">ARPES</a>.</p>
+<p>In ARPES, X-ray photons are shot vertically into a metal surface in order to eject electrons out of it. Due to energy and momentum conservation, the emitted electrons have the same momentum (parallel to the surface) that they had in the crystal, and an energy which is related to their band energy in the crystal. Hence, ARPES is the ideal tool to measure the energy dispersion of the surface states of a solid, i.e. $E(k_x, k_y)$ as a function of momenta $\hbar k_x$ and $\hbar k_y$.</p>
+<p>Below, we see an example of ARPES spectra for the surface states of a strong topological insulator Bi$_2$ Se$_3$:</p>
+<p><img src="/2021/01/07/src/w6_3dti/3dti_signatures/arpes_fig1.png" alt></p>
+<p>(copyright Hasan lab, Princeton, see license in the beginning of the chapter)</p>
+<p>ARPES can only eject electrons - so only occupied states below the Fermi level are visible in the experiment, but of course one can still map out the Fermi surface at different energies by changing the chemical potential in the crystal. In the ARPES results above we see the results for different dopings of the crystal.</p>
+<p>In the top panel of the figure above, we see that by changing the chemical potential, the Fermi surface shrinks from a circle to a point, exactly what you would expect for electrons with a Dirac-like dispersion.</p>
+<p>While the top panels shows where the occupied states lie in the $(k_x, k_y)$ plane, in the second and third rows we see a cross-section of the energy as a function of momentum, where the Dirac cone is clearly visible, emerging from a bulk valence band filled with electrons.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">"Why do you think ARPES observes surface states even if there is conductance through the bulk?"</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"ARPES can only observe occupied states and therefore bulk conductance is not an issue. "</span>,</span><br><span class="line">    <span class="string">"Since ARPES measures the spectrum in a momentum resolved way, it can separate out surface and bulk states."</span>,</span><br><span class="line">    <span class="string">"ARPES does not measure conductance and therefore bulk electronic states are not an issue."</span>,</span><br><span class="line">    <span class="string">"Since ARPES measures the spectrum in an energy resolved way, it can selectively choose the surface states in the bulk gap."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The surface states live within the energy gap of the bulk. Since ARPES directly measure $E(k)$, it separates out "</span></span><br><span class="line">    <span class="string">"surface states from bulk states, which are in different energy ranges. "</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Quasiparticle-interference-QPI"><a href="#Quasiparticle-interference-QPI" class="headerlink" title="Quasiparticle interference (QPI)"></a>Quasiparticle interference (QPI)</h1><p>Scanning tunneling microscopy (STM) is another tool to image surface states in a topological insulator. In the process of STM we tunnel electrons into the surface from a metallic tip. In contrast to ARPES, the electrons are not going into free space, so we don’t have momentum resolution. On the other hand, we do trade momentum resolution for nearly atomic spatial resolution. We know where exactly on the surface the electron came from.</p>
+<p>Tunneling into a uniform surface can tell us a little bit about which orbital on an atom, the electrons at a certain energy come from. Otherwise, we’d see a uniform surface, which wouldn’t have much information.  We can make things more interesting and, strangely enough, get more information by sprinkling some impurities on the surface. The impurities scatter the surface electrons and produce a standing wave pattern on the surface, which depends on the Fermi surface momenta of the electrons at the particular tunneling energy (Note: in this unit we refer to the equal energy surface in momentum space at the tunneling energy as Fermi surface for convenience). The resulting pattern is referred to QPI. Specifically, Fourier transforming the QPI pattern directly maps out the momentum transfer across the Fermi-surface of the surface state.</p>
+<p>Clearly, we can expect to map out some properties of the momentum space scattering on the surface of the topological insulator.</p>
+<p>In the simulation below. we see that the Fourier transform shows an interesting pattern:</p>
+<p><img src="/2021/01/07/src/w6_3dti/3dti_signatures/QPI_pic_adapted.png" alt><br>(adapted, copyright Hasan lab, Princeton, see license in the beginning of the chapter)  </p>
+<p>By comparing the QPI patterns showing spin-dependent and spin-independent scattering (respectively on the left and right column on the right side of the arrow), we see that the intensity at momenta connecting opposite points on the Fermi surface is suppressed in the case of spin-independent scattering.</p>
+<p>In fact, by comparing the fourier transform of the QPI on the right with the Fermi surface on the left, we begin to see that the absence of back-scattering, which is one of the key properties of the topological insulator surface state plays a key role. As you might remember from the quantum spin hall systems - elastic backscattering of electrons is forbidden between states at $\bf k$ and $-\bf k$ because of Kramers’ theorem. Looking at the QPI pattern from spin-independent impurities and comparing it with the Fermi surface confirms this.</p>
+<h1 id="The-issue-of-bulk-conductivity"><a href="#The-issue-of-bulk-conductivity" class="headerlink" title="The issue of bulk conductivity"></a>The issue of bulk conductivity</h1><p>One of the central issues that has plagued the experimental progress with topological insulators is the presence of bulk doping or conductance in most naturally grown crystals. You can see this simply by looking at the ARPES plots below:</p>
+<p><img src="/2021/01/07/src/w6_3dti/3dti_signatures/bulk_conductance_TI.png" alt><br>(copyright Hasan lab, Princeton, see license in the beginning of the chapter)</p>
+<p>What you see is that the Fermi-energy, which is the highest energy till which you can eject electrons in ARPES intersects the conduction band. This means that in the native state the conduction band of the electrons is occupied and the fermi level is not in the gap. In the figure above, the situation is worst for pure Antimony in the extreme left panel, which is really a semimetal with overlapping electron and hole bands. In this case, independent of fermi level position, the system would remain metallic. Moving from pure Sb to $Bi_2 Se_3$ improves this somewhat, but still does not make this an insulator. Theoretically, we do expect pure $Bi_2 Se_3$ to be an insulator - but in reality, the system typically have Se vacancies, which make it metallic.</p>
+<p>Being metallic really ruins a lot of interesting properties of the topological insulators. So a lot of effort is going in to fixing it up. Below, we see some of the results from these attempts:</p>
+<p><img src="/2021/01/07/src/w6_3dti/3dti_signatures/insulating_TI.png" alt><br>(copyright Hasan lab, Princeton, see license in the beginning of the chapter)</p>
+<p>where various combinations of $Bi$, $Se$ and $Te$ have been combined to drive the system insulating. By looking at the ARPES spectra, it should look convincing that by varying different conditions, the fermi level is indeed shifting in to the interior of the gap. The experimental tricks used to get this working range between changing the pressure of various elements in the growth condition to counter doping the surface etc.  But the resistance results seem to be improving quite a bit.</p>
+<h1 id="Hexagonal-warping"><a href="#Hexagonal-warping" class="headerlink" title="Hexagonal warping"></a>Hexagonal warping</h1><p>ARPES measurements on the surface of topological materials in the bismuth family also demonstrated an interesting (even though non-topological) feature of the surface states.</p>
+<p>The effective Dirac Hamiltonian is linear in momentum and has a full rotational symmetry in the $(x,y)$ plane of the surface, making the Fermi surface circular. However, moving away in energy from the Dirac point, experimentalists observed a different shape of the Fermi surface, similar to a snowflake:</p>
+<p><img src="/2021/01/07/src/w6_3dti/3dti_signatures/warping.png" alt><br>(copyright Hasan lab, Princeton, see license in the beginning of the chapter)</p>
+<p>It’s clear that this shape cannot be explained by the Dirac Hamiltonian with its rotational invariance. In order to take into account this deformation of the Fermi surface, we have to think about the crystal symmetries of the surface. In BiSe and BiTe compounds, there is no full rotational symmetry, but only a lower three-fold rotation symmetry. We can take into account this effect by adding a correction to the effective Dirac Hamiltonian.</p>
+<p>This is exactly what was done in this article:</p>
+<ul>
+<li>arXiv:0908.1418</li>
+</ul>
+<p>There Liang Fu made a relatively simple theoretical exercise. He listed all the terms in the Hamiltonian allowed by time-reversal and crystalline symmetries, that are proportional to $k^3.$ This is the result:</p>
+<p>$$<br>H(\mathbf{k}) = E_0(k) + v, (1+\alpha \mathbf{k}^2),(k_x\sigma_y - k_y\sigma_x) + \frac{\lambda}{2},(k^3_++k^3_-),\sigma_z.<br>$$</p>
+<p>You see a correction to the Dirac velocity proportional to $\alpha \mathbf{k}^2$, which doesn’t break the rotational symmetry, as well as the term with $\lambda$, which is responsible for the warping.</p>
+<p>Let’s plot the spectrum of this extended effective Hamiltonian:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">'png'</span></span><br><span class="line"></span><br><span class="line">plot_warping()</span><br></pre></td></tr></table></figure>
+
+<p>This Hamiltonian reproduces correctly the <em>hexagonal warping</em> of the Fermi surface. In particular, independently of the parameters $\lambda$ and $\alpha$, the vertices of the hexagon are always aligned with the $x$ crystal axis, as is observed experimentally.</p>
+<p>In addition to modifying the shape of the Fermi surface, we see that the extra term is proportional to $\sigma_z$, and rotates the spin of the surface state out of plane. This strongly affects the scattering properties of the surface state.</p>
+<h1 id="Outlook-from-basic-science-to-potential-applications"><a href="#Outlook-from-basic-science-to-potential-applications" class="headerlink" title="Outlook: from basic science to potential applications"></a>Outlook: from basic science to potential applications</h1><p>David Vanderbilt will conclude this week’s lectures by offering a perspective on the future of the field.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"WZmNeEwM1N4"</span>, src_location=<span class="string">"6.2-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"3DTI materials and signatures"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w6_3dti/3dti_signatures/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2021/01/07/src/w6_3dti/bhz/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            src/w6_3dti/bhz
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/01/07/src/w5_qshe/w5_assignments/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">src/w5_qshe/w5_assignments</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

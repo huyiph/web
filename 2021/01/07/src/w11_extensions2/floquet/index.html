@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    src/w11_extensions2/floquet |  O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="post-src/w11_extensions2/floquet" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  src/w11_extensions2/floquet
+</h1>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/01/07/src/w11_extensions2/floquet/" class="article-date">
+  <time datetime="2021-01-07T09:11:06.804Z" itemprop="datePublished">2021-01-07</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">18 min</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> linalg <span class="keyword">as</span> la</span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"></span><br><span class="line">pi_ticks = [</span><br><span class="line">    (-np.pi, <span class="string">r"$-\pi$"</span>),</span><br><span class="line">    (-np.pi / <span class="number">2</span>, <span class="string">r"$-\pi/2$"</span>),</span><br><span class="line">    (<span class="number">0</span>, <span class="string">r"$0$"</span>),</span><br><span class="line">    (np.pi / <span class="number">2</span>, <span class="string">r"$\pi/2$"</span>),</span><br><span class="line">    (np.pi, <span class="string">r"$\pi$"</span>),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">checkerboard</span><span class="params">(W=None)</span>:</span></span><br><span class="line">    lat = kwant.lattice.general([[<span class="number">2</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>]], [(<span class="number">0</span>, <span class="number">0</span>), (<span class="number">1</span>, <span class="number">0</span>)])</span><br><span class="line">    a, b = lat.sublattices</span><br><span class="line">    <span class="keyword">if</span> W:</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">lead_shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">            (x, y) = pos</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span> &lt;= y &lt; W <span class="keyword">and</span> <span class="number">0</span> &lt;= x &lt; W</span><br><span class="line"></span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">1</span>)))</span><br><span class="line">        syst[a.shape(lead_shape, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">        syst[b.shape(lead_shape, (<span class="number">1</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">0</span>), b, a)] = <span class="keyword">lambda</span> s1, s2, p: -p.t1</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">-1</span>, <span class="number">1</span>), b, a)] = <span class="keyword">lambda</span> s1, s2, p: -p.t2</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), a, b)] = <span class="keyword">lambda</span> s1, s2, p: -p.t3</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), a, b)] = <span class="keyword">lambda</span> s1, s2, p: -p.t4</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">evolution_operator</span><span class="params">(hamiltonians, T)</span>:</span></span><br><span class="line">    n = len(hamiltonians)</span><br><span class="line">    exps = [la.expm(<span class="number">-1j</span> * h * T / n) <span class="keyword">for</span> h <span class="keyword">in</span> hamiltonians]</span><br><span class="line">    <span class="keyword">return</span> reduce(np.dot, exps)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_h_k</span><span class="params">(lead, p)</span>:</span></span><br><span class="line">    bands = kwant.physics.Bands(lead, params=dict(p=p))</span><br><span class="line">    h, t = bands.ham, bands.hop</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> k: h + t * np.exp(<span class="number">-1j</span> * k) + t.T.conj() * np.exp(<span class="number">1j</span> * k)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Today’s topic, Floquet topological insulators, is introduced by Mark Rudner from the Niels Bohr Institute at Copenhagen.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"1peVp_IZ7Ts"</span>, src_location=<span class="string">"11.1-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Periodically-driven-systems"><a href="#Periodically-driven-systems" class="headerlink" title="Periodically driven systems"></a>Periodically driven systems</h1><p>We will now learn about a new generalization of topology, namely how it applies to the quantum evolution of systems with a time-dependent Hamiltonian. As you may recall, we’ve already encountered time dependence, back when we considered quantum pumps. However, back then we assumed that the time evolution was very slow, such that the system stayed in the ground state at all times, i.e. it was adiabatic. Can we relax the adiabaticity constraint? Can we find an analog of topology in systems that are driven so fast that energy isn’t conserved?</p>
+<p>For the same reasons as before, we’ll consider periodic driving</p>
+<p>$$<br>H(t + T) = H(t).<br>$$</p>
+<p>Once again, this is necessary because otherwise, any system can be continuously deformed into any other, and there is no way to define a gap.</p>
+<p>Before we get to topology, let’s refresh our knowledge of time-dependent systems.</p>
+<p>The Schrödinger equation is:</p>
+<p>$$<br>i\frac{d \psi}{dt} = H(t) \psi.<br>$$</p>
+<p>It is a linear equation, so we can write its solution as</p>
+<p>$$<br>\psi(t_2) = U(t_2, t_1) \psi(t_1),<br>$$</p>
+<p>where $U$ is a unitary <em>time evolution operator</em>. It solves the same Schrödinger equation as the wave function, and is equal to the identity matrix at the initial time. It is commonly written as</p>
+<p>$$<br>U(t_2, t_1) = \mathcal{T} \exp,\left[-i\int_{t_1}^{t_2} H(t) dt\right],<br>$$</p>
+<p>where $\mathcal{T}$ represents time-ordering (not time-reversal symmetry). The time-ordering is just a short-hand notation for the need to solve the full differential equation, and it is necessary if the Hamiltonians evaluated at different times in the integral do not commute.</p>
+<p>The time evolution operator satisfies a very simple multiplication rule:</p>
+<p>$$<br>U(t_3, t_1) = U(t_3, t_2) U(t_2, t_1),<br>$$</p>
+<p>which just says that time evolution from $t_1$ to $t_3$ is a product of time evolutions from $t_1$ to $t_2$ and then from $t_2$ to $t_3$. Of course an immediate consequence of this is the equality $U(t_2, t_1)^\dagger = U(t_2, t_1)^{-1} = U(t_1, t_2)$.</p>
+<h2 id="Floquet-theory"><a href="#Floquet-theory" class="headerlink" title="Floquet theory"></a>Floquet theory</h2><p>The central object for the study of driven systems is the evolution operator over one period of the driving,</p>
+<p>$$<br>U(t + T, t) \equiv U,<br>$$</p>
+<p>which is called the Floquet time evolution operator. It is important because it allows us to identify the wave functions that are the same if an integer number of drive periods passes. These are the stationary states of a driven system, and they are given by the eigenvalues of the Floquet operator:</p>
+<p>$$<br>U \psi = e^{i \alpha} \psi.<br>$$</p>
+<p>The stationary states are very similar to the eigenstates of a stationary Hamiltonian, except that they are only stationary if we look at fixed times $t + nT$. That’s why the Floquet time evolution operator is also called a stroboscopic time evolution operator.</p>
+<p>We can very easily construct a Hermitian matrix from $U$, the <strong>Floquet Hamiltonian</strong>:</p>
+<p>$$<br>H_\textrm{eff} = i T^{-1} ,\ln U.<br>$$</p>
+<p>Its eigenvalues $\varepsilon = \alpha / T$ are called quasi-energies, and they always belong to the interval $-\pi &lt; \alpha \leq \pi$.</p>
+<p>If the system is translationally invariant, we can study the effective band structure of $H_\textrm{eff}(\mathbf{k})$, find an energy in which the bulk Hamiltonian has no states, and study the topological properties of such a Hamiltonian: most of the things we already know still apply.</p>
+<p>Of course, selecting a single quasi-energy as the Fermi level is arbitrary, since the equilibrium state of driven systems doesn’t correspond to a Fermi distribution of filling factors, but at least it seems close enough for us to try to apply topological ideas.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"But wait, we arbitrarily chose the starting point $t$ in time for calculating the "</span></span><br><span class="line">    <span class="string">"Floquet operator. What if we chose a different one?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The starting time is just an extra parameter of our system, and topology depends on it."</span>,</span><br><span class="line">    <span class="string">"It doesn't matter, the wave function evolution within one period "</span></span><br><span class="line">    <span class="string">"can be neglected, since we are interested in many periods."</span>,</span><br><span class="line">    <span class="string">"There's only one correct starting point in time."</span>,</span><br><span class="line">    <span class="string">"It doesn't matter since the quasienergies are independent of the starting point."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"Choosing a different starting point applies a unitary transformation "</span></span><br><span class="line">    <span class="string">"to the Floquet evolution operator, and so it keeps the quasienergies the same."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Driven-Majorana-wire"><a href="#Driven-Majorana-wire" class="headerlink" title="Driven Majorana wire"></a>Driven Majorana wire</h1><p>Let us start by considering something we know very well, namely the superconducting Majorana nanowire model from week 2. This model has three important parameters which determine whether the wire is in the topological Majorana phase or not: the chemical potential $\mu$, the superconducting gap $\Delta$, and the magnetic field $B$. The topological phase with unpaired Majorana modes at zero energy is realized for $B &gt; \sqrt{\mu^2 + \Delta^2}$.</p>
+<p>Now, imagine that we can periodically drive some of these parameters. For instance, consider the simple example when</p>
+<p>$$<br>\mu = \left{<br>\begin{matrix}<br>\mu_1 \quad \text{for } 0 &lt; t &lt; T/2 \<br>\mu_2 \quad \text{for } T/2 &lt; t &lt; T<br>\end{matrix}\right.<br>$$</p>
+<p>Then, the integral to find the time evolution operator is easy to evaluate, and we simply have</p>
+<p>$$<br>U = \exp(i T H_2 / 2) \exp(i T H_1 / 2)<br>$$</p>
+<p>with $H_1$ and $H_2$ the nanowire Hamiltonians with chemical potential $\mu_1$ and $\mu_2$. A peculiar property of driven systems is that as the period becomes large, the band structure ‘folds’: if the driving is very weak, and the original Hamiltonian has energy $E$, the Floquet Hamiltonian has a much smaller quasienergy $(E\bmod 2\pi /T)$. This means that even when $H_1$ and $H_2$ correspond to trivial systems, we can still obtain nontrivial topology if we make the period large enough, as you can see for yourself:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">%%opts Path &#123;+axiswise&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nanowire_chain</span><span class="params">(L=None)</span>:</span></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="number">2</span> * p.t - p.mu) * pauli.szs0 + p.B * pauli.s0sz + p.delta * pauli.sxs0</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.szs0 + <span class="number">0.5</span> * <span class="number">1j</span> * p.alpha * pauli.szsx</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> L:</span><br><span class="line">        syst = kwant.Builder()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">-1</span>,)))</span><br><span class="line">        L = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    syst[(lat(x) <span class="keyword">for</span> x <span class="keyword">in</span> range(L))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hopping</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_finite_spectrum</span><span class="params">(periods, hamiltonians)</span>:</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> T <span class="keyword">in</span> periods:</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        phases = np.angle(la.eigvals(U))</span><br><span class="line">        phases = np.sort(np.abs(phases))</span><br><span class="line">        ev = np.sort([(<span class="number">-1</span>) ** n * val <span class="keyword">for</span> n, val <span class="keyword">in</span> enumerate(phases)])</span><br><span class="line">        energies.append(ev)</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_bands</span><span class="params">(momenta, hamiltonians_k, T)</span>:</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> momenta:</span><br><span class="line">        hamiltonians = [h_k(k) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        phases = np.angle(la.eigvals(U))</span><br><span class="line">        phases = np.sort(np.abs(phases))</span><br><span class="line">        ev = np.sort([(<span class="number">-1</span>) ** n * val <span class="keyword">for</span> n, val <span class="keyword">in</span> enumerate(phases)])</span><br><span class="line">        energies.append(ev)</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">J = <span class="number">2.0</span></span><br><span class="line">p1 = SimpleNamespace(t=J / <span class="number">2</span>, mu=<span class="number">-1</span> * J, B=J, delta=<span class="number">2</span> * J, alpha=J)</span><br><span class="line">p2 = SimpleNamespace(t=J / <span class="number">2</span>, mu=<span class="number">-3</span> * J, B=J, delta=<span class="number">2</span> * J, alpha=J)</span><br><span class="line"></span><br><span class="line">syst = nanowire_chain(L=<span class="number">20</span>).finalized()</span><br><span class="line">H1 = syst.hamiltonian_submatrix(params=dict(p=p1))</span><br><span class="line">H2 = syst.hamiltonian_submatrix(params=dict(p=p2))</span><br><span class="line"></span><br><span class="line">lead = kwant.wraparound.wraparound(nanowire_chain(L=<span class="literal">None</span>)).finalized()</span><br><span class="line">h1_k = <span class="keyword">lambda</span> kx: lead.hamiltonian_submatrix(params=dict(p=p1, k_x=kx))</span><br><span class="line">h2_k = <span class="keyword">lambda</span> kx: lead.hamiltonian_submatrix(params=dict(p=p2, k_x=kx))</span><br><span class="line"></span><br><span class="line">periods = np.linspace(<span class="number">0.2</span> / J, <span class="number">1.6</span> / J, <span class="number">100</span>)</span><br><span class="line">momenta = np.linspace(-np.pi, np.pi)</span><br><span class="line"></span><br><span class="line">energies = calculate_finite_spectrum(periods, [H1, H2])</span><br><span class="line">spectrum = np.array([calculate_bands(momenta, [h1_k, h2_k], T) <span class="keyword">for</span> T <span class="keyword">in</span> periods])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot</span><span class="params">(n)</span>:</span></span><br><span class="line">    T = J * periods[n]</span><br><span class="line"></span><br><span class="line">    plot_1 = holoviews.Path(</span><br><span class="line">        (J * periods, energies),</span><br><span class="line">        kdims=[<span class="string">r"Driving period $(JT)$"</span>, <span class="string">r"Quasi-energy $(ET)$"</span>],</span><br><span class="line">        label=<span class="string">"Finite system"</span>,</span><br><span class="line">    ).opts(plot=&#123;<span class="string">"xticks"</span>: <span class="number">5</span>, <span class="string">"yticks"</span>: pi_ticks&#125;)</span><br><span class="line"></span><br><span class="line">    VLine = holoviews.VLine(T).opts(style=&#123;<span class="string">"color"</span>: <span class="string">"b"</span>, <span class="string">"linestyle"</span>: <span class="string">"--"</span>&#125;)</span><br><span class="line"></span><br><span class="line">    plot_2 = holoviews.Path(</span><br><span class="line">        (momenta, spectrum[n]), kdims=[<span class="string">"$k$"</span>, <span class="string">"$E_kT$"</span>], label=<span class="string">"Floquet bands"</span></span><br><span class="line">    ).opts(plot=&#123;<span class="string">"xticks"</span>: pi_ticks, <span class="string">"yticks"</span>: pi_ticks, <span class="string">"aspect"</span>: <span class="string">"equal"</span>&#125;)</span><br><span class="line">    <span class="keyword">return</span> plot_1 * VLine + plot_2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(&#123;n: plot(n) <span class="keyword">for</span> n <span class="keyword">in</span> np.arange(<span class="number">0</span>, <span class="number">100</span>, <span class="number">10</span>)&#125;, kdims=[<span class="string">"n"</span>]).collate()</span><br></pre></td></tr></table></figure>
+
+<p>On the left you see the Floquet spectrum of a finite system as a function of the driving period measured in units of the hopping strength, and on the right you see the Floquet dispersion in momentum space.</p>
+<p>We now witness a cool phenomenon: just like in the undriven case, the particle-hole symmetry maps $E \rightarrow -E$, but now this means that not only $E = 0$ is special, but also $E = \pi$!</p>
+<p>In other words, this means that there are two relevant gaps in the effective Floquet BdG Hamiltonian $H_\textrm{eff}$. Now, by using the same argument as we used for the regular Majoranas, we learn that if we have an isolated Floquet state with a quasienergy $\epsilon=0$ or $\epsilon=\pi$, it cannot be removed unless the gap surrounding it closes.</p>
+<p>In other words:</p>
+<blockquote>
+<p>A Floquet superconductor has two types of Majorana bound states: the usual ones with quasienergy $\epsilon=0$, and the $\pi$-Majoranas that are as far from zero energy as possible.</p>
+</blockquote>
+<p>So the calculation above reveals two interesting features of driven systems: the first is that the periodic driving can turn a trivial system into a non-trivial system with topologically protected Floquet states. The second is that topology is richer than in the non-driven system: for instance, here the richness comes from the fact that the topologically protected states may occur at two different points in the spectrum.</p>
+<p>Now try to answer the following question: what’s the topological invariant of this system? How do we tell whether normal Majoranas are present, and whether $\pi$-Majoranas are present? (We’ll return to this question in the end of the lecture.)</p>
+<h1 id="A-Floquet-Chern-insulator"><a href="#A-Floquet-Chern-insulator" class="headerlink" title="A Floquet Chern insulator"></a>A Floquet Chern insulator</h1><p>As a second example of a driven system that shows something that the undriven system doesn’t, let’s consider the following toy model.</p>
+<p>We take a square lattice with time-dependent nearest neighbor hopping $t$. Next, let’s engineer a time-evolution of the hopping between sites such that during a period $T$ hoppings are turned on in an alternate fashion, as in the following figure:</p>
+<p><img src="/2021/01/07/src/w11_extensions2/floquet/time_steps.svg" alt></p>
+<p>Each step lasts one quarter of a period.</p>
+<p>Now let’s tune the period such that the probability for an electron to hop along a hopping is one at the end of each quarter period [$t = (\pi / 2) / (T / 4)$]. Over the complete period the trajectories of electrons will look like this:</p>
+<p><img src="/2021/01/07/src/w11_extensions2/floquet/floquet_bulk.svg" alt></p>
+<p>Every electron makes a closed loop and ends up back at its origin. After every single period the system is back to its initial state. In other words, the Floquet operator is $U=1$, and $H_\textrm{eff}=0$.</p>
+<p>Let’s have a look at the dispersion, and also see what happens as we tune the driving period:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">%%output size=<span class="number">200</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_dispersion_2D</span><span class="params">(T)</span>:</span></span><br><span class="line">    syst = checkerboard()</span><br><span class="line">    B = np.array(syst.symmetry.periods).T</span><br><span class="line">    A = B @ np.linalg.inv(B.T @ B)</span><br><span class="line">    syst = kwant.wraparound.wraparound(syst).finalized()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hamiltonian_k</span><span class="params">(par)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(k_x, k_y)</span>:</span></span><br><span class="line">            k_x, k_y = np.linalg.lstsq(A, [k_x, k_y], rcond=<span class="literal">None</span>)[<span class="number">0</span>]</span><br><span class="line">            ham = syst.hamiltonian_submatrix(params=dict(p=par, k_x=k_x, k_y=k_y))</span><br><span class="line">            <span class="keyword">return</span> ham</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> f</span><br><span class="line"></span><br><span class="line">    hamiltonians_k = [</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">1</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">1</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">1</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">1</span>)),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_energies</span><span class="params">(k_x, k_y)</span>:</span></span><br><span class="line">        hamiltonians = [h_k(k_x, k_y) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        ev = np.sort(np.angle(la.eigvals(U)))</span><br><span class="line">        <span class="keyword">return</span> ev</span><br><span class="line"></span><br><span class="line">    K = np.linspace(-np.pi, np.pi, <span class="number">50</span>)</span><br><span class="line">    energies = np.array([[get_energies(k_x, k_y) <span class="keyword">for</span> k_x <span class="keyword">in</span> K] <span class="keyword">for</span> k_y <span class="keyword">in</span> K])</span><br><span class="line"></span><br><span class="line">    ticks = &#123;<span class="string">"xticks"</span>: pi_ticks[::<span class="number">2</span>], <span class="string">"yticks"</span>: pi_ticks[::<span class="number">2</span>], <span class="string">"zticks"</span>: <span class="number">3</span>&#125;</span><br><span class="line">    kwargs = &#123;</span><br><span class="line">        <span class="string">"extents"</span>: (-np.pi, -np.pi, <span class="number">-4</span>, np.pi, np.pi, <span class="number">4</span>),</span><br><span class="line">        <span class="string">"kdims"</span>: [<span class="string">"$k_x$"</span>, <span class="string">"$k_y$"</span>],</span><br><span class="line">        <span class="string">"vdims"</span>: [<span class="string">"$E$"</span>],</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    title = <span class="string">r"$T = &#123;:.2&#125; \pi$"</span>.format(T / np.pi)</span><br><span class="line"></span><br><span class="line">    xs = np.linspace(-np.pi, np.pi, energies.shape[<span class="number">1</span>])</span><br><span class="line">    ys = np.linspace(-np.pi, np.pi, energies.shape[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        holoviews.Surface((xs, ys, energies[:, :, <span class="number">0</span>]), **kwargs).opts(plot=ticks)</span><br><span class="line">        * holoviews.Surface((xs, ys, energies[:, :, <span class="number">1</span>]), **kwargs).opts(plot=ticks)</span><br><span class="line">    ).relabel(title)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Ts = np.linspace(<span class="number">1</span>, <span class="number">3</span>, <span class="number">11</span>, endpoint=<span class="literal">True</span>)</span><br><span class="line">holoviews.HoloMap(&#123;T: plot_dispersion_2D(np.pi * T) <span class="keyword">for</span> T <span class="keyword">in</span> Ts&#125;, kdims=[<span class="string">"$T$"</span>])</span><br></pre></td></tr></table></figure>
+
+<p>Now, there isn’t a Hamiltonian which is more topologically trivial than the zero Hamiltonian. We may be tempted to conclude that our system is trivial and, by bulk-boundary correspondence, has no edge states.</p>
+<p>That’s something we can also very easily verify by computing the dispersion of a finite size ribbon:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">%%output size=<span class="number">200</span></span><br><span class="line">%%opts Path &#123;+axiswise&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_bands</span><span class="params">(momenta, hamiltonians_k, T)</span>:</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> momenta:</span><br><span class="line">        hamiltonians = [h_k(k) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        energies.append(np.sort(np.angle(la.eigvals(U))))</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ribbon_lead = checkerboard(<span class="number">10</span>).finalized()</span><br><span class="line"></span><br><span class="line">hamiltonians_k = [</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">1</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">1</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">1</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">1</span>)),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">periods = np.linspace(<span class="number">0</span>, <span class="number">4</span> * np.pi, <span class="number">11</span>)</span><br><span class="line">momenta = np.linspace(-np.pi, np.pi)</span><br><span class="line">spectrum = np.array([calculate_bands(momenta, hamiltonians_k, T) <span class="keyword">for</span> T <span class="keyword">in</span> periods])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot</span><span class="params">(n)</span>:</span></span><br><span class="line">    T = periods[n]</span><br><span class="line">    title = <span class="string">r"spectrum: $T=&#123;:.2&#125; \pi$"</span>.format(T / np.pi)</span><br><span class="line">    <span class="keyword">return</span> holoviews.Path(</span><br><span class="line">        (momenta, spectrum[n]), label=title, kdims=[<span class="string">"$k$"</span>, <span class="string">"$E_kT$"</span>]</span><br><span class="line">    ).opts(plot=&#123;<span class="string">"xticks"</span>: pi_ticks, <span class="string">"yticks"</span>: pi_ticks, <span class="string">"aspect"</span>: <span class="number">3</span>&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(&#123;n: plot(n) <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">11</span>)&#125;, kdims=[<span class="string">"n"</span>])</span><br></pre></td></tr></table></figure>
+
+<p>We see something very different from our expectations. All the bulk states are indeed at $E=0$, but there are two branches of dispersion that are clearly propagating. These can only belong to the edges, and since the two edges look identical, these two modes have to belong to the opposite edges. We seem to conclude that even though the bulk Hamiltonian is trivial, the edges carry chiral edge states, as if there was a finite Chern number.</p>
+<p>When the driving period is tuned to ensure the absence of bulk dispersion, we can also understand why the edge states appear. If we select a state that starts on the edge, and follow it for one period, we find that there are modes that never leave the edge, since one of the hoppings in the vertical direction is absent.</p>
+<p><img src="/2021/01/07/src/w11_extensions2/floquet/trajectories.svg" alt></p>
+<p>So what is happening with bulk-edge correspondence?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">"How can you change the chirality of the edge states in the figure above?"</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"By changing the driving period."</span>,</span><br><span class="line">    <span class="string">"By reversing the driving protocol sequence."</span>,</span><br><span class="line">    <span class="string">"By changing the sign of the nearest neighbor hopping."</span>,</span><br><span class="line">    <span class="string">"By making the electrons start from the black sublattice."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"Reversing the driving protocol is the same as applying time-reversal symmetry, "</span></span><br><span class="line">    <span class="string">"so it will reverse the direction of the chiral edge modes"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Bulk-edge-correspondence-in-driven-systems"><a href="#Bulk-edge-correspondence-in-driven-systems" class="headerlink" title="Bulk-edge correspondence in driven systems"></a>Bulk-edge correspondence in driven systems</h1><p>The two examples we’ve studied reveal an imporant feature of topological Floquet insulators. It seems that knowing the bulk Floquet Hamiltonian is sufficient to calculate the topological invariant, by just applying the known expression to the Floquet Hamiltonian. However, that’s not enough.</p>
+<p>In rough terms, the reason for this insufficiency is due to Floquet topological insulators missing a topologically trivial state which can be taken as a reference. With any regular 2D Hamiltonian, we know that if we take $E \rightarrow -\infty$, we will get a trivial system with the Chern number zero. In a Floquet system, the only thing that lowering the energy tells us is that the Chern number is periodic in quasienergy, like any other observable property.</p>
+<p>What do we need to know to derive the full topological invariant from the bulk properties? The answer is that we need the complete evolution operator for all moments in time, or in other words the full dependence $H(t)$. The actual calculation of the topological invariant is technically involved, and falls beyond what we can cover in this course. Moreover, to the best of our knowledge, the full classification of Floquet topological insulators is not yet accomplished.</p>
+<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"DbyqIczcR9c"</span>, src_location=<span class="string">"11.1-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Questions about what you just learned? Ask them below!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Floquet"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w11_extensions2/floquet/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2021/01/07/src/w12_manybody/fqhe/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            src/w12_manybody/fqhe
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/01/07/src/w11_extensions2/w11_assignments/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">src/w11_extensions2/w11_assignments</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

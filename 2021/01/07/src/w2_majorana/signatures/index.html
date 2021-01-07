@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    src/w2_majorana/signatures |  O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="post-src/w2_majorana/signatures" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  src/w2_majorana/signatures
+</h1>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/01/07/src/w2_majorana/signatures/" class="article-date">
+  <time datetime="2021-01-07T09:11:06.826Z" itemprop="datePublished">2021-01-07</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">26 min</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"></span><br><span class="line">dims = SimpleNamespace(</span><br><span class="line">    G=holoviews.Dimension(<span class="string">r"$G/G_0$"</span>),</span><br><span class="line">    V_bias=holoviews.Dimension(<span class="string">"$V_&#123;bias&#125;$"</span>),</span><br><span class="line">    phi=holoviews.Dimension(<span class="string">r"$\Phi/\Phi_0$"</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_system_spectroscopy</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># We apply a magnetic field in all parts of the system</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite_sc</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            (<span class="number">2</span> * p.t - p.mu_sc) * pauli.s0sz + p.Ez * pauli.sxs0 + p.delta * pauli.s0sx</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite_normal</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="number">2</span> * p.t - p.mu_l) * pauli.s0sz + p.Ez * pauli.sxs0</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite_barrier</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="number">2</span> * p.t - p.mu_l + p.Vbarrier) * pauli.s0sz + p.Ez * pauli.sxs0</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The hopping is the same in all subsystems. There is normal hopping and</span></span><br><span class="line">    <span class="comment"># spin orbit interaction.</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hop</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.s0sz + <span class="number">1j</span> * p.alpha * pauli.sysz</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.chain(norbs=<span class="number">4</span>)</span><br><span class="line">    syst = kwant.Builder()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The first subsystem just consists of the tunnel barrier (one site with a</span></span><br><span class="line">    <span class="comment"># potential)</span></span><br><span class="line">    syst[lat(<span class="number">0</span>)] = onsite_barrier</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The second subsystem is a normal lead</span></span><br><span class="line">    <span class="comment"># The translational symmetry makes it semi-infinite.</span></span><br><span class="line">    lead1 = kwant.Builder(</span><br><span class="line">        kwant.TranslationalSymmetry(*lat.prim_vecs), conservation_law=-pauli.s0sz</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># Define a unit cell (in this case the unit cell consists of a single site)</span></span><br><span class="line">    lead1[lat(<span class="number">0</span>)] = onsite_normal</span><br><span class="line">    <span class="comment"># Define the hopping between unitcells</span></span><br><span class="line">    lead1[lat(<span class="number">1</span>), lat(<span class="number">0</span>)] = hop</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The third subsystem is a superconducting lead. A Majorana bound state</span></span><br><span class="line">    <span class="comment"># can arise at the edge of this system.</span></span><br><span class="line">    lead2 = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">    <span class="comment"># Again: Define a unit cell</span></span><br><span class="line">    lead2[lat(<span class="number">0</span>)] = onsite_sc</span><br><span class="line">    <span class="comment"># Again define hopping between unit cells</span></span><br><span class="line">    lead2[lat(<span class="number">1</span>), lat(<span class="number">0</span>)] = hop</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Create a connection between the first subsystem (the tunnel barrier, system name: syst)</span></span><br><span class="line">    <span class="comment"># and the other two subsystems (the normal and the superconducting lead)</span></span><br><span class="line">    syst.attach_lead(lead1)</span><br><span class="line">    syst.attach_lead(lead2)</span><br><span class="line"></span><br><span class="line">    syst = syst.finalized()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nanowire_chain</span><span class="params">(L=None, periodic=False)</span>:</span></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> L <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        L = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(onsite, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="number">2</span> * p.t - p.mu) * pauli.szs0 + p.B * pauli.s0sz + p.delta * pauli.sxs0</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(L):</span><br><span class="line">        syst[lat(x)] = onsite</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hop</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.szs0 - <span class="number">0.5j</span> * p.alpha * pauli.szsx</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping_with_flux</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        phase = np.exp(<span class="number">1j</span> * p.flux / <span class="number">2</span>)</span><br><span class="line">        phase_factors = np.kron(np.diag([phase, phase.conj()]), pauli.s0)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.7</span> * phase_factors @ hop(site1, site1, p)</span><br><span class="line"></span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hop</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> periodic:</span><br><span class="line">        syst[lat(<span class="number">0</span>), lat(L - <span class="number">1</span>)] = hopping_with_flux</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tunnel_spectroscopy</span><span class="params">(syst, p, Es)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Andreev_cond</span><span class="params">(E)</span>:</span></span><br><span class="line">        sm = kwant.smatrix(syst, energy=E, params=dict(p=p))</span><br><span class="line">        <span class="comment"># (i, j) means we call for block j of lead i in the scattering matrix.</span></span><br><span class="line">        <span class="comment"># The normal lead is i = 0 here, where block j = 0 corresponds to electrons</span></span><br><span class="line">        <span class="comment"># and block j = 1 holes.</span></span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            sm.submatrix((<span class="number">0</span>, <span class="number">0</span>), (<span class="number">0</span>, <span class="number">0</span>)).shape[<span class="number">0</span>]</span><br><span class="line">            - sm.transmission((<span class="number">0</span>, <span class="number">0</span>), (<span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line">            + sm.transmission((<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    Gs = [Andreev_cond(E) <span class="keyword">for</span> E <span class="keyword">in</span> Es]</span><br><span class="line">    <span class="keyword">return</span> np.array(Gs)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_spectroscopy</span><span class="params">(Vbarrier)</span>:</span></span><br><span class="line">    syst = make_system_spectroscopy()</span><br><span class="line">    Es = np.linspace(<span class="number">-0.15</span>, <span class="number">0.15</span>, <span class="number">101</span>)</span><br><span class="line">    p = SimpleNamespace(</span><br><span class="line">        t=<span class="number">1</span>, mu_l=<span class="number">0.5</span>, mu_sc=<span class="number">0</span>, alpha=<span class="number">0.15</span>, delta=<span class="number">0.1</span>, Vbarrier=Vbarrier</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Trivial, because the magnetic field is zero (third argument)</span></span><br><span class="line">    p.Ez = <span class="number">0</span></span><br><span class="line">    Gs_trivial = tunnel_spectroscopy(syst, p, Es)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Non-trivial</span></span><br><span class="line">    p.Ez = <span class="number">0.25</span></span><br><span class="line">    Gs_topological = tunnel_spectroscopy(syst, p, Es)</span><br><span class="line">    kdims = [dims.V_bias, dims.G]</span><br><span class="line">    plot = holoviews.Path((Es, Gs_trivial), kdims=kdims, label=<span class="string">"trivial"</span>).opts(</span><br><span class="line">        style=&#123;<span class="string">"color"</span>: <span class="string">"k"</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    plot *= holoviews.Path((Es, Gs_topological), kdims=kdims, label=<span class="string">"topological"</span>).opts(</span><br><span class="line">        style=&#123;<span class="string">"color"</span>: <span class="string">"r"</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    style_overlay = &#123;</span><br><span class="line">        <span class="string">"xticks"</span>: [<span class="number">-0.1</span>, <span class="number">0.0</span>, <span class="number">0.1</span>],</span><br><span class="line">        <span class="string">"yticks"</span>: [<span class="number">0.0</span>, <span class="number">0.5</span>, <span class="number">1.0</span>, <span class="number">1.5</span>, <span class="number">2.0</span>],</span><br><span class="line">        <span class="string">"show_legend"</span>: <span class="literal">True</span>,</span><br><span class="line">        <span class="string">"legend_position"</span>: <span class="string">"top"</span>,</span><br><span class="line">        <span class="string">"fig_size"</span>: <span class="number">150</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    style_path = &#123;<span class="string">"show_legend"</span>: <span class="literal">True</span>&#125;</span><br><span class="line">    <span class="keyword">return</span> plot.opts(plot=&#123;<span class="string">"Overlay"</span>: style_overlay, <span class="string">"Path"</span>: style_path&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nanowire_spectrum</span><span class="params">(trivial=False)</span>:</span></span><br><span class="line">    B = <span class="number">0.2</span> <span class="keyword">if</span> trivial <span class="keyword">else</span> <span class="number">1.0</span></span><br><span class="line">    p = SimpleNamespace(mu=<span class="number">0.4</span>, t=<span class="number">1.0</span>, alpha=<span class="number">0.2</span>, delta=<span class="number">0.1</span>, B=B)</span><br><span class="line">    syst = nanowire_chain(L=<span class="number">100</span>, periodic=<span class="literal">True</span>).finalized()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">energy</span><span class="params">(flux)</span>:</span></span><br><span class="line">        p.flux = flux</span><br><span class="line">        H = syst.hamiltonian_submatrix(params=dict(p=p))</span><br><span class="line">        <span class="keyword">return</span> np.linalg.eigvalsh(H)</span><br><span class="line"></span><br><span class="line">    fluxes = np.linspace(<span class="number">0</span>, <span class="number">4</span> * np.pi, <span class="number">51</span>)</span><br><span class="line">    spectrum = np.array([energy(flux) <span class="keyword">for</span> flux <span class="keyword">in</span> fluxes])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Find the two subgap states.</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> trivial:</span><br><span class="line">        N = spectrum.shape[<span class="number">1</span>] // <span class="number">2</span></span><br><span class="line">        non_trivial = np.where((fluxes &gt; np.pi) &amp; (fluxes &lt; <span class="number">3</span> * np.pi))</span><br><span class="line">        spectrum[non_trivial, N - <span class="number">1</span> : N + <span class="number">1</span>] = spectrum[</span><br><span class="line">            non_trivial, N : N - <span class="number">2</span> : <span class="number">-1</span></span><br><span class="line">        ].copy()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fluxes, spectrum</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_spectrum_nanowire</span><span class="params">(fluxes, spectrum, ylim=[<span class="number">-0.2</span>, <span class="number">0.2</span>])</span>:</span></span><br><span class="line">    N = spectrum.shape[<span class="number">1</span>] // <span class="number">2</span></span><br><span class="line">    kdims = [dims.phi, <span class="string">"$E$"</span>]</span><br><span class="line">    plot = holoviews.Path((fluxes, spectrum), kdims=kdims).opts(</span><br><span class="line">        style=&#123;<span class="string">"color"</span>: <span class="string">"k"</span>, <span class="string">"alpha"</span>: <span class="number">0.4</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    plot *= holoviews.Path((fluxes, spectrum[:, N - <span class="number">1</span>]), kdims=kdims).opts(</span><br><span class="line">        style=&#123;<span class="string">"color"</span>: <span class="string">"r"</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    plot *= holoviews.Path((fluxes, spectrum[:, N]), kdims=kdims).opts(</span><br><span class="line">        style=&#123;<span class="string">"color"</span>: <span class="string">"k"</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    ticks = &#123;<span class="string">"xticks"</span>: [(<span class="number">0</span>, <span class="string">"0"</span>), (<span class="number">2</span> * np.pi, <span class="string">"1"</span>), (<span class="number">4</span> * np.pi, <span class="string">"2"</span>)]&#125;</span><br><span class="line">    <span class="keyword">return</span> plot.redim.range(**&#123;<span class="string">"$E$"</span>: (<span class="number">-0.11</span>, <span class="number">0.11</span>)&#125;).opts(plot=ticks)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_gse_sc_nanowire</span><span class="params">(fluxes, spectrum)</span>:</span></span><br><span class="line">    N = spectrum.shape[<span class="number">1</span>] // <span class="number">2</span></span><br><span class="line">    energy_gs = np.sum(spectrum[:, :N], axis=<span class="number">1</span>)</span><br><span class="line">    energy_gs -= np.max(energy_gs)</span><br><span class="line">    current = np.diff(energy_gs) * len(energy_gs)</span><br><span class="line"></span><br><span class="line">    xdim = dims.phi</span><br><span class="line">    ydim = <span class="string">r"$E_&#123;tot&#125;(\Phi)$"</span></span><br><span class="line"></span><br><span class="line">    ticks = &#123;<span class="string">"xticks"</span>: [(<span class="number">0</span>, <span class="string">"0"</span>), (<span class="number">2</span> * np.pi, <span class="string">"1"</span>), (<span class="number">4</span> * np.pi, <span class="string">"2"</span>)]&#125;</span><br><span class="line">    plot = holoviews.Path((fluxes, energy_gs), kdims=[xdim, ydim], label=<span class="string">"Energy"</span>).opts(</span><br><span class="line">        plot=ticks</span><br><span class="line">    )</span><br><span class="line">    ydim = <span class="string">r"$I(\Phi)$"</span></span><br><span class="line">    plot += holoviews.Path(</span><br><span class="line">        ((fluxes[<span class="number">1</span>:] + fluxes[:<span class="number">-1</span>]) / <span class="number">2</span>, current), kdims=[xdim, ydim], label=<span class="string">"Current"</span></span><br><span class="line">    ).opts(plot=ticks)</span><br><span class="line">    <span class="keyword">return</span> plot</span><br></pre></td></tr></table></figure>
+
+<h1 id="How-to-detect-Majoranas"><a href="#How-to-detect-Majoranas" class="headerlink" title="How to detect Majoranas"></a>How to detect Majoranas</h1><p>Our second guest lecturer for this week is Carlo Beenakker, from Leiden University.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"WAhNblNbadA"</span>, src_location=<span class="string">"2.2-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Andreev-reflection"><a href="#Andreev-reflection" class="headerlink" title="Andreev reflection"></a>Andreev reflection</h1><p>To understand how conductance through a Majorana works, we first have to learn how charge is transferred from a metallic lead to a superconductor. In general this transfer takes place via a mechanism known as Andreev reflection. Before we discuss the conductance signatures of a Majorana zero mode, it is useful to learn what Andreev reflection is.</p>
+<p>Let’s consider the following very simple circuit with two electrodes:</p>
+<p><img src="/2021/01/07/src/w2_majorana/signatures/ns_interface.svg" alt></p>
+<p>One electrode is a normal metal, the other a superconductor, and they are kept at a voltage difference $V$. At the interface between the normal metal and the superconductor (in short, NS interface) there is a barrier. We are particularly interested in the case when the voltage difference is very small compared to the energy gap in the superconductor, $eV &lt; \Delta$, where $e$ is the charge of the electron.</p>
+<p>What happens when electrons arrive at the interface with superconductor? The superconductor has no states available up to an energy $\Delta$ around the Fermi level, and the voltage is not enough to provide for this energy difference. How can a current develop?</p>
+<p>To understand this, let’s look more closely at an electron arriving at the interface with the superconductor. There are two possible processes that can take place, <em>normal reflection</em> and <em>Andreev reflection</em>. In normal reflection, the electron is simply reflected at the interface with the superconductor:</p>
+<p><img src="/2021/01/07/src/w2_majorana/signatures/normal_reflection.svg" alt></p>
+<p>With normal reflection, there is no net charge transfer from the left electrode to the right electrode. Hence this process does not contribute any net current. Normal reflection obviously doesn’t even require a superconductor and would take place also if the right electrode was normal.</p>
+<p>Andreev reflection, instead, is unique to the NS interface. In Andreev reflection, an electron is converted to a hole by the superconductor, and a Cooper pair is created in the superconductor.</p>
+<p><img src="/2021/01/07/src/w2_majorana/signatures/andreev_reflection.svg" alt></p>
+<p>You can see that a net charge of $2e$ is transferred from the left to the right electrode, and at low voltages Andreev reflection is the only process responsible for the electrical current.</p>
+<p>Above the superconducting gap, $eV &gt; \Delta$ transmission of an incident electron into the superconductor also contributes to the current.</p>
+<p>You can also think of Andreev <em>reflection</em> as a <em>transmission</em> problem. Because of the presence of the superconductor, both electrons and holes participate in the transfer of charge in the normal metal lead. Conceptually, you can imagine to separate the left lead into two leads, one only carrying electrons and one only carrying holes. These two leads are connected by the superconductor, which converts incoming electrons in the first lead into outgoing holes in the second lead, and viceversa:</p>
+<p><img src="/2021/01/07/src/w2_majorana/signatures/andreev_as_transmission.svg" alt></p>
+<p>With this picture, you can understand that Andreev reflection is very similar to the problem of transmission through a double barrier.</p>
+<p>Let’s call $r_{eh}$ the amplitude for Andreev reflection. Its absolute value squared, $\left|r_{eh}\right|^2$, is the probability that an incoming electron from the normal metal is Andreev reflected as a hole. Once we know $r_{eh}$, we can compute the conductance $G(V)$, which relates the current $I$ that develops as a response to a small voltage $V$, $G(V) = dI/dV$. The conductance is given by the following formula:</p>
+<p>$$G(V)=2G_0|r_{eh}|^2.$$</p>
+<p>We will not derive this equation, since it can be understood intuitively. The conductance is proportional to the probability $|r_{eh}|^2$ of Andreev reflection, since we know that at low voltages this is the only process that transfers electric charge from the left to the right electrode.</p>
+<p>The factor of $2$ is due to each Andreev reflection transferring a charge of a Cooper pair, $2e$. Finally, $G_0=e^2/h$ is the <strong>conductance quantum</strong>, the fundamental proportionality constant which relates currents to voltages.</p>
+<h1 id="Andreev-reflection-off-a-Majorana-zero-mode"><a href="#Andreev-reflection-off-a-Majorana-zero-mode" class="headerlink" title="Andreev reflection off a Majorana zero mode"></a>Andreev reflection off a Majorana zero mode</h1><p>Now that we understand a conventional NS interface, let’s see what happens if our superconductor is topological:</p>
+<p><img src="/2021/01/07/src/w2_majorana/signatures/ns_majorana_interface.svg" alt></p>
+<p>You can imagine that the superconducting electrode is now a nanowire in the topological phase, like the one you have just studied. Because the superconductor is topological, there is a Majorana mode at the NS interface, whose wave function will “leak” a bit into the normal metal, through the barrier. Of course, there will be also a second Majorana mode, but we place it far enough from the NS interface, so that it does not have a role in the transport. Does the Majorana zero mode at the interface change the Andreev reflection properties?</p>
+<p>Yes, and in a rather drastic way. Going back to the picture of Andreev reflection as a transmission process through a double barrier, the crucial difference is that the Majorana mode now appears as a bound state between the two barriers:</p>
+<p><img src="/2021/01/07/src/w2_majorana/signatures/resonant_transmission_through_majorana.svg" alt></p>
+<p>In the double barrier problem in quantum mechanics, you can have <strong>resonant</strong> transmission in the presence of a bound state. This means that the probability $\left|r_{eh}\right|^2$ to pass through the barriers is dramatically enhanced if the energy of the incident electron matches the energy of the bound state. In our case, the energy of the incident electron is $V$, and the energy of the bound state, the Majorana mode, is zero. So the presence of the Majorana mode leads to a <strong>resonant peak</strong> in the conductance of the NS interface at $V=0$.</p>
+<h1 id="Quantization-of-the-Majorana-resonance"><a href="#Quantization-of-the-Majorana-resonance" class="headerlink" title="Quantization of the Majorana resonance"></a>Quantization of the Majorana resonance</h1><p>Seeing the resonant peak is the most direct way we know to measure the presence of a Majorana zero mode.</p>
+<p>However, the presence of a resonance associated with Majorana modes is not uniquely topological, because tunneling into any low energy bound state produces resonance.</p>
+<p>Is there anything in particular which distinguishes the Majorana resonance from any other resonance?</p>
+<p>Let’s just look at what happens if we compare conductance of an NS interface in the cases when S is trivial and non-trivial, and see how the conductance changes as we alter the tunnel barrier strength.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;V: plot_spectroscopy(V) <span class="keyword">for</span> V <span class="keyword">in</span> np.arange(<span class="number">1</span>, <span class="number">4.25</span>, <span class="number">0.25</span>)&#125;,</span><br><span class="line">    kdims=[<span class="string">r"$V_&#123;barrier&#125;$"</span>],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>We see a very robust and persistent characteristic:<br>the peak height of the Majorana resonance is quantized to the value of $2G_0$, independent of the strength of the voltage barrier. From the formula above, this means that if a Majorana is present we have $\left|r_{eh}\right|^2=1$, that is we have <strong>perfect Andreev reflection</strong>.</p>
+<p>To understand why it is robust, we need to go beyond drawing cartoon figures.</p>
+<h2 id="Reflection-matrix-of-a-normal-metal-superconductor-interface"><a href="#Reflection-matrix-of-a-normal-metal-superconductor-interface" class="headerlink" title="Reflection matrix of a normal metal-superconductor interface"></a>Reflection matrix of a normal metal-superconductor interface</h2><p>Quantum-mechanically, we can describe transport through the NS interface as a scattering problem. An incoming wave function $\Psi_\textrm{in}$ propagates in the left electrode, until it is reflected back at the interface with the superconductor, turning into an outgoing wave function $\Psi_\textrm{out}$. Because of the presence of the superconductor, both the incoming and outgoing states can be electrons $\Psi_e$ or holes $\Psi_h$. At <strong>zero energy</strong>, they are related to each other by particle-hole symmetry:</p>
+<p>$$\Psi_e(E) = \mathcal{P},\Psi_h(-E),$$</p>
+<p>The reflection enforces a linear relation between incoming and ingoing waves:</p>
+<p>$$\Psi_\textrm{out} = r(V) ,\Psi_\textrm{in},$$</p>
+<p>$$r(V)=\left(\begin{array}{cc}r_{ee}&amp;r_{eh}\r_{he}&amp;r_{hh}\end{array}\right).$$</p>
+<p>The matrix $r$ is known as the <strong>reflection matrix</strong>. Its complex elements are the amplitudes of normal and Andreev reflection of an incoming electron - $r_{ee}$ and $r_{eh}$ - and normal and Andreev reflection of an incoming hole - $r_{hh}$ and $r_{he}$. (For brevity we don’t write out explicitly that each of those depends on $V$.)</p>
+<p>If there is more than one incoming electron state (in our case there are two due to spin), all 4 elements of $r$ become matrices themselves. They then describe scattering between all the possible incoming and outgoing states.</p>
+<p>Because for $eV\ll \Delta$ there are no propagating waves in the superconductor, the reflection process which relates $\Psi_\textrm{out}$ and $\Psi_\textrm{in}$ is unitary, $r^\dagger r=1$. This implies that</p>
+<p>$$\left|r_{ee}\right|^2+\left|r_{eh}\right|^2 = \left|r_{he}\right|^2+\left|r_{hh}\right|^2 = 1,.$$</p>
+<p>This is the mathematical way of saying that an electron (or hole) arriving at the interface has no alternatives other than being normal-reflected or Andreev-reflected.</p>
+<p>Can we add any other constraint to $r$, that might help to distinguish any characteristic of the Majorana mode? Just like we did last week, let’s try to study $r$ using symmetry and topology. Our circuit involves a superconductor, so we must have particle-hole symmetry in the problem.</p>
+<p>In order to derive $r$ explicitly we could start directly from the Bogoliubov-de Gennes Hamiltonian of the NS system, and solve it for an energy $V$. This is a lot of work, which we won’t do, but knowing this fact we can understand the consequences of particle-hole symmetry for $r$.</p>
+<p>First, particle-hole symmetry exchanges electrons and hole components of the wave function, so it involves a Pauli matrix $\tau_x$ acting on $\Psi_\textrm{in}$ or $\Psi_\textrm{out}$. Second, it is an anti-unitary symmetry, so it involves complex conjugation. Third, it changes the sign of the energy so it sends $V$ into $-V$. Hence we arrive at the following symmetry for the reflection matrix:</p>
+<p>$$\tau_x r^*(-V) \tau_x = r(V),.$$</p>
+<p>Together with unitarity, particle-hole symmetry imposes that the conductance is symmetric around zero voltage, $G(V)=G(-V)$. In the most interesting point, $V=0$ we have:</p>
+<p>$$ \tau_x r^*_0 \tau_x = r_0 ,.$$</p>
+<p>where we defined $r_0\equiv r(V=0)$. So much for the impact of symmetry on $r$. What about topology?</p>
+<h1 id="Topological-invariant-of-the-reflection-matrix"><a href="#Topological-invariant-of-the-reflection-matrix" class="headerlink" title="Topological invariant of the reflection matrix"></a>Topological invariant of the reflection matrix</h1><p>The Majorana zero mode is the consequence of a topological phase in the topological superconductor, and its presence is dictated by the bulk-boundary correspondence. Can we find any consequence of this fact in $r_0$? It turns out that reflection matrices $r$ with particle-hole symmetry are also topological in their own way. Their topological invariant is </p>
+<p>$$Q = \det,r_0,.$$</p>
+<p>Again, we will not <em>derive</em> this equation, but rather convince ourselves this expression is correct.</p>
+<p>First of all, the determinant of a unitary matrix such as $r_0$ is always a complex number with unit norm, so $\left|\det,r_0,\right|=1$. Second, because of particle-hole symmetry, the determinant is real: $\det r_0 = \det, (\tau_x r^<em>_0,\tau_x) = \det,r_0^*,=(\det,r_0)^</em>$. Hence, $\det,r_0,= \pm 1$. This is quite promising! Two possible discrete values, just like the Pfaffian invariant of the Kitaev chain.</p>
+<p>Because it is just dictated by unitarity and particle-hole symmetry, the determinant of $r_0$ cannot change from $+1$ to $-1$ under a change of the properties of the NS interface. For instance, you can vary the height of the potential barrier at the interface, but this cannot affect the determinant of $r_0$.</p>
+<p>The only way to make the determinant change sign is to close the bulk gap in the superconducting electrode. If the gap goes to zero, then it is not true that an incoming electron coming from the normal metal can only be normal-reflected or Andreev-reflected. It can also just enter the superconducting electrode as an electron. Hence the reflection matrix no longer contains all the possible processes taking place at the interface, and it won’t be unitary anymore. This allows the determinant to change sign. We conclude that $Q=\det,r$ is a good topological invariant.</p>
+<p>Explicitly, we have that</p>
+<p>$$Q=|r_{ee}|^2-|r_{eh}|^2\equiv\pm 1,.$$</p>
+<p>We already saw that unitarity requires that $|r_{ee}|^2+|r_{eh}|^2=1$. There are only two possibilities for both conditions to be true: either $|r_{ee}|=1$ (<strong>perfect  normal reflection</strong>) or $|r_{eh}|=1$ (<strong>perfect Andreev reflection</strong>). The situation cannot change without a phase transition. Thus the quantized conductance of the Majorana mode is topologically robust in this case, and in fact survives past the tunneling limit. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"Imagine we replace the superconducting electrode with an insulating material, "</span></span><br><span class="line">    <span class="string">"and imagine that at the interface with the normal metal there is a bound state. "</span></span><br><span class="line">    <span class="string">"How is the current through the interface different with respect "</span></span><br><span class="line">    <span class="string">"to that through an NS interface with a Majorana?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"It is not quantized but still non-zero."</span>,</span><br><span class="line">    <span class="string">"It is zero because there cannot be Andreev reflection without a superconductor."</span>,</span><br><span class="line">    <span class="string">"It is not symmetric in voltage but it is still non-zero."</span>,</span><br><span class="line">    <span class="string">"It has a resonance peak whose width is independent of the barrier strength."</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"A current requires an exit path for the charge. "</span></span><br><span class="line">    <span class="string">"No current can flow through the insulator, since there are no excitations at the Fermi level in an insulator. "</span></span><br><span class="line">    <span class="string">"A superconductor is also gapped with respect to excitations, but is different than a normal insulator. "</span></span><br><span class="line">    <span class="string">"It has a condensate of Cooper pairs, so a current can develop thanks to Andreev reflection at the interface."</span></span><br><span class="line">)</span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Flux-induced-fermion-parity-switch-in-topological-superconductors"><a href="#Flux-induced-fermion-parity-switch-in-topological-superconductors" class="headerlink" title="Flux-induced fermion parity switch in topological superconductors"></a>Flux-induced fermion parity switch in topological superconductors</h1><p>How do we probe the Pfaffian topological invariant of a topological superconductor directly? Last week, we introduced a thought-experiment where we probed the bulk-edge correspondence of Majorana modes by changing the sign of the hopping across a bond. The non-trivial value of the topological invariant results in a fermion parity switch as a result of the change in sign of the hopping $t$ across the junction i.e. </p>
+<p>$$t\rightarrow -t.$$</p>
+<p>It turns out that the sign change in the hopping across the junction might also be obtained by introducing a magnetic flux through the superconducting ring (similar to the <a href="http://en.wikipedia.org/wiki/Aharonov-Bohm_effect" target="_blank" rel="noopener">Aharonov-Bohm effect</a>). The role of the special bond is now played by a Josephson junction, which is just an insulating barrier interrupting the ring, as in the following sketch:</p>
+<p><img src="/2021/01/07/src/w2_majorana/signatures/josephson_majorana_ring.svg" alt></p>
+<p>How does the magnetic flux enter the Hamiltonian? By following the usual argument for introducing magnetic fields into lattice Hamiltonians using <a href="http://topocondmat.org/w2_majorana/Peierls.html" target="_blank" rel="noopener">Peierls substitution</a>, the flux $\Phi$ can be accounted for simply by changing the phase of the hopping across the junction in the ring:</p>
+<p>$$t,\to,t,\exp (i\phi/2).$$</p>
+<p>Here, $\phi = 2\pi\Phi/\Phi_0$ is usually called the <strong>superconducting phase difference</strong> across the junction, and $\Phi_0=2e/h$ is the <strong>superconducting flux quantum</strong>. Notice that when $\Phi=\Phi_0$ the hopping changes sign: $t ,\to, \exp (i\pi) t = -t$, exactly as we had last week!</p>
+<blockquote>
+<p>Thus, the introduction of a flux quantum $\Phi=\Phi_0$, changes the sign of the hopping $t\rightarrow t e^{i\phi}=-t$, which as discussed last week changes the fermion parity of the ground state for topological superconductors. This fermion parity switch is related to a pair of Majorana modes coupled at the junction (as in the figure above).</p>
+</blockquote>
+<p>To see how this happens explicitly, let’s look at the spectrum of a topological superconducting ring as a function of flux,  obtained using our nanowire model:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fluxes, spectrum = nanowire_spectrum()</span><br><span class="line">plot_spectrum_nanowire(fluxes, spectrum)</span><br></pre></td></tr></table></figure>
+
+<p>Staring at the spectrum we see that, lo and behold, the fermion parity switch appears, around $\Phi=\Phi_0/2$. Can we measure this fermion parity switch in our superconducting ring?</p>
+<h1 id="Detecting-the-fermion-parity-switch-using-the-Josephson-effect"><a href="#Detecting-the-fermion-parity-switch-using-the-Josephson-effect" class="headerlink" title="Detecting the fermion parity switch using the Josephson effect"></a>Detecting the fermion parity switch using the Josephson effect</h1><p>The change in fermion parity of the ground state can be detected using the so-called <a href="http://en.wikipedia.org/wiki/Josephson_effect" target="_blank" rel="noopener">Josephson effect</a>. The Josephson current can be computed from the expectation value of the derivative of the energy operator with respect to flux,</p>
+<p>$$I(\Phi)=\frac{1}{2}\frac{d E_\textrm{tot}(\Phi)}{d \Phi},$$</p>
+<p>where $E_\textrm{tot}(\Phi)=\left\langle H_{BdG}(\Phi)\right\rangle$ is the total energy of the system corresponding to the BdG Hamiltonian $H_{BdG}(\Phi)$. </p>
+<blockquote>
+<p>The key idea to detecting the ground state fermion parity switch is to note that changing the flux $\Phi$ adiabatically cannot change the fermion parity of the system. If you start with the system in the ground state and advance the magnetic flux from $\Phi$ to $\Phi+\Phi_0$, you end up in an excited state, because in the meantime the fermion parity has changed. To go back to the initial ground state with the same fermion parity, you need to advance $\Phi$ by $2\Phi_0$.</p>
+</blockquote>
+<p>Note that this argument relies on the absence of a reservoir of electrons, such as a metallic lead. In this case, when the two levels cross at zero energy and the ground state fermion parity changes, there is no electron that can enter or leave the system. </p>
+<p>The fermion parity switch, together with fermion parity conservation of the ring, result in the energy $E_\textrm{tot}(\Phi)$ and the corresponding current (that can be measured) showing a $2\Phi_0$ periodicity in $\Phi$ - that is, a $4\pi$ periodicity in $\phi$:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fluxes, spectrum = nanowire_spectrum()</span><br><span class="line">plot_gse_sc_nanowire(fluxes, spectrum)</span><br></pre></td></tr></table></figure>
+
+<p>At this point you might wonder, what is so unique about the $2\Phi_0$ periodicity of the Josephson effect?</p>
+<p>To answer this question, we need to review an alternative way of thinking about the Josephson effect in terms of just connecting a pair of superconductors by a junction without having to wrap the superconductor in a ring. In this case,  the hopping phase  $\phi$ (which we also referred to as the <em>superconducting phase</em>) that appeared in the tunneling term proportional to $t e^{i\phi/2}$ can be eliminated by shifting the fermion operators on one side of the junction by a phase i.e.  $c^\dagger\rightarrow c^\dagger e^{-i\phi/2}$. For superconducting systems, this transformation has the interesting effect of changing the superconducting phase on one side of the junction as </p>
+<p>$$\Delta\rightarrow \Delta e^{i\phi}.$$ </p>
+<p>Now you see why $\phi$ was referred to as <em>superconducting phase</em> in the first place. After this transformation (also called a gauge transformation) $\phi$ really becomes the complex phase of the superconducting term proportional to $\Delta$.</p>
+<blockquote>
+<p>But this also tells you one more thing - following the gauge transformation the Hamiltonian $H_{BdG}$ only depends on $\phi$ through the term $\Delta e^{i\phi}$, so one expects the energy to be $2\pi$ periodic in $\phi$. This leads to the conventional wisdom that the Josephson effect is $2\pi$-periodic (or equivalently $\Phi_0$-periodic in the case of a ring). </p>
+</blockquote>
+<p>As seen from the plots below, this is exactly what happens in the non-topological phase. In this case, when we look at the energy spectrum, no fermion parity switches appear:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fluxes, spectrum = nanowire_spectrum(trivial=<span class="literal">True</span>)</span><br><span class="line">plot_spectrum_nanowire(fluxes, spectrum, ylim=[<span class="number">-0.11</span>, <span class="number">0.11</span>])</span><br></pre></td></tr></table></figure>
+
+<p>In turn, this means that energy and current are periodic with period $\Phi_0$:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fluxes, spectrum = nanowire_spectrum(trivial=<span class="literal">True</span>)</span><br><span class="line">plot_gse_sc_nanowire(fluxes, spectrum)</span><br></pre></td></tr></table></figure>
+
+<p>At this point, you might be a little worried about how the topological superconductor managed to get around this <em>conventional wisdom</em>. The answer is subtle, and relies on the implicit assumption of the ground state fermion parity of the junction being fixed as one changes $\phi$. Topological superconductors violate this assumption and therefore can create the $4\pi$ periodic (or fractional) Josephson effect. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"Suppose that in your topological nanowire junction, positive energy quasiparticles can escape "</span></span><br><span class="line">    <span class="string">"into a reservoir very quickly, making the junction always relax to the ground state. "</span></span><br><span class="line">    <span class="string">"How would this affect the periodicity of the Josephson effect?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"It would make the periodicity random because of the quasiparticles jumping around randomly."</span>,</span><br><span class="line">    <span class="string">"If the system can always relax to the ground state, the current would have a period of $\Phi_0$ (hence $2\pi)$."</span>,</span><br><span class="line">    <span class="string">"Since the Josephson effect is topologically protected, these processes have no effect on the periodicity."</span>,</span><br><span class="line">    <span class="string">"The period becomes $\Phi_0/2$ because it is easier for the quasiparticles to jump out at this value of the flux."</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"A particle tunneling out means that the fermion parity of the ground state changes. "</span></span><br><span class="line">    <span class="string">"Hence the lowest between the red and black energy levels is always occupied, and both energy and current "</span></span><br><span class="line">    <span class="string">"turn out to have a period $\Phi_0$."</span></span><br><span class="line">)</span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"sSacO5RpW5A"</span>, src_location=<span class="string">"2.2-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Signatures of Majorana modes"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w2_majorana/signatures/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2021/01/07/src/w2_majorana/w2_assignments/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            src/w2_majorana/w2_assignments
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/01/07/src/w2_majorana/nanowire/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">src/w2_majorana/nanowire</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

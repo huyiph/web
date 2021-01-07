@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    src/w3_pump_QHE/pumps |  O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="post-src/w3_pump_QHE/pumps" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  src/w3_pump_QHE/pumps
+</h1>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/01/07/src/w3_pump_QHE/pumps/" class="article-date">
+  <time datetime="2021-01-07T09:11:06.834Z" itemprop="datePublished">2021-01-07</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">3.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">19 min</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"><span class="keyword">from</span> holoviews.core.options <span class="keyword">import</span> Cycle</span><br><span class="line"></span><br><span class="line">%output size=<span class="number">120</span></span><br><span class="line">pi_ticks = [(-np.pi, <span class="string">r"$-\pi$"</span>), (<span class="number">0</span>, <span class="string">"0"</span>), (np.pi, <span class="string">r"$\pi$"</span>)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ts_modulated_wire</span><span class="params">(L=<span class="number">50</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Create an infinite wire with a periodic potential</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Chain lattice, one orbital per site.</span></span><br><span class="line"><span class="string">    Returns kwant system.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Arguments required in onsite/hoppings: </span></span><br><span class="line"><span class="string">        t, mu, mu_lead, A, phase</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    The period of the potential is 2*pi/L.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    omega = <span class="number">2</span> * np.pi / L</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        x = site.pos[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * p.t - p.mu + p.A * (np.cos(omega * x + p.phase) + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t</span><br><span class="line"></span><br><span class="line">    sym_lead = kwant.TranslationalSymmetry([-L])</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line">    syst = kwant.Builder(sym_lead)</span><br><span class="line"></span><br><span class="line">    syst[(lat(x) <span class="keyword">for</span> x <span class="keyword">in</span> range(L))] = onsite</span><br><span class="line">    syst[lat.neighbors()] = hopping</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">modulated_wire</span><span class="params">(L=<span class="number">50</span>, dL=<span class="number">10</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Create a pump. </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Chain lattice, one orbital per site.</span></span><br><span class="line"><span class="string">    Returns kwant system.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    L is the length of the pump,</span></span><br><span class="line"><span class="string">    dL is the length of the clean regions next to the pump,</span></span><br><span class="line"><span class="string">            useful for demonstration purposes.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Arguments required in onsite/hoppings: </span></span><br><span class="line"><span class="string">        t, mu, mu_lead, A, omega, phase</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        x = site.pos[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * p.t - p.mu + p.A * (np.cos(p.omega * x + p.phase) + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    lead_onsite = <span class="keyword">lambda</span> site, p: <span class="number">2</span> * p.t - p.mu_lead</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line">    syst = kwant.Builder()</span><br><span class="line"></span><br><span class="line">    syst[(lat(x) <span class="keyword">for</span> x <span class="keyword">in</span> range(L))] = onsite</span><br><span class="line">    syst[lat.neighbors()] = hopping</span><br><span class="line"></span><br><span class="line">    sym_lead = kwant.TranslationalSymmetry([<span class="number">-1</span>])</span><br><span class="line">    lead = kwant.Builder(sym_lead)</span><br><span class="line">    lead[lat(<span class="number">0</span>)] = lead_onsite</span><br><span class="line">    lead[lat.neighbors()] = hopping</span><br><span class="line"></span><br><span class="line">    syst.attach_lead(lead)</span><br><span class="line">    syst.attach_lead(lead.reversed())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">total_charge</span><span class="params">(value_array)</span>:</span></span><br><span class="line">    <span class="string">"""Calculate the pumped charge from the list of reflection matrices."""</span></span><br><span class="line">    determinants = [np.linalg.det(r) <span class="keyword">for</span> r <span class="keyword">in</span> value_array]</span><br><span class="line">    charge = np.cumsum(np.angle(np.roll(determinants, <span class="number">-1</span>) / determinants))</span><br><span class="line">    charge = charge - charge[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">return</span> charge / (<span class="number">2</span> * np.pi)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Thouless-pumps"><a href="#Thouless-pumps" class="headerlink" title="Thouless pumps"></a>Thouless pumps</h1><p>Dganit Meidan from Ben Gurion University will introduce Thouless pumps,.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"gKZK9IGY9wo"</span>, src_location=<span class="string">"3.1-intro"</span>, res=<span class="string">"360"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Hamiltonians-with-parameters"><a href="#Hamiltonians-with-parameters" class="headerlink" title="Hamiltonians with parameters"></a>Hamiltonians with parameters</h1><p>Previously, when studying the topology of systems supporting Majoranas (both the Kitaev chain and the nanowire), we were able to calculate topological properties by studying the bulk Hamiltonian $H(k)$.</p>
+<p>There are two points of view on this Hamiltonian. We could either consider it a Hamiltonian of an infinite system with momentum conservation</p>
+<p>$$H = H(k) |k\rangle\langle k|,$$</p>
+<p>or we could equivalently study a finite system with only a small number of degrees of freedom (corresponding to a single unit cell), and a Hamiltonian which depends on some continuous periodic parameter $k$.</p>
+<p>Of course, without specifying that $k$ is the real space momentum, there is no meaning in bulk-edge correspondence (since the edge is an edge in real space), but the topological properties are still well-defined.</p>
+<p>Sometimes we want to know how a physical system changes if we slowly vary some parameters of the system, for example a bias voltage or a magnetic field. Because the parameters change with time, the Hamiltonian becomes time-dependent, namely</p>
+<p>$$H = H(t).$$</p>
+<p>The slow <a href="https://en.wikipedia.org/wiki/Adiabatic_theorem" target="_blank" rel="noopener">adiabatic</a> change of parameters ensures that if the system was initially in the ground state, it will stay in the ground state, so that the topological properties are useful.</p>
+<p>A further requirement for topology to be useful is the <em>periodicity</em> of time evolution:</p>
+<p>$$H(t) = H(t+T).$$</p>
+<p>The period can even go to $\infty$, in which case $H(-\infty) = H(+\infty)$. The reasons for the requirement of periodicity are somewhat abstract. If the Hamiltonian has parameters, we’re studying the topology of a <em>mapping</em> from the space of parameter values to the space of all possible gapped Hamiltonians. This mapping has nontrivial topological properties only if the space of parameter values is compact.</p>
+<p>For us, this simply means that the Hamiltonian has to be periodic in time.</p>
+<p>Of course, if we want systems with bulk-edge correspondence, then in addition to $t$ our Hamiltonian must still depend on the real space coordinate, or the momentum $k$.</p>
+<h1 id="Quantum-pumps"><a href="#Quantum-pumps" class="headerlink" title="Quantum pumps"></a>Quantum pumps</h1><p>In the image below (source: Chambers’s Encyclopedia, 1875, via Wikipedia) you see a very simple periodic time-dependent system, an Archimedes screw pump.</p>
+<p><img src="/2021/01/07/src/w3_pump_QHE/pumps/Archimedes_screw.jpg" alt></p>
+<p>The changes to the system are clearly periodic, and the pump works the same no matter how slowly we use it (that is, change the parameters), so it is an adiabatic tool.</p>
+<p>What about a quantum analog of this pump? Turns out it is just as simple as you would think.</p>
+<p>Let’s take a one-dimensional region, coupled to two electrodes on both sides, and apply a strong sine-shaped confining potential in this region. As we move the confining potential, we drag the electrons captured in it.</p>
+<p>So our system now looks like this:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Plot of the potential in the pumping system as a function of coordinate.</span></span><br><span class="line"><span class="comment"># Some part of the leads is shown with a constant potential.</span></span><br><span class="line"><span class="comment"># Regions with E &lt; 0 should be shaded to emulate Fermi sea.</span></span><br><span class="line">A = <span class="number">0.6</span></span><br><span class="line">L = <span class="number">10</span></span><br><span class="line">lamb = (<span class="number">10</span> / <span class="number">5.3</span>) / (<span class="number">2</span> * np.pi)</span><br><span class="line">mu = <span class="number">-0.4</span></span><br><span class="line">mu_lead = <span class="number">-0.8</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x &lt; <span class="number">0.0</span>:</span><br><span class="line">        <span class="keyword">return</span> mu_lead</span><br><span class="line">    <span class="keyword">if</span> x &gt;= <span class="number">0.0</span> <span class="keyword">and</span> x &lt;= L:</span><br><span class="line">        <span class="keyword">return</span> mu + A * (<span class="number">1.0</span> - np.cos(x / lamb))</span><br><span class="line">    <span class="keyword">if</span> x &gt; L:</span><br><span class="line">        <span class="keyword">return</span> mu_lead</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = np.linspace(<span class="number">-5</span>, <span class="number">15</span>, <span class="number">1000</span>)</span><br><span class="line">y = [f(i) <span class="keyword">for</span> i <span class="keyword">in</span> x]</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">6</span>, <span class="number">4</span>))</span><br><span class="line">plt.plot(x, y, <span class="string">"k"</span>, lw=<span class="number">1.2</span>)</span><br><span class="line"></span><br><span class="line">plt.xlim(<span class="number">-2.5</span>, <span class="number">12.5</span>)</span><br><span class="line">plt.ylim(<span class="number">-2</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">y = [i <span class="keyword">if</span> i &lt;= <span class="number">0</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">for</span> i <span class="keyword">in</span> y]</span><br><span class="line">plt.fill_between(</span><br><span class="line">    x, y, <span class="number">0</span>, color=<span class="string">"r"</span>, where=np.array(y) &lt; <span class="number">0.0</span>, alpha=<span class="number">0.5</span>, edgecolor=<span class="string">"k"</span>, lw=<span class="number">1.5</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plt.arrow(<span class="number">2.0</span>, <span class="number">1.25</span>, <span class="number">5</span>, <span class="number">0</span>, head_width=<span class="number">0.15</span>, head_length=<span class="number">1.0</span>, fc=<span class="string">"k"</span>, ec=<span class="string">"k"</span>)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">"$x$"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"$U(x)$"</span>)</span><br><span class="line">plt.xticks([])</span><br><span class="line">plt.yticks([])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>It is described by the Hamiltonian</p>
+<p>$$H(t) = \frac{k^2}{2m} + A [1 - \cos(x/\lambda + 2\pi t/T)].$$</p>
+<p>As we discussed, if we change $t$ very slowly, the solution will not depend on how fast $t$ varies.</p>
+<p>When $A \gg 1 /m \lambda^2$ the confining potential is strong, and additionally if the chemical potential $\mu \ll A$, the states bound in the separate minima of the potential have very small overlap.</p>
+<p>The potential near the bottom of each minimum is approximately quadratic, so the Hamiltonian is that of a simple Harmonic oscillator. This gives us discrete levels of the electrons with energies $E_n = (n + \tfrac{1}{2})\omega_c$, with $\omega_c = \sqrt{A/m\lambda^2}$ the oscillator frequency.</p>
+<p>We can quickly check how continuous bands in the wire become discrete evenly spaced bands as we increase $A$:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1</span>, mu=<span class="number">0.0</span>, phase=<span class="number">0.0</span>, A=<span class="literal">None</span>)</span><br><span class="line">syst = ts_modulated_wire(L=<span class="number">17</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">title</span><span class="params">(p)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Band structure, $A=&#123;:.2&#125;$"</span>.format(p.A)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kwargs = &#123;</span><br><span class="line">    <span class="string">"ylims"</span>: [<span class="number">-0.2</span>, <span class="number">1.3</span>],</span><br><span class="line">    <span class="string">"xticks"</span>: pi_ticks,</span><br><span class="line">    <span class="string">"yticks"</span>: [<span class="number">0</span>, <span class="number">0.5</span>, <span class="number">1.0</span>],</span><br><span class="line">    <span class="string">"xdim"</span>: <span class="string">r"$k$"</span>,</span><br><span class="line">    <span class="string">"ydim"</span>: <span class="string">r"$E$"</span>,</span><br><span class="line">    <span class="string">"k_x"</span>: np.linspace(-np.pi, np.pi, <span class="number">101</span>),</span><br><span class="line">    <span class="string">"title"</span>: title,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.A: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.A <span class="keyword">in</span> np.linspace(<span class="number">0</span>, <span class="number">0.8</span>, <span class="number">10</span>)&#125;,</span><br><span class="line">    kdims=[<span class="string">r"$A$"</span>],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>So unless $\mu = E_n$ for some $n$, each minimum of the potential contains an integer number of electrons $N$.</p>
+<p>Electron wave functions from neighboring potential minima do not overlap, so when we change the potential by one time period, we move exactly $N$ electrons.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">"Why are some levels in the band structure flat while some are not?"</span></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The flat levels are the ones whose energies are not sensitive to the offset of confining potential."</span>,</span><br><span class="line">    <span class="string">"Destructive interference of the wave functions in neighboring minima suppresses the dispersion."</span>,</span><br><span class="line">    <span class="string">"The flat levels are localized deep in the potential minima, "</span></span><br><span class="line">    <span class="string">"so the bandwidth is exponentially small."</span>,</span><br><span class="line">    <span class="string">"The flat levels correspond to filled states, and the rest to empty states."</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The dispersion of the bands in a perodic potential appears "</span></span><br><span class="line">    <span class="string">"when the wave functions from neighboring minima overlap."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">2</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Quantization-of-pumped-charge"><a href="#Quantization-of-pumped-charge" class="headerlink" title="Quantization of pumped charge"></a>Quantization of pumped charge</h1><p>As we already learned, integers are important, and they could indicate that something topological is happening.</p>
+<p>At this point we should ask ourselves these questions: Is the number of electrons $N$ pumped per cycle topological, or can we pump any continuous amount of charge? How important is it that the potential well of the pump is deep?</p>
+<h3 id="Thought-experiment"><a href="#Thought-experiment" class="headerlink" title="Thought experiment"></a>Thought experiment</h3><p>To simplify the counting let’s “dry out” the pump: We can define a procedure that empties the middle region, and pushes $n_L$ extra electrons to the left and $n_R$ electrons to the right.</p>
+<p>For example, we can do this:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Same plot as above, but now with an extra rectangular barrier in the</span></span><br><span class="line"><span class="comment"># middle, and with arrows both ways showing that the barrier widens.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot of the potential in the pumping system as a function of coordinate.</span></span><br><span class="line"><span class="comment"># Some part of the leads is shown with a constant potential.</span></span><br><span class="line"><span class="comment"># Regions with E &lt; 0 should be shaded to emulate Fermi sea.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot of the potential in the pumping system as a function of coordinate.</span></span><br><span class="line"><span class="comment"># Some part of the leads is shown with a constant potential.</span></span><br><span class="line"><span class="comment"># Regions with E &lt; 0 should be shaded to emulate Fermi sea.</span></span><br><span class="line">A = <span class="number">0.6</span></span><br><span class="line">L = <span class="number">10</span></span><br><span class="line">lamb = (<span class="number">10</span> / <span class="number">5.3</span>) / (<span class="number">2</span> * np.pi)</span><br><span class="line">mu = <span class="number">-0.4</span></span><br><span class="line">mu_lead = <span class="number">-0.8</span></span><br><span class="line">a = <span class="number">4.5</span></span><br><span class="line">b = <span class="number">6.5</span></span><br><span class="line">top = <span class="number">1.2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x &lt; <span class="number">0.0</span>:</span><br><span class="line">        <span class="keyword">return</span> mu_lead</span><br><span class="line">    <span class="keyword">if</span> x &gt;= <span class="number">0.0</span> <span class="keyword">and</span> x &lt;= a:</span><br><span class="line">        <span class="keyword">return</span> mu + A * (<span class="number">1.0</span> - np.cos(x / lamb))</span><br><span class="line">    <span class="keyword">if</span> x &gt; a <span class="keyword">and</span> x &lt; b:</span><br><span class="line">        <span class="keyword">return</span> top</span><br><span class="line">    <span class="keyword">if</span> x &gt;= b <span class="keyword">and</span> x &lt;= L:</span><br><span class="line">        <span class="keyword">return</span> mu + A * (<span class="number">1.0</span> - np.cos(x / lamb))</span><br><span class="line">    <span class="keyword">if</span> x &gt; L:</span><br><span class="line">        <span class="keyword">return</span> mu_lead</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = np.linspace(<span class="number">-5</span>, <span class="number">15</span>, <span class="number">1000</span>)</span><br><span class="line">y = [f(i) <span class="keyword">for</span> i <span class="keyword">in</span> x]</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">6</span>, <span class="number">4</span>))</span><br><span class="line">plt.plot(x, y, <span class="string">"k"</span>, lw=<span class="number">1.2</span>)</span><br><span class="line">plt.xlim(<span class="number">-2.5</span>, <span class="number">12.5</span>)</span><br><span class="line">plt.ylim(<span class="number">-2</span>, <span class="number">2</span>)</span><br><span class="line">y = [i <span class="keyword">if</span> i &lt;= <span class="number">0</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">for</span> i <span class="keyword">in</span> y]</span><br><span class="line">plt.fill_between(</span><br><span class="line">    x, y, <span class="number">0</span>, color=<span class="string">"r"</span>, where=np.array(y) &lt; <span class="number">0.0</span>, alpha=<span class="number">0.5</span>, edgecolor=<span class="string">"k"</span>, lw=<span class="number">1.5</span>,</span><br><span class="line">)</span><br><span class="line">plt.arrow(a, <span class="number">1.05</span>, <span class="number">-1</span>, <span class="number">0</span>, head_width=<span class="number">0.1</span>, head_length=<span class="number">0.4</span>, fc=<span class="string">"k"</span>, ec=<span class="string">"k"</span>)</span><br><span class="line">plt.arrow(b, <span class="number">1.05</span>, +<span class="number">1</span>, <span class="number">0</span>, head_width=<span class="number">0.1</span>, head_length=<span class="number">0.4</span>, fc=<span class="string">"k"</span>, ec=<span class="string">"k"</span>)</span><br><span class="line">plt.xlabel(<span class="string">"$x$"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"$U(x)$"</span>)</span><br><span class="line">plt.xticks([])</span><br><span class="line">plt.yticks([])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>A reverse of this procedure does the reverse of course, so it reduces the number of charges on the left and right sides.</p>
+<p>Now here comes the trick:</p>
+<ol>
+<li><p>When the middle region is emptied, the two sides are completely disconnected, and so the number of electrons on either side must be integer for every eigenstate of the Hamiltonian.</p>
+</li>
+<li><p>Next, if we performed the manipulation adiabatically, then if we start in an eigenstate of the Hamiltonian, we will also end in an eigenstate of the Hamiltonian. This is a consequence of the adiabatic theorem.</p>
+</li>
+<li><p>In light of 1. and 2., we conclude that in the process of drying the middle out, we pumped an integer number of charges.</p>
+</li>
+<li><p>Finally, adiabatic manipulation is only possible if the Hamiltonian stays gapped at all times.</p>
+</li>
+</ol>
+<p>Bonus: In our argument we didn’t use the shape or the strength of the potential, so it applies universally to any possible pump.</p>
+<p>So without doing any calculations, we can conclude that:</p>
+<blockquote>
+<p>The number of electrons pumped per cycle of a quantum pump is an integer as long as<br>the bulk of the pump is gapped. Therefore it is a <strong>topological invariant</strong>.</p>
+</blockquote>
+<h1 id="Counting-electrons-through-reflection"><a href="#Counting-electrons-through-reflection" class="headerlink" title="Counting electrons through reflection."></a>Counting electrons through reflection.</h1><p>The expression for the pumped charge in terms of the bulk Hamiltonian $H(k, t)$ is complicated.</p>
+<p>It’s an integral over both $k$ and $t$, called a <strong>Chern number</strong> or in other sources a TKNN integer. Its complexity is beyond the scope of our course, but is extremely important, so we will have to study it… next week.</p>
+<p>There is a much simpler way to calculate the same quantity using scattering formalism. From the previous two weeks, recall that we may infer the presence or absence of Majoranas at an end of a system by calculating either $Q = \textrm{sign}[\textrm{Pf},H(0),\textrm{Pf},H(\pi)]$ or $Q=\textrm{sign}\det r$, where $r$ is the reflection matrix from one end of the Majorana wire.</p>
+<p>In order to derive the scattering expression, we need to understand how the pumped charge manifests in the reflection matrix.</p>
+<p>Let’s start from the case when there’s just one mode in the reservoir. We’ll count the charge pumped by making the reservoir finite but very large.</p>
+<p>Now all the levels in the reservoir are quantized, and are standing waves, so they are equal weight superpositions of waves going to the left $\psi_L$ and to the right $\psi_R$,</p>
+<p>$$<br>\psi_n = \psi_L(x) + \psi_R(x) \propto \exp(ik_n x) + \exp(-ik_n x + i\phi),<br>$$</p>
+<p>where the wave number $k_n$ is of course a function of energy. The relative phase shift $\phi$ is necessary to satisfy the boundary condition at $x=0$, where $\psi_L = r \psi_R$, and so $\exp(i \phi) = r$. The energies of the levels are determined by requiring that the phases of $\psi_L$ and $\psi_R$ also match at $x = -L$.</p>
+<p>Now, what happens when we pump one extra charge into the reservoir? All the energy levels are shifted up by one, that is $E_n \rightarrow E_{n+1}$, and accordingly the wave functions also change $\psi_n \rightarrow \psi_{n+1}$.</p>
+<blockquote>
+<p>We conclude that the charge can only be pumped as the reflection phase $\phi$ advances by $2\pi$.</p>
+</blockquote>
+<p>It’s very easy to generalize our argument to many modes. For that we just need to sum all of the reflection phase shifts, which means we need to look at the phase of $\det r$.</p>
+<p>We conclude that there’s a very compact relation between charge $dq$ pumped by an infinitesimal change of an external parameter and the change in reflection matrix $dr$:</p>
+<p>$$<br>dq = \frac{d \log \det r}{2\pi i} = \operatorname{Tr}\frac{r^\dagger dr }{ 2 \pi i}.<br>$$</p>
+<p>While we derived this relation only for the case when all incoming particles reflect, and $r$ is unitary, written in form of trace it also holds if there is transmission.<a href="https://arxiv.org/abs/cond-mat/9808347" target="_blank" rel="noopener">¹</a></p>
+<p>Let’s check if this expression holds to our expectations. If $||r||=1$, this is just the number of times the phase of $\det r$ winds around zero, and it is certainly an integer, as we expected.</p>
+<h1 id="Applying-the-topological-invariant"><a href="#Applying-the-topological-invariant" class="headerlink" title="Applying the topological invariant"></a>Applying the topological invariant</h1><p>We’re left with a simple exercise.</p>
+<p>We know now how to calculate the pumped charge during one cycle, so let’s just see how it works in practice.</p>
+<p>The scattering problem in 1D can be solved quickly, so let’s calculate the pumped charge as a function of time for different values of the chemical potential in the pump.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">%%opts Path.Q (color=Cycle(values=[<span class="string">'r'</span>, <span class="string">'g'</span>, <span class="string">'b'</span>, <span class="string">'y'</span>]))</span><br><span class="line">%%opts HLine (color=Cycle(values=[<span class="string">'r'</span>, <span class="string">'g'</span>, <span class="string">'b'</span>, <span class="string">'y'</span>]) linestyle=<span class="string">'--'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_charge</span><span class="params">(mu)</span>:</span></span><br><span class="line">    energy = <span class="number">0.0</span></span><br><span class="line">    phases = np.linspace(<span class="number">0</span>, <span class="number">2</span> * np.pi, <span class="number">100</span>)</span><br><span class="line">    p = SimpleNamespace(t=<span class="number">1</span>, mu=mu, mu_lead=mu, A=<span class="number">0.6</span>, omega=<span class="number">0.3</span>)</span><br><span class="line">    syst = modulated_wire(L=<span class="number">100</span>).finalized()</span><br><span class="line">    rs = [</span><br><span class="line">        kwant.smatrix(syst, energy, params=dict(p=p)).submatrix(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">for</span> p.phase <span class="keyword">in</span> phases</span><br><span class="line">    ]</span><br><span class="line">    wn = -total_charge(rs)</span><br><span class="line">    title = <span class="string">"$\mu=&#123;:.2&#125;$"</span>.format(mu)</span><br><span class="line">    kdims = [<span class="string">r"$t/T$"</span>, <span class="string">r"$q/e$"</span>]</span><br><span class="line">    plot = holoviews.Path(</span><br><span class="line">        (phases / (<span class="number">2</span> * np.pi), wn), kdims=kdims, label=title, group=<span class="string">"Q"</span></span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> plot.redim.range(**&#123;<span class="string">r"$q/e$"</span>: (<span class="number">-0.5</span>, <span class="number">3.5</span>)&#125;).opts(</span><br><span class="line">        plot=&#123;<span class="string">"xticks"</span>: [<span class="number">0</span>, <span class="number">1</span>], <span class="string">"yticks"</span>: [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]&#125;</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kwargs = &#123;</span><br><span class="line">    <span class="string">"ylims"</span>: [<span class="number">-0.2</span>, <span class="number">1.3</span>],</span><br><span class="line">    <span class="string">"xticks"</span>: pi_ticks,</span><br><span class="line">    <span class="string">"yticks"</span>: [<span class="number">0</span>, <span class="number">0.5</span>, <span class="number">1.0</span>],</span><br><span class="line">    <span class="string">"xdim"</span>: <span class="string">r"$k$"</span>,</span><br><span class="line">    <span class="string">"ydim"</span>: <span class="string">r"$E$"</span>,</span><br><span class="line">    <span class="string">"k_x"</span>: np.linspace(-np.pi, np.pi, <span class="number">101</span>),</span><br><span class="line">    <span class="string">"title"</span>: <span class="keyword">lambda</span> p: <span class="string">"Band structure, $A=&#123;:.2&#125;$"</span>.format(p.A),</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p = SimpleNamespace(t=<span class="number">1</span>, mu=<span class="number">0.0</span>, phase=<span class="number">0.0</span>, A=<span class="number">0.6</span>)</span><br><span class="line">syst = ts_modulated_wire(L=<span class="number">17</span>)</span><br><span class="line">mus = [<span class="number">0.1</span>, <span class="number">0.3</span>, <span class="number">0.6</span>, <span class="number">0.9</span>]</span><br><span class="line">HLines = holoviews.Overlay([holoviews.HLine(mu) <span class="keyword">for</span> mu <span class="keyword">in</span> mus])</span><br><span class="line">spectrum(syst, p, **kwargs) * HLines + holoviews.Overlay(</span><br><span class="line">    [plot_charge(mu) <span class="keyword">for</span> mu <span class="keyword">in</span> mus]</span><br><span class="line">).relabel(<span class="string">"Pumped charge"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>In the left plot, we show the band structure, where the different colors correspond to different chemical potentials. The right plot shows the corresponding pumped charge. During the pumping cycle the charge may change, and the relation between the offset $\phi$ of the potential isn’t always linear. However we see that after a full cycle, the pumped charge exactly matches the number of filled levels in a single potential well.</p>
+<p>As a final mental exercise about pumps, let’s think about what happens if we disconnect the leads and consider the spectrum of a closed system.</p>
+<p>As the periodic potential moves, it tries to increase the energies of all the states at the right of the system and reduce the energy of all the states to the left (that’s what pumping does after all).</p>
+<p>So there should be states crossing the bulk band gap. Let’s see if it’s true.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1</span>, mu=<span class="number">0.0</span>, mu_lead=<span class="number">0</span>, A=<span class="number">0.6</span>, omega=<span class="number">0.3</span>, phase=<span class="literal">None</span>)</span><br><span class="line">syst = modulated_wire(L=<span class="number">110</span>).finalized()</span><br><span class="line">phases = np.linspace(<span class="number">0</span>, <span class="number">2</span> * np.pi, <span class="number">251</span>)</span><br><span class="line">en = [np.linalg.eigvalsh(syst.hamiltonian_submatrix(params=dict(p=p))) <span class="keyword">for</span> p.phase <span class="keyword">in</span> phases]</span><br><span class="line">en = np.array(en)</span><br><span class="line">ticks = &#123;<span class="string">"xticks"</span>: [<span class="number">0</span>, <span class="number">1</span>], <span class="string">"yticks"</span>: [<span class="number">0</span>, <span class="number">0.5</span>, <span class="number">1</span>]&#125;</span><br><span class="line">kdims = [<span class="string">r"$t/T$"</span>, <span class="string">r"$E$"</span>]</span><br><span class="line">holoviews.Path((phases / (<span class="number">2</span> * np.pi), en), kdims=kdims)[:, <span class="number">0</span>:<span class="number">1.2</span>].opts(plot=ticks)</span><br></pre></td></tr></table></figure>
+
+<p>Indeed, the levels in the bulk stay flat and have a high degeneracy, but we see that there are also single levels that get pushed across the gap. Since the bulk is homogeneous, these states have to be localized at the edge.</p>
+<p>Of course, since we have a finite system, the charge cannot be pumped forever from one end into the other. So the pumping breaks down when you see the edge states crossing the bulk bands. At these moments the charge can flow back through the bulk.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"What happens to the dependence of the reflection phase shift on time if we "</span></span><br><span class="line">    <span class="string">"remove one of the reservoirs and leave the other one?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"It becomes constant."</span>,</span><br><span class="line">    <span class="string">"For most of the cycle it stays the same, but there appear "</span></span><br><span class="line">    <span class="string">"sharp jumps such that the total winding becomes zero."</span>,</span><br><span class="line">    <span class="string">"Nothing changes, since the two ends of the pump are "</span></span><br><span class="line">    <span class="string">"far apart from each other, and the pump is not conducting."</span>,</span><br><span class="line">    <span class="string">"The reflection phase gets a new time dependence with zero winding, unrelated to the original one."</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The total pumped charge must become equal to zero since there's nowhere to place the charge, but "</span></span><br><span class="line">    <span class="string">"since the pump is insulating, the phase cannot change "</span></span><br><span class="line">    <span class="string">"for most of the cycle unless a sharp resonance appears"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Quantized-charge-and-scattering-invariant"><a href="#Quantized-charge-and-scattering-invariant" class="headerlink" title="Quantized charge and scattering invariant"></a>Quantized charge and scattering invariant</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"6lXRAZ7hv7E"</span>, src_location=<span class="string">"3.1-summary"</span>, res=<span class="string">"360"</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Questions about what you learned? Ask them below</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Quantum pumps"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w3_pump_QHE/pumps/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2021/01/07/src/w3_pump_QHE/w3_assignments/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            src/w3_pump_QHE/w3_assignments
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/01/07/src/w3_pump_QHE/Laughlinargument/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">src/w3_pump_QHE/Laughlinargument</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

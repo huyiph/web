@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    src/w8_general/classification |  O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="post-src/w8_general/classification" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  src/w8_general/classification
+</h1>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/01/07/src/w8_general/classification/" class="article-date">
+  <time datetime="2021-01-07T09:11:06.879Z" itemprop="datePublished">2021-01-07</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">31 min</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> IPython.display <span class="keyword">import</span> HTML</span><br><span class="line"><span class="keyword">from</span> nbconvert.filters.markdown <span class="keyword">import</span> markdown2html_pandoc</span><br><span class="line"></span><br><span class="line">displaymd = <span class="keyword">lambda</span> markdown: display_html(HTML(markdown2html_pandoc(markdown)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Markdown tables are ugly, and Mathjax doesn't support \tabular,</span></span><br><span class="line"><span class="comment"># therefore we use math mode + \array + add a command \T to make</span></span><br><span class="line"><span class="comment"># the \array rows less dense.</span></span><br><span class="line"></span><br><span class="line">table_header = <span class="string">r"""$$</span></span><br><span class="line"><span class="string">\require&#123;color&#125;</span></span><br><span class="line"><span class="string">colordefs</span></span><br><span class="line"><span class="string">\newcommand\T&#123;\Rule&#123;0pt&#125;&#123;1em&#125;&#123;.3em&#125;&#125;</span></span><br><span class="line"><span class="string">\begin&#123;array&#125;&#123;fmt&#125;</span></span><br><span class="line"><span class="string">\hline</span></span><br><span class="line"><span class="string">body\\</span></span><br><span class="line"><span class="string">\hline</span></span><br><span class="line"><span class="string">\end&#123;array&#125;</span></span><br><span class="line"><span class="string">$$"""</span></span><br><span class="line"></span><br><span class="line">replacements = [</span><br><span class="line">    (<span class="string">"&#123;"</span>, <span class="string">"&#123;&#123;"</span>),</span><br><span class="line">    (<span class="string">"&#125;"</span>, <span class="string">"&#125;&#125;"</span>),</span><br><span class="line">    (<span class="string">"colordefs"</span>, <span class="string">"&#123;colordefs&#125;"</span>),</span><br><span class="line">    (<span class="string">"fmt"</span>, <span class="string">"&#123;fmt&#125;"</span>),</span><br><span class="line">    (<span class="string">"body"</span>, <span class="string">"&#123;body&#125;"</span>),</span><br><span class="line">]</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> replacements:</span><br><span class="line">    table_header = table_header.replace(i, j)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Symmetry classes names and their symmetry properties</span></span><br><span class="line">symmetry_classes = (<span class="string">"A"</span>, <span class="string">"AIII"</span>, <span class="string">"AI"</span>, <span class="string">"BDI"</span>, <span class="string">"D"</span>, <span class="string">"DIII"</span>, <span class="string">"AII"</span>, <span class="string">"CII"</span>, <span class="string">"C"</span>, <span class="string">"CI"</span>)</span><br><span class="line">chiralsym = <span class="number">5</span> * (<span class="string">""</span>, <span class="string">"1"</span>)</span><br><span class="line">phs = <span class="number">3</span> * (<span class="string">""</span>,) + <span class="number">3</span> * (<span class="string">"1"</span>,) + (<span class="string">""</span>,) + <span class="number">3</span> * (<span class="string">"-1"</span>,)</span><br><span class="line">trs = <span class="number">2</span> * (<span class="string">""</span>,) + <span class="number">2</span> * (<span class="string">"1"</span>,) + (<span class="string">""</span>,) + <span class="number">3</span> * (<span class="string">"-1"</span>,) + (<span class="string">""</span>, <span class="string">"1"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Locations of non-empty entries in the periodic table</span></span><br><span class="line">primary_seq = <span class="keyword">lambda</span> n: np.arange(n) % <span class="number">2</span></span><br><span class="line">z_descendant = <span class="keyword">lambda</span> n: np.arange(n) % <span class="number">8</span></span><br><span class="line">z2_descendant = <span class="keyword">lambda</span> n: np.arange(<span class="number">1</span>, n + <span class="number">1</span>) % <span class="number">8</span></span><br><span class="line">z2_descendant2 = <span class="keyword">lambda</span> n: np.arange(<span class="number">2</span>, n + <span class="number">2</span>) % <span class="number">8</span></span><br><span class="line">twoz_descendant = <span class="keyword">lambda</span> n: np.arange(<span class="number">4</span>, n + <span class="number">4</span>) % <span class="number">8</span></span><br><span class="line"></span><br><span class="line">line_end = <span class="string">"\\T\\\\\n"</span></span><br><span class="line">sep = <span class="string">" &amp; "</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_table</span><span class="params">(n=<span class="number">4</span>, show_symmetries=True, sort_order=None)</span>:</span></span><br><span class="line">    <span class="string">"""Create an array of entries forming the periodic table.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    -----------</span></span><br><span class="line"><span class="string">    n : int</span></span><br><span class="line"><span class="string">        Number of dimensions to show.</span></span><br><span class="line"><span class="string">    show_symmetries : bool</span></span><br><span class="line"><span class="string">        Show symmetry information for each symmetry class.</span></span><br><span class="line"><span class="string">    sort_order : int array or None</span></span><br><span class="line"><span class="string">        Ordering to apply to the symmetry classes </span></span><br><span class="line"><span class="string">        (can be trivially used to discard entries).</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    --------</span></span><br><span class="line"><span class="string">    data : np.ndarray</span></span><br><span class="line"><span class="string">        A string array with the entries of the periodic table.</span></span><br><span class="line"><span class="string">    format_string : str</span></span><br><span class="line"><span class="string">        An alignment string that can be used to feed the resulting</span></span><br><span class="line"><span class="string">        table to a Latex \array environment. </span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    dimensions = np.array([[str(i) <span class="keyword">for</span> i <span class="keyword">in</span> range(n)]], dtype=<span class="string">"S100"</span>)</span><br><span class="line">    <span class="keyword">if</span> dimensions.shape[<span class="number">1</span>]:</span><br><span class="line">        dimensions[<span class="number">0</span>, <span class="number">0</span>] = <span class="string">r"d="</span> + dimensions[<span class="number">0</span>, <span class="number">0</span>].decode(<span class="string">"UTF-8"</span>)</span><br><span class="line"></span><br><span class="line">    complex_entries = np.zeros((<span class="number">2</span>, n), dtype=<span class="string">"S100"</span>)</span><br><span class="line">    complex_entries[primary_seq(n), np.arange(n)] = <span class="string">r"\mathbb&#123;Z&#125;"</span></span><br><span class="line"></span><br><span class="line">    real_entries = np.zeros((<span class="number">8</span>, n), dtype=<span class="string">"S100"</span>)</span><br><span class="line">    real_entries[z_descendant(n), np.arange(n)] = <span class="string">r"\mathbb&#123;Z&#125;"</span></span><br><span class="line">    real_entries[z2_descendant(n), np.arange(n)] = <span class="string">r"\mathbb&#123;Z&#125;_2"</span></span><br><span class="line">    real_entries[z2_descendant2(n), np.arange(n)] = <span class="string">r"\mathbb&#123;Z&#125;_2"</span></span><br><span class="line">    real_entries[twoz_descendant(n), np.arange(n)] = <span class="string">r"2\mathbb&#123;Z&#125;"</span></span><br><span class="line"></span><br><span class="line">    entries = np.r_[complex_entries, real_entries]</span><br><span class="line"></span><br><span class="line">    sym_classes_rm = tuple(<span class="string">r"\textrm&#123;&#123;&#123;&#125;&#125;&#125;"</span>.format(cl) <span class="keyword">for</span> cl <span class="keyword">in</span> symmetry_classes)</span><br><span class="line"></span><br><span class="line">    sym = np.array(</span><br><span class="line">        [sym_classes_rm] + show_symmetries * [chiralsym, phs, trs], dtype=<span class="string">"S100"</span></span><br><span class="line">    ).T</span><br><span class="line">    sym_header = np.array(</span><br><span class="line">        [</span><br><span class="line">            [<span class="string">r"\textrm&#123;class&#125;"</span>]</span><br><span class="line">            + show_symmetries * [<span class="string">r"\mathcal&#123;C&#125;"</span>, <span class="string">r"\mathcal&#123;P&#125;"</span>, <span class="string">r"\mathcal&#123;T&#125;"</span>]</span><br><span class="line">        ],</span><br><span class="line">        dtype=<span class="string">"S100"</span>,</span><br><span class="line">    )</span><br><span class="line">    header = np.c_[sym_header, dimensions]</span><br><span class="line"></span><br><span class="line">    table = np.c_[sym, entries]</span><br><span class="line">    <span class="keyword">if</span> sort_order <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        table = table[sort_order]</span><br><span class="line"></span><br><span class="line">    format_string = <span class="string">"c|"</span> + show_symmetries * <span class="string">"rrr"</span> + n * show_symmetries * <span class="string">"|"</span> + n * <span class="string">"c"</span></span><br><span class="line">    <span class="keyword">return</span> np.r_[header, table], format_string</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">color_table</span><span class="params">(table, color_array)</span>:</span></span><br><span class="line">    <span class="string">"""Apply rgb colors to table entries.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    `color_array[i, j]` is the rgb color of the entry `(i, j)`.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns the string of color definitions required for coloring the table.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    apply_color = <span class="keyword">lambda</span> text, color: <span class="string">r"\color&#123;&#123;&#123;&#125;&#125;&#125;&#123;&#123;&#123;&#125;&#125;&#125;"</span>.format(color, text)</span><br><span class="line"></span><br><span class="line">    colors = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> np.indices(table.shape).reshape(<span class="number">2</span>, <span class="number">-1</span>).T:</span><br><span class="line">        idx = tuple(idx)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> any(color_array[idx]):</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        color = <span class="string">","</span>.join(<span class="string">"&#123;:1.2&#125;"</span>.format(i) <span class="keyword">for</span> i <span class="keyword">in</span> color_array[idx])</span><br><span class="line">        val = str(abs(hash(color)))[:<span class="number">8</span>]</span><br><span class="line">        colors[color] = val</span><br><span class="line">        table[idx] = apply_color(table[idx].decode(<span class="string">"utf-8"</span>), val)</span><br><span class="line"></span><br><span class="line">    defs = []</span><br><span class="line">    <span class="keyword">for</span> color, code <span class="keyword">in</span> list(colors.items()):</span><br><span class="line">        defs.append(<span class="string">r"\definecolor&#123;&#123;&#123;&#125;&#125;&#125;&#123;&#123;rgb&#125;&#125;&#123;&#123;&#123;&#125;&#125;&#125;"</span>.format(code, color))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"\n"</span>.join(defs)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Shinsei Ryu from the University of Illinois will introduce the general classification of topological insulators and superconductors.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"cKzUuQyZjFo"</span>, src_location=<span class="string">"8.1-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="At-a-glance-periodic-table"><a href="#At-a-glance-periodic-table" class="headerlink" title="At a glance: periodic table"></a>At a glance: periodic table</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">full_table, format_string = make_table(</span><br><span class="line">    show_symmetries=<span class="literal">False</span>, sort_order=np.argsort(symmetry_classes)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">rows = [sep.join([c.decode(<span class="string">"utf-8"</span>) <span class="keyword">for</span> c <span class="keyword">in</span> line]) <span class="keyword">for</span> line <span class="keyword">in</span> full_table]</span><br><span class="line"></span><br><span class="line">rows[<span class="number">1</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">1</span>]</span><br><span class="line">block = line_end.join(rows)</span><br><span class="line">colordefs = <span class="string">"&#123;&#125;"</span></span><br><span class="line"></span><br><span class="line">displaymd(table_header.format(colordefs=colordefs, fmt=format_string, body=block))</span><br></pre></td></tr></table></figure>
+
+<p>Let us now look at all the possible symmetry classes in dimensions from $0$ to $3$, and see what kind of topological insulators are possible.</p>
+<p>There are quite a few, here is the full list:</p>
+<p>This table has a lot of logic in it, but to you it most likely looks no better than this:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">full_table, format_string = make_table(</span><br><span class="line">    show_symmetries=<span class="literal">False</span>, sort_order=np.random.permutation(<span class="number">10</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">color_array = np.round(np.random.rand(*(full_table.shape + (<span class="number">3</span>,))), <span class="number">2</span>)</span><br><span class="line">colordefs = color_table(full_table, color_array)</span><br><span class="line"></span><br><span class="line">rows = [sep.join([c.decode(<span class="string">"utf-8"</span>) <span class="keyword">for</span> c <span class="keyword">in</span> line]) <span class="keyword">for</span> line <span class="keyword">in</span> full_table]</span><br><span class="line">rows[<span class="number">1</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">1</span>]</span><br><span class="line">block = line_end.join(rows)</span><br><span class="line"></span><br><span class="line">displaymd(table_header.format(colordefs=colordefs, fmt=format_string, body=block))</span><br></pre></td></tr></table></figure>
+
+<p>But don’t worry, we are going to learn exactly what these tables mean.</p>
+<p>First of all, let’s review the meaning of the entries in the table. Each entry gives the topological classification of a system with a given combination of symmetries and dimensionality. In other words, it gives us the possible values that the topological invariant $Q$ of such a system can take.</p>
+<p>An empty entry means that the system does not have a topological phase. In other words, all gapped Hamiltonians with dimension and symmetries corresponding to an empty entry can be deformed into each other, without ever closing the bulk gap and without breaking any existing symmetry.</p>
+<p>A $\mathbb{Z}$ entry tells us that the topological invariant is an integer number, $Q=0, \pm 1, \pm 2, \dots$ An example of such a system is the quantum Hall effect, for which the topological invariant is the Chern number. The value of $Q$ specifies the number of chiral edge states and their chirality, which is opposite for opposite signs of $Q$.</p>
+<p>A $2\mathbb{Z}$ entry is much like a $\mathbb{Z}$ entry, except that the invariant may only take even numbers, $Q=0,\pm2, \pm4, \dots$, because of some doubling of the degrees of freedom. An example is a quantum dot with spinful time-reversal symmetry, for which the topological invariant is the number of filled energy levels. It may only be an even number because of Kramers degeneracy.</p>
+<p>A $\mathbb{Z}_2$ entry means that there are only two distinct topological phases, with $Q=\pm 1$ (or $Q=0, 1$, depending on convention). An example we know is the Majorana chain, with the Pfaffian topological invariant, which distinguishes between the two phases with or without unpaired Majorana modes and the ends. Another example we know are the time-reversal invariant topological insulators in two and three dimensions.</p>
+<p>Now that we have attached a meaning to each entry in the table, let’s try to understand the table as a whole. The first thing to do is to understand why it has ten and only ten rows.</p>
+<h1 id="Symmetry-classes"><a href="#Symmetry-classes" class="headerlink" title="Symmetry classes"></a>Symmetry classes</h1><p>Each row in the table corresponds to a certain <em>symmetry class</em>, that is to a given combination of the presence or absence of three fundamental discrete symmetries.</p>
+<p>You already encountered these three symmetries all the way back in week one. They are time-reversal symmetry ($\mathcal{T}$), particle-hole symmetry ($\mathcal{P}$) and chiral symmetry ($\mathcal{C}$). We previously referred to chiral symmetry $\mathcal{C}$ as sublattice symmetry. This is because in condensed matter physics, a natural realization of chiral symmetry is a system composed of two sublattices, such that sites in one lattice only couple to sites in the other.</p>
+<p>Why do we consider these symmetries fundamental, and restrict the periodic table to them only?</p>
+<p>As you may recall from week one, and as Shinsei Ryu explained in the introductory video, normal unitary symmetries of a Hamiltonian do not have particularly interesting consequences for topological classification. One may always make the Hamiltonian block-diagonal, reducing the problem to the study of a single block. This procedure can be repeated until one runs out of unitary symmetries and is left with an <em>irreducible</em> block of the Hamiltonian, i.e. one which cannot be block diagonalized.</p>
+<p>Time-reversal, particle-hole and chiral symmetries act in a different way. They impose certain constraints on an irreducible Hamiltonian - for instance, by forcing it to be a real matrix, or to be block off-diagonal.</p>
+<p>Note, however, that it is possible to extend the periodic table to study the interplay between these three discrete symmetries and other unitary symmetries. For instance, we have already touched upon crystalline symmetries in week seven, and we will return to them in week ten.</p>
+<p>But for now, let’s focus on the three fundamental discrete symmetries: $\mathcal{P}$, $\mathcal{T}$ and $\mathcal{C}$. Their basic properties are:</p>
+<ul>
+<li>$\mathcal{T}$ is an anti-unitary operator which commutes with the Hamiltonian.</li>
+<li>$\mathcal{P}$ is an anti-unitary operator which anti-commutes with the Hamiltonian.</li>
+<li>$\mathcal{C}$ is a unitary operator which anti-commutes with the Hamiltonian.</li>
+</ul>
+<p>Recall that an anti-unitary operator can be written as the product of a unitary operator and the complex conjugation operator $\mathcal{K}$. The next important thing to know is that time-reversal and particle-hole symmetry may come in two separate flavors, depending on whether they square to plus or minus one.</p>
+<p>For instance, you will recall that for the time-reversal operator acting on electronic states, $\mathcal{T}^2=-1$. This was the crux of Kramers theorem, which in turn was the key to topological insulators. If you go back to week one, you will also remember that we discussed real matrices, which were symmetric under a time-reversal operator $\mathcal{T}=\mathcal{K}$. This operator satisfies $\mathcal{T}^2=1$.</p>
+<p>Thus, a system can behave in three ways under time-reversal symmetry $\mathcal{T}$: (1) it does not have time-reversal symmetry, (2) it has it and $\mathcal{T}$ squares to $+1$, (3) it has it and $\mathcal{T}$ squares to $-1$. The same holds for particle-hole symmetry, which can also have $\mathcal{P}^2=\pm 1$. On the other hand, the chiral symmetry only comes in one flavor, $\mathcal{C}^2=1$.</p>
+<h2 id="Combining-symmetries"><a href="#Combining-symmetries" class="headerlink" title="Combining symmetries"></a>Combining symmetries</h2><p>How do we arrive to having ten symmetry classes? Let’s count all the possible cases carefully. By combining the three cases for $\mathcal{P}$ and the three cases for $\mathcal{T}$ we arrive at nine possible combinations. </p>
+<p>The important thing to notice now is that $\mathcal{C}$ is not completely independent from $\mathcal{T}$ and $\mathcal{P}$. Whenever a system has both $\mathcal{T}$ and $\mathcal{P}$, there is also a chiral symmetry $\mathcal{C}=\mathcal{P\cdot T}$.</p>
+<p>This also means that if a system only has either $\mathcal{T}$ or $\mathcal{P}$ but not both, it cannot have a chiral symmetry $\mathcal{C}$. In other words, the presence of any two out of the three symmetries implies that the third is also present.</p>
+<p>On the other hand, if both $\mathcal{P}$ and $\mathcal{T}$ are absent, then $\mathcal{C}$ may or may not be present. This gives us two distinct cases.</p>
+<p>Adding all the possibilities, we indeed find 10 symmetry classes:</p>
+<p>$$(3\times 3 - 1) + 2 = 8 + 2 = 10,.$$</p>
+<p>The first term in the sum corresponds to the eight cases where there is at least one anti-unitary symmetry: either $\mathcal{P}$, or $\mathcal{T}$, or both. These eight symmetry classes are called <em>real</em>, because an anti-unitary symmetry always involves the complex conjugation operator. This does not necessarily mean that the Hamiltonian is a real matrix, but it is a reminder that there is a constraint between its real and imaginary parts.</p>
+<p>The second term in the sum covers the two cases when there are no anti-unitary symmetries. These symmetry classes are called <em>complex</em>.</p>
+<p>Let’s have another look at the 10 rows in the table, this time specifying which combination of the three fundamental symmetries each row has:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">full_table, format_string = make_table(</span><br><span class="line">    n=<span class="number">0</span>, show_symmetries=<span class="literal">True</span>, sort_order=np.argsort(symmetry_classes)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">rows = [sep.join([c.decode(<span class="string">"utf-8"</span>) <span class="keyword">for</span> c <span class="keyword">in</span> line]) <span class="keyword">for</span> line <span class="keyword">in</span> full_table]</span><br><span class="line">rows[<span class="number">1</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">block = line_end.join(rows)</span><br><span class="line"></span><br><span class="line">displaymd(table_header.format(colordefs=colordefs, fmt=format_string, body=block))</span><br></pre></td></tr></table></figure>
+
+<p>The somewhat cryptic notations in the leftmost column are just the names of the different symmetry classes. (Also the ‘I’s appearing there are Roman cardinal numbers, so for instance BDI is ‘B D one’, and AIII is “A three”.)</p>
+<p>Their names come from an elegant mathematical classification of <a href="http://en.wikipedia.org/wiki/Symmetric_space" target="_blank" rel="noopener">symmetric spaces</a> worked out by <a href="http://en.wikipedia.org/wiki/%C3%89lie_Cartan" target="_blank" rel="noopener">Elie Cartan</a> in 1926. While it is definitely intriguing that a group theory result from 1926 reappears in a totally different context almost 80 years later, the origin of this nomenclature is not directly relevant to most of the theory done in the field.<br>The two complex classes are A and AIII.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">"Which symmetry class do we get if we break Kramers degeneracy in class BDI?"</span></span><br><span class="line"></span><br><span class="line">answers = [<span class="string">"D"</span>, <span class="string">"AIII"</span>, <span class="string">"DIII"</span>, <span class="string">"None, class BDI has no Kramers degeneracy"</span>]</span><br><span class="line"></span><br><span class="line">explanation = <span class="string">"Kramers degeneracy requires that time reversal squares to -1, while it squares to 1 in class BDI."</span></span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>Finally, let us make an extra observation:</p>
+<blockquote>
+<p>While the particle-hole symmetry appears in any superconductor, it must satisfy $\mathcal{P}^2 = -\mathcal{T}^2$ due to the way the Bogoliubov quasiparticles are related to the original electrons. This makes the symmetry classes BDI, and CII rely on a fine-tuned Hamiltonian, just like the symmetry class AIII.</p>
+</blockquote>
+<h1 id="What-we-learned-so-far"><a href="#What-we-learned-so-far" class="headerlink" title="What we learned so far"></a>What we learned so far</h1><p>To get some confidence with the table and these obscure names, it is useful to see where the topological systems that we have studied so far fit into the table.</p>
+<p>Every red entry in the table below corresponds to something which we already know and studied in the previous weeks of the course, as you can discover by moving the mouse over it.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">tooltips = &#123;</span><br><span class="line">    (<span class="number">1</span>, <span class="number">6</span>): <span class="string">"Chern insulator: no symmetries, d=2"</span>,</span><br><span class="line">    (<span class="number">9</span>, <span class="number">5</span>): <span class="string">"Majorana wire: spinful particle-hole, d=1"</span>,</span><br><span class="line">    (<span class="number">4</span>, <span class="number">5</span>): <span class="string">"Polyacetilene/SSH chain: sublattice symmetry, d=1"</span>,</span><br><span class="line">    (<span class="number">3</span>, <span class="number">6</span>): <span class="string">"QSHE: spinful TRS, d=2"</span>,</span><br><span class="line">    (<span class="number">3</span>, <span class="number">7</span>): <span class="string">"3D strong TI: spinful TRS, d=3"</span>,</span><br><span class="line">    (<span class="number">9</span>, <span class="number">6</span>): <span class="string">"p-wave superconductor: PHS, d=2"</span>,</span><br><span class="line">    (<span class="number">9</span>, <span class="number">4</span>): <span class="string">"Superconducting quantum dot: d=0, PHS"</span>,</span><br><span class="line">    (<span class="number">2</span>, <span class="number">4</span>): <span class="string">"Quantum dot: d=0, spinless TRS"</span>,</span><br><span class="line">    (<span class="number">1</span>, <span class="number">4</span>): <span class="string">"Quantum dot: d=0, no symmetries"</span>,</span><br><span class="line">    (<span class="number">3</span>, <span class="number">4</span>): <span class="string">"Quantum dot: d=0, spinful TRS and Kramers degeneracy"</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">table, format_string = make_table(</span><br><span class="line">    show_symmetries=<span class="literal">True</span>, sort_order=np.argsort(symmetry_classes)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">colors = np.zeros(shape=table.shape + (<span class="number">3</span>,))</span><br><span class="line">colors[<span class="number">1</span>:, <span class="number">4</span>:] = [<span class="number">0.7</span>, <span class="number">0.7</span>, <span class="number">0.7</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> pos <span class="keyword">in</span> tooltips:</span><br><span class="line">    colors[pos] = [<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>]</span><br><span class="line"></span><br><span class="line">colordefs = color_table(table, colors)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> pos, val <span class="keyword">in</span> list(tooltips.items()):</span><br><span class="line">    table[pos] = <span class="string">r"\texttip&#123;&#123;&#123;&#125;&#125;&#125;&#123;&#123;&#123;&#125;&#125;&#125;"</span>.format(table[pos].decode(<span class="string">"utf-8"</span>), val)</span><br><span class="line"></span><br><span class="line">rows = [sep.join([c.decode(<span class="string">"utf-8"</span>) <span class="keyword">for</span> c <span class="keyword">in</span> line]) <span class="keyword">for</span> line <span class="keyword">in</span> table]</span><br><span class="line">rows[<span class="number">1</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">1</span>]</span><br><span class="line">block = line_end.join(rows)</span><br><span class="line"></span><br><span class="line">HTML(</span><br><span class="line">    markdown2html_pandoc(</span><br><span class="line">        table_header.format(</span><br><span class="line">            colordefs=(<span class="string">"\\require&#123;action&#125;\n"</span> + colordefs), fmt=format_string, body=block</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>As you can see, the Majorana wire and the $p$-wave superconductor are in class D, the Chern insulators in class A, and the time-reversal invariant topological insulators in class AII. These names occur quite often in the literature.</p>
+<h1 id="Finding-a-periodic-structure"><a href="#Finding-a-periodic-structure" class="headerlink" title="Finding a periodic structure"></a>Finding a periodic structure</h1><p>We have now explained why there are ten rows and the meaning of the symmetry classes, but the table as a whole still does not have a coherent structure. Is there a way that we can connect systems between different symmetry classes and different dimensions?</p>
+<p>Given a gapped Bloch Hamiltonian $H_d$ in a certain symmetry class and dimension $d$, there is a systematic procedure by which we can increase its dimensionality. This changes its symmetry class, but makes sure that the topological classification is unvaried. This procedure thus allows us to connect different rows of the table.</p>
+<p>The basic idea is to add a new momentum $k_{d+1}$ to the Bloch Hamiltonian in such a way that the gap does not close for any value of $k_{d+1}$ in the Brillouin zone. This means that the new Hamiltonian must have the same value of the topological invariant as the initial one. The tricky (but also beautiful) part is that adding a momentum can change the symmetries of the Hamiltonian, and one has to keep track of that carefully.</p>
+<p>This procedure is slightly different depending on whether the initial $H_d$ has chiral symmetry or not. In one case the procedure removes symmetries, in the other it adds them. Let’s start with the first.</p>
+<h2 id="Removing-symmetries"><a href="#Removing-symmetries" class="headerlink" title="Removing symmetries"></a>Removing symmetries</h2><p>Let’s first suppose that $H_d$ has chiral symmetry $\mathcal{C}$. The Hamiltonian then has $n$ pairs of energy bands symmetric around zero, which we can denote as $\pm \epsilon_{n,d}$, hiding their dependence on the different momenta appearing in $H_d$.</p>
+<p>Then consider the following higher-dimensional Hamiltonian:</p>
+<p>$$<br>H_{d+1} = H_d,\cos k_{d+1} + \mathcal{C} \sin k_{d+1}.<br>$$</p>
+<p>This Hamiltonian has the same number of bands as $H_d$, even though the bands are higher-dimensional. Given its simple form, every band $\epsilon_{n,d+1}^n$ is directly related to a band $\epsilon_{n,d}$ of $H_d$, </p>
+<p>$$<br>\epsilon_{n,d+1} = \pm \sqrt{\epsilon_{n, d}^2,\cos^2 k_{d+1} + \sin^2 k_{d+1}}.<br>$$</p>
+<p>This expression guarantees that the gap of $H_{d+1}$ only closes if that of $H_d$ closes. In other words, whatever value of the topological invariant $H_d$ has, $H_{d+1}$ will have the same value.</p>
+<p>What are the discrete symmetries of $H_{d+1}$? First of all, note that $H_{d+1}$ has no chiral symmetry since the second term by construction commutes with $\mathcal{C}$, while the chiral symmetry would require anti-commutation. So $H_{d+1}$ and $H_d$ belong to a different symmetry classes. Which symmetry class does $H_d$ belong to?</p>
+<p>If $\mathcal{C}$ is the only discrete symmetry of $H_d$, i.e. if $H_d$ belongs to class AIII, then $H_{d+1}$ has no symmetries at all, so it is in class A. We can express this by writing AIII $\to$ A, meaning that the topological classification is the same to the left of the arrow in $d$ dimensions, and to the right of the arrow in $d+1$ dimensions.</p>
+<p>If instead $\mathcal{C}$ is not the only discrete symmetry of $H_d$, then $H_d$ must have both $\mathcal{P}$ and $\mathcal{T}$, because we know that two of the symmetries imply the third. Hence $H_d$ must be in one of the symmetry classes BDI, CI, CII, DIII. Because $H_{d+1}$ has no chiral symmetry, it can only have one remaining symmetry, either $\mathcal{P}$ or $\mathcal{T}$. It is therefore in one of the four classes AI, AII, C, D. With some patience, it is possible to work out exactly the symmetry class of $H_{d+1}$ given that of $H_d$ in all four cases.</p>
+<p>We won’t do that, but state that the result is that by removing chiral symmetry and adding one dimension, one obtains that BDI $\to$ D, DIII $\to$ AII, CII $\to$ C and CI $\to$ AI.</p>
+<h2 id="Adding-symmetries"><a href="#Adding-symmetries" class="headerlink" title="Adding symmetries"></a>Adding symmetries</h2><p>Let’s now start from a Hamiltonian without chiral symmetry. Our procedure this time involves a doubling of the number of bands of $H_d$. That is, we introduce a new set of Pauli matrices $\tau$, not present in $H_d$, and write $H_{d+1}$ as</p>
+<p>$$<br>H_{d+1} = H_d,\cos k_{d+1},\tau_x + \sin k_{d+1},\tau_y.<br>$$</p>
+<p>Note that just like in our previous argument, the topological invariant of $H_{d+1}$ must be the same as that of $H_d$. Also, by construction, $H_{d+1}$ has a chiral symmetry given by $\mathcal{C}=\tau_z$, which anticommutes with all the terms in the Hamiltonian. </p>
+<p>What are the symmetries of $H_{d+1}$ in this case? To begin with, $H_d$ cannot have both anti-unitary symmetries, because then it would have $\mathcal{C}$ as well. It either has none (class A) or just one of them (classes AI, AII, C, or D). We thus have two cases:</p>
+<ul>
+<li>if $H_d$ has no symmetries at all, meaning that it was in class A, then $H_{d+1}$ only has chiral symmetry, meaning that it is in class AIII. So we obtain A $\to$ AIII.</li>
+<li>if $H_d$ has one anti-unitary symmetry, then $H_{d+1}$ must have all three discrete symmetries. Again, we will not work out the details for each case, but one obtains that AI $\to$ BDI, D $\to$ DIII, AII $\to$ CII, and C $\to$ CI.</li>
+</ul>
+<p>Now that we have learned how to extend the topological classification by adding one dimension to the Hamiltonian and changing its symmetry in an appropriate way, nothing forbids us to repeat the procedure, by going two dimensions higher, three dimensions higher, etc…</p>
+<p>So we have made the procedure of finding topological phases systematic.</p>
+<h1 id="The-Bott-clock"><a href="#The-Bott-clock" class="headerlink" title="The Bott clock"></a>The Bott clock</h1><p>If you repeat the procedure many times, you will find that it has a period, i.e. at some point you end up in the same symmetry class you started with.</p>
+<p>This is easy to see for the two complex classes, which are just interchanged:</p>
+<ul>
+<li>A $\to$ AIII $\to$ A.</li>
+</ul>
+<p>But it is also the case for the eight real classes:</p>
+<ul>
+<li>AI $\to$ BDI $\to$ D $\to$ DIII $\to$ AII $\to$ CII $\to$ C $\to$ CI $\to$ AI.</li>
+</ul>
+<p>This property is called <strong>Bott periodicity</strong>, and it can be nicely represented in the following table, similar to a clock:</p>
+<p><img src="/2021/01/07/src/w8_general/classification/bott_clock.svg" alt></p>
+<p>The grey entries in the table are the chiral classes, and the arrows show which classes have the same topological classification when you shift $d\to d+1$. The complex classes are in the centre of the table, and only talk to each other. The eight real classes are disposed around the clock.</p>
+<p>Finally, let’s see what the table looks like when we order the rows according to the Bott clock above:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">5</span>)</span><br><span class="line">n = <span class="number">8</span></span><br><span class="line"></span><br><span class="line">periodic_table, format_string = make_table(n=<span class="number">8</span>, show_symmetries=<span class="literal">True</span>, sort_order=<span class="literal">None</span>)</span><br><span class="line">colors = np.zeros(shape=periodic_table.shape + (<span class="number">3</span>,))</span><br><span class="line">colors[<span class="number">1</span>:, <span class="number">4</span>:] = [<span class="number">0.9</span>, <span class="number">0.9</span>, <span class="number">0.9</span>]</span><br><span class="line">palette = np.linspace(<span class="number">0.6</span>, <span class="number">1.2</span>, n).reshape(<span class="number">1</span>, <span class="number">-1</span>, <span class="number">1</span>) * np.random.rand(<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line">palette = np.minimum(palette, <span class="number">1</span>)</span><br><span class="line">colors[primary_seq(n) + <span class="number">1</span>, np.arange(n) + <span class="number">4</span>] = palette[<span class="number">0</span>]</span><br><span class="line">colors[z_descendant(n) + <span class="number">3</span>, np.arange(n) + <span class="number">4</span>] = palette[<span class="number">1</span>]</span><br><span class="line">colors[z2_descendant(n) + <span class="number">3</span>, np.arange(n) + <span class="number">4</span>] = palette[<span class="number">2</span>]</span><br><span class="line">colors[z2_descendant2(n) + <span class="number">3</span>, np.arange(n) + <span class="number">4</span>] = palette[<span class="number">3</span>]</span><br><span class="line">colors[twoz_descendant(n) + <span class="number">3</span>, np.arange(n) + <span class="number">4</span>] = palette[<span class="number">4</span>]</span><br><span class="line">colordefs = color_table(periodic_table, colors)</span><br><span class="line">rows = [sep.join([c.decode(<span class="string">"utf-8"</span>) <span class="keyword">for</span> c <span class="keyword">in</span> line]) <span class="keyword">for</span> line <span class="keyword">in</span> periodic_table]</span><br><span class="line">rows[<span class="number">1</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">1</span>]</span><br><span class="line">rows[<span class="number">3</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">3</span>]</span><br><span class="line">block = line_end.join(rows)</span><br><span class="line"></span><br><span class="line">displaymd(table_header.format(colordefs=colordefs, fmt=format_string, body=block))</span><br></pre></td></tr></table></figure>
+
+<p>Finally some order appears!</p>
+<p>We have colored the different entries to show how all the topological invariants repeat themselves along the diagonals, as a consequence of the procedure outlined above. The table has overall a period equal to 8, meaning that for instance in $d=8$ the topological classification in all symmetry classes is equal to that in $d=0$, and so on.</p>
+<p>In fact, we know another way to change the dimensionality while preserving the topology. It is to go from a Hamiltonian $H$ in $d$ dimensions to the reflection matrix $r$ in $d-1$ dimensions. Whenever $H$ is gapped, $r$ has no zeroes, so both have the same topology. On the other hand, $r$ is a $d-1$-dimensional object, so in going from $H$ to $r$, we go against the Bott clock.</p>
+<p>For example, this means that in the SSH chain, which is a $d=1$ dimensional system in symmetry class AIII, the scattering invariant is the same as the Hamiltonian invariant in the $d=0$ symmetry class A, i.e. the number of negative eigenvalues. On the other hand, the scattering invariant of the quantum Hall effect, the winding number of $r$, is the same expression as the Hamiltonian topological invariant of the SSH chain.</p>
+<h1 id="Reading-the-table-in-different-ways"><a href="#Reading-the-table-in-different-ways" class="headerlink" title="Reading the table in different ways"></a>Reading the table in different ways</h1><h2 id="Complex-classes-Chern-and-winding-numbers"><a href="#Complex-classes-Chern-and-winding-numbers" class="headerlink" title="Complex classes: Chern and winding numbers"></a>Complex classes: Chern and winding numbers</h2><p>The first thing to observe is that the complex classes only have $\mathbb{Z}$ invariant. We already know what these invariants are in low dimensions: the Chern number, which we encountered in quantum Hall systems (class A, $d=2$), and the winding number of the reflection matrix, which we encountered when we studied reflection from the Thouless pump.</p>
+<p>The higher dimensional invariants are simple generalizations of these two. Their mathematical expression can be found in several papers, for instance <a href="http://arxiv.org/abs/1104.1602" target="_blank" rel="noopener">this one</a>.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="number">8</span></span><br><span class="line"></span><br><span class="line">periodic_table, format_string = make_table(n=n, show_symmetries=<span class="literal">True</span>, sort_order=<span class="literal">None</span>)</span><br><span class="line">colors = np.zeros(shape=periodic_table.shape + (<span class="number">3</span>,))</span><br><span class="line">colors[<span class="number">1</span>:<span class="number">3</span>, <span class="number">4</span>:] = [<span class="number">0.8</span>, <span class="number">0.8</span>, <span class="number">0.8</span>]</span><br><span class="line">colors[<span class="number">1</span>, <span class="number">4</span>:] = [<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">colors[<span class="number">2</span>, <span class="number">4</span>:] = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">colordefs = color_table(periodic_table, colors)</span><br><span class="line">rows = [sep.join([c.decode(<span class="string">"utf-8"</span>) <span class="keyword">for</span> c <span class="keyword">in</span> line]) <span class="keyword">for</span> line <span class="keyword">in</span> periodic_table]</span><br><span class="line">rows[<span class="number">1</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">1</span>]</span><br><span class="line">rows[<span class="number">3</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">3</span>]</span><br><span class="line">block = line_end.join(rows)</span><br><span class="line">displaymd(table_header.format(colordefs=colordefs, fmt=format_string, body=block))</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reading-the-table-by-columns"><a href="#Reading-the-table-by-columns" class="headerlink" title="Reading the table by columns"></a>Reading the table by columns</h2><p>Another useful feature of the table is that in a given column, all $\mathbb{Z}$ or $2\mathbb{Z}$ entries, which are grouped by the color gradients below, have the same topological invariant.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">15</span>)</span><br><span class="line">n = <span class="number">8</span></span><br><span class="line"></span><br><span class="line">periodic_table, format_string = make_table(n=n, show_symmetries=<span class="literal">True</span>, sort_order=<span class="literal">None</span>)</span><br><span class="line">colors = np.zeros(shape=periodic_table.shape + (<span class="number">3</span>,))</span><br><span class="line">colors[<span class="number">1</span>:, <span class="number">4</span>:] = [<span class="number">0.9</span>, <span class="number">0.9</span>, <span class="number">0.9</span>]</span><br><span class="line">palette = np.random.rand(n, <span class="number">3</span>) ** <span class="number">2</span></span><br><span class="line">colors[primary_seq(n) + <span class="number">1</span>, np.arange(n) + <span class="number">4</span>] = <span class="number">0.8</span> * palette</span><br><span class="line">colors[z_descendant(n) + <span class="number">3</span>, np.arange(n) + <span class="number">4</span>] = <span class="number">1</span> - <span class="number">0.6</span> * (<span class="number">1</span> - palette)</span><br><span class="line">colors[twoz_descendant(n) + <span class="number">3</span>, np.arange(n) + <span class="number">4</span>] = <span class="number">1</span> - <span class="number">0.6</span> * (<span class="number">1</span> - palette)</span><br><span class="line">colordefs = color_table(periodic_table, colors)</span><br><span class="line">rows = [sep.join([c.decode(<span class="string">"utf-8"</span>) <span class="keyword">for</span> c <span class="keyword">in</span> line]) <span class="keyword">for</span> line <span class="keyword">in</span> periodic_table]</span><br><span class="line">rows[<span class="number">1</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">1</span>]</span><br><span class="line">rows[<span class="number">3</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">3</span>]</span><br><span class="line">block = line_end.join(rows)</span><br><span class="line"></span><br><span class="line">displaymd(table_header.format(colordefs=colordefs, fmt=format_string, body=block))</span><br></pre></td></tr></table></figure>
+
+<p>We can check this statement for some cases we know. For instance, in $d=0$ the $\mathbb{Z}$ topological invariant is the number of filled energy levels, which applies to quantum dots with broken time-reversal symmetry (class A), spinless time-reversal symmetry (class AI) and spinful time-reversal symmetry (class AII, which has $2\mathbb{Z}$ because of Kramers degeneracy). In $d=2$, the $\mathbb{Z}$ topological invariant is the Chern number, and we saw how it applies to both the Chern insulators in class A and the $p$-wave superconductor in class D.</p>
+<h2 id="Dimensional-reduction"><a href="#Dimensional-reduction" class="headerlink" title="Dimensional reduction"></a>Dimensional reduction</h2><p>An important pattern visible in the table is the descending sequence $\mathbb{Z} ,\to,\mathbb{Z}_2,\to,\mathbb{Z}_2$ that appears in every symmetry class. That is, starting from the $\mathbb{Z}$ invariant, reducing the dimensionaility twice by one we encounter two $\mathbb{Z}_2$ invariants in a row:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">4</span>)</span><br><span class="line">n = <span class="number">8</span></span><br><span class="line"></span><br><span class="line">periodic_table, format_string = make_table(n=<span class="number">8</span>, show_symmetries=<span class="literal">True</span>, sort_order=<span class="literal">None</span>)</span><br><span class="line">colors = np.zeros(shape=periodic_table.shape + (<span class="number">3</span>,))</span><br><span class="line">colors[<span class="number">1</span>:, <span class="number">4</span>:] = [<span class="number">0.9</span>, <span class="number">0.9</span>, <span class="number">0.9</span>]</span><br><span class="line">palette = np.random.rand(n, <span class="number">3</span>)</span><br><span class="line">colors[z_descendant(n) + <span class="number">3</span>, np.arange(n) + <span class="number">4</span>] = <span class="number">0.8</span> * palette</span><br><span class="line">colors[z2_descendant(n - <span class="number">1</span>) + <span class="number">3</span>, np.arange(n - <span class="number">1</span>) + <span class="number">4</span>] = <span class="number">1</span> - <span class="number">0.8</span> * (<span class="number">1</span> - palette[<span class="number">1</span>:])</span><br><span class="line">colors[z2_descendant2(n - <span class="number">2</span>) + <span class="number">3</span>, np.arange(n - <span class="number">2</span>) + <span class="number">4</span>] = <span class="number">1</span> - <span class="number">0.5</span> * (<span class="number">1</span> - palette[<span class="number">2</span>:])</span><br><span class="line">colordefs = color_table(periodic_table, colors)</span><br><span class="line">rows = [sep.join([c.decode(<span class="string">"utf-8"</span>) <span class="keyword">for</span> c <span class="keyword">in</span> line]) <span class="keyword">for</span> line <span class="keyword">in</span> periodic_table]</span><br><span class="line">rows[<span class="number">1</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">1</span>]</span><br><span class="line">rows[<span class="number">3</span>] = <span class="string">r"\hline "</span> + rows[<span class="number">3</span>]</span><br><span class="line">block = line_end.join(rows)</span><br><span class="line"></span><br><span class="line">displaymd(table_header.format(colordefs=colordefs, fmt=format_string, body=block))</span><br></pre></td></tr></table></figure>
+
+<p>Again, this dimensional reduction can best be understood with an example we already know. Consider the symmetry class $D$. In $d=2$ it has a $\mathbb{Z}$ topological phase, the $p$-wave superconductor.</p>
+<p>If you take a finite ribbon of a $p$-wave superconductor, it will have an integer number of edge states, as determined by the Chern number. Let’s now imagine that you take a ribbon and roll it up into a thin, long cylinder, by pasting two of its edges together. The two remaining edges at this point form a circle.</p>
+<p>You can now view this cylinder as a one-dimensional system whose ends are the two rolled-up edges, and ask: how many zero-energy Majorana modes can there be at the ends? We know the answer from last week’s material: the number of zero-modes can be zero or one, depending on whether the boundary conditions are periodic or anti-periodic. The topological invariant is thus reduced to $\mathbb{Z}_2$. This is no surprise, since the system is topologically in the same class as the Kitaev chain.</p>
+<p>We can proceed further with our dimensional reduction. If we take our one dimensional system and make it into a ring, we obtain a zero-dimensional system. Depending on how the two ends are coupled, the two Majorana modes can favour the even or odd fermion parity state, and this quantity cannot change without a Fermi level crossing. This is the $\mathbb{Z}_2$ invariant of zero-dimensional systems in class D.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"What sort of topological invariant do we get if we take a 3D TI, and try to make a 4D system with strong invariant, "</span></span><br><span class="line">    <span class="string">"like we did when making a 3D TI out of QSHE?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"We get another $Z_2$ topological invariant"</span>,</span><br><span class="line">    <span class="string">"A 4D system with the Chern number as invariant."</span>,</span><br><span class="line">    <span class="string">"This construction cannot be repeated anymore."</span>,</span><br><span class="line">    <span class="string">"The topological invariant stays the same."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"A quick check with the table shows that symmetry class AII in 4D has a $Z$ invariant, "</span></span><br><span class="line">    <span class="string">"and it should be the second Chern number."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"nnzPiJ3Q3_8"</span>, src_location=<span class="string">"8.1-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Questions about what you just learned? Ask them below!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Periodic table"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w8_general/classification/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2021/01/07/src/w8_general/invariants/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            src/w8_general/invariants
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/01/07/src/w7_defects/ti_majoranas/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">src/w7_defects/ti_majoranas</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

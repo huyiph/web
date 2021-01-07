@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    src/w1_topointro/1D |  O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="post-src/w1_topointro/1D" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  src/w1_topointro/1D
+</h1>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/01/07/src/w1_topointro/1D/" class="article-date">
+  <time datetime="2021-01-07T09:11:06.811Z" itemprop="datePublished">2021-01-07</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">5.9k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">36 min</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"></span><br><span class="line">%output size=<span class="number">150</span></span><br><span class="line">dims = SimpleNamespace(</span><br><span class="line">    E_t=<span class="string">r"$E/t$"</span>,</span><br><span class="line">    mu_t=<span class="string">r"$\mu/t$"</span>,</span><br><span class="line">    lambda_=<span class="string">r"$\lambda$"</span>,</span><br><span class="line">    x=<span class="string">r"$x$"</span>,</span><br><span class="line">    k=<span class="string">r"$k$"</span>,</span><br><span class="line">    amplitude=<span class="string">r"$|u|^2 + |v|^2$"</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">holoviews.core.dimension.title = <span class="string">""</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kitaev_chain</span><span class="params">(L=None, periodic=False)</span>:</span></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> L <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">-1</span>,)))</span><br><span class="line">        L = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># transformation to antisymmetric basis</span></span><br><span class="line">    U = np.array([[<span class="number">1.0</span>, <span class="number">1.0</span>], [<span class="number">1.0j</span>, <span class="number">-1.0j</span>]]) / np.sqrt(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(onsite, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.mu * U @ pauli.sz @ U.T.conj()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(L):</span><br><span class="line">        syst[lat(x)] = onsite</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hop</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> U @ (-p.t * pauli.sz - <span class="number">1j</span> * p.delta * pauli.sy) @ U.T.conj()</span><br><span class="line"></span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hop</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> periodic:</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">last_hop</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">            <span class="keyword">return</span> hop(site1, site2, p) * (<span class="number">1</span> - <span class="number">2</span> * p.lambda_)</span><br><span class="line"></span><br><span class="line">        syst[lat(<span class="number">0</span>), lat(L - <span class="number">1</span>)] = last_hop</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bandstructure</span><span class="params">(mu, delta=<span class="number">1</span>, t=<span class="number">1</span>, Dirac_cone=<span class="string">"Hide"</span>, show_pf=False)</span>:</span></span><br><span class="line">    syst = kitaev_chain(<span class="literal">None</span>)</span><br><span class="line">    p = SimpleNamespace(t=t, delta=delta, mu=mu)</span><br><span class="line">    plot = holoviews.Overlay([spectrum(syst, p, ydim=<span class="string">"$E/T$"</span>, xdim=<span class="string">"$k$"</span>)][<span class="number">-4</span>:<span class="number">4</span>])</span><br><span class="line">    h_1 = h_k(syst, p, <span class="number">0</span>)</span><br><span class="line">    h_2 = h_k(syst, p, np.pi)</span><br><span class="line">    pfaffians = [find_pfaffian(h_1), find_pfaffian(h_2)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> show_pf:</span><br><span class="line">        signs = [(<span class="string">"&gt;"</span> <span class="keyword">if</span> pf &gt; <span class="number">0</span> <span class="keyword">else</span> <span class="string">"&lt;"</span>) <span class="keyword">for</span> pf <span class="keyword">in</span> pfaffians]</span><br><span class="line">        title = (</span><br><span class="line">            <span class="string">"$\mu = &#123;mu&#125; t$, Pf$(iH_&#123;&#123;k=0&#125;&#125;) &#123;sign1&#125; 0$, Pf$(iH_&#123;&#123;k=\pi&#125;&#125;) &#123;sign2&#125; 0$"</span></span><br><span class="line">        )</span><br><span class="line">        title = title.format(mu=mu, sign1=signs[<span class="number">0</span>], sign2=signs[<span class="number">1</span>])</span><br><span class="line">        plot *= holoviews.VLine(<span class="number">0</span>) * holoviews.VLine(-np.pi)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> pfaffians[<span class="number">0</span>] * pfaffians[<span class="number">1</span>] &lt; <span class="number">0</span>:</span><br><span class="line">            title = <span class="string">"$\mu = &#123;mu&#125; t$, topological "</span>.format(mu=mu)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            title = <span class="string">"$\mu = &#123;mu&#125; t$, trivial "</span>.format(mu=mu)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> Dirac_cone == <span class="string">"Show"</span>:</span><br><span class="line">        ks = np.linspace(-np.pi, np.pi)</span><br><span class="line">        ec = np.sqrt((mu + <span class="number">2</span> * t) ** <span class="number">2</span> + <span class="number">4.0</span> * (delta * ks) ** <span class="number">2</span>)</span><br><span class="line">        plot *= holoviews.Path((ks, ec), kdims=[dims.k, dims.E_t]).opts(</span><br><span class="line">            style=&#123;<span class="string">"linestyle"</span>: <span class="string">"--"</span>, <span class="string">"color"</span>: <span class="string">"r"</span>&#125;</span><br><span class="line">        )</span><br><span class="line">        plot *= holoviews.Path((ks, -ec), kdims=[dims.k, dims.E_t]).opts(</span><br><span class="line">            style=&#123;<span class="string">"linestyle"</span>: <span class="string">"--"</span>, <span class="string">"color"</span>: <span class="string">"r"</span>&#125;</span><br><span class="line">        )</span><br><span class="line">    <span class="keyword">return</span> plot.relabel(title)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_pfaffian</span><span class="params">(H)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.sign(np.real(pf.pfaffian(<span class="number">1j</span> * H)))</span><br></pre></td></tr></table></figure>
+
+<h1 id="Kitaev-chain-and-bulk-edge-correspondence"><a href="#Kitaev-chain-and-bulk-edge-correspondence" class="headerlink" title="Kitaev chain and bulk-edge correspondence"></a>Kitaev chain and bulk-edge correspondence</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"U84MzZm9Gbo"</span>, src_location=<span class="string">"1.2-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Unpaired-Majorana-modes-in-one-dimensional-systems"><a href="#Unpaired-Majorana-modes-in-one-dimensional-systems" class="headerlink" title="Unpaired Majorana modes in one-dimensional systems"></a>Unpaired Majorana modes in one-dimensional systems</h1><h2 id="Fermion-operators-and-Majorana-operators"><a href="#Fermion-operators-and-Majorana-operators" class="headerlink" title="Fermion operators and Majorana operators"></a>Fermion operators and Majorana operators</h2><p>Let’s start from the creation and annihilation operators $c^\dagger$ and $c$ of a fermionic mode. These operators satisfy the anticommutation relation $c^\dagger c + cc^\dagger = 1$ and, furthermore, square to zero, $c^2=0$ and $(c^\dagger)^2=0$. They connect two states $\left|0\right\rangle$ and $\left|1\right\rangle$ which correspond to the ‘vacuum’ state with no particle and the ‘excited’ state with one particle, according to the following rules $c \left|0\right\rangle = 0$, $c^\dagger\left|0\right\rangle=\left|1\right\rangle$ and $c^\dagger \left|1\right\rangle = 0$.</p>
+<p>When you have a pair of $c$ and $c^\dagger$ operators, you can write them down in the following way</p>
+<p>$$ c^\dagger = \tfrac{1}{2}(\gamma_1+i\gamma_2),;; c = \tfrac{1}{2}(\gamma_1-i\gamma_2).$$</p>
+<p>The operators $\gamma_1$ and $\gamma_2$ are known as Majorana operators. By inverting the transformation above, you can see that $\gamma_1=\gamma_1^\dagger$ and $\gamma_2=\gamma_2^\dagger$. Because of this property, we cannot think of a single Majorana mode as being ‘empty’ or ‘filled’, as we can do for a normal fermionic mode. This makes Majorana modes special.</p>
+<p>You can also check that to maintain all the properties of $c$ and $c^\dagger$, the operators $\gamma_1$ and $\gamma_2$ must satisfy the following relations:</p>
+<p>$$\gamma_1\gamma_2 + \gamma_2\gamma_1 = 0;,;\gamma_1^2=1;,;\gamma_2^2=1;.$$</p>
+<p>You can see that Majorana modes are similar to normal fermions in the sense that they have operators which all anticommute with each other. Using Majorana modes instead of normal fermionic modes is very similar to writing down two real numbers in place of a complex number. Indeed, every fermion operator can always be expressed in terms of a pair of Majorana operators. This also means that Majorana modes always come in even numbers.</p>
+<p>The two Majorana operators $\gamma_1, \gamma_2$ still act on the same states $\left|0\right\rangle$ and $\left|1\right\rangle$.<br>If these two states have an energy difference $\epsilon$, this corresponds to a Hamiltonian $H=\epsilon c^\dagger c$.<br>We can also express this Hamiltonian in terms of Majoranas as $H=\tfrac{1}{2},\epsilon,(1 - i\gamma_1\gamma_2)$.</p>
+<p>But is it possible to have a single isolated Majorana mode, one that is not close to its partner?<br>The naive answer is ‘no’: condensed matter systems are made out of electrons, and these always correspond to pairs of Majoranas.<br>However, it turns out that by engineering the Hamiltonian in a special way it actually is possible to separate two Majoranas.</p>
+<h2 id="Unpaired-Majorana-modes-in-a-model-of-dominoes"><a href="#Unpaired-Majorana-modes-in-a-model-of-dominoes" class="headerlink" title="Unpaired Majorana modes in a model of dominoes"></a>Unpaired Majorana modes in a model of dominoes</h2><p>Let’s see how creating isolated Majoranas can be done. Let us consider a chain of $N$ sites, where each site can host a fermion with creation operator $c^\dagger_n$. Equivalently, each site hosts two Majorana modes $\gamma_{2n-1}$ and $\gamma_{2n}$. This situation is illustrated below for $N=4$, where each site is represented by a domino tile.</p>
+<p><img src="/2021/01/07/src/w1_topointro/1D/majorana_dominoes.svg" alt></p>
+<p>What happens if we pair the Majoranas? This means that the energy cost for each fermion to be occupied is $\mu$, and the Hamiltonian becomes</p>
+<p>$$H=(i/2),\mu, \sum_{n=1}^{N} \gamma_{2n-1}\gamma_{2n}.$$</p>
+<p>This is how the pairing looks:</p>
+<p><img src="/2021/01/07/src/w1_topointro/1D/trivial_dominoes.svg" alt></p>
+<p>All the excitations in this system have an energy $\pm|\mu|/2$, and the chain has a gapped bulk and no zero energy edge states.</p>
+<p>Of course this didn’t help us to achieve our aim, so let’s pair the Majoranas differently.<br>We want only one Majorana to remain at an edge, so let’s pair up the Majoranas from <em>adjacent</em> sites, leaving the first one and the last one without a neighboring partner:</p>
+<p><img src="/2021/01/07/src/w1_topointro/1D/topological_dominoes.svg" alt></p>
+<p>To every pair formed in this way, we assign an energy difference $2t$ between the empty and filled state, hence arriving at the Hamiltonian</p>
+<p>$$H=it \sum_{n=1}^{N-1} \gamma_{2n}\gamma_{2n+1}.$$</p>
+<p>You can see that the two end Majorana modes $\gamma_1$ and $\gamma_{2N}$ do not appear in $H$ at all.<br>Hence our chain has two zero-energy states, localized at its ends.<br>All the states which are not at the ends of the chain have an energy of $\pm |t|$, independently on the length of the chain. Hence, we have a one-dimensional system with a gapped bulk and zero energy states at the edges.</p>
+<h2 id="The-Kitaev-chain-model"><a href="#The-Kitaev-chain-model" class="headerlink" title="The Kitaev chain model"></a>The Kitaev chain model</h2><p>Let us now try to write the Hamiltonian $H$, which we have so far written in terms of Majoranas, in terms of regular fermions by substituting $\gamma_{2n-1}=(c_n^\dagger+c_n)$ and $\gamma_{2n}=-i(c_n^\dagger-c_n)$. We find that both pairings sketched above are extreme limits of one tight-binding Hamiltonian for a one-dimensional superconducting wire:</p>
+<p>$$H=-\mu\sum_n c_n^\dagger c_n-t\sum_n (c_{n+1}^\dagger c_n+\textrm{h.c.}) + \Delta\sum_n (c_n c_{n+1}+\textrm{h.c.}),.$$</p>
+<p>It has three real parameters: the onsite energy $\mu$, the hopping $t$ between different sites, and the superconducting pairing $\Delta$. Note that the $\Delta$ terms create or annihilate pairs of particles at neighboring sites.</p>
+<p>Starting from this Hamiltonian, the unpaired Majorana regime is the special point $\Delta=t$ and $\mu=0$, while the completely trivial regime of isolated fermions is $\Delta=t=0$ and $\mu\neq 0$.</p>
+<p>As we learned just before, it is useful to write down the above superconducting Hamiltonian in the Bogoliubov-de Gennes formalism $H = \tfrac{1}{2} C^\dagger H_\textrm{BdG} C$, with $C$ a column vector containing all creation and annihilation operators, $C=(c_1, \dots, c_N, c_1^\dagger, \dots, c^\dagger_N)^T$. The $2N\times 2N$ matrix $H_\textrm{BdG}$ can be written in a compact way by using Pauli matrices $\tau$ in particle and hole space, and denoting with $\left|n\right\rangle$ a column basis vector $(0,\dots,1,0,\dots)^T$ corresponding to the $n$-th site of the chain. In this way, we have for instance that $C^\dagger,\tau_z,\left|n\right\rangle\left\langle n\right|,C = 2c_n^\dagger c_n-1$. The Bogoliubov-de Gennes Hamiltonian is then given by</p>
+<p>$$H_{BdG}=-\sum_n \mu \tau_z\left|n\right\rangle\left\langle n\right|-\sum_n \left[(t\tau_z+i\Delta\tau_y),\left|n\right\rangle\left\langle n+1 \right| + \textrm{h.c.}\right].$$</p>
+<p>The BdG Hamiltonian acts on a set of basis states $\left|n\right\rangle\left|\tau\right\rangle$, with $\tau=\pm 1$ corresponding to electron and hole states respectively. It has particle-hole symmetry, $\mathcal{P}H_\textrm{BdG}\mathcal{P}^{-1}=-H_\textrm{BdG}$ with $\mathcal{P}=\tau_x\mathcal{K}$.</p>
+<h2 id="Topological-protection-of-edge-Majorana-modes"><a href="#Topological-protection-of-edge-Majorana-modes" class="headerlink" title="Topological protection of edge Majorana modes"></a>Topological protection of edge Majorana modes</h2><p>The fact that the Kitaev model can have unpaired Majorana zero modes is certainly interesting. At this point you might however object:</p>
+<p>“Unpaired Majoranas appear because you chose one particular, and perhaps even unreachable, set of parameters! Clearly by setting $\mu=0$ you have cut the first and last Majorana mode from the rest of the chain. I bet that if you change the value of $\mu$ only slightly from zero, the zero modes will be coupled to the rest of the chain and quickly disappear. So these Majorana modes may just be an artefact appearing in this highly tuned model!”</p>
+<p>Well, let’s test if this objection is true. Let’s start from the situation with unpaired Majorana modes ($\Delta=t, \mu=0$) and then increase $\mu$. Then let’s plot the energy spectrum of a chain with $N=25$ sites as a function of $\mu$, and also keep track how do the two lowest energy states of our system look like, when we change $\mu$ <strong>(move the slider)</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_wf</span><span class="params">(syst, wf1, wf2, lstyle=<span class="string">"-"</span>, lcolor=<span class="string">"b"</span>)</span>:</span></span><br><span class="line">    xs = np.array([i.pos[<span class="number">0</span>] <span class="keyword">for</span> i <span class="keyword">in</span> syst.sites])</span><br><span class="line">    indx = np.argsort(xs)</span><br><span class="line">    wf_sq = (</span><br><span class="line">        np.linalg.norm(wf1.reshape(<span class="number">-1</span>, <span class="number">2</span>), axis=<span class="number">1</span>) ** <span class="number">2</span></span><br><span class="line">        + np.linalg.norm(wf2.reshape(<span class="number">-1</span>, <span class="number">2</span>), axis=<span class="number">1</span>) ** <span class="number">2</span></span><br><span class="line">    )</span><br><span class="line">    plot = holoviews.Path((xs[indx], wf_sq[indx]), kdims=[dims.x, dims.amplitude])</span><br><span class="line">    <span class="keyword">return</span> plot.opts(</span><br><span class="line">        style=&#123;<span class="string">"linestyle"</span>: lstyle, <span class="string">"color"</span>: lcolor&#125;,</span><br><span class="line">        plot=&#123;<span class="string">"yticks"</span>: <span class="number">0</span>, <span class="string">"xticks"</span>: list(range(<span class="number">0</span>, len(xs), <span class="number">10</span>))&#125;,</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_pwave</span><span class="params">(L, t, delta, mu)</span>:</span></span><br><span class="line">    <span class="comment"># At mu=0 the first exited state is not well defined due to the massive degeneracy.</span></span><br><span class="line">    <span class="comment"># That is why we add a small offset to mu.</span></span><br><span class="line">    syst = kitaev_chain(L).finalized()</span><br><span class="line">    p = SimpleNamespace(t=t, delta=delta, mu=mu + <span class="number">1e-4</span>)</span><br><span class="line">    ham = syst.hamiltonian_submatrix(params=dict(p=p))</span><br><span class="line">    ev, evec = np.linalg.eigh(ham)</span><br><span class="line">    <span class="keyword">return</span> plot_wf(syst, evec[:, L], evec[:, L - <span class="number">1</span>]) * plot_wf(</span><br><span class="line">        syst, evec[:, L + <span class="number">1</span>], evec[:, L - <span class="number">2</span>], lstyle=<span class="string">"--"</span>, lcolor=<span class="string">"r"</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">syst = kitaev_chain(L=<span class="number">25</span>)</span><br><span class="line">mus = np.arange(<span class="number">0</span>, <span class="number">4</span>, <span class="number">0.2</span>)</span><br><span class="line">p = SimpleNamespace(t=<span class="number">1</span>, delta=<span class="number">1</span>, mu=mus)</span><br><span class="line"></span><br><span class="line">(</span><br><span class="line">    spectrum(</span><br><span class="line">        syst,</span><br><span class="line">        p,</span><br><span class="line">        xticks=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">        yticks=range(<span class="number">-3</span>, <span class="number">4</span>),</span><br><span class="line">        xdim=dims.mu_t,</span><br><span class="line">        ydim=dims.E_t,</span><br><span class="line">        ylims=(<span class="number">-3</span>, <span class="number">3</span>),</span><br><span class="line">    )</span><br><span class="line">    * holoviews.HoloMap(&#123;mu: holoviews.VLine(mu) <span class="keyword">for</span> mu <span class="keyword">in</span> mus&#125;, kdims=[dims.mu_t])</span><br><span class="line">    + holoviews.HoloMap(</span><br><span class="line">        &#123;mu: plot_pwave(<span class="number">25</span>, <span class="number">1.0</span>, <span class="number">1.0</span>, mu) <span class="keyword">for</span> mu <span class="keyword">in</span> mus&#125;, kdims=[dims.mu_t]</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>The left panel shows the spectrum, where we see two states at zero energy that split. On the right panel the blue line is the wave function of the state corresponding to the pair of Majorana modes, while the red dashed line is the wave function of the first excited state.</p>
+<p>As you can see, the zero energy eigenvalues corresponding to the two unpaired Majorana zero modes persist for a long time, and they only split in energy when $\mu \simeq 2t$. Another thing that we observe is that the wave function of the Majoranas stays zero in the middle of our wire.</p>
+<p>As we increase $\mu$ (try it), the wave function of the Majoranas becomes less localized near the edges of the wire, but the coupling between two ends only appears later.</p>
+<p>You would observe a similar behavior if you varied $\mu$ in the negative direction starting from $\mu=0$. The Majoranas persist until $\mu\simeq-2t$, where the bulk gap closes.</p>
+<p>In fact, the Majoranas only split when the higher-energy states in the bulk, originally separated by an energy gap of $2 t$, come very close to zero energy. So our investigation shows that the Majorana modes are protected <strong>as long as the bulk energy gap is finite</strong>.</p>
+<p>How can we understand this? Recall that we are dealing with a particle-hole symmetric Hamiltonian. Hence, the spectrum has to be symmetric around zero energy. When $\mu=0$, we have two zero energy levels, corresponding to the Majorana modes which are localized far away from each other and separated by a gapped medium. Trying to move these levels from zero energy individually is impossible, as it would violate particle-hole symmetry:</p>
+<p><img src="/2021/01/07/src/w1_topointro/1D/level_deformation_fig.svg" alt></p>
+<p>The only possibility to move the energy levels from zero is to couple the two unpaired Majorana modes to each other. However, because of the spatial separation between Majoranas and of the presence of an energy gap, this coupling is impossible. The only way to split the Majorana modes in energy is to first close the bulk energy gap, and that is exactly what happens at large values of $\mu$ (to be precise, it happens at $\mu=2t$).</p>
+<p>So we have just learned the following:</p>
+<blockquote>
+<p>Isolated zero end-modes at each end in the Kitaev chain are protected by <strong>symmetry</strong> between positive and negative energy, and by the <strong>absence of zero-energy excitations in the bulk of the wire</strong>, but not by fine-tuning of the chain parameters.</p>
+</blockquote>
+<p>As you see, our conclusion sounds a lot like what we learned about topology just before. We have come to these conclusions by studying a Kitaev chain on an open geometry with boundaries, and by focusing on the presence or absence of edge states localized at the boundaries of the chain. In the rest of the unit we will see that the presence or absence of edge states can be deduced by studying the bulk alone. In order to do this, we will now study an infinite Kitaev chain without boundaries.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"But wait! What happens if we remove the last Majorana site of a Kitaev chain"</span></span><br><span class="line">    <span class="string">" in the topological phase?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"We get a chain with a single Majorana mode."</span>,</span><br><span class="line">    <span class="string">"We cannot remove a single Majorana site because electrons (pairs of Majoranas) "</span></span><br><span class="line">    <span class="string">"are the only physical degrees of freedom."</span>,</span><br><span class="line">    <span class="string">"The Hamiltonian becomes topologically trivial."</span>,</span><br><span class="line">    <span class="string">"Removing a single Majorana is not allowed by particle-hole symmetry"</span>,</span><br><span class="line">]</span><br><span class="line">explanation = <span class="string">"Indeed, as we explained, removing a single Majorana is like removing a single pole of a magnet. So not possible."</span></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Topological-phases-from-the-bulk-spectrum"><a href="#Topological-phases-from-the-bulk-spectrum" class="headerlink" title="Topological phases from the bulk spectrum"></a>Topological phases from the bulk spectrum</h1><h2 id="Going-to-momentum-space"><a href="#Going-to-momentum-space" class="headerlink" title="Going to momentum space"></a>Going to momentum space</h2><p>The Majoranas are edge excitations that arise from the bulk-edge correspondence. You might wonder if there is a way to deduce the existence of Majorana modes by looking at the bulk? To answer this, eliminate the boundaries from the study of the Kitaev chain. You can imagine that the last site of the chain is reconnected to the first, so that the chain is closed in a ring (a “Kitaev ring”). In the absence of boundaries, the Bogoliubov-de Gennes Hamiltonian has a translational symmetry $\left|n\right\rangle,\to,\left|n+1\right\rangle$, since all parameters $t, \Delta$ and $\mu$ do not depend on the chain site $n$. In the presence of translational symmetries, it is always convenient to use <a href="http://en.wikipedia.org/wiki/Bloch_wave#Preliminaries:_Crystal_symmetries.2C_lattice.2C_and_reciprocal_lattice" target="_blank" rel="noopener">Bloch’s theorem</a> and write down the Hamiltonian in momentum space rather than in real space. In our case, a state with momentum $k$ is given by</p>
+<p>$$ \left|k\right\rangle =(N)^{-1/2} \sum_{n=1}^{N} e^{-ikn} \left|n\right\rangle.$$</p>
+<p>We apply periodic boundary conditions, that is $\left\langle k | n=0 \right\rangle=\left\langle k | n=N \right\rangle$. The momentum $k$ is then a conserved quantum number with allowed values $2\pi p /N$ where $p=0, 1, 2, \dots, N-1$. Values of $k$ which differ by $2\pi$ are equivalent. One can also imagine that for very large $N$, $k$ is a continuous periodic variable with values in the interval $[-\pi,\pi]$, the <strong>Brillouin zone</strong>. Because $k$ is a good quantum number, the Bogoliubov-de Gennes Hamiltonian in momentum space can be reduced to a $2\times 2$ matrix:</p>
+<p>$$ H(k) \equiv \left\langle k\right| H_\textrm{BdG} \left| k \right\rangle = (-2t\cos{k}-\mu),\tau_z + 2\Delta \sin{k},,\tau_y.$$</p>
+<p>The full Bogoliubov-de Gennes Hamiltonian is obtained by summing all these $2\times 2$ blocks:</p>
+<p>$$ H_\textrm{BdG} = \sum_k H(k) \left| k \right\rangle\left\langle k \right|.$$</p>
+<p>In the limit of an infinite chain the sum becomes an integral over the Brillouin zone.</p>
+<h2 id="Particle-hole-symmetry-in-momentum-space"><a href="#Particle-hole-symmetry-in-momentum-space" class="headerlink" title="Particle-hole symmetry in momentum space"></a>Particle-hole symmetry in momentum space</h2><p>Going to momentum space does not affect the particle-hole symmetry of the Bogoliubov-de Gennes Hamiltonian. However, one must always be careful in dealing with anti-unitary operators when making a basis transformation. The reason is that the action of the complex conjugation operator might depend on the basis. In our case, we have</p>
+<p>$$\mathcal{P}\left|k\right\rangle!\left|\tau\right\rangle =  \left(\sum_n,e^{-ikn}\right)^<em>,\left|n\right\rangle,\tau_x\left|\tau\right\rangle^</em>=\left|-k\right\rangle,\tau_x\left|\tau\right\rangle^*.$$</p>
+<p>Note that the particle-hole symmetry operator changes $k$ to $-k$. Therefore, the action of $\mathcal{P}$ on the Bogoliubov-de Gennes Hamiltonian written in momentum space is the following:</p>
+<p>$$\mathcal{P}H_\textrm{BdG}\mathcal{P}^{-1} = \sum_k \tau_xH^<em>(k)\tau_x \left| -k \right\rangle\left\langle -k \right|=\sum_k \tau_xH^</em>(-k)\tau_x \left| k \right\rangle\left\langle k \right|,.$$</p>
+<p>In the last equality, we have used the fact that the allowed values of $k$ always come in $(-k, k)$ pairs, plus the two symmetric points $k=0$ and $k=\pi$. Therefore, particle-hole symmetry $\mathcal{P}H_\textrm{BdG}\mathcal{P}^{-1}= -H_\textrm{BdG}$ implies that</p>
+<p>$$H(k)=-\tau_xH^*(-k)\tau_x.$$</p>
+<p>You can verify that it is indeed the case:</p>
+<p>$$\tau_x H^*(-k) \tau_x = (2t\cos{k}+\mu),\tau_z - 2\Delta \sin{k},,\tau_y.$$</p>
+<p>Given a solution with energy $E$ and momentum $k$, particle-hole symmetry dictates in general the presence of a solution with energy $-E$ and momentum $-k$.</p>
+<h2 id="Band-structure"><a href="#Band-structure" class="headerlink" title="Band structure"></a>Band structure</h2><p>At this point, we only need to diagonalize this $2\times 2$ matrix to obtain the <em>band structure</em> of the Kitaev chain model, that is the energy levels $E(k)$. This can be done very easily, and results in two energy bands, one with positive energy and one with negative energy:</p>
+<p>$$ E(k) = \pm\sqrt{(2t\cos{k}+\mu)^2 + 4\Delta^2\sin^2{k}}. $$</p>
+<p>Let’s see what this band structure looks like (<strong>once again move the slider</strong> to change $\mu$):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mus = np.arange(<span class="number">-3</span>, <span class="number">3</span>, <span class="number">0.25</span>)</span><br><span class="line"></span><br><span class="line">plots = &#123;</span><br><span class="line">    (mu, Dirac_cone): bandstructure(mu, Dirac_cone=Dirac_cone)</span><br><span class="line">    <span class="keyword">for</span> mu <span class="keyword">in</span> mus</span><br><span class="line">    <span class="keyword">for</span> Dirac_cone <span class="keyword">in</span> [<span class="string">"Show"</span>, <span class="string">"Hide"</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(plots, kdims=[dims.mu_t, <span class="string">"Dirac cone"</span>])</span><br></pre></td></tr></table></figure>
+
+<p>You can see that the energy spectrum is gapped at all $k$ for $\mu=0$. This is natural: Since our chain does not have boundaries anymore, the energy spectrum does not contain the zero energy Majorana modes which we found in the previous subsection at $\mu=0$. However, you can see very clearly the bulk gap closing which occurs at the points $\mu=2t$ and $\mu=-2t$. Indeed, for these values of $\mu$ the two bands at negative and positive energy touch at $E=0$, for $k=\pi$ and $k=0$ respectively.</p>
+<p>At first sight, the band structure looks quite similar on both sides of the bulk gap closings. Just from the above plot, it is not clear that the bulk gap closings separate two distinct phases of the model. Nevertheless, we will see that it is possible to rigorously come to this conclusion by studying the properties of $H(k)$ in more detail. But in the meantime, we will start by understanding better what happens close to the transition, by writing down a simple effective model from which we will be able to deduce a lot of information.</p>
+<h2 id="Study-of-the-bulk-transition-with-an-effective-Dirac-model"><a href="#Study-of-the-bulk-transition-with-an-effective-Dirac-model" class="headerlink" title="Study of the bulk transition with an effective Dirac model"></a>Study of the bulk transition with an effective Dirac model</h2><p>Let’s look at the gapless points more in detail. We focus on the gap closing at $\mu=-2t$, which happens at $k=0$. Close to this point where the two bands touch, we can make a linear expansion of the Hamiltonian $H(k)$,</p>
+<p>$$H(k) \simeq m \tau_z + 2\Delta,k,\tau_y,,$$</p>
+<p>with $m=-\mu-2t$. We can see that $H(k)$ becomes a <strong>Dirac Hamiltonian</strong> - note that condensed matter physicists use this term quite loosely to refer to any Hamiltonian which is linear in the momentum operator. You can easily check that this Hamiltonian gives an energy spectrum $E(k) = \pm\sqrt{m^2 + 4\Delta^2k^2}$, and by returning to the plot above you can indeed verify that this is a very good approximation of the exact band structure around $\mu=-2t$.</p>
+<p>The ‘’mass’’ $m$ appearing in this Dirac Hamiltonian is a very important parameter to describe what is happening. Its magnitude is equal to the energy gap $\left|\mu+2t\right|$ in the band structure close to the gap closing. Its sign reminds us of the two original phases which we encountered in the previous part of the lecture:</p>
+<ul>
+<li>$m&lt;0$ for $\mu&gt;-2t$, which corresponds to the <strong>topological</strong> phase, the one with Majorana modes in the open chain.</li>
+<li>$m&gt;0$ for $\mu&lt;-2t$, which corresponds to the <strong>trivial</strong> phase, the one without Majorana modes in the open chain.</li>
+</ul>
+<p>Previously, we had identified the point $\mu=-2t$ as a phase transition between two phases with or without zero energy edge modes. By looking at the bulk Hamiltonian, the same point $\mu=-2t$ appears as a point where the bulk gap closes and <em>changes sign</em>.</p>
+<p>When $m=0$, the Hamiltonian has two eigenstates with energy $E=\pm 2\Delta k$. These states are the eigenstates of $\tau_y$, hence they are equal weight superpositions of electron and holes. They are in fact Majorana modes, that are left-moving on the branch $E = -2\Delta k$ and right-moving on $E = 2\Delta k$. Now they are free to propagate in the chain since there is no bulk gap anymore. In our simple model, the speed of these modes is given by $v=2\Delta$.</p>
+<h2 id="Majorana-modes-appearing-at-a-domain-wall-between-different-phases"><a href="#Majorana-modes-appearing-at-a-domain-wall-between-different-phases" class="headerlink" title="Majorana modes appearing at a domain wall between different phases"></a>Majorana modes appearing at a domain wall between different phases</h2><p>Let us consider the following question: What happens if the mass parameter $m(x)$ varies continuously <em>in space</em>, and changes sign at a certain point?</p>
+<p>To answer the question, let’s write down the Dirac Hamiltonian above in real space. Then we have</p>
+<p>$$H = -v,\tau_y,i\partial_x + m(x), \tau_z.$$</p>
+<p>As anticipated, the mass is now a function of position, $m(x)$, with the property that $m(x)\to \pm m$ for $x\to\pm\infty$ and $m(x=0)=0$. The point $x=0$ is a <em>domain wall</em>, the border between two regions of space with opposite sign of the mass.</p>
+<p>We already know that when $m=0$, the Hamiltonian above has a zero energy Majorana mode as a solution. Let us look at it in more detail. We need to solve the equation $H\Psi=0$, which can be rewritten as</p>
+<p>$$\partial_x\Psi(x) = (1/v),m(x),\tau_x,\Psi(x).$$</p>
+<p>Only a single Pauli matrix $\tau_x$ appears in this equation, which is therefore quite easy to solve. The solutions have the form</p>
+<p>$$\Psi(x) = \exp,\left(\tau_x\int_0^x \frac{m(x’)}{v}, dx’\right) \Psi(0).$$</p>
+<p>Two linearly independent solutions are given by the eigenstates of $\tau_x$:</p>
+<p>$$\Psi(x) = \exp,\left(\pm\int_0^x \frac{m(x’)}{v}, dx’\right) \begin{pmatrix} 1 \ \pm 1 \end{pmatrix},.$$</p>
+<p>Only one of the two is normalizable, thanks to the fact that $m(x)$ changes sign at $x=0$. In this way we obtain a wave function localized at $x=0$, with two exponential tails on the sides. This solution is our Majorana mode which, in this case, is a bound state localized at the domain wall. Note that no zero-energy solution would exist if $m(x)$ did not change sign. In this case $\Psi(x)$ would not be normalizable at either side of the domain wall.</p>
+<p>Physically, we are considering a situation where our system is in the topological phase for $x&lt;0$ and in the trivial phase for $x&gt;0$. Therefore we have just demonstrated that at the interface between these two regions <em>there must be</em> a zero energy mode.</p>
+<p><img src="/2021/01/07/src/w1_topointro/1D/domain_wall_zero_mode.svg" alt></p>
+<p>To clarify the situation, we can represent the same domain wall with our domino tiles. When you join together two chains of dominoes paired up in a different way, one single unpaired Majorana <em>must be</em> left in the middle:</p>
+<p><img src="/2021/01/07/src/w1_topointro/1D/domain_wall_with_dominoes.svg" alt></p>
+<h1 id="Bulk-topological-invariant-and-the-bulk-edge-correspondence"><a href="#Bulk-topological-invariant-and-the-bulk-edge-correspondence" class="headerlink" title="Bulk topological invariant and the bulk-edge correspondence"></a>Bulk topological invariant and the bulk-edge correspondence</h1><h2 id="Bulk-topological-invariant"><a href="#Bulk-topological-invariant" class="headerlink" title="Bulk topological invariant"></a>Bulk topological invariant</h2><p>Now that we understand the topological transition in more detail, let’s go back to the bulk Hamiltonian $H(k)$ of the Kitaev ring and try to generalize our Dirac-equation based criterion for Majorana modes. In our effective Dirac model it was easy to identify a quantity, the mass parameter $m$, whose sign determined whether the system could support unpaired Majorana modes at its ends. Let’s now try to turn this effective description into a <strong>bulk topological invariant</strong> which can be computed directly from $H(k)$. We will not attempt to give a rigorous derivation of the bulk invariant - a task which is often difficult even for advanced researchers in the field - but rather to arrive at it in a heuristic manner.</p>
+<p>We can start with some important clues. On the one hand, we are studying a Bogoliubov-de Gennes Hamiltonian, and we have already learned that quantum dots with particle-hole symmetry are characterized by a topological invariant, the sign of the Pfaffian, which changes sign at every gap closing. On the other hand, we have just seen that the gap closing in the Kitaev chain model is accompanied by a change of sign of $m$. This suggests to try to link the quantity $m$ to a Pfaffian. How to do so?</p>
+<p>In fact, you can think of the full $H_\textrm{BdG}$ as a very large matrix with particle-hole symmetry. It can be put in antisymmetric form and we can compute its Pfaffian. This Pfaffian may change only when an eigenvalue of $H(k)$ passes through zero. Because of particle-hole symmetry, for every eigenvalue $E(k)$ we have one at $-E(-k)$. So if $E(k)$ passes through zero, also its partner does. Furthermore, the spectrum has to be periodic in the Brillouin zone, which means that gap closings at finite momentum always come in pairs, and cannot change the Pfaffian. There are only two points which make exception: $k=0$ and $k=\pi$, which are mapped onto themselves by particle-hole symmetry. In fact, for these points we have:</p>
+<p>$$ \tau_x H^<em>(0)\tau_x=-H(0),$$<br>$$ \tau_x H^</em>(\pi)\tau_x=-H(\pi).$$</p>
+<p>So $H(0)$ and $H(\pi)$ can always be put individually in antisymmetric form, and we can always compute their Pfaffian. Also, note that these are precisely the points in momentum space where the gap closes: at $k=0$ for $\mu=-2t$ and at $k=\pi$ for $\mu=2t$. All things considered, we have a strong reason to focus exclusively on $H(0)$ and $H(\pi)$. Following the procedure that we learned in the last chapter, we can therefore put $H(0)$ and $H(\pi)$ in antisymmetric form,</p>
+<p>$$\tilde{H}(0) = \frac{1}{2}<br>\begin{pmatrix} 1 &amp; 1 \ i &amp; -i \end{pmatrix}<br>\begin{pmatrix} -2t-\mu &amp; 0 \ 0 &amp; 2t+\mu \end{pmatrix}<br>\begin{pmatrix} 1 &amp; -i \ 1 &amp; i \end{pmatrix} = -i<br>\begin{pmatrix} 0 &amp; -2t-\mu \ 2t+\mu &amp; 0\end{pmatrix},$$<br>$$\tilde{H}(\pi) = \frac{1}{2}<br>\begin{pmatrix} 1 &amp; 1 \ i &amp; -i \end{pmatrix}<br>\begin{pmatrix} 2t-\mu &amp; 0 \ 0 &amp; -2t+\mu \end{pmatrix}<br>\begin{pmatrix} 1 &amp; -i \ 1 &amp; i \end{pmatrix} = -i<br>\begin{pmatrix} 0 &amp; 2t-\mu \ -2t+\mu &amp; 0\end{pmatrix}.$$</p>
+<p>We now easily obtain that</p>
+<p>$$\textrm{Pf}[iH(0)]=-2t-\mu,$$<br>$$\textrm{Pf}[iH(\pi)]=2t-\mu.$$</p>
+<p>You see that the Pfaffian of $H(0)$ changes sign at $\mu=-2t$, and the Pfaffian of $H(\pi)$ does so at $\mu=2t$, in perfect agreement with the position of the gap closing in the band structure:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mus = np.arange(<span class="number">-3</span>, <span class="number">3</span>, <span class="number">0.25</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;mu: bandstructure(mu, show_pf=<span class="literal">True</span>) <span class="keyword">for</span> mu <span class="keyword">in</span> mus&#125;, kdims=[dims.mu_t]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>Individually, the two Pfaffians account for one of the two bulk gap closings which can occur in the model. To obtain a single bulk invariant $Q$ we can simply multiply the two! Hence we arrive at the following expression:</p>
+<p>$$Q = \textrm{sign}\left(, \textrm{Pf}[iH(0)],\textrm{Pf}[iH(\pi)],\right).$$</p>
+<p>A value $Q=-1$ means that the bulk is in a topological phase, such that if the wire was cut at a point, two unpaired Majorana modes would appear at the ends of it. On the other hand, a value $Q=+1$ means that the bulk is in the trivial phase. Again, you might think that this expression for $Q$, that we have just cooked up, is only valid for the particular model that we are considering. However, you would be wrong:</p>
+<blockquote>
+<p>The topological invariant $Q$ cannot change under continuous deformations of the Hamiltonian unless the gap closes.</p>
+</blockquote>
+<h2 id="Connecting-the-bulk-invariant-and-the-edge-modes"><a href="#Connecting-the-bulk-invariant-and-the-edge-modes" class="headerlink" title="Connecting the bulk invariant and the edge modes"></a>Connecting the bulk invariant and the edge modes</h2><p>At the moment, the bulk topological invariant $Q$ defined above might look just like an abstract mathematical object. We know that $Q=-1$ corresponds to the topological phase, but can we give a more concrete physical meaning to this value? This is the goal of this last part of the lecture.</p>
+<p>We have already connected the Pfaffian of a Bogoliubov-de Gennes Hamiltonian to a physical quantity: The ground state fermion parity of the system. Our one-dimensional invariant involves the product of two Pfaffians, $\textrm{Pf}[iH(0)]$ and $\textrm{Pf}[iH(\pi)]$. By taking their product we are somehow <em>comparing</em> the fermion parity of the two states of the chain with $k=0$ and $k=\pi$, and we have that $Q=-1$ if and only if the two parities are different.</p>
+<p>This means that if we <em>continuously deform</em> $H(0)$ into $H(\pi)$ in some way without breaking the particle-hole symmetry, we must encounter a zero-energy level crossing in the energy spectrum, what we called a <em>fermion parity switch</em> in the last chapter.</p>
+<p>In practice, this can be done in the following way. Let’s imagine that we change the boundary conditions of a Kitaev ring with $N$ sites from <em>periodic</em> to <em>antiperiodic</em> boundary conditions, that is from $\left\langle k | n=0 \right\rangle=\left\langle k | n=N \right\rangle$ to $\left\langle k | n=0 \right\rangle=-\left\langle k | n=N \right\rangle$. This means that the allowed values of momentum shift from $k=2\pi p/N$ to $k = 2\pi p/N + \pi /N$.</p>
+<p>Let’s now ask what is the difference in ground state fermion parity of the two chains. The value $k=0$ is always present in the chain with periodic boundary conditions, while $k=\pi$ is in the first set if $N$ is even and in the second set if $N$ is odd. This means that in either case, the difference in the ground state fermion parities between the chains with periodic and antiperiodic boundary conditions is equal to $Q$!</p>
+<p>To verify this statement, we will now <em>physically change the boundary condition in real space</em>. For simplicity, we will do so for a Kitaev ring with $\Delta=t$. You will remember that, in the Majorana basis, this corresponds to the limit where neighboring Majoranas from different sites are coupled by hopping of strength $t$.</p>
+<p>To go from periodic to antiperiodic boundary condition, we can change the hopping on the last bond of the ring (the one connecting sites $n=N-1$ and $n=0$) from $t$ to $-t$. This can easily be done continuously and without breaking particle-hole symmetry, for instance by setting the last hopping to be equal to $t,(1-2\lambda)$ and varying $\lambda$ in the interval $[0,1]$, as shown in this picture:</p>
+<p><img src="/2021/01/07/src/w1_topointro/1D/majorana_ring.svg" alt></p>
+<p>You can check that the Bogoliubov-de Gennes Hamiltonian of this closed ring satisfies particle-hole symmetry at every value of $\lambda$. Let’s now look at the energy spectrum $E(\lambda)$ of the system as we vary $\mu$ from $0$ to $4t$, passing once again through the gap closing at $\mu=2t$.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">syst = kitaev_chain(L=<span class="number">25</span>, periodic=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">p = SimpleNamespace(t=<span class="number">1</span>, delta=<span class="number">1</span>, lambda_=np.linspace(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">101</span>), mu=<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">kwargs = &#123;</span><br><span class="line">    <span class="string">"xticks"</span>: np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>),</span><br><span class="line">    <span class="string">"yticks"</span>: np.linspace(<span class="number">-4</span>, <span class="number">4</span>, <span class="number">5</span>),</span><br><span class="line">    <span class="string">"xdim"</span>: dims.lambda_,</span><br><span class="line">    <span class="string">"ydim"</span>: dims.E_t,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mus = np.arange(<span class="number">0</span>, <span class="number">4</span>, <span class="number">0.1</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.mu: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.mu <span class="keyword">in</span> mus&#125;, kdims=[dims.mu_t]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>You can see that for $\mu&lt;2t$, the energy spectrum shows a zero-energy level crossing at $\lambda=1/2$. The fermion parity of the system is therefore different at $\lambda=0$ and $\lambda=1$. When $\lambda=1/2$ the hopping on the last bond is equal to zero. We have introduced a “cut” to the system, such that our closed Kitaev ring is effectively transformed to an open Kitaev chain. Because we are in the topological phase, this open Kitaev chain has two zero-energy unpaired Majorana modes!</p>
+<p>On the other hand, when $\mu&gt;2 t$ no zero-energy level crossing is present. The ground state fermion parity is the same at $\lambda=0$ and $\lambda=1$. In this case, when we cut the system at $\lambda=1/2$, we find no unpaired Majorana modes, consistent with our knowledge of the behavior of the open chain in the trivial phase.</p>
+<p>We have therefore learned the essence of the bulk-boundary correspondence: A non-trivial value $Q=-1$ of the bulk invariant for the closed chain implies the existence of unpaired Majorana modes for the open chain. Also, we have been able to connect the value of the bulk invariant to a measurable quantity, in this case the ground state fermion parity of the closed chain.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"What will happen if we take a 100 site Kitaev chain in the topological phase "</span></span><br><span class="line">    <span class="string">"and change the potential mu to a very large negative value for the last 50 sites?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The topological gap at the last 50 sites closes and reopens as $\mu$ changes from $0$ to $-\infty$."</span>,</span><br><span class="line">    <span class="string">"The Majoranas get destroyed by the drastic change of chemical potential $\mu_j$."</span>,</span><br><span class="line">    <span class="string">"One of the Majoranas moves from being the end of the system to the middle."</span>,</span><br><span class="line">]</span><br><span class="line">MoocCheckboxesAssessment(question, answers, correct_answers=[<span class="number">0</span>, <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<h1 id="Three-approaches-to-analysing-topological-systems"><a href="#Three-approaches-to-analysing-topological-systems" class="headerlink" title="Three approaches to analysing topological systems"></a>Three approaches to analysing topological systems</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"wiHPQlEha6g"</span>, src_location=<span class="string">"1.2-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Bulk-edge correspondence in the Kitaev chain"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w1_topointro/1D/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2021/01/07/src/w1_topointro/w1_assignments/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            src/w1_topointro/w1_assignments
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/01/07/src/w12_manybody/w12_assignments/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">src/w12_manybody/w12_assignments</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

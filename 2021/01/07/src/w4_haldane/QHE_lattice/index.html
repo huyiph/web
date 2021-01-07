@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    src/w4_haldane/QHE_lattice |  O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="post-src/w4_haldane/QHE_lattice" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  src/w4_haldane/QHE_lattice
+</h1>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/01/07/src/w4_haldane/QHE_lattice/" class="article-date">
+  <time datetime="2021-01-07T09:11:06.836Z" itemprop="datePublished">2021-01-07</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.6k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">16 min</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line">%output size=<span class="number">150</span></span><br><span class="line">pi_ticks = [(-np.pi, <span class="string">r"$-\pi$"</span>), (<span class="number">0</span>, <span class="string">"0"</span>), (np.pi, <span class="string">r"$\pi$"</span>)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Qi_Wu_Zhang</span><span class="params">(w=None)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.mu * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopx</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-0.5j</span> * p.delta * pauli.sy - p.t * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopy</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1j</span> * p.gamma * pauli.sx - p.gamma * pauli.sz</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> w == <span class="literal">None</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span> &lt;= pos[<span class="number">1</span>] &lt; w</span><br><span class="line"></span><br><span class="line">        sym = kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>))</span><br><span class="line">        syst = kwant.Builder(sym)</span><br><span class="line">        syst[lat.shape(ribbon_shape, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line"></span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopx</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">title</span><span class="params">(p)</span>:</span></span><br><span class="line">    title = <span class="string">r"$t=&#123;:.2&#125;$, $\mu=&#123;:.2&#125;$, $\Delta=&#123;:.2&#125;$, $\gamma=&#123;:.2&#125;$"</span></span><br><span class="line">    title = title.format(p.t, p.mu, p.delta, p.gamma)</span><br><span class="line">    <span class="keyword">return</span> title</span><br></pre></td></tr></table></figure>
+
+<h1 id="Introduction-stacking-wires"><a href="#Introduction-stacking-wires" class="headerlink" title="Introduction: stacking wires"></a>Introduction: stacking wires</h1><p>Looking back at the material from the past weeks, you might have the impression that the quantum Hall effect and one dimensional topological superconductors are really different topics, and not connected at all.</p>
+<p>Xiaoliang Qi from Stanford University will now explain that this is not the case, and will also introduce this week’s topic - Chern insulators.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"osKP6x0Ewbo"</span>, src_location=<span class="string">"4.1-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Pairs-of-chiral-edges-in-a-1D-wire"><a href="#Pairs-of-chiral-edges-in-a-1D-wire" class="headerlink" title="Pairs of chiral edges in a 1D wire"></a>Pairs of chiral edges in a 1D wire</h1><p>Last week, we started with a phenomenological description of the quantum Hall effect. We learned that one way to get a quantum Hall state is to place electrons in an external magnetic field.</p>
+<p>However, we still don’t have a simple lattice Hamiltonian describing the quantum Hall effect - we’d like to have something like the Kitaev chain model, which was very useful to understand Majoranas in the first two weeks of the course. An added benefit of finding this tight binding model is that it would not need an external magnetic field to exhibit the unique properties of quantum Hall effect.</p>
+<p>These models exist, and they are referred to as <em>Chern insulators</em>. The quantum Hall effect without an external magnetic field is also referred to as the <em>quantum anomalous Hall effect</em>. Duncan Haldane, from who we will hear in the next chapter, invented the first model of a Chern insulator now known as <em>Haldane model</em>. However, in this chapter, we will use a more natural route that fits better into the context of our course so far.</p>
+<h2 id="General-strategy-to-construct-a-lattice-model-for-the-Quantum-Hall-Effect"><a href="#General-strategy-to-construct-a-lattice-model-for-the-Quantum-Hall-Effect" class="headerlink" title="General strategy to construct a lattice model for the Quantum Hall Effect"></a>General strategy to construct a lattice model for the Quantum Hall Effect</h2><p>What we will do to get a model for a Chern insulator is to follow a “domino prescription”, as we did to get the Kitaev model in week 1. Our strategy will have two key aspects:</p>
+<ul>
+<li><p>Focusing on the unique property of the quantum Hall edge that cannot exist in isolation from a bulk, and can only be present because of bulk-boundary correspondence. For the Kitaev chain, this property was the presence of unpaired Majorana modes. In the quantum Hall effect, it is the chiral edge states.</p>
+</li>
+<li><p>Finding a lower dimensional building block, from which we can somehow “extract“ in a clever way the exotic object we are interested in. In the Kitaev chain, these were the fermionic sites, which we could think of as a pair of Majorana modes.</p>
+</li>
+</ul>
+<p>So we need to find a one-dimensional system which can host a pair of chiral edge states. Since they are one-dimensional, these states will necessarily be spatially on top of each other, essentially a pair of propagating modes with opposite velocity. Once we have this building block, we can follow the domino prescription: couple the counter-propagating states in pairs, just like we did with Majorana modes. We then end up with a pair of spatially separated chiral edge states, and so a quantum Hall insulator without magnetic field.</p>
+<p>So our plan is to turn the system on the left into the system on the right:</p>
+<p><img src="/2021/01/07/src/w4_haldane/QHE_lattice/coupled_chains.svg" alt></p>
+<p>Voilà - we have a lattice model for the 2D quantum Hall state!</p>
+<h2 id="Getting-a-one-dimensional-wire-with-a-pair-of-edge-states"><a href="#Getting-a-one-dimensional-wire-with-a-pair-of-edge-states" class="headerlink" title="Getting a one dimensional wire with a pair of edge states"></a>Getting a one dimensional wire with a pair of edge states</h2><p>Let’s focus on the first essential step of our plan: finding a one dimensional system with a pair of counter-propagating chiral states.</p>
+<p>You might guess that the easiest way to get a pair of states moving in opposite directions is to take the usual one dimensional single electron Hamiltonian with an effective mass. Such a system has a parabolic dispersion and the low energy excitations at a finite Fermi wave-vector $k=\pm k_F$ move in opposite directions. The catch is that these two states have different momenta, and it is tricky (though not impossible) to deal with momentum conservation when pairing the edges. So we will avoid this approach.</p>
+<p>The more educated guess we make a model that we have already encountered, the Dirac model $H= \Delta,k, \tau_y$ of the Kitaev chain at the topological phase transition.</p>
+<p>More specifically, in the first week we wrote the Kitaev Hamiltonian in momentum space as $H(k)=-(2 t\cos{k}+\mu),\tau_z+\Delta \sin{k}\tau_y$.  At the critical point $\mu=-2t$, we found the Kitaev Hamiltonian to become</p>
+<p>$$H=-2t(\cos{k}-1),\tau_z+\Delta\sin{k},\tau_y.$$</p>
+<p>We see that at $k\approx 0$ we have a pair of states with wave functions the eigenvalues $\pm 1$ of $\tau_y$, and with opposite and equal velocities.</p>
+<p>At this point you might worry that the Kitaev model has superconductivity, and so the $\tau$ matrices refer to particle and hole degrees of freedom. Indeed, these ingredients should not enter in the description of the quantum Hall effect. But this is not a real issue, because we can just interpret the $\tau$ matrices as acting in the space of left- and right-movers. This flexibility in interpreting the Hamiltonian terms in different ways, depending on the context, is part of the advantage of thinking in terms of toy models.</p>
+<p>Finally, before we go on with our plan, keep in mind that considering the phase transition point of a lower dimensional model turns out to be a fairly generic strategy to construct higher dimensional topological models.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"It seems that both a quantum Hall bar and a Kitaev chain can have chiral states. "</span></span><br><span class="line">    <span class="string">"Apart from the two systems having different dimensionality"</span></span><br><span class="line">    <span class="string">", what's the fundamental difference between the two cases?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The quantum Hall edge states go in opposite directions, while the Kitaev states go in the same direction."</span>,</span><br><span class="line">    <span class="string">"The quantum Hall edge states go in the same direction, while the Kitaev states go in opposite directions."</span>,</span><br><span class="line">    <span class="string">"The quantum Hall edges always cross zero energy at zero momentum while the Kitaev states don't."</span>,</span><br><span class="line">    (</span><br><span class="line">        <span class="string">"The Kitaev chiral states exist only at specific parameter values, "</span></span><br><span class="line">        <span class="string">"while the quantum Hall edge states don't."</span></span><br><span class="line">    ),</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The pair of chiral states in the Kitaev model only exists at "</span></span><br><span class="line">    <span class="string">"the phase transition point, when the chain becomes gapless. "</span></span><br><span class="line">    <span class="string">"On the other hand, chiral edge states are a topological property of the quantum Hall state. "</span></span><br><span class="line">    <span class="string">"They are separated by a gapped bulk which protects them, and they exist for a full range of parameter values."</span></span><br><span class="line">)</span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="QHE-without-a-magnetic-field"><a href="#QHE-without-a-magnetic-field" class="headerlink" title="QHE without a magnetic  field"></a>QHE without a magnetic  field</h1><h2 id="Deriving-the-model-Hamiltonian"><a href="#Deriving-the-model-Hamiltonian" class="headerlink" title="Deriving the model Hamiltonian"></a>Deriving the model Hamiltonian</h2><p>Let us now couple the wires to get the quantum Hall system as promised. We take a stack of chains all extending along the horizontal $x$ direction, like in the figure above. We stack them one next to the other along the $y$ direction, so that we form a square lattice. If we take a large (ideally infinite) stack of chains we have a truly two-dimensional system.</p>
+<p>Now let us make this formal by first labeling the chains by an index $n_y$, which takes integer values. Let us also replace $k\rightarrow k_x$ to denote the wave-vector along a chain. Hence a single chain has the Hamiltonian $\left[-(2 t\cos{k_x}+\mu),\tau_z+\Delta \sin{k_x}\tau_y\right],\otimes,\left|,n_y\right\rangle\left\langle n_y\right|$. The projector $\left|,n_y\right\rangle\left\langle n_y\right|$ is needed to single out one chain from the stack. </p>
+<p>Now all that we have to do is to couple the $\tau_y=-1$ branch of one chain to the $\tau_y=+1$ branch of a neighboring chain,  and we will have a quantum Hall state.</p>
+<p>A term coupling opposite movers from different chains is $\left|,n_y\right\rangle\left\langle n_y+1\right|\otimes (\tau_z+i\tau_x)$. The first part couples neighboring chains and the matrix $(\tau_z+i\tau_x)$ turns a right mover into a left mover, which is what we want. Let’s call the strength of this coupling $\gamma$.</p>
+<p>To obtain the complete Hamiltonian of the stack of chains we just need to sum over $n_y$, and we obtain</p>
+<p>$$H=\sum_{n_y},\left[-(2 t\cos{k_x}+\mu)\tau_z+\Delta \sin{k_x}\tau_y\right],\otimes,\left|,n_y\right\rangle\left\langle n_y\right|,-,\gamma,\sum_{n_y},\left[\left|,n_y\right\rangle\left\langle n_y+1\right|\otimes (\tau_z+i\tau_x),+,\textrm{h.c.}\right].$$</p>
+<p>This Hamiltonian should in principle suffice to produce a quantum Hall state.</p>
+<h2 id="Gap-and-edge-states"><a href="#Gap-and-edge-states" class="headerlink" title="Gap and edge states"></a>Gap and edge states</h2><p>Let’s first consider a finite number of chains $n_y=1,\dots,N$. If you tune each chain individually to the point $\mu = -2t$, it’s easy to check that at $k_x \approx 0$ the above Hamiltonian has one right-moving edge eigenstate for $n_y=1$ with eigenvalue $\approx \Delta , k_x$, and a left-moving edge eigenstate for $n_y=N$  with eigenvalue $\approx -\Delta,k_x$.</p>
+<p>The next thing we need to check is that these are the only eigenstates close to zero energy. In other words, is the system gapped in the two-dimensional bulk?  To see this, let’s switch to an infinite stack of chains along the $y$ direction. We then have full translational invariance, so we can go to momentum space in the $y$ direction.</p>
+<p>This leads us to the two-dimensional Bloch Hamiltonian </p>
+<p>$$H(k_x,k_y)=[-(2t\cos{k_x}+\mu)\tau_z+\Delta\sin{k_x}\tau_y]-2\gamma,[\cos{k_y}\tau_z+\sin{k_y}\tau_x].$$ </p>
+<p>Since this Hamiltonian is a sum of three Pauli matrices, the energy spectrum can be written down as </p>
+<p>$$E(k_x,k_y)=\pm\sqrt{\Delta^2\sin^2{k_x}+(2\gamma\cos{k_y}+\mu+2t\cos{k_x}))^2+4\gamma^2\sin^2{k_y}}.$$ </p>
+<p>Aside from special points, this spectrum is gapped, just like we wanted. For instance it is gapped if $\mu&lt;-2t-2\gamma$. If we start from this point and increase the value of $\mu$, the gap closes at the point $\mu = -2t-2\gamma$ and then reopens:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">'png'</span></span><br><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, delta=<span class="number">0.3</span>, gamma=<span class="number">-0.5</span>, mu=<span class="literal">None</span>)</span><br><span class="line">syst = Qi_Wu_Zhang()</span><br><span class="line">mus = np.linspace(<span class="number">-2</span>, <span class="number">0</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.mu: spectrum(syst, p, zticks=[<span class="number">-4</span>, <span class="number">-2</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>], title=title) <span class="keyword">for</span> p.mu <span class="keyword">in</span> mus&#125;,</span><br><span class="line">    kdims=[<span class="string">r"$\mu$"</span>],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>As a check that everything worked, let’s look at the dispersion of a ribbon with finite width along the $y$ direction. If there are edge states, we should see a Dirac-like crossing around $k_x=0$.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, delta=<span class="number">0.3</span>, gamma=<span class="number">-0.5</span>, mu=<span class="literal">None</span>)</span><br><span class="line">syst = Qi_Wu_Zhang(w=<span class="number">15</span>)</span><br><span class="line">mus = np.linspace(<span class="number">-2</span>, <span class="number">0</span>, <span class="number">11</span>)</span><br><span class="line"></span><br><span class="line">style = &#123;</span><br><span class="line">    <span class="string">"xdim"</span>: <span class="string">r"$k$"</span>,</span><br><span class="line">    <span class="string">"ydim"</span>: <span class="string">r"$E/t$"</span>,</span><br><span class="line">    <span class="string">"xticks"</span>: pi_ticks,</span><br><span class="line">    <span class="string">"yticks"</span>: [<span class="number">-2</span>, <span class="number">0</span>, <span class="number">2</span>],</span><br><span class="line">    <span class="string">"ylims"</span>: [<span class="number">-2.2</span>, <span class="number">2.2</span>],</span><br><span class="line">    <span class="string">"title"</span>: title,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(&#123;p.mu: spectrum(syst, p, **style) <span class="keyword">for</span> p.mu <span class="keyword">in</span> mus&#125;, kdims=[<span class="string">r"$\mu$"</span>])</span><br></pre></td></tr></table></figure>
+
+<p>We see that the crossing is there, and it disappears when the gap closes. So we can identify the point $\mu=-2t-2\gamma$ as a critical point at which the quantum Hall state becomes topologically trivial.</p>
+<p>While details such as the bulk spectrum and edge dispersion are different from the case with a magnetic field, the bulk-edge correspondence tells us that the edge states are as robust as those of the quantum Hall effect we studied last week.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">"How does our lattice model with no magnetic field differ from the original quantum Hall effect?"</span></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Since there is no magnetic field the quantum Hall effect on a lattice preserves time reversal symmetry."</span>,</span><br><span class="line">    <span class="string">"Quantum Hall effect in a magnetic field has Landau levels "</span></span><br><span class="line">    <span class="string">"that do not disperse in k while they disperse in the lattice."</span>,</span><br><span class="line">    <span class="string">"Quantum Hall effect in the lattice has no chiral edge states, which arise from skipping orbits in a magnetic field."</span>,</span><br><span class="line">    <span class="string">"In a magnetic field the filling fraction is fixed to integer per flux quantum, while in the "</span></span><br><span class="line">    <span class="string">"lattice the filling fraction per unit cell is arbitrary."</span>,</span><br><span class="line">]</span><br><span class="line">explanation = <span class="string">"In a lattice one gets a non-constant bandstructure which forms a Dirac cone near the phase transition."</span></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Dirac-equation-at-the-phase-transition"><a href="#Dirac-equation-at-the-phase-transition" class="headerlink" title="Dirac equation at the phase transition"></a>Dirac equation at the phase transition</h1><p>Back in week 1, we saw with the Kitaev chain that the “domino argument” led to two distinct phases. The same is true for our model, even though the parameter space is larger than before, with three distinct parameters $\mu, t, \gamma$, which we have not explored fully. But let’s not worry about establishing the full phase diagram. For now it’s more interesting to study the transition point we have found.</p>
+<p>The two phases around this point are easy to understand. One is the quantum Hall phase with chiral edge states, which was our initial goal. The other one is a topologically trivial phase. The trivial phase can be understood by first taking $\mu$ very positive and large, and then taking $\gamma\to 0$. Then we just have a bunch of gapped 1D chains next to each other without any tunneling between them, a trivial phase with no edge states.</p>
+<p>It is once again useful to write down the effective Hamiltonian near to the transition point at $k_x\approx 0$ and $k_y\approx 0$. It is given by a 2D Dirac Hamiltonian:</p>
+<p>$$H_{\textrm{Dirac}}=[\Delta k_x\tau_y-2\gamma k_y\tau_x+m\tau_z],$$ </p>
+<p>The combination $m=-(\mu +2t+2\gamma)$ serves as the ‘mass’ in this Dirac model. As before, we see that the gapless phase transition point at $m=0$ is described by a massless Dirac Hamiltonian. The phase transition separates the topological from the trivial phase, and the two phases are characterized by a different sign of the mass (in this case $m&gt;0$ in the topological phase and $m&lt;0$ in the trivial phase).</p>
+<p>As with Kitaev chains, the Dirac model gives us another way to construct chiral edge states at the domain wall between topological and non-topological phases. Back in week 1, we saw that for a one dimensional Dirac model, a domain wall in the mass $m$ supports a non-degenerate zero mode. Fixing  $k_y=0$, we see that the one dimensional Dirac Hamiltonian here is identical to the one we saw in week 1, where the zero mode at the domain wall between $m&lt;0$ and $m&gt;0$ was an eigenstate of $\tau_x$ with eigenvalue $+1$. </p>
+<p>Unlike the one-dimensional case, the zero mode is not stationary in the two dimensional case. By adding $2\gamma k_y\tau_x$ as a perturbation, we see that the energy of the state increases as </p>
+<p>$$\epsilon(k_y)\approx 2\gamma k_y,,$$</p>
+<p>so it has a velocity $v=2\gamma$, the direction of which depends on the sign of $\gamma$. So we see how we can get the chiral edge modes analytically.</p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"CXgAcOOVlag"</span>, src_location=<span class="string">"4.1-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Questions about what you learned? Ask them below</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Chern insulators"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w4_haldane/QHE_lattice/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2021/01/07/src/w4_haldane/ComputingChern/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            src/w4_haldane/ComputingChern
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/01/07/src/w3_pump_QHE/w3_assignments/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">src/w3_pump_QHE/w3_assignments</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>
