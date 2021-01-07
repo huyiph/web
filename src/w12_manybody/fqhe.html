@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="page-" class="article article-type-page" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br></pre></td></tr></table></figure>
+
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>This topic is introduced by Sankar Das Sarma from the university of Maryland.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"4gSJSo3olfg"</span>, src_location=<span class="string">"12.1-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Interacting-systems"><a href="#Interacting-systems" class="headerlink" title="Interacting systems"></a>Interacting systems</h1><p>One obvious thing that we completely ignored throughout the course is the effects of interactions on topology. It is of course possible to generalize all the symmetry classes that we have studied to many-body Hamiltonians, but what happens to the classification of the topological phases?</p>
+<p>The first statement we should make here is that our work so far wasn’t wasted: most of the usual topological insulators turn out to tolerate interactions as long as the interactions do not spontaneously break the symmetry, or close the bulk gap.<br>There are interesting cases where the classification collapses. For example, the 1D BDI chain with Majorana fermions on one of the two sublattice degrees of freedom allows a $\mathbb{Z}_8$ classification with interactions instead of $\mathbb{Z}$. The reason for this is that the 8-Majorana interaction term doesn’t break the symmetries anymore.</p>
+<p>However this is relatively minor compared to the real can of worms that the interactions open: the amount of possibilities for the interacting phases is much larger. To begin with, we’ll discuss the oldest known example of a strongly interacting topological phase, the fractional quantum Hall effect. Note that it only covers a single dimension ($D=2$), and a single symmetry class (no symmetry at all). Yet, classifying all such states turns out to be a very hard task.</p>
+<h1 id="Fractional-charge-and-statistics-in-the-fractional-quantized-Hall-effect"><a href="#Fractional-charge-and-statistics-in-the-fractional-quantized-Hall-effect" class="headerlink" title="Fractional charge and statistics in the fractional quantized Hall effect"></a>Fractional charge and statistics in the fractional quantized Hall effect</h1><p>If you followed what we learned about the integer quantum Hall effect, you’ll remember that we used the pumping argument to establish that the Hall conductance in an incompressible liquid is quantized in integers. You might now wonder if the experimental evidence for the fractional quantum Hall effect completely invalidates this argument in some way. The key step in the argument was to realize that the pumped charge that results from the insertion of one flux quantum $\Phi_0$ into a Corbino geometry is </p>
+<p>$$<br>Q_{pump}=\sigma_{xy}\Phi_0\equiv \nu e,<br>$$</p>
+<p>where $\nu=\sigma_{xy}/G_0$ is the Hall conductance in dimensionless units. For the non-interacting system that we studied in the quantum Hall effect, we assumed that only an integer number of electrons could be transferred between the edges - so $\nu$ had to be an integer. </p>
+<p>The real reason that the charge transferred had to be an integer multiple of the electron charge was that the Hamiltonian for the electrons was identical between flux $\Phi=0$ and flux $\Phi=\Phi_0$. Since the system is incompressible, it is reasonable to assume that all excitations in the system are local. Usually we expect different excited states to differ by rearranging electrons. Within this framework, such excitations can differ by integer multiples of electronic charge.</p>
+<p>The existence of fractional values of $\nu$ implies that the edge can have local excitations that differ by a fractional electron charge. In principle, the inner edge of the Corbino geometry can be shrunk to a point, and if we do this, we’re forced to conclude that the system can now host excitations that have fractional charge.</p>
+<p>The fractional charged excitations are local particles just like the electrons themselves. So we can ask about the statistics under exchange of two such particles. On performing such an exchange, the total many-body wave function of the system returns to itself, but<br>the wave function can pick up a Berry phase. For fermions this phase is $\pi$ and for Bosons it is zero. Instead of computing the phase directly, let us consider doing a double exchange, which is topologically equivalent to taking a particle around another one and computing the phase for that. </p>
+<p><img src="/src/w12_manybody/fqhe.htm/exchange.svg" alt></p>
+<p>Let us first assume that one of the particles was created by a flux quantum. Since the flux quantum created this particle adiabatically by a pumping process, locality dictates that the particle going around the flux quantum + particle cannot know about the existence of the other particle. Thus the phase from going around a particle together with its flux quantum must vanish. On the other hand, the particle picks up a phase of $2\pi \nu$ from just going around the flux quantum. Thus double exchange of a pair of particles leads to a Berry phase of $-2\pi\nu$. This is another strange property of excitations in the FQH state! They must obey different statistics than both fermions and bosons, and are thus referred to as anyons. Therefore the exchange phase of anyons in the simple FQH states is given by </p>
+<p>$$<br>\phi_{exch}=\pi\nu.<br>$$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"The Laughlin argument was used to prove that the Hall effect must be quantized in integers. What is the key assumption"</span></span><br><span class="line">    <span class="string">"that must be dropped in order to understand the fractional quantum Hall effect?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Allow electrons to have fractional statistics."</span>,</span><br><span class="line">    <span class="string">"Allow quasiparticles with fractional charge."</span>,</span><br><span class="line">    <span class="string">"Require that the system forms an incompressible fluid."</span>,</span><br><span class="line">    <span class="string">"Allow electrons to have fractional charge."</span>,</span><br><span class="line">    <span class="string">"Allow quasiparticles to have fractional statistics."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The key assumption in the Laughlin argument for the integer case was that the charge that was added by pumping could"</span></span><br><span class="line">    <span class="string">"only be an integer multiple of an electronic charge."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Topological-degeneracy"><a href="#Topological-degeneracy" class="headerlink" title="Topological degeneracy"></a>Topological degeneracy</h1><p>Knowing that the system supports particles with nontrivial braiding statistics, we can derive its next important property, the topological degeneracy of the ground state.</p>
+<p>To do this, we turn around the argument for computing the statistics of particles and consider the statistics of fluxes. A particle going around a flux acquires a phase of $2\pi\nu$. As noted in the last unit, the combination of a particle and flux does not have any non-trivial exchange statistics. So replacing the particle by another flux will lead to a phase of $-2\pi \nu$. Therefore the exchange phase of fluxes gives a phase of $\pi\nu$, just like the exchange of particles.</p>
+<p>Let us now put the FQH system on a torus. A natural operation on the torus is to create a flux anti-flux pair, move them around a cycle of the torus and annihilate them at the end. This operation inserts a flux into one of the two nontrivial cycles of the torus. Let’s label this operation $T_{1,2}$ for each of the cycles of the torus:</p>
+<p><img src="/src/w12_manybody/fqhe.htm/torus.svg" alt></p>
+<p>The last physical step to deriving the degeneracy is to ask what is the commutator $T_1^{-1}T_2^{-1}T_1 T_2$. This operator describes first moving a vortex around the red contour, then moving the vortex around the blue contour, moving the vortex back around the red contour, and finally undoing the motion of the vortex along the blue contour.<br>No matter which path we choose for this operation, we will need to take one vortex all the way around the other one. According to the braiding rule we get:</p>
+<p>$$<br>T_1^{-1}T_2^{-1}T_1 T_2 =e^{i2\pi \nu}.<br>$$</p>
+<p>Now all we need to do is an exercise in elementary quantum mechanics. First of all, both $T_{1,2}$ commute with the Hamiltonian. Let’s take $|\Psi\rangle$ as a simultaneous ground state of the Hamiltonian and eigenstate of $T_1$. If in addition $e^{i\alpha}|\Psi\rangle=T_2|\Psi\rangle$, then $T_1$ and $T_2$ would commute. Since we know this isn’t the case, $T_2|\Psi\rangle$ must be a ground state of the Hamiltonian which is not the same as $|\Psi\rangle$.</p>
+<blockquote>
+<p>We conclude that fractional quantum Hall phases have ground state degeneracy on the torus.</p>
+</blockquote>
+<p>We have seen an example of ground state degeneracy in Majorana wires, where the degeneracy of the zero modes could not be lifted by any local perturbation. The difference between the Majorana case and fractional quantum Hall is that in the latter we don’t rely on the presence of defects, and the degeneracy is a property of the surface on which we put the fractional quantum Hall state.</p>
+<h1 id="Creating-an-FQH-state"><a href="#Creating-an-FQH-state" class="headerlink" title="Creating an FQH state"></a>Creating an FQH state</h1><p>How can we describe a fractional quantum Hall state? Laughlin used a representation of the many-electron wave function in complex coordinates to guess a wave function of an incompressible state. We will instead follow the more intuitive “Composite Fermion” approach due to Jain to understand this state. </p>
+<p>The starting point for the FQH state is of course the same as for the integer quantum Hall states, i.e. electrons in a magnetic field that occupy Landau levels. As we noticed in week 3, every state in a single Landau level is at exactly the same energy. The simplest family of FQH states are ones where the lowest Landau level states are only partially filled. Since there is no kinetic energy, the state is determined entirely by optimizing the Coulomb repulsion such that the electrons are as far away from each other as possible.</p>
+<p>The composite fermion theory postulates that electrons manage to space themselves out by associating themselves with “vortex”-like excitations. As you hopefully recall, a vortex in a superconductor is a defect where the superconducting phase $\varphi$ winds by $2\pi$ when going around the vortex. An electron going around the vortex picks up a $\pi$-phase shift. On the other hand, an electron can go around a double vortex and pick up effectively no (i.e. $2\pi$) phase shift. However, the electron feels a phase gradient or a vector potential ${\bf A}={\bf\nabla}\varphi$ as it goes around the vortex. Such a vector potential is like a magnetic field and repels the electron. </p>
+<p>Of course we have no superconductivity at hand, but we can mimic the vortex properties using a mathematical trick involving complex numbers. First let us introduce complex coordinates for the electrons $z=x+iy$. Then we notice that we can insert a double vortex at $z_0$ in a gas of electrons with wave function $\Psi(z_1,\dots)$ by the transformation</p>
+<p>$$<br>\Psi(z_1,\dots)\rightarrow \prod(z_i-z_0)^2\Psi(z_1,\dots).<br>$$</p>
+<blockquote>
+<p>The basic trick of composite fermions in trying to keep electrons far apart is to say that each electron binds  an even number $(2m)$ vortices to form a composite fermion.</p>
+</blockquote>
+<p>This amounts to the transformation of the many-body wave function $\Psi_{CF}(z_1,z_2,\dots)=\prod_{i &lt; j}(z_i-z_j)^2\Psi(z_1,z_2,\dots)$, where $z_j$ are the electron wave-functions.</p>
+<p>Pictorially the composite fermion transformation is represented as:</p>
+<p><img src="/src/w12_manybody/fqhe.htm/composite.svg" width="800"></p>
+<p>The next step in the composite fermion approach to the FQH state is to say that all the correlation effects of the Coulomb interaction are taken care of by the flux attachment. Beyond this, the composite fermions are weakly interacting particles. If we believe in this picture, then the only non-interacting incompressible states that we can get are integer quantum Hall states. This means that the FQH states are integer quantum Hall states of the composite fermions.</p>
+<p>How does this explain a fractionally filled state? Well, the original electron is $2m$ flux quanta together with a composite fermion. If we smear out the flux created by the electron density $\nu$, we get a magnetic field of $2m\nu$ flux quanta per unit area. This is in addition to the one flux quantum per unit area of the external magnetic field. Therefore the composite fermions, which are at a density of $\nu$ per unit area, see a magnetic field of $2m\nu+1$ per unit area. We can make the composite fermions form an incompressible state with $p$-Landau levels filled if<br>$\nu=p(2m\nu+1),$ so that we describe a state of filling </p>
+<p>$$<br>\nu=\frac{p}{2 m p-1}.<br>$$</p>
+<p>Thus the composite fermion theory provides an explanation for how electrons can form incompressible states at a fractional sequence of filling fractions that is known as the “Jain sequence”. These states were all seen in experiments.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"Composite fermions allow one to explain incompressible states at fractional filling of the Landau levels by "</span></span><br><span class="line">    <span class="string">"postulating that:"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The quantum Hall system forms an incompressible liquid."</span>,</span><br><span class="line">    <span class="string">"The fractionally charged quasiparticles bind to fluxes to reduce the filling."</span>,</span><br><span class="line">    <span class="string">"The electrons become fractionally charged."</span>,</span><br><span class="line">    <span class="string">"The electrons bind to fluxes and reduce the effective magnetic field."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"Composite fermions are electrons bound to fluxes. Electrons are the fundamental particles and they cannot change "</span></span><br><span class="line">    <span class="string">"their charge. The fractional charged quasiparticles are invoked by composite fermions not explained by the theory. "</span></span><br><span class="line">    <span class="string">" The incompressible liquid is true for either integer or fractional quantum Hall."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Classification-and-fractional-topological-insulators"><a href="#Classification-and-fractional-topological-insulators" class="headerlink" title="Classification and fractional topological insulators"></a>Classification and fractional topological insulators</h1><p>Before we approach the classification of topological insulators in the presence of symmetries, let us discuss the fractional quantum Hall effect. In fact, there is a whole bunch of fractional quantum Hall states, so there is clearly room for classification. However, at first glance it looks more challenging because we cannot really solve general two dimensional interacting Hamiltonians. The tool that is used to understand what phases might exist is braiding. Based on all the examples of two-dimensional topological states with no symmetry that we have so far, it is believed that distinct topological states are characterized by distinct particle-like anyonic excitations with distinct topological properties. It is certainly obvious that if two states have topologically distinct excitations in the bulk they cannot be adiabatically deformed into one another, since the braiding rules cannot change continuously.</p>
+<p>So the basic rule of the game is to ask what are all possible braiding rules for excitations in two dimensions. One would think that it would simply be arbitrary. Turns out that the situation is not quite as bad - locality and unitarity put rather strong constraints on the possible braidings of particles. The answer is obtained through a branch of mathematics called modular tensor category theory, and the theory tells us that valid sets of fractional excitations must obey the so-called pentagon and hexagon equations. All this being said, not all solutions of these equations are known - so basically the set of possible phases is not quite known. And this is all very abstract - and not even all the abstractly known phases that have acceptable braiding rules are known to be realized in nature. In fact, so far most of the known phases seem to be composite fermion ones that are well understood.</p>
+<h2 id="Symmetries"><a href="#Symmetries" class="headerlink" title="Symmetries"></a>Symmetries</h2><p>To approach the classification of interacting topological insulators with symmetries, we can start by playing the same game as Kane and Mele, and combine two fractional quantum Hall states (instead of integer ones) to make a fractional topological insulator. If we choose a pair of FQH states which are related by time-reversal and stack them together for spin-up and spin-down electrons, that technically leads to a time-reversal invariant state. The key question that needs to be asked is whether one can gap out the edge states by adding time-reversal invariant perturbations. If one can do that, then unlike the Kane-Mele quantum spin Hall state, the state is not a phase that is protected by just time-reversal symmetry. This question is not too mathematically involved, though still beyond this course and can be answered by the bosonization technique as was done by <a href="http://arxiv.org/abs/0906.2769" target="_blank" rel="noopener">Stern and Levin</a>.</p>
+<p>We can however explain the result. If one stacks the two FQH states one obtains a spin-Hall conductance $\sigma_{sh}$, which is equal to the Hall conductance of each layer. Let the smallest charge of an excitation of our phase be $e^<em>$, some fraction of electron charge. It turns out that the edge states are protected from gapping by time-reversal invariant perturbations if and only if $\sigma_{sh}/e^</em>$ is an odd integer. This gives some idea as to what kind of interacting analogues of quantum spin Hall states one may get. But again, as with the non-symmetric case, the general classification is still up in the air. More importantly, we don’t really have realistic candidates for such states yet.</p>
+<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"zrL-qxjKfGw"</span>, src_location=<span class="string">"12.1-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Questions about what you just learned? Ask them below!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"FQHE"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/src/w12_manybody/fqhe.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

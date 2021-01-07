@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="page-" class="article article-type-page" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br></pre></td></tr></table></figure>
+
+<h1 id="Braiding-of-Majoranas"><a href="#Braiding-of-Majoranas" class="headerlink" title="Braiding of Majoranas"></a>Braiding of Majoranas</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"Ndf2Z84g1R0"</span>, src_location=<span class="string">"2.3-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Majorana-zero-modes-in-nanowire-networks"><a href="#Majorana-zero-modes-in-nanowire-networks" class="headerlink" title="Majorana zero modes in nanowire networks"></a>Majorana zero modes in nanowire networks</h1><p>As you just heard in the video, the goal of this lecture is to compute the quantum statistics of Majorana zero modes. In order to do this, we will have in mind a nanowire network where Majorana modes can be exchanged in space, like this one:</p>
+<p><img src="/src/w2_majorana/braiding.htm/nanowire_network.svg" alt></p>
+<p>In the drawing, you can see a nanowire with many T-shaped junctions in between several Majorana zero modes (which is why we call it a network). We will not worry about the microscopic description of the nanowire network, which will differ in irrelevant ways from similar structures in alternative platforms for Majoranas (we’ll learn about those later, in week 7). Just to fix the ideas, you can imagine that the system can be effectively described by the Kitaev chain toy-model, and that the Majoranas are at the positions of domain walls where the gap changes sign, as you saw in the first week of the course.</p>
+<p>The only thing that distinguishes the Majorana zero modes is their position in the network. They have no other “flavour” that would allow us to characterize them. They are identical to each other, just like all electrons are identical to each other. If we exchanged two Majoranas in space, the system after the exchange would look exactly the same as it looked before the exchange.</p>
+<blockquote>
+<p>It is very interesting to ask what is the behaviour of the quantum state $\left|\Psi\right\rangle$ of a system of identical particles under the exchange of two of the particles. You already know that for bosons and fermions $\left|\Psi\right\rangle,\to,\pm\left|\Psi\right\rangle$. To see what happens in the case of Majoranas, we first have to learn how to write down the quantum state $\left|\Psi\right\rangle$ corresponding to a set of Majoranas like the one sketched above.</p>
+</blockquote>
+<h2 id="The-Hilbert-space-of-a-set-of-Majoranas"><a href="#The-Hilbert-space-of-a-set-of-Majoranas" class="headerlink" title="The Hilbert space of a set of Majoranas"></a>The Hilbert space of a set of Majoranas</h2><p>From now on, it is important to keep in mind that by considering only the states corresponding to the Majorana zero modes, we are neglecting the existence of the states that live in the bulk. As mentioned in the video, we assume that the energy spectrum looks like this:</p>
+<p><img src="/src/w2_majorana/braiding.htm/gs_manifold.svg" alt></p>
+<p>Based on your knowledge of the Kitaev chain, this assumption should sound reasonable to you. Because you have several Majoranas, there will be several states all at zero energy, forming a “ground state manifold”.</p>
+<p>Let’s now explore more in detail the ground state manifold defined by this degenerate sets of states.</p>
+<p>In the drawing you see six Majoranas, that is three pairs, but let’s consider here the more general case of $N$ pairs. It might appear that since the $\gamma_n$s don’t appear in the Hamiltonian, there is a degenerate quantum state for each of the $2N$ values of $n$. However, just as Majorana modes appear in pairs, they can be assigned quantum states only in pairs.</p>
+<blockquote>
+<p>To assign quantum states to Majoranas, we can pair the Majoranas and form fermionic modes,<br>$$<br>c^\dagger_n = \tfrac{1}{2}(\gamma_{2n-1}+i\gamma_{2n}),,\<br>c_n =\tfrac{1}{2}(\gamma_{2n-1}-i\gamma_{2n}),,<br>$$<br>for $n=1,\dots, N$. Using this notation, we have chosen to pair neighboring Majoranas into a fermionic mode. We have now a set of $N$ fermionic modes with corresponding creation and annihilation operators. Every mode can be empty or it can be occupied by a fermion, giving us two possible degenerate quantum states $\left|0\right\rangle$ and $\left|1\right\rangle$ for each pair of Majoranas.</p>
+</blockquote>
+<p>Going back to our sketch, we can represent the situation as follows:</p>
+<p><img src="/src/w2_majorana/braiding.htm/majoranas_pairing.svg" alt></p>
+<p>The coloring of the Majorana modes now makes explicit our choice of how to pair them into fermionic modes. In total, the system above has 8 possible states, corresponding to all the possible combinations of the occupation numbers of the 3 fermionic modes. Generalizing, we will have $2^N$ possible quantum states for $N$ pairs of Majoranas. We can represent each such state with a ket</p>
+<p>$$\left| s_1, s_2, \dots, s_N\right\rangle,,$$</p>
+<p>where $s_n$ is equal to $0$ if the $n$-th fermionic mode is not occupied, and equal to $1$ if it is occupied. These states are a <em>complete basis</em> for the Hilbert space of the set of Majorana modes. Note that these basis states are all eigenstates of the operators $P_n \equiv 1-2c^\dagger_n c_n \equiv i\gamma_{2n-1}\gamma_{2n}$. For instance, we have that</p>
+<p>$$ P_1 \left| 0, \dots \right\rangle\ = (1-2c^\dagger_1 c_1)\left|0, \dots \right\rangle= + \left|0, \dots \right\rangle,, $$<br>$$ P_1 \left| 1, \dots \right\rangle\ = (1-2c^\dagger_1 c_1)\left|1, \dots \right\rangle= - \left|1, \dots \right\rangle,, $$</p>
+<p>and so on. The operator $P_n$ is the <em>fermion parity operator</em> for the pair of Majoranas $\gamma_{2n-1}$ and $\gamma_{2n}$. At this point it is useful to remind you that different Majorana operators all anticommute with each other. This means that the product of a pair of Majorana operators commutes with the product of a different pair, for instance:</p>
+<p>$$(\gamma_1\gamma_2)(\gamma_3\gamma_4) = (\gamma_3\gamma_4)(\gamma_1\gamma_2),.$$</p>
+<p>However, if the two pairs share a Majorana, then they do not commute anymore, for instance:</p>
+<p>$$(\gamma_1\gamma_2)(\gamma_2\gamma_3) = - (\gamma_2\gamma_3)(\gamma_1\gamma_2),.$$<br>Of course, the product above can also be simplified: since $\gamma_2^2=1$, you have that $(\gamma_1\gamma_2)(\gamma_2\gamma_3)=\gamma_1\gamma_3$.<br> All $P_n$’s commute with each other, because they all involve a different pair of Majoranas. </p>
+<blockquote>
+<p>Thus the  Hilbert space of states $|\Psi\rangle$ of a set of $N$ pairs of Majorana modes is spanned by the simultaneous eigenstates $|s_1,s_2,\dots,s_N\rangle$ of the commuting fermion parity operators $P_n$ and is written as $$\left|\Psi\right\rangle= \sum_{s_n=0,1} \alpha_{s_1s_2\dots s_N},\left| s_1, s_2, \dots, s_N\right\rangle, $$<br> with complex coefficients $\alpha_{s_1s_2\dots s_N}$. </p>
+</blockquote>
+<p> At this point an important consideration is in order. You will remember learning during the first week that, while a superconducting Hamiltonian may not conserve the total number of electrons due to the creation and annihilation of Cooper pairs, the parity of the number of electrons is always conserved.<br>We can obtain the <em>total fermion parity</em> by multiplying all the operators $P_n$,</p>
+<p>$$ P_\textrm{tot}=P_1\cdot P_2\cdot, \dots, \cdot P_N = i^N,\gamma_1\gamma_2\dots\gamma_{2N},.$$</p>
+<p>The operator $P_\textrm{tot}$ has eigenvalues $s_1 s_2\dots s_N=\pm 1$, depending on whether the total number of occupied fermionic modes is even or odd. Applied to our case, this means that it is only meaningful to consider states $\left|\Psi\right\rangle$ which are <em>eigenstates</em> of the operator $P_\textrm{tot}$, that is</p>
+<p>$$P_\textrm{tot}\left|\Psi\right\rangle=\pm\left|\Psi\right\rangle,.$$</p>
+<p>In particular, linear combinations of states with different total parity are forbidden. You can see this condition as a constraint on the allowed values of the coefficients $\alpha_{s_1s_2\dots s_N}$.</p>
+<p>This consideration only applies to closed systems. It does not apply if we are considering a system which is in contact with a reservoir of electrons, such as a metallic lead, in which case electrons may tunnel in and out of the lead, changing the total parity of the system. Equivalently, it does not apply if we are considering only a part of the total system. You could for instance imagine that, in our sketch, there are more Majorana zero modes in the part of the network which is not drawn explicitly (represented by the dots which “continue” the nanowire). In such a case it is perfectly possible that the <em>total</em> network is in, say, a state of even parity, but that the subsystem under consideration is in a superposition of even and odd parity states.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"Consider an isolated system with N=7 pairs of Majoranas, and an even total fermion parity. "</span></span><br><span class="line">    <span class="string">"What is the ground state degeneracy of the system?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Trick question - it is not possible to get N=7 pairs of Majorana modes with even parity."</span>,</span><br><span class="line">    <span class="string">"2^7."</span>,</span><br><span class="line">    <span class="string">"2^6."</span>,</span><br><span class="line">    <span class="string">"14"</span>,</span><br><span class="line">    <span class="string">"The system has an energy gap, so it cannot be degenerate."</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"7 pairs of Majoranas means a Hilbert space with dimension 2^7, "</span></span><br><span class="line">    <span class="string">"out of which half have even total parity and half have odd total parity. "</span></span><br><span class="line">    <span class="string">"So the degeneracy at fixed even parity is 2^6."</span></span><br><span class="line">)</span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">2</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Non-Abelian-statistics-of-Majoranas"><a href="#Non-Abelian-statistics-of-Majoranas" class="headerlink" title="Non-Abelian statistics of Majoranas"></a>Non-Abelian statistics of Majoranas</h1><p>Let’s now imagine that experimentalists are not only able to build such a network, but also to move the position of the domain walls and swap the positions of two Majoranas, for instance by performing the following trajectory:</p>
+<p><img src="/src/w2_majorana/braiding.htm/nanowire_network_exchange.svg" alt></p>
+<p>Let’s suppose that the trajectory takes a time $T$. During the trajectory, the system is described by a time-dependent Hamiltonian $H(t)$, $0\leq t \leq T$. This Hamiltonian contains all the details of the system, such as the positions of the domain walls where the Majoranas are located. Because the final configuration of the system is identical to the initial one, for instance all the domain walls are in the same positions as in the beginning, we have that $H(0)=H(T)$. In other words, we are considering a <em>closed trajectory</em> which brings the Hamiltonian back into itself. To ensure that the wave-function for the system does not leave the ground state manifold of states $|\Psi\rangle$, we need to change the Hamiltonian $H(t)$ slowly enough to obey the <a href="http://en.wikipedia.org/wiki/Adiabatic_theorem" target="_blank" rel="noopener">adiabatic theorem</a>. </p>
+<p>So let’s imagine that we are in the adiabatic limit and that we exchange two Majoranas $\gamma_n$ and $\gamma_m$. As usual in quantum mechanics, the initial and final quantum states are connected by a unitary operator $U$ ($U^{-1}=U^\dagger$),</p>
+<p>$$\left|\Psi\right\rangle ,\to, U \left|\Psi\right\rangle,.$$</p>
+<p>Because the quantum state $\left|\Psi\right\rangle$ never leaves the ground state manifold, which has $2^N$ states, the operator $U$ can be written a $2^N\times 2^N$ unitary matrix.</p>
+<p>We can derive the exact form of $U$ without a direct calculation, which would require knowing $H(t)$, but only based on the following, general considerations. First, the adiabatic exchange of two Majoranas does not change the parity of the number of electrons in the system, so $U$ commutes with the total fermion parity, $[U, P_\textrm{tot}]=0$. Second, it is reasonable to assume that $U$ only depends on the Majoranas involved in the exchange, or in other words that it is a function of $\gamma_n$ and $\gamma_m$, and of no other operator. And because it has to preserve fermion parity, it can only depend on their product, that is on the parity operator $-i\gamma_n\gamma_m$, which is Hermitian. Finally, the exponential of $i$ times a Hermitian operator is a unitary operator. So, in general $U$ must take the form</p>
+<p>$$U\equiv\exp(\beta \gamma_n \gamma_m) = \cos(\beta) + \gamma_n\gamma_m \sin(\beta),,$$</p>
+<p><em>up to an overall phase</em>. Here, $\beta$ is a real coefficient to be determined, and in the last equality we have used the fact that $(\gamma_n\gamma_m)^2=-1$. To determine $\beta$, it is convenient to go to the <a href="http://en.wikipedia.org/wiki/Heisenberg_picture" target="_blank" rel="noopener">Heisenberg picture</a> and look at the evolution of the Majorana operators in time. We have that</p>
+<p>$$<br>\gamma_n,\to,  U,\gamma_n,U^\dagger,,\<br>\gamma_m,\to,  U,\gamma_m,U^\dagger,.<br>$$</p>
+<p>Inserting our guess for $U$ we obtain:</p>
+<p>$$<br>\gamma_n,\to,   \cos (2\beta),\gamma_n  - \sin(2\beta),\gamma_m,,\<br>\gamma_m,\to,   \cos (2\beta),\gamma_m  + \sin(2\beta),\gamma_n,.<br>$$</p>
+<p>Now we have to remember that at time $T$ we have completed a closed trajectory, so that the Majorana $\gamma_n$ is now in the place initially occupied by $\gamma_m$, and vice versa. This condition leads to the choice $\beta = \pm \pi/4$. It is not strange that we find that both signs are possible - this distinguishes the clockwise and the counterclockwise exchange of the Majoranas. </p>
+<blockquote>
+<p>Thus, we can write the unitary operator that exchanges the Majorana modes $\gamma_n$ and $\gamma_m$ in an explicit (and somewhat non-trivial looking!) form as:<br>$$U = \exp \left(\pm\frac{\pi}{4}\gamma_n \gamma_m\right) = \tfrac{1}{\sqrt{2}}\left(1\pm\gamma_n\gamma_m\right)$$</p>
+</blockquote>
+<p>To fix our ideas and study the consequences of $U$ more closely, it is convenient to just focus on four Majoranas $\gamma_1,\gamma_2,\gamma_3$ and $\gamma_4$. For this discussion we will assume that counter-clockwise exchanges pick the $+$ sign in $U$. Their ground state manifold has four states, which in the notation introduced before we write down as</p>
+<p>$$\left|00\right\rangle, \left|11\right\rangle, \left|01\right\rangle, \left|10\right\rangle,,$$</p>
+<p>where the first digit is the occupation number of the fermionic mode $c^\dagger_1=\tfrac{1}{2}(\gamma_1+i\gamma_2)$ and the second digit the occupation number of $c^\dagger_2=\tfrac{1}{2}(\gamma_3+i\gamma_4)$. The most generic possible wave function is a superposition</p>
+<p>$$\left|\Psi\right\rangle = s_{00}\left|00\right\rangle + s_{11} \left|11\right\rangle + s_{01} \left|01\right\rangle + s_{10} \left|10\right\rangle,,$$</p>
+<p>which we can also represent as a vector with four entries, $\left|\Psi\right\rangle = (s_{00}, s_{11}, s_{01}, s_{10})^T$. The operator $U$ at this point can be written as a $4\times 4$ matrix. In order to do so, you just have to compute the action of a product of Majoranas on the basis states. This a simple but tedious operation, which we skip here. It results in the following matrices for the operators $U_{12}, U_{23}$ and $U_{34}$ exchanging neighboring Majoranas:</p>
+<p>$$<br>U_{12} = \exp\left(\frac{\pi}{4}\gamma_1 \gamma_2\right) \equiv\begin{pmatrix}<br>e^{-i\pi/4} &amp; 0 &amp; 0 &amp; 0 \0 &amp; e^{i\pi/4} &amp; 0 &amp;0 \0 &amp; 0&amp; e^{-i\pi/4} &amp;0 \ 0&amp;0&amp; 0&amp; e^{i\pi/4}<br>\end{pmatrix},,<br>$$</p>
+<p>$$<br>U_{23} = \exp\left(\frac{\pi}{4}\gamma_2 \gamma_3\right) \equiv\frac{1}{\sqrt{2}}\begin{pmatrix}<br>1 &amp; -i &amp; 0 &amp; 0\ -i &amp; 1 &amp; 0&amp; 0\ 0&amp; 0&amp; 1 &amp; -i\ 0&amp; 0&amp; -i &amp; 1<br>\end{pmatrix},,<br>$$</p>
+<p>$$<br>U_{34} = \exp\left(\frac{\pi}{4}\gamma_3 \gamma_4\right) \equiv\begin{pmatrix}<br>e^{-i\pi/4} &amp; 0 &amp; 0 &amp; 0\ 0&amp; e^{i\pi/4} &amp; 0&amp; 0\ 0&amp; 0&amp; e^{i\pi/4} &amp; 0\ 0&amp; 0&amp; 0&amp; e^{-i\pi/4}<br>\end{pmatrix},.<br>$$</p>
+<p>These matrices indeed act in a very non-trivial way on the wave function. For instance, if we start from the state $\left|00\right\rangle$ and we exchange $\gamma_2$ and $\gamma_3$, we obtain</p>
+<p>$$\left|00\right\rangle,\to,U_{23}\left|00\right\rangle=\tfrac{1}{\sqrt{2}}\left(\left|00\right\rangle-i\left|11\right\rangle\right),,$$</p>
+<p>which is a superposition of states! Hence we have seen explicitly that the effect of the exchange two Majoranas on the wavefunction amounts to much more than just an overall phase, as it happens for bosons and fermions.</p>
+<p>Let’s now try a sequence of two exchanges. In this case, we have to multiply the corresponding $U$s, ordering them from right to the left according to the order of the exchanges. Given that the matrices above are not diagonal, it is not surprising that the order in the product matters a lot. For instance you can check that</p>
+<p>$$U_{23}U_{12}\neq U_{12}U_{23},$$</p>
+<blockquote>
+<p>We have just shown that exchanging two Majorana modes leads to a non trivial rotation in the ground state manifold, and that changing the order of the exchanges changes the final result. These properties make Majorana modes <strong>non-Abelian anyons</strong>. The exchange of two non-Abelian anyons is usually called <strong>braiding</strong>, a name which is suggestive of the fact that, when thinking of the trajectories of the different particles, a sequence of exchanges looks like a braid made out of different strands.</p>
+</blockquote>
+<p>Finally, you might object to the fact that the network of nanowires drawn in the figures only allows to exchange neighbouring Majoranas, even though our derivation of $U=\exp(\pi\gamma_n\gamma_m/4)$ seems to hold for any pair of Majoranas. This geometric constraint is not a big problem: by carefully composing many exchanges between neighbours, we can exchange any pair of Majoranas. As an example, you have that $U_{13}\equiv\exp\left(\pi\gamma_1 \gamma_3/4\right) = U_{12}^\dagger,U^\dagger_{23},U_{12}$.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"Consider a system with only one pair of Majorana modes, thus with just two degenerate states with different fermion parity. "</span></span><br><span class="line">    <span class="string">"What happens when we exchange the pair of Majorana modes, starting from a given fermion parity eigenstate?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The fermion parity of the state flips."</span>,</span><br><span class="line">    <span class="string">"Nothing happens."</span>,</span><br><span class="line">    <span class="string">"The system wave-function picks up a phase that depends on the fermion parity."</span>,</span><br><span class="line">    <span class="string">"You end up in a superposition of the two states."</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The total fermion parity cannot change, "</span></span><br><span class="line">    <span class="string">"but the two states can pick up a different phase. "</span></span><br><span class="line">    <span class="string">"This is indeed what happens since the operator $U$ describing the exchange depends on fermion parity."</span></span><br><span class="line">)</span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">2</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Majoranas-and-quantum-computation-basic-ideas"><a href="#Majoranas-and-quantum-computation-basic-ideas" class="headerlink" title="Majoranas and quantum computation: basic ideas"></a>Majoranas and quantum computation: basic ideas</h1><p>The non-Abelian statistics of Majorana modes is a very special property. Furthermore, it has some practical interest, since it could be used to realize a robust <strong>quantum computer</strong>. (If you are not yet interested in quantum computation, you can skip this part, even though we suggest that you get interested in it! Quantum computation is a huge topic of research, but <a href="http://arxiv.org/abs/quant-ph/9708022" target="_blank" rel="noopener">this</a> is a good place to start learning.)</p>
+<p>Let’s discuss very briefly how this can be done.</p>
+<p>First, we can think of our network of nanowires with $2N$ Majoranas as a small computer. The $2^N$ states of the ground state manifold can encode a string of $N$ bits, so it’s like having a small <em>register</em>. As always in quantum computation, and unlike in a classical computer, the register can be in a superposition of different states. So far, nothing really special about Majoranas.</p>
+<p>How do we execute an <em>algorithm</em> on our register? Simply by exchanging the Majorana modes! Because of the non-Abelian statistics, different sequences of exchanges will yield different algorithms. Of course, to execute an interesting algorithm we may need a lot of Majorana modes and a very very long sequence of exchanges. However, it all begins with the small building blocks, the matrices that you have just studied in detail.</p>
+<p>You might say that this is just another way to obtain a given unitary operator acting on the wave function. The beautiful thing, though, is that both the state of the register and the algorithms are <em>topologically protected</em>. Let’s explain what we mean by that.</p>
+<p>The state of the register is encoded in the fermion parity degrees of freedom, which are shared <em>non-locally</em> by the Majoranas. This means that no local perturbation can change the state of the register and cause <em>decoherence</em> of the quantum state. The environment cannot access the information stored in the Majoranas, as long as they are kept far away from each other. The only exception is a change in fermion parity due to the tunnelling of a stray quasiparticle into the system (this is the problem of quasiparticle poisoning, the same that can hinder the detection of the $4\pi$-periodic Josephson effect of Majorana modes, as you heard from Carlo Beenakker). But except from this, the Majoranas are a great <em>quantum memory</em>.</p>
+<p>On the other hand, every step of the algorithm will be extremely accurate because it is given by an exchange of two Majoranas, which corresponds to <em>exactly</em> $\exp(\pi\gamma_n\gamma_m/4)$. When you are in the adiabatic limit, this operator does not depend on any of the details on how the exchange between Majoranas is performed. It does not depend on <em>how</em> you move the Majoranas, or on the particular trajectory that $\gamma_n$ and $\gamma_m$ followed, or on the timing of the trajectory. So the final result is extremely reliable.</p>
+<p>These are the basic ideas of <strong>topological quantum computation</strong>. It is incredible that we can find condensed matter systems, such as networks of Majoranas, which are naturally endowed with these characteristics. </p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"V3e9r4S8GHs"</span>, src_location=<span class="string">"2.3-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Questions about what you just learned? Ask them below.</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Non-Abelian statistics of Majorana modes"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/src/w2_majorana/braiding.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

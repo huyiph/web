@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="page-" class="article article-type-page" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br></pre></td></tr></table></figure>
+
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>The topological order is introduced by Barbara Terhal from RWTH Aachen.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"rLdHCKxMumY"</span>, src_location=<span class="string">"12.2-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Simplest-model-for-topological-degeneracy-Toric-code"><a href="#Simplest-model-for-topological-degeneracy-Toric-code" class="headerlink" title="Simplest model for topological degeneracy: Toric code"></a>Simplest model for topological degeneracy: Toric code</h1><p>We have worked hard to create topological models so far. The FQH system, which is the most topological in some sense, was also more obscure in terms of microscopics. Here, we follow Alexei Kitaev and write down a simple Hamiltonian that is obviously topological, but also relatively easy to analyse.</p>
+<p>Let’s consider a system of localized spin$-1/2$ electrons that live on the bonds of a square lattice. The particular Hamiltonian that Kitaev wrote down is:</p>
+<p>$$H=-A_v\sum_{+}\prod_+ \sigma_z-B_p\sum_{\Box}\prod_{\Box} \sigma_x.$$</p>
+<p>As you can see in the figure below, $\Box$ refers to the spins on the bonds that surround a plaquette and $+$ refers to the bonds that surround a vertex. The beauty of this Hamiltonian is that all the terms commute between themselves. The only terms that you might suspect not to commute are a plaquette term and a vertex term that share some bonds. But you can convince yourself easily (by  looking at the figure) that such terms always share an even number of spins. This means that the commutation picks up an even number of minus signs and so these terms commute as well.</p>
+<p><img src="/src/w12_manybody/topoorder.htm/toric_layout.svg" alt></p>
+<p>Since $H$ is a sum of commuting terms, we can calculate the ground state as the simultaneous ground state for all the terms.<br>Let us first look at the vertex terms proportional to $A$. If we draw a red line through bond connecting neighboring spins with $\sigma_z=-1$ on our lattice (as shown below), then we find that each vertex in the ground state configuration has an even number of red lines coming in. Thus, we can think of the red  lines forming loops that can never be open ended. This allows us to view the ground state of the toric code as a loop gas. </p>
+<p><img src="/src/w12_manybody/topoorder.htm/loops.svg" alt></p>
+<p>What if we focus on the large plaquette term limit i.e. $A_v\ll B_p$ instead? The toric code is fairly symmetric between the vertex and plaquette terms. Clearly, focusing on the $\sigma_z$ diagonal basis was a choice. If we draw loops (blue lines) through the dual lattice (whose vertices are in the middle of the original lattice) whenever $\sigma_x=-1$ on some link. This results in a loop gas picture (blue lines) on the dual lattice, which focusses on the $\sigma_x$ terms. </p>
+<p>Returning to the $\sigma_z$ representation, it looks like every loop configuration is a ground state wave-function and so is a massively degenerate loop space $L$. But this conclusion doesn’t include the plaquette terms (i.e. the $B_p$ coefficient) yet. Since the plaquette terms commute with the vertex terms in the Hamiltonian, the plaquette terms take us between different loop configurations. Considering the plaquette Hamiltonian in the low energy space of closed loops we can show that the ground state wave-function must be the sum of all possible (i.e. ones that can be reached by applying the plaquette terms) loop configurations with equal weight. </p>
+<p>The ground state looks pretty non-degenerate at this point but if we consider the system with periodic boundary conditions - namely on a torus, we immediately see that there are 4 topologically distinct loop configurations that are degenerate. Basically, the plaquette terms can only deform the loops smoothly and therefore cannot change the parity of the winding numbers of the loops. </p>
+<p>It is however possible to continuously deform a closed loop into a pair of loops along some cycle of the torus. So only the parity of the loop winding across a cut cannot be changed. Thus, the toric code on a torus has 4 degenerate ground state wave-functions (all with the same energy), which are topologically distinct. The difference between these wave functions is the parity of the number of loops crossing a vertical or a horizontal cycle on the torus.</p>
+<p>Does this have anything to do with the way we have defined topology in this course, using the bulk-edge correspondence? Unfortunately and confusingly, not. These interacting systems are topological in the sense of having a topological degeneracy between topologically distinct states that cannot be continuously deformed into one another. In a sense, this is a more amazing feature than the bulk edge correspondence itself - the degeneracy between these states cannot be lifted by any reasonable (local) perturbation. This is sort of similar to Majorana fermions, but even more robust. In fact, the toric code does not even have edge states, so there is really no bulk-edge correspondence to speak of.</p>
+<p>The topological robustness makes the topologically degenerate states particularly attractive to store quantum information. The main challenge of quantum information is the quantum decoherence problem, where local fluctuations in the Hamiltonian destroy the phase coherence of the quantum system used to store information. The solution proposed by topological quantum computation is to use the topologically degenerate space of a toric code to store the information. In fact, this is in essence what is being attempted by experimentalists who work on superconducting qubits, under the framework of the surface code. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"How would the topological degeneracy of the ground state that comes from the loop configurations "</span></span><br><span class="line">    <span class="string">"change if we put it on a torus (donut) with two holes?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Since there is still an infinite number of loop configurations, the degeneracy would be infinite."</span>,</span><br><span class="line">    <span class="string">"Since there is one additional hole there are two more distinct cycles. "</span></span><br><span class="line">    <span class="string">"So  the number of ground states increases by a factor of 4."</span>,</span><br><span class="line">    <span class="string">"It still remains 4 since the loops is topologically forbidden from going around the extra loops."</span>,</span><br><span class="line">    <span class="string">"Since there is one additional hole the loops can go around this hole an even or an odd number of time, "</span></span><br><span class="line">    <span class="string">"so the degeneracy increases from 4 to 8."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The additional hole introduces the possibility of 2 values of parity on each extra cycle. This adds a "</span></span><br><span class="line">    <span class="string">"factor of $2 \\times 2=4$."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Particle-like-excitations"><a href="#Particle-like-excitations" class="headerlink" title="Particle-like excitations"></a>Particle-like excitations</h1><p>As we saw in the FQH systems, excitations with fractional charge and statistics was really the hall-mark of topologically degenerate states. Since the basic degree of freedom in the toric code are spin, we expect all excitations to be neutral. But there is a possibility that we get fractionalized statistics. The neat thing about the toric code Hamiltonian is that it allows us to not only compute the ground state for the toric code but also all the excited states. Again, this is not too surprising since all the terms in the Hamiltonian commute, so all eigenstates are simultaneous eigenstates of the vertex and plaquette terms. If we focus on the vertex terms first (let’s say by assuming that $B_p\ll A_v$), we can get excitations of the vertex Hamiltonian by breaking loops. We can think of the end points of the loops as excitations, since the plaquette terms proportional to $B_p$ make the plaquette terms fluctuate. These particles (that you see in the figure below) because of analogy with $Z_2$ gauge theory, are called the electric defects, which we label ‘e’. As shown below, analogous defects in $\sigma_x=-1$-loops on the dual lattice are referred to as magnetic defects, which we will label ‘m’. </p>
+<p><img src="/src/w12_manybody/topoorder.htm/toric_exchanges.svg" alt></p>
+<p>While the intuitive picture for the excitations as ends of broken loops is nice, to describe these exctiation in the more general case, where $A_v$ and $B_p$ are comparable, it is convenient to define the so-called Wilson path operators </p>
+<p>$$W_e=\prod_{\mathcal{l}<em>e} \sigma_z,\quad, W_m=\prod</em>{\mathcal{l}_m}  \sigma_x.$$</p>
+<p>By viewing the system in the $\sigma_z$-basis in the limit $B_p\rightarrow 0$, we see that the operator $W_e$ counts the parity of $\sigma_z=-1$ spins that lie on the loop $\mathcal{l}_e$. Therefore, in this limit $W_e$ measures the parity of ‘e’ excitations inside the loop $\mathcal{l}_e$. The  operator $W_e$ is a product of the vertex terms inside the loop $\mathcal{l}_e$ and hence commutes with $H$ for any strength  of the plaquette terms proportional to $B_p$. </p>
+<blockquote>
+<p>Therefore $W_e$ and $W_m$ are conserved ‘flux’ operators that measure the parity of the number of electric and magnetic defects inside the loops $\mathcal{l}_{e,m}$ respectively.</p>
+</blockquote>
+<p>Thus, the values $W_{e,m}=-1$ can also be used to define what it means to have a localized ‘e’ or ‘m’ excitation respectively. These defects describe the localized excitations of the toric code. In fact in this model, this excitation on the ground states are localized to exactly one lattice site and may be viewed as point-like particles in a vacuum.  </p>
+<p>Just like in the quantum Hall effect, we can use the Wilson loops $W_{e,m}$ to characterize the degenerate ground states of the toric code on a torus. The value of the Wilson loop $W_e$ counts the parity of intersections of $\sigma_z=-1$ loops (red lines) crossing the Wilson loop. Therefore, the value of the Wilson loop $W_e$ along one of the cycles of the torus counts the parity of the $\sigma_z=-1$ loops crossing it. Since we can draw a pair of commuting Wilson loop $W_e$, one through each cycle of the torus, the degeneracy of the torus from $W_e=\pm 1$ is 4. This is exactly what we got from the loop picture. </p>
+<h1 id="Semionic-statistics-of-excitations"><a href="#Semionic-statistics-of-excitations" class="headerlink" title="Semionic statistics of excitations"></a>Semionic statistics of excitations</h1><p>The loop gas picture makes the ‘e’ and ‘m’ excitations, which are ends of loops look quite topological. But are they topological in a sense similar to the charges in the FQH system? To see this, let us try to interchange an ‘e’ particle and an ‘m’ particle. For starters let us see how to move each of these particles. To do this we use the ‘path’ operators </p>
+<p>$$\Gamma^{(e)}(a,b)=\prod_{a\rightarrow b}\sigma_x,\quad,\Gamma^{(m)}(a,b)=\prod_{a\rightarrow b}\sigma_z,$$</p>
+<p>to move an excitation from point $a$ to $b$. This is because this operator will flip $W_{e,m}(a):-1\rightarrow +1$ at end $a$ and hence destroy the excitation and also flip $W_{e,m}(b):+1\rightarrow -1$ to create an excitation. </p>
+<p>Now, if we try to take an ‘e’ particle around an ‘m’ particle, the path forms a loop $W_e$ around ‘m’. This adds a factor of  $W_e=-1$ to the wave-function, for the double exchange process between ‘e’ and ‘m’, which is topologically equivalent to taking one particle around the other. This strange exchange statistics, which is not quite the same as the exchange of identical particles that we are used to is referred to as “semionic” statistics.</p>
+<p>Next, we try to exchange a pair of ‘e’ particles. We can do this by applying a pair of path operators $\Gamma^{(e)}$ to the particles<br>that form a loop. This pair of operators form loop operator $W_e$, which must be $W_e=+1$ unless there is an ‘m’ particle inside. Therefore the ‘e’ particles are bosons and so are the ‘m’ particles by a similar argument.</p>
+<p>Finally, if we exchange an ‘e’-‘m’ pair with another ‘e’-‘m’ pair, we see, that the result is equivalent to a double exchange between an ‘e’ particle and an ‘m’ particle in addition some ‘e’ and ‘m’ exchanges. The double exchange produces a $-$ sign as we saw. However, unlike the case of exchanging ‘e’ and ‘m’ particles, the ‘e’-‘m’ pairs (also called dyons) are identical particles and therefore we can treat them analogous to exchanging quantum particles in nature. In this context, the $-$ sign should suggest to you that the dyon ‘e’-‘m’ are really fermions. This is rather strange because the microscopic constituents of our theory were spins whose exchange phases are always $1$ (i.e. bosons) and we end up with fermions, which are in some sense half of bosons.<br>Thus, the toric code, in a sense, gives us a microscopic model of “fractional statistics”.</p>
+<p>Questions about what you just learned? Ask them below!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Topological order"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/src/w12_manybody/topoorder.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

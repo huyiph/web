@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="page-" class="article article-type-page" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"></span><br><span class="line">%opts Layout [sublabel_format=<span class="string">''</span> aspect_weight=<span class="number">1</span> figure_size=(<span class="number">100</span>) vspace=<span class="number">0.4</span>]</span><br><span class="line">%output size = <span class="number">150</span></span><br><span class="line"></span><br><span class="line">randn = np.random.randn</span><br><span class="line"></span><br><span class="line">alphas = np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line">dims = SimpleNamespace(</span><br><span class="line">    E=holoviews.Dimension(<span class="string">r"$E$"</span>),</span><br><span class="line">    alpha=holoviews.Dimension(<span class="string">r"$\alpha$"</span>),</span><br><span class="line">    Q=holoviews.Dimension(<span class="string">r"$Q$"</span>),</span><br><span class="line">    Q_BdG=holoviews.Dimension(<span class="string">r"$Q_&#123;BdG&#125;$"</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_random_real_ham</span><span class="params">(N)</span>:</span></span><br><span class="line">    H = randn(N, N)</span><br><span class="line">    H += H.T</span><br><span class="line">    <span class="keyword">return</span> H / <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_cons_ham</span><span class="params">(N)</span>:</span></span><br><span class="line">    H = np.kron(pauli.s0, randn(N, N)) + np.kron(pauli.sz, randn(N, N))</span><br><span class="line">    H += H.T.conj()</span><br><span class="line">    <span class="keyword">return</span> H / <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_random_ham</span><span class="params">(N)</span>:</span></span><br><span class="line">    H = randn(N, N) + <span class="number">1j</span> * randn(N, N)</span><br><span class="line">    H += H.T.conj()</span><br><span class="line">    <span class="keyword">return</span> H / <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_random_symplectic_ham</span><span class="params">(N)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> N % <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">"Matrix dimension should be a multiple of 2"</span>)</span><br><span class="line">    sy = np.kron(np.eye(N // <span class="number">2</span>), np.array([[<span class="number">0</span>, <span class="number">-1j</span>], [<span class="number">1j</span>, <span class="number">0</span>]]))</span><br><span class="line">    h = randn(N, N) + <span class="number">1j</span> * randn(N, N)</span><br><span class="line">    h += h.T.conj()</span><br><span class="line">    Th = sy @ h.conj() @ sy</span><br><span class="line">    <span class="keyword">return</span> (h + Th) / <span class="number">4</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_chiral_ham</span><span class="params">(N)</span>:</span></span><br><span class="line">    temp1 = randn(N, N) + <span class="number">1j</span> * randn(N, N)</span><br><span class="line">    temp2 = randn(N, N) + <span class="number">1j</span> * randn(N, N)</span><br><span class="line">    H = np.kron(pauli.sx, temp1) + np.kron(pauli.sy, temp2)</span><br><span class="line">    H += H.T.conj()</span><br><span class="line">    <span class="keyword">return</span> H / <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_BdG_ham</span><span class="params">(N)</span>:</span></span><br><span class="line">    <span class="comment"># This is antisymmetric basis</span></span><br><span class="line">    H = <span class="number">1j</span> * randn(<span class="number">2</span> * N, <span class="number">2</span> * N)</span><br><span class="line">    H += H.T.conj()</span><br><span class="line">    <span class="keyword">return</span> H / <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">energies</span><span class="params">(alpha, H0, H1)</span>:</span></span><br><span class="line">    H = (<span class="number">1</span> - alpha) * H0 + alpha * H1</span><br><span class="line">    <span class="keyword">return</span> np.linalg.eigvalsh(H)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_spectrum</span><span class="params">(alphas, H0, H1)</span>:</span></span><br><span class="line">    spectrum = [energies(a, H0, H1) <span class="keyword">for</span> a <span class="keyword">in</span> alphas]</span><br><span class="line">    <span class="keyword">return</span> np.array(spectrum)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_Q</span><span class="params">(spectrum)</span>:</span></span><br><span class="line">    <span class="string">"""Finds the number of bands that are under zero energy.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    -----------</span></span><br><span class="line"><span class="string">    spectrum : numpy array</span></span><br><span class="line"><span class="string">        Array that contains the energies levels for every alpha.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    --------</span></span><br><span class="line"><span class="string">    Q : list</span></span><br><span class="line"><span class="string">        Number of bands under zero energy.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">return</span> [len(s[s &lt; <span class="number">0</span>]) <span class="keyword">for</span> s <span class="keyword">in</span> spectrum]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_hamiltonian_spectrum</span><span class="params">(alphas, spectrum, E_range=<span class="params">(<span class="number">-4</span>, <span class="number">4</span>)</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Function that plots a spectrum for a range of alphas.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    -----------</span></span><br><span class="line"><span class="string">    alphas : numpy array</span></span><br><span class="line"><span class="string">        Range of alphas for which the energies are calculated.</span></span><br><span class="line"><span class="string">    spectrum : numpy array</span></span><br><span class="line"><span class="string">        Array that contains the energies levels for every alpha.</span></span><br><span class="line"><span class="string">    E_range : tuple</span></span><br><span class="line"><span class="string">        The upper and lower limit of the y-dimension.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    --------</span></span><br><span class="line"><span class="string">    plot : holoviews.Path object</span></span><br><span class="line"><span class="string">        Plot of alphas vs. spectrum.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    E_min, E_max = E_range</span><br><span class="line">    energy = dims.E.clone()</span><br><span class="line">    energy.range = tuple(E_range)</span><br><span class="line">    plot = (holoviews.Path((alphas, spectrum), kdims=[dims.alpha, energy]) * holoviews.HLine(<span class="number">0</span>))</span><br><span class="line">    <span class="keyword">return</span> plot.opts(plot=&#123;<span class="string">"xticks"</span>: [<span class="number">0</span>, <span class="number">0.5</span>, <span class="number">1</span>], <span class="string">"yticks"</span>: [E_min, <span class="number">0</span>, E_max]&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_Q</span><span class="params">(alphas, Q, Q_range, Q_dim=dims.Q)</span>:</span></span><br><span class="line">    <span class="string">"""Function that plots value of Q for a range of alphas.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    -----------</span></span><br><span class="line"><span class="string">    alphas : numpy array</span></span><br><span class="line"><span class="string">        Range of alphas for which the energies are calculated.</span></span><br><span class="line"><span class="string">    Q : numpy array</span></span><br><span class="line"><span class="string">        Vector that contains the value of Q for every alpha.</span></span><br><span class="line"><span class="string">    Q_range : tuple</span></span><br><span class="line"><span class="string">        The upper and lower limit of the y-dimension.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    --------</span></span><br><span class="line"><span class="string">    plot : holoviews.Path object</span></span><br><span class="line"><span class="string">        Plot of alphas vs. Q.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    Q_min, Q_max = Q_range</span><br><span class="line">    Q_mid = (Q_max + Q_min) / <span class="number">2</span></span><br><span class="line">    Q_dim = Q_dim.clone()</span><br><span class="line">    Q_dim.range = tuple(Q_range)</span><br><span class="line">    plot = holoviews.Area((alphas, Q), kdims=[dims.alpha], vdims=[Q_dim]).opts(style=&#123;<span class="string">"alpha"</span>: <span class="number">0.4</span>&#125;)</span><br><span class="line">    plot *= holoviews.Curve((alphas, Q), kdims=[dims.alpha], vdims=[Q_dim])</span><br><span class="line">    <span class="keyword">return</span> plot.opts(</span><br><span class="line">        plot=&#123;</span><br><span class="line">            <span class="string">"xticks"</span>: [<span class="number">0</span>, <span class="number">0.5</span>, <span class="number">1</span>],</span><br><span class="line">            <span class="string">"yticks"</span>: [int(Q_min), int(Q_mid), int(Q_max)],</span><br><span class="line">            <span class="string">"aspect"</span>: <span class="number">4</span>&#125;</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+<h1 id="Topology-and-symmetry"><a href="#Topology-and-symmetry" class="headerlink" title="Topology and symmetry"></a>Topology and symmetry</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"5ysdSoorJz4"</span>, src_location=<span class="string">"1.1-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Zero-dimensional-quantum-systems"><a href="#Zero-dimensional-quantum-systems" class="headerlink" title="Zero-dimensional quantum systems"></a>Zero-dimensional quantum systems</h1><p>Imagine a quantum system with a finite number of states $N$. The Hamiltonian of such a system is represented by a matrix $H$ of dimension $N\times N$.<br>This matrix is Hermitian, $H=H^\dagger$. Its real eigenvalues $E_n$ correspond to the allowed energies of the system,</p>
+<p>$$H,\left|n\right\rangle = E_n,\left|n\right\rangle,,$$</p>
+<p>with $\left|n\right\rangle$ the corresponding eigenstate. Let’s say that $H$ describes a small quantum dot with a few levels. We can imagine that the quantum dot is in weak contact with a metallic lead, as in the following sketch:</p>
+<p><img src="/src/w1_topointro/0d.htm/dot.svg" alt></p>
+<p>The presence of a metallic lead allows us to measure all the energies $E_n$ of the electronic states in the dot with respect to the Fermi level $E_F$ of the electrons in the metallic lead. In the following we will set $E_F=0$. Hence, all negative energies $E_n&lt;0$ correspond to filled states in the dot, and all positive energies $E_n&gt;0$ to empty states. In the sketch, the lead and the dot are separated by a potential barrier, such that they are only coupled very weakly. Thus, we can still consider the dot as an isolated system, to a good approximation.</p>
+<p>We are now ready to start on the main theme of this course, topology.</p>
+<h2 id="Topology-and-gapped-quantum-systems"><a href="#Topology-and-gapped-quantum-systems" class="headerlink" title="Topology and gapped quantum systems"></a>Topology and gapped quantum systems</h2><p>Topology studies whether objects can be transformed continuously into each other. In condensed matter physics we can ask whether the Hamiltonians of two quantum systems can be continuously transformed into each other. If that is the case, then we can say that two systems are ‘topologically equivalent’.</p>
+<p>If we considered all Hamiltonians without any constraint, every Hamiltonian could be continuously deformed into every other Hamiltonian, and all quantum systems would be topologically equivalent. This changes drastically if we restrict ourselves to systems with an energy gap. This means that there is a finite energy cost to excite the system above its ground state.<br>If an energy gap is present, then the Hamiltonian of the system has no eigenvalues in a finite interval around zero energy.</p>
+<p>We can now use the following criterion: we say that two gapped quantum systems are topologically equivalent if their Hamiltonians can be continuously deformed into each other <em>without ever closing the energy gap</em>.</p>
+<p>In the following, we will see that often one is interested in some more specific criterion: for instance, that some symmetry may be preserved throughout the continuous path which connects two Hamiltonians.</p>
+<p>However, for the moment let’s just see these ideas at play using our quantum dot as a simple test case. Imagine our dot is initially described by a random $H$, such as:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">30</span>)</span><br><span class="line">H0 = make_random_real_ham(N=<span class="number">4</span>)</span><br><span class="line">pprint_matrix(H0)</span><br></pre></td></tr></table></figure>
+
+<p>For simplicity, we have taken $H$ to be real. Let’s now deform this Hamiltonian into another Hamiltonian $H’$, also real. We can imagine that this deformation describes the changes that occur to the dot as an external parameter, such as a gate voltage, is varied. We can parameterize the deformation by</p>
+<p>$H(\alpha) = \alpha H’ + (1-\alpha) H,$</p>
+<p>so that at $\alpha=0$ we are at the initial Hamiltonian and at $\alpha=1$ we are at the final Hamiltonian. Let’s see what the energy levels do as a function of $\alpha$ (we use more levels here than in the matrix above so that the spectrum looks more interesting).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">69</span>)</span><br><span class="line">H0 = make_random_real_ham(N=<span class="number">10</span>)</span><br><span class="line">H1 = make_random_real_ham(N=<span class="number">10</span>)</span><br><span class="line">spectrum = find_spectrum(alphas, H0, H1)</span><br><span class="line">plot_hamiltonian_spectrum(alphas, spectrum)</span><br></pre></td></tr></table></figure>
+
+<p>You may notice from the plot that as $\alpha$ varies, it can happen that an energy level crosses zero energy. When this happens, we break the condition that there should be an energy gap in the system. Notice, however, that this does not necessarily mean that there is no continuous transformation between $H$ and $H’$ such that the gap does not close. It simply means that this particular path has gap closings. Perhaps it is possible to find another path which does not.</p>
+<p>So are $H$ and $H’$ topologically equivalent or not? Let’s look at this situation:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">6</span>)</span><br><span class="line">H0 = make_random_real_ham(N=<span class="number">10</span>)</span><br><span class="line">H1 = make_random_real_ham(N=<span class="number">10</span>)</span><br><span class="line">spectrum = find_spectrum(alphas, H0, H1)</span><br><span class="line">plot_hamiltonian_spectrum(alphas, spectrum)</span><br></pre></td></tr></table></figure>
+
+<p>We see that one level does cross zero (even twice), but it seems obvious that we can just push it down a little bit and we find a continuous path between two Hamiltonians. So we need to come up with an easier way to figure out if Hamiltonians can be transformed into each other or not.</p>
+<h1 id="The-concept-of-a-topological-invariant"><a href="#The-concept-of-a-topological-invariant" class="headerlink" title="The concept of a topological invariant"></a>The concept of a topological invariant</h1><p>In order to know whether there is any path which connects $H$ and $H’$ without closing the gap, we can count the number of levels below zero energy, i.e. the number of filled energy levels. This is possible because the eigenvalues of gapped Hamiltonians can move freely as long as they don’t cross zero energy. Therefore continuous transformations exist exactly between Hamiltonians with the same number of energy levels below zero.</p>
+<p>Since this number can not change under continuous transformations inside the set of gapped Hamiltonians, we call it a <em>topological invariant</em> $Q$.</p>
+<p>Below, we plot the energy levels along our path from $H$ to $H’$ again, together with our topological invariant, the number of filled energy levels. You can see that this number changes between 3, 4 and 5. Hence we can say that $H$ and $H’$ are not topologically equivalent.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">69</span>)</span><br><span class="line">H0 = make_random_real_ham(N=<span class="number">10</span>)</span><br><span class="line">H1 = make_random_real_ham(N=<span class="number">10</span>)</span><br><span class="line">spectrum = find_spectrum(alphas, H0, H1)</span><br><span class="line">Q = find_Q(spectrum)</span><br><span class="line">(</span><br><span class="line">    plot_hamiltonian_spectrum(alphas, spectrum)</span><br><span class="line">    + plot_Q(alphas, Q, [<span class="number">2</span>, <span class="number">6</span>])</span><br><span class="line">).cols(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>The plot makes it clear that we do not actually have to count the number of filled energy levels for both $H$ and $H’$, so it is enough to keep track of <em>zero energy crossings</em>. Whenever an energy level crosses zero energy, the number of levels below zero energy changes. Such a crossing therefore changes the topological invariant. We call that a <em>topological phase transition</em>.</p>
+<p>If two Hamiltonians have a different topological invariant, they must be separated by such a transition. In other words, it is impossible to go from one to the other without closing the gap.</p>
+<p>On the other hand, if there are equally many levels crossing from below to above zero energy as the other way around, the number of levels below zero energy does not change. The topological invariant is therefore the same for the initial and final Hamiltonian. In this case, there must be a continuous transformation between the initial and final Hamiltonian which does not close the gap.</p>
+<p>Once we have identified a topological invariant, we can <em>classify</em> all quantum Hamiltonians according to its value. In this way we create classes of Hamiltonians which are all topologically equivalent, and we can keep track of all the different <em>topological phases</em> that these Hamiltonians can support.</p>
+<h2 id="Role-of-conservation-laws"><a href="#Role-of-conservation-laws" class="headerlink" title="Role of conservation laws"></a>Role of conservation laws</h2><p>Let’s now consider the case that the Hamiltonian of the quantum dot satisfies a symmetry constraint. This means that there is a unitary matrix, for example $U = \sigma_z \otimes 1!!1$ where $\sigma_z$ is the third Pauli matrix, such that the Hamiltonian commutes with this matrix:</p>
+<p>$$U^\dagger H U = H.$$</p>
+<p>This means that the system has a conservation law, and that the Hamiltonian can be brought to a block-diagonal form:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">modes = <span class="number">5</span></span><br><span class="line">np.random.seed(<span class="number">10</span>)</span><br><span class="line">H0 = make_cons_ham(<span class="number">2</span>)</span><br><span class="line">pprint_matrix(H0)</span><br></pre></td></tr></table></figure>
+
+<p>We can now look at the spectrum and the topological invariant of each subblock individually,</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">%%opts Layout [aspect_weight=<span class="number">1</span> fig_inches=(<span class="number">8</span>, <span class="number">6</span>) fig_size=<span class="number">100</span> ]</span><br><span class="line">np.random.seed(<span class="number">13</span>)</span><br><span class="line">H0 = make_cons_ham(modes)</span><br><span class="line">H1 = make_cons_ham(modes)</span><br><span class="line">spectrum1 = find_spectrum(alphas, H0[:modes, :modes], H1[:modes, :modes])</span><br><span class="line">spectrum2 = find_spectrum(alphas, H0[modes:, modes:], H1[modes:, modes:])</span><br><span class="line">Q1 = find_Q(spectrum1)</span><br><span class="line">Q2 = find_Q(spectrum2)</span><br><span class="line">(</span><br><span class="line">    plot_hamiltonian_spectrum(alphas, spectrum1, [<span class="number">-3</span>, <span class="number">3</span>])</span><br><span class="line">    + plot_hamiltonian_spectrum(alphas, spectrum2, [<span class="number">-3</span>, <span class="number">3</span>])</span><br><span class="line">    + plot_Q(alphas, Q1, [<span class="number">0</span>, <span class="number">4</span>])</span><br><span class="line">    + plot_Q(alphas, Q2, [<span class="number">0</span>, <span class="number">4</span>])</span><br><span class="line">).cols(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>and combine them to get the spectrum and the topological invariant of the whole system:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spectrum = find_spectrum(alphas, H0, H1)</span><br><span class="line">Q = find_Q(spectrum)</span><br><span class="line">(plot_hamiltonian_spectrum(alphas, spectrum) + plot_Q(alphas, Q, [<span class="number">3</span>, <span class="number">7</span>])).cols(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>As you can see, unitary symmetries play a rather boring role. As usual, they allow to reduce the dimension of the problem at hand, but nothing more. There are however other symmetries which can have a rich influence on topology. An important example is time-reversal symmetry, as we will see next.</p>
+<h1 id="Time-reversal-symmetry"><a href="#Time-reversal-symmetry" class="headerlink" title="Time-reversal symmetry"></a>Time-reversal symmetry</h1><p>In our previous examples, you might have wondered, whether there was anything special with choosing real matrices? Indeed there was something special. A real Hamiltonian is a manifestation of time-reversal symmetry. Time-reversal symmetry is represented by an anti-unitary operator, and as such it can always be written as the product $\mathcal{T}=U\mathcal{K}$ of a unitary matrix times complex conjugation. In the case above, we had simply $\mathcal{T}\equiv\mathcal{K}$. Our real Hamiltonians clearly obeyed time-reversal symmetry since $H=H^*$.</p>
+<p>Let’s now break time-reversal symmetry, create random Hamiltonians with complex entries and see what happens.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">91</span>)</span><br><span class="line">H0 = make_random_ham(N=<span class="number">4</span>)</span><br><span class="line">pprint_matrix(H0)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">92</span>)</span><br><span class="line">H0 = make_random_ham(N=<span class="number">10</span>)</span><br><span class="line">H1 = make_random_ham(N=<span class="number">10</span>)</span><br><span class="line">spectrum = find_spectrum(alphas, H0, H1)</span><br><span class="line">Q = find_Q(spectrum)</span><br><span class="line">(plot_hamiltonian_spectrum(alphas, spectrum) + plot_Q(alphas, Q, [<span class="number">3</span>, <span class="number">7</span>])).cols(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>As you can see, there aren’t really many differences with the previous case. The different energy levels move, and the topological invariant changes when one of them crosses zero.</p>
+<p>There is, however, a very important case where time-reversal symmetry makes a real difference. For systems with spin $1/2$, time-reversal symmetry has the operator</p>
+<p>$$<br>\mathcal{T}=i\sigma_y \mathcal{K},<br>$$</p>
+<p>with $\sigma_y$ the second Pauli matrix acting on the spin degree of freedom. In that case $\mathcal{T}^2=-1$. A Hamiltonian with this type of time-reversal symmetry obeys the equation</p>
+<p>$$<br>H = \sigma_y, H^* \sigma_y.<br>$$</p>
+<p>The following matrix is an example of such Hamiltonian:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">49</span>)</span><br><span class="line">H0 = make_random_symplectic_ham(N=<span class="number">4</span>)</span><br><span class="line">pprint_matrix(H0)</span><br></pre></td></tr></table></figure>
+
+<p>Hamiltonians of this type have the following property: every energy eigenvalue $E_n$ is doubly degenerate (Kramers’ degeneracy). We can see the consequences of Kramers’ degeneracy on our game of deforming one random Hamiltonian into another.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">2285</span>)</span><br><span class="line">H0 = make_random_symplectic_ham(N=<span class="number">10</span>)</span><br><span class="line">H1 = make_random_symplectic_ham(N=<span class="number">10</span>)</span><br><span class="line">spectrum = find_spectrum(alphas, H0, H1)</span><br><span class="line">Q = find_Q(spectrum)</span><br><span class="line">(plot_hamiltonian_spectrum(alphas, spectrum) + plot_Q(alphas, Q, [<span class="number">3</span>, <span class="number">7</span>])).cols(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>While the spectrum looks quite similar to the previous ones, whenever a line crosses zero energy, our topological invariant makes a jump of two, and not one! In this case, time-reversal symmetry constrains the topological invariant to only take even values. This is an example of how topological properties can be influenced by discrete symmetries.</p>
+<h1 id="Sublattice-symmetry"><a href="#Sublattice-symmetry" class="headerlink" title="Sublattice symmetry"></a>Sublattice symmetry</h1><p>We just saw that time-reversal symmetry can forbid the topological invariant to take a certain set of values. We now study another case where a symmetry changes the topological properties dramatically.</p>
+<p>Let’s now take a system where we can split all the degrees of freedom into two groups (say group $A$ and group $B$) such that the Hamiltonian only has nonzero matrix elements between two groups, and not inside each group. This situation arises naturally when the lattice has two sublattices, as in the hexagonal carbon lattice of graphene. So let’s imagine our quantum dot is now a graphene dot:</p>
+<p><img src="/src/w1_topointro/0d.htm/graphene_dot.svg" alt></p>
+<p>As a consequence of sublattice symmetry, the Hamiltonian of the graphene dot looks like this:</p>
+<p>$$<br>H =<br>\begin{pmatrix}<br>0 &amp; H_{AB} \<br>H_{AB}^\dagger &amp; 0<br>\end{pmatrix}.<br>$$</p>
+<p>We can once again generate a random Hamiltonian with sublattice symmetry, here:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">98</span>)</span><br><span class="line">pprint_matrix(make_chiral_ham(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<p>If we introduce a diagonal matrix $\sigma_z$ that equals $+1$ for sites on sublattice $A$, and $-1$ for sites on sublattice $B$, we can write the sublattice symmetry of the Hamiltonian as</p>
+<p>$$<br>\sigma_z H \sigma_z = -H.<br>$$</p>
+<p>This immediately means that if $(\psi_A, \psi_B)^T$ is an eigenvector of the Hamiltonian with energy $\varepsilon$, then<br>$(\psi_A, -\psi_B)^T$ is an eigenvector with energy $-\varepsilon$. A symmetric spectrum is the consequence of sublattice symmetry.</p>
+<p>What does this mean for the topological classification?<br>Clearly, the number of states with negative energy is the same as the number of states with positive energy, and that means we don’t ever expect a single level to cross zero energy.</p>
+<p>Let’s once again see if this is correct by transforming a random Hamiltonian with sublattice symmetry into another one.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">modes = <span class="number">10</span></span><br><span class="line">np.random.seed(<span class="number">99</span>)</span><br><span class="line">H0 = make_chiral_ham(modes)</span><br><span class="line">H1 = make_chiral_ham(modes)</span><br><span class="line">spectrum = find_spectrum(alphas, H0, H1)</span><br><span class="line">plot_hamiltonian_spectrum(alphas, spectrum, [<span class="number">-3</span>, <span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>Indeed, we can deform all the Hamiltonians with sublattice symmetry into one another without closing the gap.<br>This means that an extra symmetry may render topological classification trivial.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"OK, let's see what we have so far. Which symmetry certainly "</span></span><br><span class="line">    <span class="string">"does not restrict the values that the topological invariant can take?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Spinless time-reversal symmetry"</span>,</span><br><span class="line">    <span class="string">"Sublattice symmetry"</span>,</span><br><span class="line">    <span class="string">"Conservation law"</span>,</span><br><span class="line">    <span class="string">"Spinful time-reversal symmetry"</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"We cannot be sure about the conservation law, since the blocks may have different remaining symmetries. "</span></span><br><span class="line">    <span class="string">"And we just saw that sublattice symmetry makes every system trivial, while spinful time-reversal "</span></span><br><span class="line">    <span class="string">"makes the numbers of levels even."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">0</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Particle-hole-symmetry"><a href="#Particle-hole-symmetry" class="headerlink" title="Particle-hole symmetry"></a>Particle-hole symmetry</h1><p>There is another symmetry that has a strong influence on topology: particle-hole symmetry. It shows up in superconducting systems. As an example, imagine bringing our quantum dot in contact with a superconductor, like this:</p>
+<p><img src="/src/w1_topointro/0d.htm/SCdot.svg" alt></p>
+<p>A superconductor will create and annihilate pairs of electrons by breaking apart <a href="https://en.wikipedia.org/wiki/Cooper_pair" target="_blank" rel="noopener">Cooper pairs</a> and forming them.<br>This results in a Hamiltonian:</p>
+<p>$$<br>\mathcal{H} = \sum_{nm} H_{nm} c^\dagger_nc_m + \tfrac{1}{2} (\Delta_{nm} c^\dagger_n c^\dagger_m + \Delta^*_{nm} c_m c_n),<br>$$</p>
+<p>where $c^\dagger_n, c_n$ are the creation and annihilation operators of the electrons. We recall that these operators anticommute, obeying the relations $c_nc_m+c_mc_n=0$ and $c^\dagger_n c_m + c_m c^\dagger_n = \delta_{mn}$, where $\delta_{mn}=0$ if $m\neq n$ and $1$ if $m=n$.</p>
+<p>The $H$-term is the dynamics of the electrons in the dot, while $\Delta$ describes the pair creation and annihilation. The matrix $\Delta$ is antisymmetric because the fermion operators anticommute. Now $\mathcal{H}$ does not conserve the number of electrons, but still conserves the parity of the number of electrons, that is whether the number of electrons is even or odd. We can now group all the creation and annihilation operators in a vector, $C = (c_1, \dots, c_n, c^\dagger_1, \dots, c^\dagger_n)^T$. Then we write $\mathcal{H}$ in the form ‘row multiplies matrix multiplies column’:</p>
+<p>$$<br>\mathcal{H} = \frac{1}{2} C^\dagger H_\textrm{BdG},C,.<br>$$</p>
+<p>The matrix $H_\textrm{BdG}$ is known as the Bogoliubov-de Gennes Hamiltonian, and it has the following structure:</p>
+<p>$$<br>H_\textrm{BdG} = \begin{pmatrix} H &amp; \Delta \ -\Delta^* &amp; -H^* \end{pmatrix}.<br>$$</p>
+<p>The Bogoliubov-de Gennes Hamiltonian acts on wave functions whose first half is composed out of annihilation operators of electrons, and the second half out of creations operators of the same electrons.<br>We can think of them as annihilation operators of an extra set of holes, so that we double the amount of degrees of freedom in the system.</p>
+<p>Since holes are related to the electrons, $H_{BdG}$ automatically has an extra symmetry.<br>This symmetry exchanges electrons with holes, and has an antiunitary operator $\mathcal{P}=\tau_x \mathcal{K}$, where the Pauli matrix $\tau_x$ acts on the particle and hole blocks. We have that:</p>
+<p>$$<br>\mathcal{P} H_\textrm{BdG} \mathcal{P}^{-1} = -H_\textrm{BdG}.<br>$$</p>
+<p>Particle-hole symmetry is represented by an anti-unitary operator which anti-commutes with the Hamiltonian (compare this situation with that of time-reversal and sublattice symmetries). Because of the minus sign in the particle-hole symmetry, the spectrum of $H_\textrm{BdG}$ must be symmetric around zero energy (that is, the Fermi level). Indeed, for every eigenvector $\psi = (u, v)^T$ of $H_\textrm{BdG}$ with energy $E$, there will be a particle-hole symmetric eigenvector $\mathcal{P}\psi=(v^<em>, u^</em>)^T$ with energy $-E$.</p>
+<h2 id="Fermi-level-crossings-in-a-random-Bogoliubov-de-Gennes-Hamiltonian"><a href="#Fermi-level-crossings-in-a-random-Bogoliubov-de-Gennes-Hamiltonian" class="headerlink" title="Fermi level crossings in a random Bogoliubov-de Gennes Hamiltonian"></a>Fermi level crossings in a random Bogoliubov-de Gennes Hamiltonian</h2><p>Let’s generate a random Bogoliubov-de Gennes Hamiltonian $H_\textrm{BdG}$:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">modes = <span class="number">2</span></span><br><span class="line">np.random.seed(<span class="number">101</span>)</span><br><span class="line">H0 = make_BdG_ham(modes)</span><br><span class="line">H1 = make_BdG_ham(modes)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Print in 'normal' basis</span></span><br><span class="line">H0_normal = np.kron(np.array([[<span class="number">1</span>, <span class="number">-1j</span>], [<span class="number">1</span>, <span class="number">1j</span>]]), np.identity(modes)) @ H0</span><br><span class="line">H0_normal = H0_normal @ np.kron(np.array([[<span class="number">1</span>, <span class="number">1</span>], [<span class="number">1j</span>, <span class="number">-1j</span>]]), np.identity(modes))</span><br><span class="line">pprint_matrix(H0_normal)</span><br></pre></td></tr></table></figure>
+
+<p>We can now see what happens when we deform it into a second one. You can indeed see clearly that the spectrum is mirrored around the line $E=0$, just like it was in the presence of sublattice symmetry.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">modes = <span class="number">10</span></span><br><span class="line">np.random.seed(<span class="number">5</span>)</span><br><span class="line">H0 = make_BdG_ham(modes)</span><br><span class="line">H1 = make_BdG_ham(modes)</span><br><span class="line">spectrum = find_spectrum(alphas, H0, H1)</span><br><span class="line">plot_hamiltonian_spectrum(alphas, spectrum, [<span class="number">-3</span>, <span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>You can however notice that, unlike in the case of sublattice symmetry, energy levels do not repel around zero energy, so that crossings at zero energy appear.</p>
+<h2 id="Fermion-parity-switches"><a href="#Fermion-parity-switches" class="headerlink" title="Fermion parity switches"></a>Fermion parity switches</h2><p>Let’s think a bit more about these crossings. At first, they might look a bit mysterious. In general a crossing between energy levels happens in the presence of a conserved quantity, and our random Bogoliubov-de Gennes Hamiltonian does not seem to have an obvious one. Let’s however recall what we said earlier: While the mean-field Hamiltonian of a superconductor does not conserve the number of particles, it conserves the parity of this number. In other words, forming and breaking Cooper pairs does not affect whether the superconducting quantum dots contains an even or odd number of electrons. In short, fermion parity is a conserved quantity (provided that isolated electrons do not enter or leave the dot, a possibility which we will disregard).</p>
+<p>The above observation reveals that the existence of crossings is due to the fermion parity conservation. Fermion parity, however, is a many-body quantity, which cannot be directly described in terms of the single particle picture of the Bogoliubov-de Gennes Hamiltonian.<br>To understand the existence of the crossings, recall that to obtain a Bogoliubov-de Gennes description of the superconductor we had to double the number of degrees of freedom by introducing holes.<br>Hence, unlike in the case of sublattice symmetry, a pair of $\pm E$ energy levels does not corresponds to two distinct quantum states, but to a <em>single</em> quantum state.<br>This quantum state is a coherent superposition of electrons and holes - a <em>Bogoliubov quasiparticle</em>: it has an excitation energy $E$, and it is created by an operator $a^\dagger = u c^\dagger + v c$.<br>Populating the partner state at energy $-E$ is the same as emptying the positive energy state.</p>
+<p>When a pair of levels crosses zero energy, the excitation energy $E$ of the Bogoliubov quasiparticle changes sign and it becomes favorable to add a Bogoliubov quasiparticle to, or remove it from the superconducting quantum dot. In other words, at each crossing the fermion parity in the ground state of the dot changes from even to odd, or vice versa. Hence these crossings are <em>fermion parity switches</em>.</p>
+<p>Since the ground state fermion parity is preserved by the superconducting Hamiltonian if there are no Bogoliubov quasiparticles crossing zero energy, the ground state fermion parity is the topological invariant of this system. It is clear however that this invariant is of a different nature than the one of the non-superconducting systems, which is given by the number of negative eigenvalues of the Hamiltonian. The latter cannot change for a Bogoliubov-de Gennes Hamiltonian, which has a symmetric energy spectrum, and hence it is not suitable to describe changes in fermion parity. Is there a way to compute this new invariant directly from the Bogoliubov-de Gennes Hamiltonian?</p>
+<h2 id="The-Pfaffian-invariant"><a href="#The-Pfaffian-invariant" class="headerlink" title="The Pfaffian invariant"></a>The Pfaffian invariant</h2><p>In order to introduce the new invariant, we have to start with a basis transformation, that makes the Hamiltonian an antisymmetric matrix. We use the following unitary transformation in particle-hole space,</p>
+<p>$$<br>\tilde{H}<em>{BdG}=\frac{1}{2}\left( \begin{array}{cc}<br>1 &amp; 1 \<br>i &amp; -i \end{array} \right)<br>H</em>{BdG}<br>\left( \begin{array}{cc}<br>1 &amp; -i \<br>1 &amp; i \end{array} \right),.<br>$$</p>
+<p>We then have</p>
+<p>$$<br>\tilde{H}_\textrm{BdG} = \frac{1}{2}\begin{pmatrix} H-H^<em>+\Delta-\Delta^</em> &amp; -iH-iH^<em>+i\Delta+i\Delta^</em> \ +iH+iH^<em>+i\Delta+i\Delta^</em> &amp; H-H^<em>-\Delta+\Delta^</em> \end{pmatrix}.<br>$$</p>
+<p>We already know that the pairing matrix $\Delta$ is antisymmetric. Since $H$ is Hermitian $H-H^<em>$ is also antisymmetric and $H+H^</em>$ is symmetric. Then we can see that $\tilde{H}_\textrm{BdG}$ is antisymmetric.</p>
+<p>There is a special number that we can compute for antisymmetric matrices, the <a href="http://en.wikipedia.org/wiki/Pfaffian" target="_blank" rel="noopener">Pfaffian</a>. Its rigorous definition is not important for our course. The basic idea is simple: The eigenvalues of antisymmetric matrices always come in pairs. In the case of our $\tilde{H}_{BdG}$, these are the energy eigenvalues $\pm E_n$. By taking their product we obtain the determinant of the matrix, equal to $\prod_n (-E_n^2)$. The key property of the Pfaffian is that it allows to take a square root of the determinant, equal to $\pm \prod_n iE_n$, in such a way that the sign of the product is uniquely defined. At a fermion parity switch a single $E_n$ changes sign, so the Pfaffian changes sign as well (while the determinant stays the same).</p>
+<p>This feature of the Pfaffian really makes it what we are looking for. Let’s try out the sign of the Pfaffian as our topological invariant $Q_\textrm{BdG}$:</p>
+<p>$$ Q_\textrm{BdG} = \textrm{sign}\left[,\textrm{Pf} (i H_\textrm{BdG}),\right],.$$</p>
+<p>We have included a factor of $i$ just for convenience, so that the Pfaffian is a real number.</p>
+<p>Whenever we need to compute a Pfaffian we just use the <a href="http://arxiv.org/abs/1102.3440" target="_blank" rel="noopener">Pfapack</a> package that calculates Pfaffians for numerical matrices. Let’s use that package and check that the Pfaffian indeed allows us to calculate the fermion parity of the ground state of $H_\textrm{BdG}$.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_pfaffian</span><span class="params">(alphas, H0, H1)</span>:</span></span><br><span class="line">    <span class="string">"""Function caculates the Pfaffian for a Hamiltonian.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    -----------</span></span><br><span class="line"><span class="string">    alphas : numpy array</span></span><br><span class="line"><span class="string">        Range of alphas for which the energies are calculated.</span></span><br><span class="line"><span class="string">    H0 : numpy array</span></span><br><span class="line"><span class="string">        Hamiltonian, same size as H1.</span></span><br><span class="line"><span class="string">    H1 : numpy array</span></span><br><span class="line"><span class="string">        Hamiltonian, same size as H0.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    --------</span></span><br><span class="line"><span class="string">    pfaffians : numpy array</span></span><br><span class="line"><span class="string">        Pfaffians for each alpha.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">H</span><span class="params">(alpha)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="number">1</span> - alpha) * H0 + alpha * H1</span><br><span class="line"></span><br><span class="line">    pfaffians = [np.sign(np.real(pf.pfaffian(<span class="number">1j</span> * H(a)))) <span class="keyword">for</span> a <span class="keyword">in</span> alphas]</span><br><span class="line">    <span class="keyword">return</span> np.array(pfaffians)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pfaffian = find_pfaffian(alphas, H0, H1)</span><br><span class="line"></span><br><span class="line">(</span><br><span class="line">    plot_hamiltonian_spectrum(alphas, spectrum, [<span class="number">-1.5</span>, <span class="number">1.5</span>])</span><br><span class="line">    + plot_Q(alphas, pfaffian, [<span class="number">-1.2</span>, <span class="number">1.2</span>], dims.Q_BdG)</span><br><span class="line">).cols(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>You can see how the Pfaffian invariant $Q_\textrm{BdG}$ changes its value from $+1$ to $-1$ at every zero-energy crossing.<br>This means that it is the correct expression for the ground state fermion parity and for the topological invariant.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"What happens to the topological invariant if we take the superconducting"</span></span><br><span class="line">    + <span class="string">" Hamiltonian and set $\Delta=0$?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The Pfaffian invariant still captures all of the topological properties."</span>,</span><br><span class="line">    <span class="string">"The Hamiltonian loses particle-hole symmetry and becomes topologically trivial."</span>,</span><br><span class="line">    <span class="string">"The Hamiltonian now has a new conservation law so there are two blocks, each with its own invariant."</span>,</span><br><span class="line">    <span class="string">"It isn't allowed to set $\Delta=0$"</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"If $\Delta=0$ the numbers of filled electron and hole states is conserved, and so the invariant once again"</span></span><br><span class="line">    <span class="string">" becomes just the number of filled states."</span></span><br><span class="line">)</span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">2</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"C7HoXjVbpoM"</span>, src_location=<span class="string">"1.1-summary"</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Questions about what you learned? Ask them below</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Hamiltonians, Topology and Symmetry"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/src/w1_topointro/0d.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>

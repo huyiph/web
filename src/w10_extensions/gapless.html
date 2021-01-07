@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="demon" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     O
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="page-" class="article article-type-page" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> cm</span><br><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> hsv_to_rgb</span><br><span class="line"></span><br><span class="line">pi_ticks = [(-np.pi, <span class="string">r"$-\pi$"</span>), (<span class="number">0</span>, <span class="string">"$0$"</span>), (np.pi, <span class="string">r"$\pi$"</span>)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">d_wave</span><span class="params">(w=None, direction=None)</span>:</span></span><br><span class="line">    <span class="string">"""Creates a d-wave system.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    -----------</span></span><br><span class="line"><span class="string">    w : int</span></span><br><span class="line"><span class="string">        Width of the system, if None the system is infinite</span></span><br><span class="line"><span class="string">    direction : str</span></span><br><span class="line"><span class="string">        Direction of translation symmetry, if None it's an infinite</span></span><br><span class="line"><span class="string">        system in x and y.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopx</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.sz - p.delta * pauli.sx</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopy</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.sz + p.delta * pauli.sx</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="number">4</span> * p.t - p.mu) * pauli.sz</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> w:</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">            (x, y) = pos</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">        sym = kwant.TranslationalSymmetry(*lat.prim_vecs)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> direction == <span class="string">"topo"</span>:</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">                (x, y) = pos</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span> &lt;= y - x &lt; w</span><br><span class="line"></span><br><span class="line">            sym = kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">        <span class="keyword">elif</span> direction == <span class="string">"triv"</span>:</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">                (x, y) = pos</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span> &lt;= y &lt; w</span><br><span class="line"></span><br><span class="line">            sym = kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">    syst = kwant.Builder(sym)</span><br><span class="line"></span><br><span class="line">    syst[lat.shape(ribbon_shape, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopx</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">graphene_infinite</span><span class="params">()</span>:</span></span><br><span class="line">    lat = kwant.lattice.honeycomb()</span><br><span class="line">    a, b = lat.sublattices</span><br><span class="line">    syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">    syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">    syst[kwant.builder.HoppingKind((<span class="number">0</span>, <span class="number">0</span>), a, b)] = <span class="keyword">lambda</span> site1, site2, p: p.t_1</span><br><span class="line">    syst[kwant.builder.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), a, b)] = <span class="keyword">lambda</span> site1, site2, p: p.t_23</span><br><span class="line">    syst[kwant.builder.HoppingKind((<span class="number">-1</span>, <span class="number">1</span>), a, b)] = <span class="keyword">lambda</span> site1, site2, p: p.t_23</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_dets</span><span class="params">(syst, p, ks, chiral=False)</span>:</span></span><br><span class="line">    B = np.array(syst.symmetry.periods).T</span><br><span class="line">    A = B @ np.linalg.inv(B.T @ B)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">momentum_to_lattice</span><span class="params">(k)</span>:</span></span><br><span class="line">        k, residuals = np.linalg.lstsq(A, k, rcond=<span class="number">-1</span>)[:<span class="number">2</span>]</span><br><span class="line">        <span class="keyword">return</span> list(k)</span><br><span class="line"></span><br><span class="line">    syst = kwant.wraparound.wraparound(syst).finalized()</span><br><span class="line">    kys, kxs = np.meshgrid(ks, ks)</span><br><span class="line">    dets = np.zeros_like(kxs, dtype=complex)</span><br><span class="line">    <span class="keyword">for</span> i, kx <span class="keyword">in</span> enumerate(ks):</span><br><span class="line">        <span class="keyword">for</span> j, ky <span class="keyword">in</span> enumerate(ks):</span><br><span class="line">            kx, ky = momentum_to_lattice([kx, ky])</span><br><span class="line">            ham = syst.hamiltonian_submatrix(params=dict(p=p, k_x=kx, k_y=ky))</span><br><span class="line">            <span class="keyword">if</span> chiral:</span><br><span class="line">                <span class="comment"># Bring the chiral symmetric Hamiltonian in offdiagonal form</span></span><br><span class="line">                U = (pauli.s0 + <span class="number">1j</span> * pauli.sx) / np.sqrt(<span class="number">2</span>)</span><br><span class="line">                ham = U @ ham @ U.T.conjugate()</span><br><span class="line">            dets[i, j] = ham[<span class="number">1</span>, <span class="number">0</span>]</span><br><span class="line">    H = np.angle(dets) / (<span class="number">2</span> * np.pi)</span><br><span class="line">    V = np.abs(dets)</span><br><span class="line">    H = np.mod(H, <span class="number">1</span>)</span><br><span class="line">    V /= np.max(V)</span><br><span class="line">    V = <span class="number">1</span> - V ** <span class="number">2</span></span><br><span class="line">    S = np.ones_like(H)</span><br><span class="line">    HSV = np.dstack((H, S, V))</span><br><span class="line">    RGB = hsv_to_rgb(HSV)</span><br><span class="line">    bounds = (ks.min(), ks.min(), ks.max(), ks.max())</span><br><span class="line">    pl = holoviews.RGB(RGB, bounds=bounds, label=<span class="string">r"$\det(h)$"</span>, kdims=[<span class="string">"$k_x$"</span>, <span class="string">"$k_y$"</span>])</span><br><span class="line">    <span class="keyword">return</span> pl.opts(plot=&#123;<span class="string">"xticks"</span>: pi_ticks, <span class="string">"yticks"</span>: pi_ticks&#125;).opts(</span><br><span class="line">        style=&#123;<span class="string">"interpolation"</span>: <span class="literal">None</span>&#125;</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Weyl_slab</span><span class="params">(w=<span class="number">5</span>)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopx</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.5j</span> * p.t * pauli.sx - p.t * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopy</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopz</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.5j</span> * p.t * pauli.sy - p.t * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">6</span> * p.t * pauli.sz - p.mu * pauli.sz</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.general(np.eye(<span class="number">3</span>))</span><br><span class="line">    syst = kwant.Builder(kwant.TranslationalSymmetry([<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">        (x, y, z) = pos</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span> &lt;= z &lt; w</span><br><span class="line"></span><br><span class="line">    syst[lat.shape(shape, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>), lat)] = hopx</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>), lat)] = hopy</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>), lat)] = hopz</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br></pre></td></tr></table></figure>
+
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Ashvin Vishwanath from the University of California, Berkeley will introduce Weyl semimetals and other examples of gapless, yet topological, systems.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"MAWwa4r1qIc"</span>, src_location=<span class="string">"10.1-intro"</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Topological-invariants-of-Fermi-surfaces"><a href="#Topological-invariants-of-Fermi-surfaces" class="headerlink" title="Topological invariants of Fermi surfaces"></a>Topological invariants of Fermi surfaces</h1><p>The idea that leads us to the topology of gapless systems is extremely simple. It is:</p>
+<blockquote>
+<p>If we consider momentum as an external conserved parameter, we can study topological closings of the gap in momentum space.</p>
+</blockquote>
+<p>Let’s consider the simplest type of topological invariant, one we learned about at the very beginning of this course. Remember the simplest topological invariant of a 0D Hamiltonian, the number of filled energy levels? What if we take two points in momentum space, $\mathbf{k}_1$ and $\mathbf{k}_2$, and consider a Hamiltonian such that the number of filled states changes by $n$ between these two points? We can conclude that there are at least $n$ Fermi surfaces that lie on every path between $\mathbf{k}_1$ and $\mathbf{k}_2$ in momentum space.</p>
+<p>Now we just need to take this idea and apply it to more interesting systems and topological invariants!</p>
+<p>What types of topological invariants are relevant? Aside from special circumstances, we cannot make use of time-reversal or particle-hole symmetries: in momentum space these only have an immediate effect in isolated $\mathbf{k}$-points, where every momentum component is either $0$ or $\pi$. So there are no paths in momentum space for which either of the symmetries is effective in each point.</p>
+<p>So we are left with only two symmetry classes: A and AIII (no symmetry at all or sublattice/chiral symmetry), and with only two invariants: if there is a sublattice symmetry, a winding number can be defined, and without it there’s a Chern number.</p>
+<h1 id="Graphene-and-protected-Dirac-cones"><a href="#Graphene-and-protected-Dirac-cones" class="headerlink" title="Graphene and protected Dirac cones"></a>Graphene and protected Dirac cones</h1><p>We’ve already analysed the 0D Chern number that stabilizes the usual Fermi surfaces. Let’s go one dimension higher, and study winding numbers in systems with sublattice symmetry around 1D loops. </p>
+<p>For a winding number to be nonzero, we need to consider 1D loops in momentum space. As a reminder, with sublattice symmetry the Hamiltonian can always be brought to the form</p>
+<p>$$<br>H = \begin{pmatrix}<br>0 &amp; h(\mathbf{k}) \<br>h^\dagger(\mathbf{k}) &amp; 0<br>\end{pmatrix}<br>$$</p>
+<p>The topological invariant is a nonzero winding of $\det h(\mathbf{k})$ when $\mathbf{k}$ goes around some contour. Since $h(\mathbf{k})$ is continuous, this means that its determinant also has to vanish somewhere inside this contour.</p>
+<p>To study a particular example where this appears, let’s return to graphene, which we studied as a simple limit of Haldane model. For graphene we have the Hamiltonian</p>
+<p>$$h(k_x, k_y) = t_1 e^{i \mathbf{k} \cdot \mathbf{a_1}} + t_2 e^{i \mathbf{k} \cdot \mathbf{a_2}} + t_3 e^{i \mathbf{k} \cdot \mathbf{a_3}},$$</p>
+<p>where $t_1, t_2, t_3$ are the three hoppings connecting a site in one of the two graphene sublattices, and $a_1, a_2, a_3$ are the lattice vectors connecting one unit cell to its neighbors.</p>
+<p>To consider something specific, let’s take $t_2 = t_3 = t$ and vary $t_1$. This is what the band structure and $\det h$ look like:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">%%output size=<span class="number">150</span> fig=<span class="string">'png'</span></span><br><span class="line">p = SimpleNamespace(t_1=<span class="number">1.0</span>, t_23=<span class="number">1.0</span>)</span><br><span class="line">syst = graphene_infinite()</span><br><span class="line">ks = np.sqrt(<span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">80</span>)</span><br><span class="line">kwargs = dict(</span><br><span class="line">    title=<span class="keyword">lambda</span> p: <span class="string">r"Graphene, $t_1 = &#123;:.2&#125; \times t$"</span>.format(p.t_1), zticks=<span class="number">3</span></span><br><span class="line">)</span><br><span class="line">ts = np.linspace(<span class="number">1</span>, <span class="number">2.4</span>, <span class="number">8</span>)</span><br><span class="line">(</span><br><span class="line">    holoviews.HoloMap(</span><br><span class="line">        &#123;p.t_1: spectrum(syst, p, k_x=ks, k_y=ks, **kwargs) <span class="keyword">for</span> p.t_1 <span class="keyword">in</span> ts&#125;,</span><br><span class="line">        kdims=[<span class="string">"$t_1$"</span>],</span><br><span class="line">    )</span><br><span class="line">    + holoviews.HoloMap(</span><br><span class="line">        &#123;p.t_1: plot_dets(syst, p, ks) <span class="keyword">for</span> p.t_1 <span class="keyword">in</span> ts&#125;, kdims=[<span class="string">"$t_1$"</span>]</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>The left panel shows the band structure, and you see that it has gapless points. The right panel shows $\det h$ by using hue as a phase and intensity as magnitude (so white is $\det h = 0$). There are two Dirac points (you see 6, but this is because we plot more than one Brillouin zone). </p>
+<p>We also see that the winding numbers around these two Dirac points have opposite signs (because by going around them clockwise you encounter red, blue and green colors in opposite orders). This must always be the case since the winding number around the edges of the complete Brillouin zone must vanish - as you walk down every edge of the Brillouin zone twice in opposite directions, their contributions always cancel.</p>
+<p>As $t_1$ increases, the two poles move towards each other, eventually annihilating and leaving a completely gapped dispersion relation. Let’s now try to obtain an effective model for the dispersion at each pole and at the phase transition point.</p>
+<p>We know that $\det h$ has to vanish next to some point $\mathbf{k}_0$. We can expand the Hamiltonian to a linear order next to this point, which immediately leaves us with a Hamiltonian</p>
+<p>$$<br>H(\mathbf{k}) =<br>\begin{pmatrix}<br>0 &amp; e^{i\alpha} (v_x \delta k_x + i v_y \delta k_y) \<br>e^{-i\alpha} (v_x \delta k_x - i v_y \delta k_y) &amp; 0<br>\end{pmatrix},<br>$$</p>
+<p>where $\mathbf{\delta k}$ is of course the difference between $\mathbf{k}$ and the Dirac point momentum. Of course this is the 2D Dirac equation, which should be very familiar now.</p>
+<p>At the phase transition where the two Dirac points annihilate, we can also quickly guess that the correct dispersion should be a quadratic function along the axis connecting the two Dirac points, and linear along the other axis (this is also what we see in the plot). We thus have</p>
+<p>$$<br>H(\mathbf{k}) =<br>\begin{pmatrix}<br>0 &amp; e^{i\alpha} (\beta \delta k_1^2 + m + i v_2 \delta k_2) \<br>e^{-i\alpha} (\beta \delta k_1^2 + m - i v_2 \delta k_2) &amp; 0<br>\end{pmatrix},<br>$$</p>
+<p>such that for $m&gt;0$ we have a fully gapped Hamiltonian, and for $m&lt;0$ there are two Dirac points.</p>
+<h1 id="d-wave-superconductors-and-edge-states"><a href="#d-wave-superconductors-and-edge-states" class="headerlink" title="$d$-wave superconductors and edge states"></a>$d$-wave superconductors and edge states</h1><p>Gapless points with Dirac dispersion were known for quite some time before graphene. They exist in the cuprate family of high temperature superconductors, known to have a $d$-wave order parameter. These materials are layered, with weak couplings between the layers, so in the study of these complicated systems, one often starts with a simplified two-dimensional Hamiltonian.</p>
+<p>This Hamiltonian just has the usual kinetic energy term of a single particle band and a superconducting pairing proportional to $k_x^2 - k_y^2$, namely</p>
+<p>$$<br>H = \begin{pmatrix}<br>k^2/2m -\mu &amp; \Delta (k_x^2 - k_y^2) \<br>\Delta (k_x^2 - k_y^2) &amp; \mu-k^2/2m<br>\end{pmatrix}.<br>$$</p>
+<p>There is no spin-orbit coupling here, so the Hamiltonian has a spinless time-reversal symmetry $H = H^<em>$. It also has a particle-hole symmetry $H= - \tau_y H^</em> \tau_y$. Their product, the chiral symmetry $H = -\tau_y H \tau_y$ allows the Hamiltonian to have gapless points where both the single-particle dispersion and the pairing vanish.</p>
+<h2 id="Difference-between-sublattice-symmetries"><a href="#Difference-between-sublattice-symmetries" class="headerlink" title="Difference between sublattice symmetries"></a>Difference between sublattice symmetries</h2><p>Time-reversal symmetry ensures that the winding points come in pairs at opposite momenta, just like in graphene.<br>In graphene however, the chiral symmetry operator $\sigma_z$ commutes with the time-reversal symmetry operator. This means that applying time-reversal symmetry changes the direction of a loop in momentum space, but leaves the winding number invariant. In $d$-wave superconductors on the other hand, the chiral symmetry operator $\tau_y$ is odd under time-reversal (i.e. the operators anticommute), and the winding is invariant under it.</p>
+<p>This means that a Dirac point at momentum $k$ and positive winding must come together with a Dirac point at $-k$ and also positive winding. Since the total winding over the Brillouin zone must be 0, this means that in superconducting systems the Dirac points come in quadruplets: two with positive winding and two with negative winding.</p>
+<p>The $d$-wave superconductor Hamiltonian gives just that: there are 4 Dirac points at $|k_x| = |k_y| = k_F / \sqrt{2}$.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">r"What happens if you make the 2D $d$-wave Hamiltonian 3D, by adding coupling between 2D layers?"</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The Dirac points couple and gap out."</span>,</span><br><span class="line">    <span class="string">"In 3D you cannot have a $d$-wave pairing."</span>,</span><br><span class="line">    <span class="string">"There will remain isolated gapless points in the larger 3D Brillouin zone."</span>,</span><br><span class="line">    <span class="string">"You get a closed 1D Dirac line of gap closings in the 3D Brillouin zone."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">r"The real and imaginary parts of the solutions of $\det h(\mathbf&#123;k&#125;)=0$ form two surfaces "</span></span><br><span class="line">    <span class="string">r"in the Brillouin zone. The intersection of these two surfaces is a line."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Edge-states"><a href="#Edge-states" class="headerlink" title="Edge states"></a>Edge states</h2><p>Now let’s see how bulk-edge correspondence can be made to work for gapless systems. The idea here is to consider the projection of the wave vector parallel to a continuous sample boundary $k_\parallel$ as a parameter, and to apply the bulk-edge correspondence to the remaining lower-dimensional Hamiltonian.</p>
+<p>Whenever the line corresponding to a constant $k_\parallel$ crosses a Dirac point, the winding number of the Hamiltonian $H(k_\parallel)$ changes by the winding of the Dirac point. This means that for certain values of momentum parallel to the boundary, a zero energy edge state will appear.</p>
+<p>For a $d$-wave superconductor this will only happen for some crystalline orientations, as you can see for yourself:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">%%opts VLine (color=<span class="string">'k'</span>)  Curve (linestyle=<span class="string">'--'</span>)</span><br><span class="line">p = SimpleNamespace(mu=<span class="number">2.0</span>, t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>)</span><br><span class="line">k = np.arccos(<span class="number">1</span> - p.mu / p.t / <span class="number">4</span>)</span><br><span class="line">ks = np.linspace(-np.pi, np.pi, <span class="number">50</span>)</span><br><span class="line">sys0 = d_wave()</span><br><span class="line">sys1 = d_wave(<span class="number">50</span>, direction=<span class="string">"topo"</span>)</span><br><span class="line">sys2 = d_wave(<span class="number">50</span>, direction=<span class="string">"triv"</span>)</span><br><span class="line"></span><br><span class="line">det_plot = plot_dets(sys0, p, ks, chiral=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">det_plot1 = (</span><br><span class="line">    det_plot</span><br><span class="line">    * holoviews.Curve(([-np.pi, np.pi], [np.pi, -np.pi]))</span><br><span class="line">    * holoviews.Curve(([-np.pi, np.pi - <span class="number">2</span> * k], [np.pi - <span class="number">2</span> * k, -np.pi]))</span><br><span class="line">    * holoviews.Curve(([-np.pi + <span class="number">2</span> * k, np.pi], [np.pi, -np.pi + <span class="number">2</span> * k]))</span><br><span class="line">).relabel(<span class="string">"$\det(h)$"</span>)</span><br><span class="line"></span><br><span class="line">det_plot2 = det_plot * holoviews.VLine(k) * holoviews.VLine(-k)</span><br><span class="line"></span><br><span class="line">kwargs = dict(k_x=ks, ylims=[<span class="number">-2</span>, <span class="number">2</span>], xticks=pi_ticks, yticks=<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">(</span><br><span class="line">    spectrum(sys1, p, title=<span class="string">"Ribbon with edge states"</span>, **kwargs)</span><br><span class="line">    * holoviews.VLine(<span class="number">-2</span> * k)</span><br><span class="line">    * holoviews.VLine(<span class="number">2</span> * k)</span><br><span class="line">    + det_plot1</span><br><span class="line">    + spectrum(sys2, p, title=<span class="string">"Ribbon without edge states"</span>, **kwargs)</span><br><span class="line">    * holoviews.VLine(-k)</span><br><span class="line">    * holoviews.VLine(k)</span><br><span class="line">    + det_plot2</span><br><span class="line">).cols(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>On the right panels you once again see $\det h$, with added lines denoting different the values of $k_{\parallel}$ crossing the Dirac points. If the sample boundary is along the $(1, 0)$ axis, the Dirac points have coinciding $k_{\parallel}$, and their windings cancel, so that no single value of $k_{\parallel}$ carries an edge state.</p>
+<p>On the other hand, the crystal boundary (1, 1), which lies at an angle $\pi/4$ with respect to the crystallographic axes, has a total winding of +2 at $k_{\parallel}=0$ and a winding of −1 for $k_{\parallel}=\pm k_F$. In this case, each $|k_{\parallel}|&lt;k_F$ carries a single edge state.</p>
+<p>These edge states were known to exist long before the discovery of topological insulators, and it is fascinating to see how they perfectly fit to the theory of topological phenomena!</p>
+<h1 id="Weyl-points"><a href="#Weyl-points" class="headerlink" title="Weyl points"></a>Weyl points</h1><p>So far we’ve seen two examples of Dirac points in two dimensions, the surface of a 3D topological insulator and graphene. You might wonder, why don’t we have such cones in three dimensions? These do indeed exist and are called Weyl points instead of Dirac points. The reason is historical - Dirac’s equation for the electron (which  is in 3D) involves states with four components, two for the electron and two for the hole. The direct generalization of graphene to $3D$ that we will discuss involves states with two electron component. Such electron states with linear dispersion were studied first by Weyl, and have strange properties as we will illustrate below.</p>
+<p>Let us start by writing the low-energy Hamiltonian for the three dimensional generalization of graphene:</p>
+<p>$$H({\bf k})=(\sigma_x k_x+\sigma_y k_y+\sigma_z k_z).$$</p>
+<p>Here you might think of $\sigma_{x,y,z}$ as the spin of the electron (just as on the surface of a topological insulator).</p>
+<p>Next we try the usual thing we would do with a two-dimensional Dirac cone - namely see what happens when we gap it out by applying a magnetic field $\bf\sigma\cdot B$. Adding such a term, we find that the Hamiltonian transforms as follows: </p>
+<p>$$H({\bf k})\rightarrow H({\bf k})+{\bf\sigma\cdot B}={\bf\sigma\cdot (k+B)}.$$</p>
+<p>The key observation here is that the addition of a magnetic field effectively shifts the wave-vector as </p>
+<p>$${\bf k}\rightarrow \tilde{\bf k}={\bf k+ B}.$$</p>
+<blockquote>
+<p>So applying the most general perturbation we can think of does not gap out the Weyl point where the energy vanishes. Instead, the perturbation only shifts the Weyl point around in momentum space. This feels like some kind of topological protection.</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">'png'</span></span><br><span class="line">%%opts Surface [azimuth=<span class="number">45</span>]</span><br><span class="line"></span><br><span class="line">syst = Weyl_slab(w=<span class="number">10</span>)</span><br><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, mu=<span class="literal">None</span>)</span><br><span class="line">mus = np.linspace(<span class="number">-0.4</span>, <span class="number">2</span>, <span class="number">13</span>)</span><br><span class="line"></span><br><span class="line">kwargs = dict(</span><br><span class="line">    k_x=np.linspace(-np.pi, <span class="number">0</span>),</span><br><span class="line">    k_y=np.linspace(-np.pi, np.pi),</span><br><span class="line">    title=<span class="keyword">lambda</span> p: <span class="string">"Weyl semimetal, $\mu = &#123;:.2&#125;$"</span>.format(p.mu),</span><br><span class="line">    num_bands=<span class="number">4</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(&#123;p.mu: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.mu <span class="keyword">in</span> mus&#125;, kdims=[<span class="string">r"$\mu$"</span>])</span><br></pre></td></tr></table></figure>
+
+<p>Is there a sense in which Weyl points are “topological”? They are clearly protected, but is there some topological reason for the protection? As in the rest of this section, the topology of gapless system becomes apparent by looking at the Hamiltonian in lower dimensional subspaces of momentum space. For the case of Weyl, the momentum space is three dimensional, so let us look at two dimensional subspaces of momentum space.</p>
+<p>A natural subspace to choose is to fix $k_z=m$. The Weyl Hamiltonian then becomes that of a massive 2D Dirac cone</p>
+<p>$$H_{2D,Dirac}(k_x,k_y;m)\equiv H(k_x,k_y,k_z=m)=(\sigma_x k_x+\sigma_y k_y+m\sigma_z).$$</p>
+<p>As we talked about in week 4 with Chern insulators, the massive Dirac model has a Chern number, which changes by $1$ if $m$ changes sign. </p>
+<blockquote>
+<p>So we can think of the Weyl Hamiltonian in the momentum planes at fixed $k_z$ as Chern insulators with Chern numbers $n_{Ch}=0$ (i.e. trivial) if $k_z &lt; 0$ and $n_{Ch}=1$ (topological) if $k_z &gt; 0$.  The Hamiltonian at $k_z=0$ is at the phase transition point of the Chern insulator, which supports a gapless Dirac point.</p>
+</blockquote>
+<p>Systems with Weyl points are known as Weyl semimetals. Just like other topological phases, Weyl semimetals have an interesting surface spectrum. We can understand this easily by viewing the Weyl point as a stack of Chern insulators in momentum space. For any surface in a plane that contains the $z$-axis, we can treat $k_z$ as a conserved quantity. At this $k_z=m$, the Hamiltonian is just that of a Chern insulator with an appropriate Chern number. For the range of $k_z$ where the Chern number $n_{Ch}(k_z)=1$, the surface spectrum supports chiral edge states with an energy approximated at low energy by </p>
+<p>$$E(k_x,k_z)\approx v(k_z)k_x.$$</p>
+<p>We can consider the edge states over a range of $k_z$ together to visualize the “surface states”. </p>
+<blockquote>
+<p>The unique property of the surface states is that if we set $k_x=0$ then the energy vanishes on a line in the surface spectrum. This line actually terminates at $k_z=0$, where the Chern number changes. Such lines, which are referred to as “Fermi arcs,” are the unique bounday properties (hence the bulk-boundary correspondence) of Weyl semimetals.</p>
+</blockquote>
+<p>At large enough $k_z$, the two dimensional Hamiltonian $H_{2D,Dirac}(k_x,k_y;k_z)$ becomes trivial i.e. $n_{Ch}(|k_z|\rightarrow \infty)=0$. This means that if the Chern number is $n_{Ch}=1$ in a range of $k_z$, then $n_{Ch}(k_z)$ must change twice resulting in two Weyl points. So Weyl points come in pairs. These points map onto the ends of the Fermi arcs on the surface. </p>
+<p><img src="/src/w10_extensions/gapless.htm/weyl.svg" alt></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">r"What protects the surface state of Weyl semi-metals from scattering inside the bulk Weyl point?"</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Chiral symmetry."</span>,</span><br><span class="line">    <span class="string">"The energy gap in the bulk."</span>,</span><br><span class="line">    <span class="string">"Absence of scattering."</span>,</span><br><span class="line">    <span class="string">"The non-zero Chern number of the bulk."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">r"The bulk has gapless states due to the Weyl point. "</span></span><br><span class="line">    <span class="string">"Therefore, only momentum conservation protects surface states from going into the bulk."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">2</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Questions about what you just learned? Ask them below!</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Topology in gapless systems"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>Copyright： </strong>
+              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/src/w10_extensions/gapless.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+  
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020-2021
+        huyi
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="O"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/logs/">日志</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['----------------------', '', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+
+
+  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+    
+  </div>
+</body>
+
+</html>
