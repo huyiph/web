@@ -3819,4 +3819,63 @@ conda install kwant holoviews notebook feedparser</code></pre></li>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"QSHE - theory"</span>)</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
+  <entry>
+    <title>hexo部署</title>
+    <url>/2021/01/16/hexo%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h1 id="用Hexo部署博客到Ubuntu服务器"><a href="#用Hexo部署博客到Ubuntu服务器" class="headerlink" title="用Hexo部署博客到Ubuntu服务器"></a>用Hexo部署博客到Ubuntu服务器</h1><h1 id="本地安装Hexo-node-js-git"><a href="#本地安装Hexo-node-js-git" class="headerlink" title="本地安装Hexo,node.js,git"></a>本地安装Hexo,node.js,git</h1><h1 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h1><p>首先需要一台Ubuntu服务器，并且可以用<code>ubuntu</code>用户身份正常登陆.</p>
+<h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>配置服务器的登陆选项，添加SSH，SSH公钥就用之前安装git时生成的公钥即可.</p>
+<p>在本地下载Xshell等工具，登陆方式也可以选为本地的私钥.</p>
+<blockquote>
+<p>注意在使用Xshell等终端时，若不小心键入了<code>ctrl+s</code>, 则这个命令为暂时挂起终端，只需要按<code>ctrl+q</code>即可继续输入</p>
+</blockquote>
+<h2 id="安装Git和Nginx"><a href="#安装Git和Nginx" class="headerlink" title="安装Git和Nginx"></a>安装Git和Nginx</h2><p>Git 用于版本管理和部署，Nginx 用于静态博客托管。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git nginx -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建Git仓库"><a href="#创建Git仓库" class="headerlink" title="创建Git仓库"></a>创建Git仓库</h2><p>在<code>/var/repo/</code>下创建名为<code>hexo_static</code>的裸仓库。用如下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkdir &#x2F;var&#x2F;repo&#x2F;</span><br><span class="line">sudo chown -R $USER:$USER &#x2F;var&#x2F;repo&#x2F;</span><br><span class="line">sudo chmod -R 755 &#x2F;var&#x2F;repo&#x2F;</span><br><span class="line"></span><br><span class="line">cd &#x2F;var&#x2F;repo&#x2F;</span><br><span class="line">git init --bare hexo_static.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置Nginx托管文件目录"><a href="#配置Nginx托管文件目录" class="headerlink" title="配置Nginx托管文件目录"></a>配置Nginx托管文件目录</h2><p>创建<code>/var/www/hexo</code>目录，用于Nginx托管，修改目录所有权和权限。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p &#x2F;var&#x2F;www&#x2F;hexo</span><br><span class="line"></span><br><span class="line">sudo chown -R $USER:$USER &#x2F;var&#x2F;www&#x2F;hexo</span><br><span class="line">sudo chmod -R 755 &#x2F;var&#x2F;www&#x2F;hexo</span><br></pre></td></tr></table></figure>
+
+<p>随后修改Nginx的<code>default</code>设置，使<code>root</code>指向<code>hexo</code>目录.</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/nginx/sites-available/<span class="keyword">default</span></span><br></pre></td></tr></table></figure>
+
+<p>注意一定要加<code>sudo</code>,否则会提醒<code>default</code>是只读文件.</p>
+<p>修改文件中对应的项</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen <span class="number">80</span> default_server;</span><br><span class="line">    listen [::]:<span class="number">80</span> default_server ipv6only=<span class="keyword">on</span>;</span><br><span class="line"></span><br><span class="line">    root /<span class="keyword">var</span>/www/hexo; # 需要修改的部分</span><br><span class="line">    index index.html index.htm;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Vim的操作方法比较特殊，可以在网上查查</p>
+</blockquote>
+<p>重启Nginx服务，使得改动生效。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo service nginx restart</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建Git钩子"><a href="#创建Git钩子" class="headerlink" title="创建Git钩子"></a>创建Git钩子</h2><blockquote>
+<p>不清楚钩子是什么</p>
+</blockquote>
+<p>在自动生成的 hooks 目录下创建一个新的钩子文件：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">vim /<span class="keyword">var</span>/repo/hexo_static.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+
+<p>在该文件中添加两行代码，指定 Git 的工作树（源代码）和 Git 目录（配置文件等）。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">git --work-tree=/var/www/hexo --git-dir=/var/repo/hexo_static.git checkout -f</span><br></pre></td></tr></table></figure>
+
+<p>保存并退出文件，并让该文件变为可执行文件。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">chmod +x /<span class="keyword">var</span>/repo/hexo_static.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+
+<h1 id="回到本地配置"><a href="#回到本地配置" class="headerlink" title="回到本地配置"></a>回到本地配置</h1><h2 id="修改Hexo的默认配置"><a href="#修改Hexo的默认配置" class="headerlink" title="修改Hexo的默认配置"></a>修改Hexo的默认配置</h2><p>在站点config.yml中修改博客的地址<code>url</code></p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site <span class="keyword">is</span> put <span class="keyword">in</span> a subdirectory, <span class="keyword">set</span> url <span class="keyword">as</span> <span class="string">'http://yoursite.com/child'</span> and root <span class="keyword">as</span> <span class="string">'/child/'</span></span><br><span class="line"></span><br><span class="line">url: http:<span class="comment">//server-ip # 没有绑定域名时填写服务器的实际 IP 地址。</span></span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过Git部署"><a href="#通过Git部署" class="headerlink" title="通过Git部署"></a>通过Git部署</h2><p>先在任意位置处打开powershell, 从服务器上把<code>hexo_static</code>仓库克隆下来, 以此来将服务器地址添加到受信任的站点中。</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">git clone ubuntu@server_ip<span class="symbol">:/var/repo/hexo_static</span>.git</span><br></pre></td></tr></table></figure>
+
+<p>注意在第一次进行这一步时会提示是否继续，选yes即可。</p>
+<p>再编辑Hexo的<code>config.yml</code>文件，找到Deployment, 修改为</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line">  <span class="symbol">type:</span> git</span><br><span class="line">   <span class="symbol">repo:</span> ubuntu@server_ip<span class="symbol">:/var/repo/hexo_static</span>.git</span><br><span class="line">  <span class="symbol">branch:</span> master</span><br></pre></td></tr></table></figure>
+
+<p>最后记得安装Hexo部署到Git仓库的包.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>于是就可用<code>hexo d</code>命令来部署了。大功告成。</p>
+]]></content>
+  </entry>
 </search>
