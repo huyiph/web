@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en">
+  
 
-
-<head>
-  <meta charset="utf-8" />
-    
-  <meta name="description" content="demon" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-     O
-  </title>
-  <meta name="generator" content="hexo-theme-yilia-plus">
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="demon" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> O</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
 <link rel="stylesheet" href="/dist/main.css">
 
-  
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
 <link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-  
-  
-
-  
-
+      <!-- mermaid -->
+      
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+    <link rel="alternate" href="/atom.xml" title="O" type="application/atom+xml">
 </head>
-
+  </html>
 </html>
+
 
 <body>
   <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
     <main class="content on">
       <section class="outer">
-  <article id="page-" class="article article-type-page" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
+  <article
+  id="page-"
+  class="article article-type-page"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
   <div class="article-inner">
-    
-
-    
-
-    
-
-    
+       
     <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> linalg <span class="keyword">as</span> la</span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"></span><br><span class="line">pi_ticks = [</span><br><span class="line">    (-np.pi, <span class="string">r"$-\pi$"</span>),</span><br><span class="line">    (-np.pi / <span class="number">2</span>, <span class="string">r"$-\pi/2$"</span>),</span><br><span class="line">    (<span class="number">0</span>, <span class="string">r"$0$"</span>),</span><br><span class="line">    (np.pi / <span class="number">2</span>, <span class="string">r"$\pi/2$"</span>),</span><br><span class="line">    (np.pi, <span class="string">r"$\pi$"</span>),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">checkerboard</span><span class="params">(W=None)</span>:</span></span><br><span class="line">    lat = kwant.lattice.general([[<span class="number">2</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>]], [(<span class="number">0</span>, <span class="number">0</span>), (<span class="number">1</span>, <span class="number">0</span>)])</span><br><span class="line">    a, b = lat.sublattices</span><br><span class="line">    <span class="keyword">if</span> W:</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">lead_shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">            (x, y) = pos</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span> &lt;= y &lt; W <span class="keyword">and</span> <span class="number">0</span> &lt;= x &lt; W</span><br><span class="line"></span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">1</span>)))</span><br><span class="line">        syst[a.shape(lead_shape, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">        syst[b.shape(lead_shape, (<span class="number">1</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">0</span>), b, a)] = <span class="keyword">lambda</span> s1, s2, p: -p.t1</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">-1</span>, <span class="number">1</span>), b, a)] = <span class="keyword">lambda</span> s1, s2, p: -p.t2</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), a, b)] = <span class="keyword">lambda</span> s1, s2, p: -p.t3</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), a, b)] = <span class="keyword">lambda</span> s1, s2, p: -p.t4</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">evolution_operator</span><span class="params">(hamiltonians, T)</span>:</span></span><br><span class="line">    n = len(hamiltonians)</span><br><span class="line">    exps = [la.expm(<span class="number">-1j</span> * h * T / n) <span class="keyword">for</span> h <span class="keyword">in</span> hamiltonians]</span><br><span class="line">    <span class="keyword">return</span> reduce(np.dot, exps)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_h_k</span><span class="params">(lead, p)</span>:</span></span><br><span class="line">    bands = kwant.physics.Bands(lead, params=dict(p=p))</span><br><span class="line">    h, t = bands.ham, bands.hop</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> k: h + t * np.exp(<span class="number">-1j</span> * k) + t.T.conj() * np.exp(<span class="number">1j</span> * k)</span><br></pre></td></tr></table></figure>
+       
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">&quot;../../code&quot;</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> linalg <span class="keyword">as</span> la</span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"></span><br><span class="line">pi_ticks = [</span><br><span class="line">    (-np.pi, <span class="string">r&quot;$-\pi$&quot;</span>),</span><br><span class="line">    (-np.pi / <span class="number">2</span>, <span class="string">r&quot;$-\pi/2$&quot;</span>),</span><br><span class="line">    (<span class="number">0</span>, <span class="string">r&quot;$0$&quot;</span>),</span><br><span class="line">    (np.pi / <span class="number">2</span>, <span class="string">r&quot;$\pi/2$&quot;</span>),</span><br><span class="line">    (np.pi, <span class="string">r&quot;$\pi$&quot;</span>),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">checkerboard</span>(<span class="params">W=<span class="literal">None</span></span>):</span></span><br><span class="line">    lat = kwant.lattice.general([[<span class="number">2</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>]], [(<span class="number">0</span>, <span class="number">0</span>), (<span class="number">1</span>, <span class="number">0</span>)])</span><br><span class="line">    a, b = lat.sublattices</span><br><span class="line">    <span class="keyword">if</span> W:</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">lead_shape</span>(<span class="params">pos</span>):</span></span><br><span class="line">            (x, y) = pos</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span> &lt;= y &lt; W <span class="keyword">and</span> <span class="number">0</span> &lt;= x &lt; W</span><br><span class="line"></span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">1</span>)))</span><br><span class="line">        syst[a.shape(lead_shape, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">        syst[b.shape(lead_shape, (<span class="number">1</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">0</span></span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">0</span>), b, a)] = <span class="keyword">lambda</span> s1, s2, p: -p.t1</span><br><span class="line">    syst[kwant.HoppingKind((-<span class="number">1</span>, <span class="number">1</span>), b, a)] = <span class="keyword">lambda</span> s1, s2, p: -p.t2</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), a, b)] = <span class="keyword">lambda</span> s1, s2, p: -p.t3</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), a, b)] = <span class="keyword">lambda</span> s1, s2, p: -p.t4</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">evolution_operator</span>(<span class="params">hamiltonians, T</span>):</span></span><br><span class="line">    n = <span class="built_in">len</span>(hamiltonians)</span><br><span class="line">    exps = [la.expm(-<span class="number">1j</span> * h * T / n) <span class="keyword">for</span> h <span class="keyword">in</span> hamiltonians]</span><br><span class="line">    <span class="keyword">return</span> reduce(np.dot, exps)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_h_k</span>(<span class="params">lead, p</span>):</span></span><br><span class="line">    bands = kwant.physics.Bands(lead, params=<span class="built_in">dict</span>(p=p))</span><br><span class="line">    h, t = bands.ham, bands.hop</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> k: h + t * np.exp(-<span class="number">1j</span> * k) + t.T.conj() * np.exp(<span class="number">1j</span> * k)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Today’s topic, Floquet topological insulators, is introduced by Mark Rudner from the Niels Bohr Institute at Copenhagen.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"1peVp_IZ7Ts"</span>, src_location=<span class="string">"11.1-intro"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">&quot;1peVp_IZ7Ts&quot;</span>, src_location=<span class="string">&quot;11.1-intro&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Periodically-driven-systems"><a href="#Periodically-driven-systems" class="headerlink" title="Periodically driven systems"></a>Periodically driven systems</h1><p>We will now learn about a new generalization of topology, namely how it applies to the quantum evolution of systems with a time-dependent Hamiltonian. As you may recall, we’ve already encountered time dependence, back when we considered quantum pumps. However, back then we assumed that the time evolution was very slow, such that the system stayed in the ground state at all times, i.e. it was adiabatic. Can we relax the adiabaticity constraint? Can we find an analog of topology in systems that are driven so fast that energy isn’t conserved?</p>
 <p>For the same reasons as before, we’ll consider periodic driving</p>
@@ -84,7 +91,7 @@
 <p>Its eigenvalues $\varepsilon = \alpha / T$ are called quasi-energies, and they always belong to the interval $-\pi &lt; \alpha \leq \pi$.</p>
 <p>If the system is translationally invariant, we can study the effective band structure of $H_\textrm{eff}(\mathbf{k})$, find an energy in which the bulk Hamiltonian has no states, and study the topological properties of such a Hamiltonian: most of the things we already know still apply.</p>
 <p>Of course, selecting a single quasi-energy as the Fermi level is arbitrary, since the equilibrium state of driven systems doesn’t correspond to a Fermi distribution of filling factors, but at least it seems close enough for us to try to apply topological ideas.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"But wait, we arbitrarily chose the starting point $t$ in time for calculating the "</span></span><br><span class="line">    <span class="string">"Floquet operator. What if we chose a different one?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The starting time is just an extra parameter of our system, and topology depends on it."</span>,</span><br><span class="line">    <span class="string">"It doesn't matter, the wave function evolution within one period "</span></span><br><span class="line">    <span class="string">"can be neglected, since we are interested in many periods."</span>,</span><br><span class="line">    <span class="string">"There's only one correct starting point in time."</span>,</span><br><span class="line">    <span class="string">"It doesn't matter since the quasienergies are independent of the starting point."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"Choosing a different starting point applies a unitary transformation "</span></span><br><span class="line">    <span class="string">"to the Floquet evolution operator, and so it keeps the quasienergies the same."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">&quot;But wait, we arbitrarily chose the starting point $t$ in time for calculating the &quot;</span></span><br><span class="line">    <span class="string">&quot;Floquet operator. What if we chose a different one?&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">&quot;The starting time is just an extra parameter of our system, and topology depends on it.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;It doesn&#x27;t matter, the wave function evolution within one period &quot;</span></span><br><span class="line">    <span class="string">&quot;can be neglected, since we are interested in many periods.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;There&#x27;s only one correct starting point in time.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;It doesn&#x27;t matter since the quasienergies are independent of the starting point.&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">&quot;Choosing a different starting point applies a unitary transformation &quot;</span></span><br><span class="line">    <span class="string">&quot;to the Floquet evolution operator, and so it keeps the quasienergies the same.&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Driven-Majorana-wire"><a href="#Driven-Majorana-wire" class="headerlink" title="Driven Majorana wire"></a>Driven Majorana wire</h1><p>Let us start by considering something we know very well, namely the superconducting Majorana nanowire model from week 2. This model has three important parameters which determine whether the wire is in the topological Majorana phase or not: the chemical potential $\mu$, the superconducting gap $\Delta$, and the magnetic field $B$. The topological phase with unpaired Majorana modes at zero energy is realized for $B &gt; \sqrt{\mu^2 + \Delta^2}$.</p>
 <p>Now, imagine that we can periodically drive some of these parameters. For instance, consider the simple example when</p>
@@ -92,7 +99,7 @@
 <p>Then, the integral to find the time evolution operator is easy to evaluate, and we simply have</p>
 <p>$$<br>U = \exp(i T H_2 / 2) \exp(i T H_1 / 2)<br>$$</p>
 <p>with $H_1$ and $H_2$ the nanowire Hamiltonians with chemical potential $\mu_1$ and $\mu_2$. A peculiar property of driven systems is that as the period becomes large, the band structure ‘folds’: if the driving is very weak, and the original Hamiltonian has energy $E$, the Floquet Hamiltonian has a much smaller quasienergy $(E\bmod 2\pi /T)$. This means that even when $H_1$ and $H_2$ correspond to trivial systems, we can still obtain nontrivial topology if we make the period large enough, as you can see for yourself:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">%%opts Path &#123;+axiswise&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nanowire_chain</span><span class="params">(L=None)</span>:</span></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="number">2</span> * p.t - p.mu) * pauli.szs0 + p.B * pauli.s0sz + p.delta * pauli.sxs0</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.szs0 + <span class="number">0.5</span> * <span class="number">1j</span> * p.alpha * pauli.szsx</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> L:</span><br><span class="line">        syst = kwant.Builder()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">-1</span>,)))</span><br><span class="line">        L = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    syst[(lat(x) <span class="keyword">for</span> x <span class="keyword">in</span> range(L))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hopping</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_finite_spectrum</span><span class="params">(periods, hamiltonians)</span>:</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> T <span class="keyword">in</span> periods:</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        phases = np.angle(la.eigvals(U))</span><br><span class="line">        phases = np.sort(np.abs(phases))</span><br><span class="line">        ev = np.sort([(<span class="number">-1</span>) ** n * val <span class="keyword">for</span> n, val <span class="keyword">in</span> enumerate(phases)])</span><br><span class="line">        energies.append(ev)</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_bands</span><span class="params">(momenta, hamiltonians_k, T)</span>:</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> momenta:</span><br><span class="line">        hamiltonians = [h_k(k) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        phases = np.angle(la.eigvals(U))</span><br><span class="line">        phases = np.sort(np.abs(phases))</span><br><span class="line">        ev = np.sort([(<span class="number">-1</span>) ** n * val <span class="keyword">for</span> n, val <span class="keyword">in</span> enumerate(phases)])</span><br><span class="line">        energies.append(ev)</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">J = <span class="number">2.0</span></span><br><span class="line">p1 = SimpleNamespace(t=J / <span class="number">2</span>, mu=<span class="number">-1</span> * J, B=J, delta=<span class="number">2</span> * J, alpha=J)</span><br><span class="line">p2 = SimpleNamespace(t=J / <span class="number">2</span>, mu=<span class="number">-3</span> * J, B=J, delta=<span class="number">2</span> * J, alpha=J)</span><br><span class="line"></span><br><span class="line">syst = nanowire_chain(L=<span class="number">20</span>).finalized()</span><br><span class="line">H1 = syst.hamiltonian_submatrix(params=dict(p=p1))</span><br><span class="line">H2 = syst.hamiltonian_submatrix(params=dict(p=p2))</span><br><span class="line"></span><br><span class="line">lead = kwant.wraparound.wraparound(nanowire_chain(L=<span class="literal">None</span>)).finalized()</span><br><span class="line">h1_k = <span class="keyword">lambda</span> kx: lead.hamiltonian_submatrix(params=dict(p=p1, k_x=kx))</span><br><span class="line">h2_k = <span class="keyword">lambda</span> kx: lead.hamiltonian_submatrix(params=dict(p=p2, k_x=kx))</span><br><span class="line"></span><br><span class="line">periods = np.linspace(<span class="number">0.2</span> / J, <span class="number">1.6</span> / J, <span class="number">100</span>)</span><br><span class="line">momenta = np.linspace(-np.pi, np.pi)</span><br><span class="line"></span><br><span class="line">energies = calculate_finite_spectrum(periods, [H1, H2])</span><br><span class="line">spectrum = np.array([calculate_bands(momenta, [h1_k, h2_k], T) <span class="keyword">for</span> T <span class="keyword">in</span> periods])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot</span><span class="params">(n)</span>:</span></span><br><span class="line">    T = J * periods[n]</span><br><span class="line"></span><br><span class="line">    plot_1 = holoviews.Path(</span><br><span class="line">        (J * periods, energies),</span><br><span class="line">        kdims=[<span class="string">r"Driving period $(JT)$"</span>, <span class="string">r"Quasi-energy $(ET)$"</span>],</span><br><span class="line">        label=<span class="string">"Finite system"</span>,</span><br><span class="line">    ).opts(plot=&#123;<span class="string">"xticks"</span>: <span class="number">5</span>, <span class="string">"yticks"</span>: pi_ticks&#125;)</span><br><span class="line"></span><br><span class="line">    VLine = holoviews.VLine(T).opts(style=&#123;<span class="string">"color"</span>: <span class="string">"b"</span>, <span class="string">"linestyle"</span>: <span class="string">"--"</span>&#125;)</span><br><span class="line"></span><br><span class="line">    plot_2 = holoviews.Path(</span><br><span class="line">        (momenta, spectrum[n]), kdims=[<span class="string">"$k$"</span>, <span class="string">"$E_kT$"</span>], label=<span class="string">"Floquet bands"</span></span><br><span class="line">    ).opts(plot=&#123;<span class="string">"xticks"</span>: pi_ticks, <span class="string">"yticks"</span>: pi_ticks, <span class="string">"aspect"</span>: <span class="string">"equal"</span>&#125;)</span><br><span class="line">    <span class="keyword">return</span> plot_1 * VLine + plot_2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(&#123;n: plot(n) <span class="keyword">for</span> n <span class="keyword">in</span> np.arange(<span class="number">0</span>, <span class="number">100</span>, <span class="number">10</span>)&#125;, kdims=[<span class="string">"n"</span>]).collate()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">%%opts Path &#123;+axiswise&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nanowire_chain</span>(<span class="params">L=<span class="literal">None</span></span>):</span></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span>(<span class="params">site, p</span>):</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="number">2</span> * p.t - p.mu) * pauli.szs0 + p.B * pauli.s0sz + p.delta * pauli.sxs0</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.szs0 + <span class="number">0.5</span> * <span class="number">1j</span> * p.alpha * pauli.szsx</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> L:</span><br><span class="line">        syst = kwant.Builder()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((-<span class="number">1</span>,)))</span><br><span class="line">        L = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    syst[(lat(x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(L))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hopping</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_finite_spectrum</span>(<span class="params">periods, hamiltonians</span>):</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> T <span class="keyword">in</span> periods:</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        phases = np.angle(la.eigvals(U))</span><br><span class="line">        phases = np.sort(np.<span class="built_in">abs</span>(phases))</span><br><span class="line">        ev = np.sort([(-<span class="number">1</span>) ** n * val <span class="keyword">for</span> n, val <span class="keyword">in</span> <span class="built_in">enumerate</span>(phases)])</span><br><span class="line">        energies.append(ev)</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_bands</span>(<span class="params">momenta, hamiltonians_k, T</span>):</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> momenta:</span><br><span class="line">        hamiltonians = [h_k(k) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        phases = np.angle(la.eigvals(U))</span><br><span class="line">        phases = np.sort(np.<span class="built_in">abs</span>(phases))</span><br><span class="line">        ev = np.sort([(-<span class="number">1</span>) ** n * val <span class="keyword">for</span> n, val <span class="keyword">in</span> <span class="built_in">enumerate</span>(phases)])</span><br><span class="line">        energies.append(ev)</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">J = <span class="number">2.0</span></span><br><span class="line">p1 = SimpleNamespace(t=J / <span class="number">2</span>, mu=-<span class="number">1</span> * J, B=J, delta=<span class="number">2</span> * J, alpha=J)</span><br><span class="line">p2 = SimpleNamespace(t=J / <span class="number">2</span>, mu=-<span class="number">3</span> * J, B=J, delta=<span class="number">2</span> * J, alpha=J)</span><br><span class="line"></span><br><span class="line">syst = nanowire_chain(L=<span class="number">20</span>).finalized()</span><br><span class="line">H1 = syst.hamiltonian_submatrix(params=<span class="built_in">dict</span>(p=p1))</span><br><span class="line">H2 = syst.hamiltonian_submatrix(params=<span class="built_in">dict</span>(p=p2))</span><br><span class="line"></span><br><span class="line">lead = kwant.wraparound.wraparound(nanowire_chain(L=<span class="literal">None</span>)).finalized()</span><br><span class="line">h1_k = <span class="keyword">lambda</span> kx: lead.hamiltonian_submatrix(params=<span class="built_in">dict</span>(p=p1, k_x=kx))</span><br><span class="line">h2_k = <span class="keyword">lambda</span> kx: lead.hamiltonian_submatrix(params=<span class="built_in">dict</span>(p=p2, k_x=kx))</span><br><span class="line"></span><br><span class="line">periods = np.linspace(<span class="number">0.2</span> / J, <span class="number">1.6</span> / J, <span class="number">100</span>)</span><br><span class="line">momenta = np.linspace(-np.pi, np.pi)</span><br><span class="line"></span><br><span class="line">energies = calculate_finite_spectrum(periods, [H1, H2])</span><br><span class="line">spectrum = np.array([calculate_bands(momenta, [h1_k, h2_k], T) <span class="keyword">for</span> T <span class="keyword">in</span> periods])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot</span>(<span class="params">n</span>):</span></span><br><span class="line">    T = J * periods[n]</span><br><span class="line"></span><br><span class="line">    plot_1 = holoviews.Path(</span><br><span class="line">        (J * periods, energies),</span><br><span class="line">        kdims=[<span class="string">r&quot;Driving period $(JT)$&quot;</span>, <span class="string">r&quot;Quasi-energy $(ET)$&quot;</span>],</span><br><span class="line">        label=<span class="string">&quot;Finite system&quot;</span>,</span><br><span class="line">    ).opts(plot=&#123;<span class="string">&quot;xticks&quot;</span>: <span class="number">5</span>, <span class="string">&quot;yticks&quot;</span>: pi_ticks&#125;)</span><br><span class="line"></span><br><span class="line">    VLine = holoviews.VLine(T).opts(style=&#123;<span class="string">&quot;color&quot;</span>: <span class="string">&quot;b&quot;</span>, <span class="string">&quot;linestyle&quot;</span>: <span class="string">&quot;--&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line">    plot_2 = holoviews.Path(</span><br><span class="line">        (momenta, spectrum[n]), kdims=[<span class="string">&quot;$k$&quot;</span>, <span class="string">&quot;$E_kT$&quot;</span>], label=<span class="string">&quot;Floquet bands&quot;</span></span><br><span class="line">    ).opts(plot=&#123;<span class="string">&quot;xticks&quot;</span>: pi_ticks, <span class="string">&quot;yticks&quot;</span>: pi_ticks, <span class="string">&quot;aspect&quot;</span>: <span class="string">&quot;equal&quot;</span>&#125;)</span><br><span class="line">    <span class="keyword">return</span> plot_1 * VLine + plot_2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(&#123;n: plot(n) <span class="keyword">for</span> n <span class="keyword">in</span> np.arange(<span class="number">0</span>, <span class="number">100</span>, <span class="number">10</span>)&#125;, kdims=[<span class="string">&quot;n&quot;</span>]).collate()</span><br></pre></td></tr></table></figure>
 
 <p>On the left you see the Floquet spectrum of a finite system as a function of the driving period measured in units of the hopping strength, and on the right you see the Floquet dispersion in momentum space.</p>
 <p>We now witness a cool phenomenon: just like in the undriven case, the particle-hole symmetry maps $E \rightarrow -E$, but now this means that not only $E = 0$ is special, but also $E = \pi$!</p>
@@ -111,47 +118,47 @@
 <p><img src="/src/w11_extensions2/floquet.htm/floquet_bulk.svg" alt></p>
 <p>Every electron makes a closed loop and ends up back at its origin. After every single period the system is back to its initial state. In other words, the Floquet operator is $U=1$, and $H_\textrm{eff}=0$.</p>
 <p>Let’s have a look at the dispersion, and also see what happens as we tune the driving period:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">%%output size=<span class="number">200</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_dispersion_2D</span><span class="params">(T)</span>:</span></span><br><span class="line">    syst = checkerboard()</span><br><span class="line">    B = np.array(syst.symmetry.periods).T</span><br><span class="line">    A = B @ np.linalg.inv(B.T @ B)</span><br><span class="line">    syst = kwant.wraparound.wraparound(syst).finalized()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hamiltonian_k</span><span class="params">(par)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(k_x, k_y)</span>:</span></span><br><span class="line">            k_x, k_y = np.linalg.lstsq(A, [k_x, k_y], rcond=<span class="literal">None</span>)[<span class="number">0</span>]</span><br><span class="line">            ham = syst.hamiltonian_submatrix(params=dict(p=par, k_x=k_x, k_y=k_y))</span><br><span class="line">            <span class="keyword">return</span> ham</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> f</span><br><span class="line"></span><br><span class="line">    hamiltonians_k = [</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">1</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">1</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">1</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">1</span>)),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_energies</span><span class="params">(k_x, k_y)</span>:</span></span><br><span class="line">        hamiltonians = [h_k(k_x, k_y) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        ev = np.sort(np.angle(la.eigvals(U)))</span><br><span class="line">        <span class="keyword">return</span> ev</span><br><span class="line"></span><br><span class="line">    K = np.linspace(-np.pi, np.pi, <span class="number">50</span>)</span><br><span class="line">    energies = np.array([[get_energies(k_x, k_y) <span class="keyword">for</span> k_x <span class="keyword">in</span> K] <span class="keyword">for</span> k_y <span class="keyword">in</span> K])</span><br><span class="line"></span><br><span class="line">    ticks = &#123;<span class="string">"xticks"</span>: pi_ticks[::<span class="number">2</span>], <span class="string">"yticks"</span>: pi_ticks[::<span class="number">2</span>], <span class="string">"zticks"</span>: <span class="number">3</span>&#125;</span><br><span class="line">    kwargs = &#123;</span><br><span class="line">        <span class="string">"extents"</span>: (-np.pi, -np.pi, <span class="number">-4</span>, np.pi, np.pi, <span class="number">4</span>),</span><br><span class="line">        <span class="string">"kdims"</span>: [<span class="string">"$k_x$"</span>, <span class="string">"$k_y$"</span>],</span><br><span class="line">        <span class="string">"vdims"</span>: [<span class="string">"$E$"</span>],</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    title = <span class="string">r"$T = &#123;:.2&#125; \pi$"</span>.format(T / np.pi)</span><br><span class="line"></span><br><span class="line">    xs = np.linspace(-np.pi, np.pi, energies.shape[<span class="number">1</span>])</span><br><span class="line">    ys = np.linspace(-np.pi, np.pi, energies.shape[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        holoviews.Surface((xs, ys, energies[:, :, <span class="number">0</span>]), **kwargs).opts(plot=ticks)</span><br><span class="line">        * holoviews.Surface((xs, ys, energies[:, :, <span class="number">1</span>]), **kwargs).opts(plot=ticks)</span><br><span class="line">    ).relabel(title)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Ts = np.linspace(<span class="number">1</span>, <span class="number">3</span>, <span class="number">11</span>, endpoint=<span class="literal">True</span>)</span><br><span class="line">holoviews.HoloMap(&#123;T: plot_dispersion_2D(np.pi * T) <span class="keyword">for</span> T <span class="keyword">in</span> Ts&#125;, kdims=[<span class="string">"$T$"</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">%%output size=<span class="number">200</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_dispersion_2D</span>(<span class="params">T</span>):</span></span><br><span class="line">    syst = checkerboard()</span><br><span class="line">    B = np.array(syst.symmetry.periods).T</span><br><span class="line">    A = B @ np.linalg.inv(B.T @ B)</span><br><span class="line">    syst = kwant.wraparound.wraparound(syst).finalized()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hamiltonian_k</span>(<span class="params">par</span>):</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">k_x, k_y</span>):</span></span><br><span class="line">            k_x, k_y = np.linalg.lstsq(A, [k_x, k_y], rcond=<span class="literal">None</span>)[<span class="number">0</span>]</span><br><span class="line">            ham = syst.hamiltonian_submatrix(params=<span class="built_in">dict</span>(p=par, k_x=k_x, k_y=k_y))</span><br><span class="line">            <span class="keyword">return</span> ham</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> f</span><br><span class="line"></span><br><span class="line">    hamiltonians_k = [</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">1</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">1</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">1</span>, t4=<span class="number">0</span>)),</span><br><span class="line">        hamiltonian_k(SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">1</span>)),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_energies</span>(<span class="params">k_x, k_y</span>):</span></span><br><span class="line">        hamiltonians = [h_k(k_x, k_y) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        ev = np.sort(np.angle(la.eigvals(U)))</span><br><span class="line">        <span class="keyword">return</span> ev</span><br><span class="line"></span><br><span class="line">    K = np.linspace(-np.pi, np.pi, <span class="number">50</span>)</span><br><span class="line">    energies = np.array([[get_energies(k_x, k_y) <span class="keyword">for</span> k_x <span class="keyword">in</span> K] <span class="keyword">for</span> k_y <span class="keyword">in</span> K])</span><br><span class="line"></span><br><span class="line">    ticks = &#123;<span class="string">&quot;xticks&quot;</span>: pi_ticks[::<span class="number">2</span>], <span class="string">&quot;yticks&quot;</span>: pi_ticks[::<span class="number">2</span>], <span class="string">&quot;zticks&quot;</span>: <span class="number">3</span>&#125;</span><br><span class="line">    kwargs = &#123;</span><br><span class="line">        <span class="string">&quot;extents&quot;</span>: (-np.pi, -np.pi, -<span class="number">4</span>, np.pi, np.pi, <span class="number">4</span>),</span><br><span class="line">        <span class="string">&quot;kdims&quot;</span>: [<span class="string">&quot;$k_x$&quot;</span>, <span class="string">&quot;$k_y$&quot;</span>],</span><br><span class="line">        <span class="string">&quot;vdims&quot;</span>: [<span class="string">&quot;$E$&quot;</span>],</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    title = <span class="string">r&quot;$T = &#123;:.2&#125; \pi$&quot;</span>.<span class="built_in">format</span>(T / np.pi)</span><br><span class="line"></span><br><span class="line">    xs = np.linspace(-np.pi, np.pi, energies.shape[<span class="number">1</span>])</span><br><span class="line">    ys = np.linspace(-np.pi, np.pi, energies.shape[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        holoviews.Surface((xs, ys, energies[:, :, <span class="number">0</span>]), **kwargs).opts(plot=ticks)</span><br><span class="line">        * holoviews.Surface((xs, ys, energies[:, :, <span class="number">1</span>]), **kwargs).opts(plot=ticks)</span><br><span class="line">    ).relabel(title)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Ts = np.linspace(<span class="number">1</span>, <span class="number">3</span>, <span class="number">11</span>, endpoint=<span class="literal">True</span>)</span><br><span class="line">holoviews.HoloMap(&#123;T: plot_dispersion_2D(np.pi * T) <span class="keyword">for</span> T <span class="keyword">in</span> Ts&#125;, kdims=[<span class="string">&quot;$T$&quot;</span>])</span><br></pre></td></tr></table></figure>
 
 <p>Now, there isn’t a Hamiltonian which is more topologically trivial than the zero Hamiltonian. We may be tempted to conclude that our system is trivial and, by bulk-boundary correspondence, has no edge states.</p>
 <p>That’s something we can also very easily verify by computing the dispersion of a finite size ribbon:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">%%output size=<span class="number">200</span></span><br><span class="line">%%opts Path &#123;+axiswise&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_bands</span><span class="params">(momenta, hamiltonians_k, T)</span>:</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> momenta:</span><br><span class="line">        hamiltonians = [h_k(k) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        energies.append(np.sort(np.angle(la.eigvals(U))))</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ribbon_lead = checkerboard(<span class="number">10</span>).finalized()</span><br><span class="line"></span><br><span class="line">hamiltonians_k = [</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">1</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">1</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">1</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">1</span>)),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">periods = np.linspace(<span class="number">0</span>, <span class="number">4</span> * np.pi, <span class="number">11</span>)</span><br><span class="line">momenta = np.linspace(-np.pi, np.pi)</span><br><span class="line">spectrum = np.array([calculate_bands(momenta, hamiltonians_k, T) <span class="keyword">for</span> T <span class="keyword">in</span> periods])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot</span><span class="params">(n)</span>:</span></span><br><span class="line">    T = periods[n]</span><br><span class="line">    title = <span class="string">r"spectrum: $T=&#123;:.2&#125; \pi$"</span>.format(T / np.pi)</span><br><span class="line">    <span class="keyword">return</span> holoviews.Path(</span><br><span class="line">        (momenta, spectrum[n]), label=title, kdims=[<span class="string">"$k$"</span>, <span class="string">"$E_kT$"</span>]</span><br><span class="line">    ).opts(plot=&#123;<span class="string">"xticks"</span>: pi_ticks, <span class="string">"yticks"</span>: pi_ticks, <span class="string">"aspect"</span>: <span class="number">3</span>&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(&#123;n: plot(n) <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">11</span>)&#125;, kdims=[<span class="string">"n"</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">%%output size=<span class="number">200</span></span><br><span class="line">%%opts Path &#123;+axiswise&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_bands</span>(<span class="params">momenta, hamiltonians_k, T</span>):</span></span><br><span class="line">    energies = []</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> momenta:</span><br><span class="line">        hamiltonians = [h_k(k) <span class="keyword">for</span> h_k <span class="keyword">in</span> hamiltonians_k]</span><br><span class="line">        U = evolution_operator(hamiltonians, T)</span><br><span class="line">        energies.append(np.sort(np.angle(la.eigvals(U))))</span><br><span class="line">    <span class="keyword">return</span> np.array(energies).real</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ribbon_lead = checkerboard(<span class="number">10</span>).finalized()</span><br><span class="line"></span><br><span class="line">hamiltonians_k = [</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">1</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">1</span>, t3=<span class="number">0</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">1</span>, t4=<span class="number">0</span>)),</span><br><span class="line">    get_h_k(ribbon_lead, SimpleNamespace(t1=<span class="number">0</span>, t2=<span class="number">0</span>, t3=<span class="number">0</span>, t4=<span class="number">1</span>)),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">periods = np.linspace(<span class="number">0</span>, <span class="number">4</span> * np.pi, <span class="number">11</span>)</span><br><span class="line">momenta = np.linspace(-np.pi, np.pi)</span><br><span class="line">spectrum = np.array([calculate_bands(momenta, hamiltonians_k, T) <span class="keyword">for</span> T <span class="keyword">in</span> periods])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot</span>(<span class="params">n</span>):</span></span><br><span class="line">    T = periods[n]</span><br><span class="line">    title = <span class="string">r&quot;spectrum: $T=&#123;:.2&#125; \pi$&quot;</span>.<span class="built_in">format</span>(T / np.pi)</span><br><span class="line">    <span class="keyword">return</span> holoviews.Path(</span><br><span class="line">        (momenta, spectrum[n]), label=title, kdims=[<span class="string">&quot;$k$&quot;</span>, <span class="string">&quot;$E_kT$&quot;</span>]</span><br><span class="line">    ).opts(plot=&#123;<span class="string">&quot;xticks&quot;</span>: pi_ticks, <span class="string">&quot;yticks&quot;</span>: pi_ticks, <span class="string">&quot;aspect&quot;</span>: <span class="number">3</span>&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">holoviews.HoloMap(&#123;n: plot(n) <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">11</span>)&#125;, kdims=[<span class="string">&quot;n&quot;</span>])</span><br></pre></td></tr></table></figure>
 
 <p>We see something very different from our expectations. All the bulk states are indeed at $E=0$, but there are two branches of dispersion that are clearly propagating. These can only belong to the edges, and since the two edges look identical, these two modes have to belong to the opposite edges. We seem to conclude that even though the bulk Hamiltonian is trivial, the edges carry chiral edge states, as if there was a finite Chern number.</p>
 <p>When the driving period is tuned to ensure the absence of bulk dispersion, we can also understand why the edge states appear. If we select a state that starts on the edge, and follow it for one period, we find that there are modes that never leave the edge, since one of the hoppings in the vertical direction is absent.</p>
 <p><img src="/src/w11_extensions2/floquet.htm/trajectories.svg" alt></p>
 <p>So what is happening with bulk-edge correspondence?</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">"How can you change the chirality of the edge states in the figure above?"</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"By changing the driving period."</span>,</span><br><span class="line">    <span class="string">"By reversing the driving protocol sequence."</span>,</span><br><span class="line">    <span class="string">"By changing the sign of the nearest neighbor hopping."</span>,</span><br><span class="line">    <span class="string">"By making the electrons start from the black sublattice."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"Reversing the driving protocol is the same as applying time-reversal symmetry, "</span></span><br><span class="line">    <span class="string">"so it will reverse the direction of the chiral edge modes"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">&quot;How can you change the chirality of the edge states in the figure above?&quot;</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">&quot;By changing the driving period.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;By reversing the driving protocol sequence.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;By changing the sign of the nearest neighbor hopping.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;By making the electrons start from the black sublattice.&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">&quot;Reversing the driving protocol is the same as applying time-reversal symmetry, &quot;</span></span><br><span class="line">    <span class="string">&quot;so it will reverse the direction of the chiral edge modes&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Bulk-edge-correspondence-in-driven-systems"><a href="#Bulk-edge-correspondence-in-driven-systems" class="headerlink" title="Bulk-edge correspondence in driven systems"></a>Bulk-edge correspondence in driven systems</h1><p>The two examples we’ve studied reveal an imporant feature of topological Floquet insulators. It seems that knowing the bulk Floquet Hamiltonian is sufficient to calculate the topological invariant, by just applying the known expression to the Floquet Hamiltonian. However, that’s not enough.</p>
 <p>In rough terms, the reason for this insufficiency is due to Floquet topological insulators missing a topologically trivial state which can be taken as a reference. With any regular 2D Hamiltonian, we know that if we take $E \rightarrow -\infty$, we will get a trivial system with the Chern number zero. In a Floquet system, the only thing that lowering the energy tells us is that the Chern number is periodic in quasienergy, like any other observable property.</p>
 <p>What do we need to know to derive the full topological invariant from the bulk properties? The answer is that we need the complete evolution operator for all moments in time, or in other words the full dependence $H(t)$. The actual calculation of the topological invariant is technically involved, and falls beyond what we can cover in this course. Moreover, to the best of our knowledge, the full classification of Floquet topological insulators is not yet accomplished.</p>
-<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"DbyqIczcR9c"</span>, src_location=<span class="string">"11.1-summary"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">&quot;DbyqIczcR9c&quot;</span>, src_location=<span class="string">&quot;11.1-summary&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Questions about what you just learned? Ask them below!</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Floquet"</span>)</span><br></pre></td></tr></table></figure>
-
-      
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">&quot;Questions&quot;</span>, <span class="string">&quot;Floquet&quot;</span>)</span><br></pre></td></tr></table></figure>
+ 
       <!-- reward -->
       
     </div>
     
+
+    <!-- copyright -->
     
-      <!-- copyright -->
-      
-        <div class="declare">
-          <ul class="post-copyright">
-            <li>
-              <i class="ri-copyright-line"></i>
-              <strong>Copyright： </strong>
-              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-            </li>
-          </ul>
-        </div>
-        
-    <footer class="article-footer">
-      
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
           
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
 <div class="share-btn">
       <span class="share-sns share-outer">
         <i class="ri-share-forward-line"></i>
@@ -194,55 +201,107 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/src/w11_extensions2/floquet.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ihuyi.xyz/src/w11_extensions2/floquet.html" alt="微信分享二维码">
     </div>
 </div>
 
-<div id="share-mask"></div>
-      
-      
-
+<div id="share-mask"></div>  
     </footer>
-
   </div>
 
-  
-  
+   
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
 
-  
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
 
-  
-  
-  
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
 
-  
-  
-  
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
 
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+    
 </article>
+
 </section>
       <footer class="footer">
   <div class="outer">
-    <ul class="list-inline">
+    <ul>
       <li>
-        &copy;
-        2020-2021
-        huyi
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> huyi
       </li>
+    </ul>
+    <ul>
       <li>
         
-        Powered by
         
         
-        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
-    <ul class="list-inline">
+    <ul>
       <li>
         
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
       </li>
+    </ul>
+    <ul>
       
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
       <li>
         <!-- cnzz统计 -->
         
@@ -250,7 +309,6 @@
     </ul>
   </div>
 </footer>
-
       <div class="float_btns">
         <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
@@ -289,19 +347,19 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/logs/">日志</a>
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2020/about">关于我</a>
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://pan.huyiph.xyz" target="_blank" rel="noopener">网盘</a>
+      <a class="nav-item-link" href="/friends">友链</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://aria.huyiph.xyz" target="_blank" rel="noopener">aria2</a>
+      <a class="nav-item-link" href="/2019/about">关于我</a>
     </li>
     
   </ul>
@@ -329,12 +387,6 @@
 </div>
 </div>
     </aside>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
     <div id="mask"></div>
 
 <!-- #reward -->
@@ -344,13 +396,13 @@
   <div class="reward-box">
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
       <span class="reward-type">支付宝</span>
     </div>
     
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
       <span class="reward-type">微信</span>
     </div>
     
@@ -358,39 +410,22 @@
 </div>
     
 <script src="/js/jquery-2.0.3.min.js"></script>
-
-
+ 
 <script src="/js/lazyload.min.js"></script>
 
-
-<script>
-  try {
-    var typed = new Typed("#subtitle", {
-      strings: ['----------------------', '', ''],
-      startDelay: 0,
-      typeSpeed: 200,
-      loop: true,
-      backSpeed: 100,
-      showCursor: true
-    });
-  } catch (err) {
-  }
-
-</script>
-
-
-
-
+<!-- Tocbot -->
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
 <script src="/dist/main.js"></script>
 
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     <!-- Background of PhotoSwipe. 
@@ -495,10 +530,9 @@
         })
     }
     viewer_init()
-</script>
-
-
-<script type="text/x-mathjax-config">
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
       tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -518,37 +552,103 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
   var ayerConfig = {
-    mathjax: true
-  }
+    mathjax: true,
+  };
 </script>
 
-
-
+<!-- Katex -->
+ 
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         
+            <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css">
+        
     
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
 
+<!-- ClickBoom1 -->
 
-
-
-<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
-
-
-
-
-  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
     }
-  </script>
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
 
 
     
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

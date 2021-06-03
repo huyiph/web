@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en">
+  
 
-
-<head>
-  <meta charset="utf-8" />
-    
-  <meta name="description" content="demon" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-    pytorch 学习 |  O
-  </title>
-  <meta name="generator" content="hexo-theme-yilia-plus">
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="demon" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>pytorch 学习 |  O</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
 <link rel="stylesheet" href="/dist/main.css">
 
-  
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
 <link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-  
-  
-
-  
-
+      <!-- mermaid -->
+      
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+    <link rel="alternate" href="/atom.xml" title="O" type="application/atom+xml">
 </head>
-
+  </html>
 </html>
+
 
 <body>
   <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
     <main class="content on">
       <section class="outer">
-  <article id="post-pytorch_learning" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
+  <article
+  id="post-pytorch_learning"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
   <div class="article-inner">
     
     <header class="article-header">
@@ -50,27 +66,23 @@
 </h1>
  
 
+      
     </header>
-    
-
-    
+     
     <div class="article-meta">
       <a href="/2020/05/02/pytorch_learning/" class="article-date">
   <time datetime="2020-05-02T05:41:10.000Z" itemprop="datePublished">2020-05-02</time>
-</a>
-      
+</a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
   </div>
-
-      
-      
+  
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.7k</span>
+            <span class="post-count">1.8k</span>
         </span>
     </span>
 
@@ -83,58 +95,48 @@
         </span>
     </span>
 </div>
-
-      
+ 
     </div>
-    
-
-    
-    
+      
     <div class="tocbot"></div>
 
 
 
 
-
-    
-
-    
+  
     <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h3 id="pytorch-学习"><a href="#pytorch-学习" class="headerlink" title="pytorch 学习"></a>pytorch 学习</h3><h4 id="1-pytorch的优点"><a href="#1-pytorch的优点" class="headerlink" title="1. pytorch的优点"></a>1. pytorch的优点</h4><pre><code>自动微分
+       
+  <h3 id="pytorch-学习"><a href="#pytorch-学习" class="headerlink" title="pytorch 学习"></a>pytorch 学习</h3><h4 id="1-pytorch的优点"><a href="#1-pytorch的优点" class="headerlink" title="1. pytorch的优点"></a>1. pytorch的优点</h4><pre><code>自动微分
 集成常用函数
 拥有数据处理函数
 多精度训练</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d <span class="keyword">import</span> Axes3D</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">torch.manual_seed(<span class="number">466</span>)</span><br><span class="line">np.random.seed(<span class="number">466</span>)</span><br></pre></td></tr></table></figure>
 
-<h4 id="numpy-ndarray-与-pytorch-Tensors-之间的联系"><a href="#numpy-ndarray-与-pytorch-Tensors-之间的联系" class="headerlink" title="numpy ndarray 与 pytorch Tensors 之间的联系"></a>numpy ndarray 与 pytorch Tensors 之间的联系</h4>   <a id="more"></a>
+<h4 id="numpy-ndarray-与-pytorch-Tensors-之间的联系"><a href="#numpy-ndarray-与-pytorch-Tensors-之间的联系" class="headerlink" title="numpy ndarray 与 pytorch Tensors 之间的联系"></a>numpy ndarray 与 pytorch Tensors 之间的联系</h4>   <span id="more"></span>
 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x_numpy = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">x_torch = torch.tensor([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">print(<span class="string">'x_numpy,  x_torch'</span>)</span><br><span class="line">print(x_numpy,x_torch)</span><br><span class="line">print()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x_numpy = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">x_torch = torch.tensor([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;x_numpy,  x_torch&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(x_numpy,x_torch)</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
 
 <pre><code>x_numpy,  x_torch
 [1 2 3] tensor([1, 2, 3])</code></pre><p>​    </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'numpy 与 torch 之间的转化'</span>)</span><br><span class="line">print(torch.from_numpy(x_numpy),x_torch.numpy())</span><br><span class="line">print()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;numpy 与 torch 之间的转化&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(torch.from_numpy(x_numpy),x_torch.numpy())</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
 
 <pre><code>numpy 与 torch 之间的转化
 tensor([1, 2, 3], dtype=torch.int32) [1 2 3]</code></pre><p>​    </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 运算操作</span></span><br><span class="line">y_numpy = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">y_torch = torch.tensor([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">print(<span class="string">'x+y'</span>)</span><br><span class="line">print(x_numpy+y_numpy,x_torch+y_torch)</span><br><span class="line">print()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 运算操作</span></span><br><span class="line">y_numpy = np.array([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">y_torch = torch.tensor([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;x+y&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(x_numpy+y_numpy,x_torch+y_torch)</span><br><span class="line"><span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
 
 <pre><code>x+y
 [3 5 7] tensor([3, 5, 7])</code></pre><p>​    </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"mean along the 0th dimension"</span>)</span><br><span class="line">x_numpy = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4.</span>]])</span><br><span class="line">x_torch = torch.tensor([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4.</span>]])</span><br><span class="line">print(np.mean(x_numpy, axis=<span class="number">0</span>), torch.mean(x_torch, dim=<span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;mean along the 0th dimension&quot;</span>)</span><br><span class="line">x_numpy = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4.</span>]])</span><br><span class="line">x_torch = torch.tensor([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4.</span>]])</span><br><span class="line"><span class="built_in">print</span>(np.mean(x_numpy, axis=<span class="number">0</span>), torch.mean(x_torch, dim=<span class="number">0</span>))</span><br></pre></td></tr></table></figure>
 
 <pre><code>mean along the 0th dimension
-[2. 3.] tensor([2., 3.])</code></pre><h4 id="Tensor-view-用于reshape-tensor"><a href="#Tensor-view-用于reshape-tensor" class="headerlink" title="Tensor.view 用于reshape tensor"></a>Tensor.view 用于reshape tensor</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">N,C,W,H = <span class="number">10</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span></span><br><span class="line">X = torch.randn(N,C,W,H)</span><br><span class="line"></span><br><span class="line">print(X.shape)</span><br><span class="line">print(X.view(N,C,<span class="number">5</span>*<span class="number">5</span>).shape)</span><br><span class="line">print(X.view(<span class="number">-1</span>,C,<span class="number">5</span>*<span class="number">5</span>).shape)</span><br></pre></td></tr></table></figure>
+[2. 3.] tensor([2., 3.])</code></pre><h4 id="Tensor-view-用于reshape-tensor"><a href="#Tensor-view-用于reshape-tensor" class="headerlink" title="Tensor.view 用于reshape tensor"></a>Tensor.view 用于reshape tensor</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">N,C,W,H = <span class="number">10</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span></span><br><span class="line">X = torch.randn(N,C,W,H)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(X.shape)</span><br><span class="line"><span class="built_in">print</span>(X.view(N,C,<span class="number">5</span>*<span class="number">5</span>).shape)</span><br><span class="line"><span class="built_in">print</span>(X.view(-<span class="number">1</span>,C,<span class="number">5</span>*<span class="number">5</span>).shape)</span><br></pre></td></tr></table></figure>
 
 <pre><code>torch.Size([10, 3, 5, 5])
 torch.Size([10, 3, 25])
 torch.Size([10, 3, 25])</code></pre><h3 id="计算图"><a href="#计算图" class="headerlink" title="计算图"></a>计算图</h3><p>What’s special about PyTorch’s tensor object is that it implicitly creates a computation graph in the background. A computation graph is a a way of writing a mathematical expression as a graph. There is an algorithm to compute the gradients of all the variables of a computation graph in time on the same order it is to compute the function itself.</p>
 <p>Consider the expression  𝑒=(𝑎+𝑏)∗(𝑏+1)  with values  𝑎=2,𝑏=1 . We can draw the evaluated computation graph as</p>
 <p>In PyTorch, we can write this as<br><img src="/2020/05/02/pytorch_learning/tree-eval.png" alt="image.png"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = torch.tensor(<span class="number">2.0</span>,requires_grad=<span class="literal">True</span>) <span class="comment"># requires_grad 自动微分参数</span></span><br><span class="line">b = torch.tensor(<span class="number">1.0</span>,requires_grad=<span class="literal">False</span>) <span class="comment"># 输入False不自动计算计算图</span></span><br><span class="line">c = a+b</span><br><span class="line">d = b+<span class="number">1</span></span><br><span class="line">e = c*d</span><br><span class="line">print(<span class="string">'c'</span>,c)</span><br><span class="line">print(<span class="string">'d'</span>,d)</span><br><span class="line">print(<span class="string">'e'</span>,e)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = torch.tensor(<span class="number">2.0</span>,requires_grad=<span class="literal">True</span>) <span class="comment"># requires_grad 自动微分参数</span></span><br><span class="line">b = torch.tensor(<span class="number">1.0</span>,requires_grad=<span class="literal">False</span>) <span class="comment"># 输入False不自动计算计算图</span></span><br><span class="line">c = a+b</span><br><span class="line">d = b+<span class="number">1</span></span><br><span class="line">e = c*d</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c&#x27;</span>,c)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;d&#x27;</span>,d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;e&#x27;</span>,e)</span><br></pre></td></tr></table></figure>
 
 <pre><code>c tensor(3., grad_fn=&lt;AddBackward0&gt;)
 d tensor(2.)
@@ -142,7 +144,7 @@ e tensor(6., grad_fn=&lt;MulBackward0&gt;)</code></pre><h3 id="PyTorch-的自动
 <p>Consider the function  $ 𝑓(𝑥)=(𝑥−2)^2 $.</p>
 <p>Q: Compute $\frac{d}{dx} f(x)$ and then compute $f’(1)$.</p>
 <p>We make a <code>backward()</code> call on the leaf variable (<code>y</code>) in the computation, computing all the gradients of <code>y</code> at once.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (x<span class="number">-2</span>)**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fp</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>*(x<span class="number">-2</span>)</span><br><span class="line"></span><br><span class="line">x = torch.tensor([<span class="number">1.0</span>],requires_grad=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">y = f(x)</span><br><span class="line">y.backward()  <span class="comment">#backward()用于计算表达式中的所有梯度</span></span><br><span class="line">print(<span class="string">'PyTorch 解为：'</span>,x.grad)</span><br><span class="line">z = f(x) * f(x**<span class="number">2</span>)</span><br><span class="line">z.backward()</span><br><span class="line">print(<span class="string">'微分解析解为：'</span>,fp(x))</span><br><span class="line">print(<span class="string">'PyTorch 解为：'</span>,x.grad)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">return</span> (x-<span class="number">2</span>)**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fp</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>*(x-<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">x = torch.tensor([<span class="number">1.0</span>],requires_grad=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">y = f(x)</span><br><span class="line">y.backward()  <span class="comment">#backward()用于计算表达式中的所有梯度</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;PyTorch 解为：&#x27;</span>,x.grad)</span><br><span class="line">z = f(x) * f(x**<span class="number">2</span>)</span><br><span class="line">z.backward()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;微分解析解为：&#x27;</span>,fp(x))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;PyTorch 解为：&#x27;</span>,x.grad)</span><br></pre></td></tr></table></figure>
 
 <pre><code>PyTorch 解为： tensor([-2.])
 微分解析解为： tensor([-2.], grad_fn=&lt;MulBackward0&gt;)
@@ -150,13 +152,13 @@ PyTorch 解为： tensor([-8.])</code></pre><p>It can also find gradients of fun
 <p>Let $w = [w_1, w_2]^T$</p>
 <p>Consider $g(w) = 2w_1w_2 + w_2\cos(w_1)$</p>
 <p>Q: Compute $\nabla_w g(w)$ and verify $\nabla_w g([\pi,1]) = [2, \pi - 1]^T$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">g</span><span class="params">(w)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>*w[<span class="number">0</span>]*w[<span class="number">1</span>] + w[<span class="number">1</span>]*torch.cos(w[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">grad_g</span><span class="params">(w)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> torch.tensor([<span class="number">2</span>*w[<span class="number">1</span>]-w[<span class="number">1</span>]*torch.sin(w[<span class="number">0</span>]),<span class="number">2</span>*w[<span class="number">0</span>]+torch.cos(w[<span class="number">0</span>])])</span><br><span class="line"></span><br><span class="line">w = torch.tensor([np.pi,<span class="number">1</span>],requires_grad=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">z = g(w)</span><br><span class="line">z.backward()</span><br><span class="line"></span><br><span class="line">print(<span class="string">'解析解：'</span>, grad_g(w))</span><br><span class="line">print(<span class="string">'Torch解：'</span>, w.grad)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">g</span>(<span class="params">w</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>*w[<span class="number">0</span>]*w[<span class="number">1</span>] + w[<span class="number">1</span>]*torch.cos(w[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">grad_g</span>(<span class="params">w</span>):</span></span><br><span class="line">    <span class="keyword">return</span> torch.tensor([<span class="number">2</span>*w[<span class="number">1</span>]-w[<span class="number">1</span>]*torch.sin(w[<span class="number">0</span>]),<span class="number">2</span>*w[<span class="number">0</span>]+torch.cos(w[<span class="number">0</span>])])</span><br><span class="line"></span><br><span class="line">w = torch.tensor([np.pi,<span class="number">1</span>],requires_grad=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">z = g(w)</span><br><span class="line">z.backward()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;解析解：&#x27;</span>, grad_g(w))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Torch解：&#x27;</span>, w.grad)</span><br></pre></td></tr></table></figure>
 
 <pre><code>解析解： tensor([2.0000, 5.2832])
 Torch解： tensor([2.0000, 5.2832])</code></pre><h3 id="使用梯度"><a href="#使用梯度" class="headerlink" title="使用梯度"></a>使用梯度</h3><p>Now that we have gradients, we can use our favorite optimization algorithm: gradient descent!</p>
 <p>Let $f$ the same function we defined above.<br>$ f = (x-2)^2 $</p>
 <p>Q: What is the value of $x$ that minimizes $f$?</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x = torch.tensor([<span class="number">5.0</span>],requires_grad=<span class="literal">True</span>)</span><br><span class="line">step_size = <span class="number">0.4</span></span><br><span class="line">print(<span class="string">'iter,\tx,\tf(x),\tf\'(x),\tf\'(x) pytorch'</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    y = f(x)</span><br><span class="line">    y.backward()</span><br><span class="line">    print(<span class="string">'&#123;&#125;,\t&#123;:.3f&#125;,\t&#123;:.3f&#125;,\t&#123;:.3f&#125;,\t&#123;:.3f&#125;'</span>.format(i, x.item(), f(x).item(), fp(x).item(), x.grad.item()))</span><br><span class="line">    </span><br><span class="line">    x.data = x.data - step_size * x.grad</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#需要把grad值归零，不归零的话 y 的值会累积</span></span><br><span class="line">    x.grad.detach_() <span class="comment"># 为了提高效率</span></span><br><span class="line">    x.grad.zero_()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x = torch.tensor([<span class="number">5.0</span>],requires_grad=<span class="literal">True</span>)</span><br><span class="line">step_size = <span class="number">0.4</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;iter,\tx,\tf(x),\tf\&#x27;(x),\tf\&#x27;(x) pytorch&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    y = f(x)</span><br><span class="line">    y.backward()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;,\t&#123;:.3f&#125;,\t&#123;:.3f&#125;,\t&#123;:.3f&#125;,\t&#123;:.3f&#125;&#x27;</span>.<span class="built_in">format</span>(i, x.item(), f(x).item(), fp(x).item(), x.grad.item()))</span><br><span class="line">    </span><br><span class="line">    x.data = x.data - step_size * x.grad</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#需要把grad值归零，不归零的话 y 的值会累积</span></span><br><span class="line">    x.grad.detach_() <span class="comment"># 为了提高效率</span></span><br><span class="line">    x.grad.zero_()</span><br></pre></td></tr></table></figure>
 
 <pre><code>iter,    x,    f(x),    f&apos;(x),    f&apos;(x) pytorch
 0,    5.000,    9.000,    6.000,    6.000
@@ -169,20 +171,20 @@ Torch解： tensor([2.0000, 5.2832])</code></pre><h3 id="使用梯度"><a href="
 7,    2.000,    0.000,    0.000,    0.000
 8,    2.000,    0.000,    0.000,    0.000
 9,    2.000,    0.000,    0.000,    0.000</code></pre><h3 id="Linear-Regression"><a href="#Linear-Regression" class="headerlink" title="Linear Regression"></a>Linear Regression</h3><p>使用torch进行线性回归</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构造了一个线性带有噪音的data set</span></span><br><span class="line">d = <span class="number">2</span></span><br><span class="line">n = <span class="number">50</span></span><br><span class="line">X = torch.randn(n,d)</span><br><span class="line">true_w = torch.tensor([[<span class="number">-1.0</span>],[<span class="number">2.0</span>]])</span><br><span class="line">y = X @ true_w + torch.randn(n,<span class="number">1</span>)*<span class="number">0.1</span></span><br><span class="line">print(<span class="string">'X shape'</span>,X.shape)</span><br><span class="line">print(<span class="string">'y shape'</span>, y.shape)</span><br><span class="line">print(<span class="string">'w shape'</span>, true_w.shape)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构造了一个线性带有噪音的data set</span></span><br><span class="line">d = <span class="number">2</span></span><br><span class="line">n = <span class="number">50</span></span><br><span class="line">X = torch.randn(n,d)</span><br><span class="line">true_w = torch.tensor([[-<span class="number">1.0</span>],[<span class="number">2.0</span>]])</span><br><span class="line">y = X @ true_w + torch.randn(n,<span class="number">1</span>)*<span class="number">0.1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;X shape&#x27;</span>,X.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;y shape&#x27;</span>, y.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;w shape&#x27;</span>, true_w.shape)</span><br></pre></td></tr></table></figure>
 
 <pre><code>X shape torch.Size([50, 2])
 y shape torch.Size([50, 1])
 w shape torch.Size([2, 1])</code></pre><h3 id="Note-dimensions"><a href="#Note-dimensions" class="headerlink" title="Note: dimensions"></a>Note: dimensions</h3><p>PyTorch does a lot of operations on batches of data. The convention is to have your data be of size $(N, d)$ where $N$ is the size of the batch of data.</p>
 <h3 id="Sanity-check"><a href="#Sanity-check" class="headerlink" title="Sanity check"></a>Sanity check</h3><p>To verify PyTorch is computing the gradients correctly, let’s recall the gradient for the RSS objective:</p>
 <p>$$\nabla_w \mathcal{L}_{RSS}(w; X) = \nabla_w\frac{1}{n} ||y - Xw||_2^2 = -\frac{2}{n}X^T(y-Xw)$$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">model</span><span class="params">(X,w)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> X @ w</span><br><span class="line"></span><br><span class="line"><span class="comment"># norm 求的是矩阵范数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rss</span><span class="params">(y,y_hat)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> torch.norm(y-y_hat)**<span class="number">2</span>/n</span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度解析解 @ 表示矩阵乘法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">grad_rss</span><span class="params">(X,y,W)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-2</span>*X.t()@(y-X @ w)/n</span><br><span class="line"></span><br><span class="line">w = torch.tensor([[<span class="number">1.0</span>],[<span class="number">0</span>]],requires_grad=<span class="literal">True</span>)</span><br><span class="line">y_hat = model(X,w)</span><br><span class="line"></span><br><span class="line">loss = rss(y,y_hat)</span><br><span class="line">loss.backward()</span><br><span class="line"></span><br><span class="line">print(<span class="string">'Analytical gradient'</span>, grad_rss(X, y, w).detach().view(<span class="number">2</span>).numpy())</span><br><span class="line">print(<span class="string">'PyTorch\'s gradient'</span>, w.grad.view(<span class="number">2</span>).numpy())</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">model</span>(<span class="params">X,w</span>):</span></span><br><span class="line">    <span class="keyword">return</span> X @ w</span><br><span class="line"></span><br><span class="line"><span class="comment"># norm 求的是矩阵范数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rss</span>(<span class="params">y,y_hat</span>):</span></span><br><span class="line">    <span class="keyword">return</span> torch.norm(y-y_hat)**<span class="number">2</span>/n</span><br><span class="line"></span><br><span class="line"><span class="comment"># 梯度解析解 @ 表示矩阵乘法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">grad_rss</span>(<span class="params">X,y,W</span>):</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">2</span>*X.t()@(y-X @ w)/n</span><br><span class="line"></span><br><span class="line">w = torch.tensor([[<span class="number">1.0</span>],[<span class="number">0</span>]],requires_grad=<span class="literal">True</span>)</span><br><span class="line">y_hat = model(X,w)</span><br><span class="line"></span><br><span class="line">loss = rss(y,y_hat)</span><br><span class="line">loss.backward()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Analytical gradient&#x27;</span>, grad_rss(X, y, w).detach().view(<span class="number">2</span>).numpy())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;PyTorch\&#x27;s gradient&#x27;</span>, w.grad.view(<span class="number">2</span>).numpy())</span><br></pre></td></tr></table></figure>
 
 <pre><code>Analytical gradient [ 4.474982 -3.335253]
 PyTorch&apos;s gradient [ 4.4749813 -3.3352537]</code></pre><p>Now that we’ve seen PyTorch is doing the right think, let’s use the gradients!</p>
 <h2 id="Linear-regression-using-GD-with-automatically-computed-derivatives"><a href="#Linear-regression-using-GD-with-automatically-computed-derivatives" class="headerlink" title="Linear regression using GD with automatically computed derivatives"></a>Linear regression using GD with automatically computed derivatives</h2><p>We will now use the gradients to run the gradient descent algorithm.</p>
 <p>Note: This example is an illustration to connect ideas we have seen before to PyTorch’s way of doing things. We will see how to do this in the “PyTorchic” way in the next example.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">step_size = <span class="number">0.4</span></span><br><span class="line">print(<span class="string">'iter,\t loss,\t w'</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>):</span><br><span class="line">    y_hat = model(X,w)</span><br><span class="line">    loss = rss(y,y_hat)</span><br><span class="line">    </span><br><span class="line">    loss.backward()</span><br><span class="line">    w.data = w.data - step_size * w.grad</span><br><span class="line">    print(<span class="string">'&#123;&#125;,\t&#123;:.2f&#125;,\t&#123;&#125;'</span>.format(i, loss.item(), w.view(<span class="number">2</span>).detach().numpy()))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># We need to zero the grad variable since the backward()</span></span><br><span class="line">    <span class="comment"># call accumulates the gradients in .grad instead of overwriting.</span></span><br><span class="line">    <span class="comment"># The detach_() is for efficiency. You do not need to worry too much about it.</span></span><br><span class="line">    w.grad.detach()</span><br><span class="line">    w.grad.zero_()</span><br><span class="line"></span><br><span class="line">print(<span class="string">'\ntrue w\t\t'</span>, true_w.view(<span class="number">2</span>).numpy())</span><br><span class="line">print(<span class="string">'estimated w\t'</span>, w.view(<span class="number">2</span>).detach().numpy())</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">step_size = <span class="number">0.4</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;iter,\t loss,\t w&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">    y_hat = model(X,w)</span><br><span class="line">    loss = rss(y,y_hat)</span><br><span class="line">    </span><br><span class="line">    loss.backward()</span><br><span class="line">    w.data = w.data - step_size * w.grad</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;,\t&#123;:.2f&#125;,\t&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(i, loss.item(), w.view(<span class="number">2</span>).detach().numpy()))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># We need to zero the grad variable since the backward()</span></span><br><span class="line">    <span class="comment"># call accumulates the gradients in .grad instead of overwriting.</span></span><br><span class="line">    <span class="comment"># The detach_() is for efficiency. You do not need to worry too much about it.</span></span><br><span class="line">    w.grad.detach()</span><br><span class="line">    w.grad.zero_()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\ntrue w\t\t&#x27;</span>, true_w.view(<span class="number">2</span>).numpy())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;estimated w\t&#x27;</span>, w.view(<span class="number">2</span>).detach().numpy())</span><br></pre></td></tr></table></figure>
 
 <pre><code>iter,     loss,     w
 0,    7.80,    [-2.5799851  2.668203 ]
@@ -208,11 +210,11 @@ PyTorch&apos;s gradient [ 4.4749813 -3.3352537]</code></pre><p>Now that we’ve 
 
 true w         [-1.  2.]
 estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-in-PyTorch"><a href="#Neural-Network-Basics-in-PyTorch" class="headerlink" title="Neural Network Basics in PyTorch"></a>Neural Network Basics in PyTorch</h3><p>fitting a simple neural network to the data </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line">d = <span class="number">1</span></span><br><span class="line">n = <span class="number">100</span></span><br><span class="line">X = torch.rand(n,d)</span><br><span class="line">y = <span class="number">4</span>* torch.sin(np.pi*X)*torch.cos(<span class="number">6</span>*np.pi*X**<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">plt.scatter(X.numpy(),y.numpy())</span><br><span class="line">plt.title(<span class="string">'plot of $f(x)$'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'$x$'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'$y$'</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line">d = <span class="number">1</span></span><br><span class="line">n = <span class="number">100</span></span><br><span class="line">X = torch.rand(n,d)</span><br><span class="line">y = <span class="number">4</span>* torch.sin(np.pi*X)*torch.cos(<span class="number">6</span>*np.pi*X**<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">plt.scatter(X.numpy(),y.numpy())</span><br><span class="line">plt.title(<span class="string">&#x27;plot of $f(x)$&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;$x$&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;$y$&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 
 <p><img src="/2020/05/02/pytorch_learning/output_25_0.png" alt="png"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">step_size = <span class="number">0.05</span></span><br><span class="line">iter_times = <span class="number">12000</span></span><br><span class="line">n_hidden_1 = <span class="number">32</span></span><br><span class="line">n_hidden_2 = <span class="number">32</span></span><br><span class="line">d_out = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">neural_network = nn.Sequential(</span><br><span class="line">                                nn.Linear(d,n_hidden_1),</span><br><span class="line">                                nn.Tanh(),</span><br><span class="line">                                nn.Linear(n_hidden_1,n_hidden_2),</span><br><span class="line">                                nn.Tanh(),</span><br><span class="line">                                nn.Linear(n_hidden_2,d_out))</span><br><span class="line"></span><br><span class="line">loss_func = nn.MSELoss()</span><br><span class="line"></span><br><span class="line">optim = torch.optim.SGD(neural_network.parameters(),lr=step_size)</span><br><span class="line">print(<span class="string">'iter, \t loss'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(iter_times):</span><br><span class="line">    y_hat = neural_network(X)</span><br><span class="line">    loss = loss_func(y_hat,y)</span><br><span class="line">    optim.zero_grad()</span><br><span class="line">    loss.backward()</span><br><span class="line">    optim.step()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">1000</span> ==<span class="number">0</span> :</span><br><span class="line">        print(<span class="string">'&#123;&#125;,\t&#123;:.2f&#125;'</span>.format(i, loss.item()))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">step_size = <span class="number">0.05</span></span><br><span class="line">iter_times = <span class="number">12000</span></span><br><span class="line">n_hidden_1 = <span class="number">32</span></span><br><span class="line">n_hidden_2 = <span class="number">32</span></span><br><span class="line">d_out = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">neural_network = nn.Sequential(</span><br><span class="line">                                nn.Linear(d,n_hidden_1),</span><br><span class="line">                                nn.Tanh(),</span><br><span class="line">                                nn.Linear(n_hidden_1,n_hidden_2),</span><br><span class="line">                                nn.Tanh(),</span><br><span class="line">                                nn.Linear(n_hidden_2,d_out))</span><br><span class="line"></span><br><span class="line">loss_func = nn.MSELoss()</span><br><span class="line"></span><br><span class="line">optim = torch.optim.SGD(neural_network.parameters(),lr=step_size)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;iter, \t loss&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(iter_times):</span><br><span class="line">    y_hat = neural_network(X)</span><br><span class="line">    loss = loss_func(y_hat,y)</span><br><span class="line">    optim.zero_grad()</span><br><span class="line">    loss.backward()</span><br><span class="line">    optim.step()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">1000</span> ==<span class="number">0</span> :</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;,\t&#123;:.2f&#125;&#x27;</span>.<span class="built_in">format</span>(i, loss.item()))</span><br></pre></td></tr></table></figure>
 
 <pre><code>iter,      loss
 0,    4.36
@@ -226,32 +228,32 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
 8000,    0.03
 9000,    0.02
 10000,    0.00
-11000,    0.01</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">X_grid = torch.from_numpy(np.linspace(<span class="number">0</span>,<span class="number">1</span>,<span class="number">50</span>)).float().view(<span class="number">-1</span>,d)</span><br><span class="line">y_hat = neural_network(X_grid)</span><br><span class="line">plt.scatter(X.numpy(), y.numpy())</span><br><span class="line">plt.plot(X_grid.detach().numpy(), y_hat.detach().numpy(), <span class="string">'r'</span>)</span><br><span class="line">plt.title(<span class="string">'plot of $f(x)$ and $\hat&#123;f&#125;(x)$'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'$x$'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'$y$'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+11000,    0.01</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">X_grid = torch.from_numpy(np.linspace(<span class="number">0</span>,<span class="number">1</span>,<span class="number">50</span>)).<span class="built_in">float</span>().view(-<span class="number">1</span>,d)</span><br><span class="line">y_hat = neural_network(X_grid)</span><br><span class="line">plt.scatter(X.numpy(), y.numpy())</span><br><span class="line">plt.plot(X_grid.detach().numpy(), y_hat.detach().numpy(), <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;plot of $f(x)$ and $\hat&#123;f&#125;(x)$&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;$x$&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;$y$&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 
 <p><img src="/2020/05/02/pytorch_learning/output_27_0.png" alt="png"></p>
-
-      
+ 
       <!-- reward -->
       
     </div>
     
+
+    <!-- copyright -->
     
-      <!-- copyright -->
-      
-        <div class="declare">
-          <ul class="post-copyright">
-            <li>
-              <i class="ri-copyright-line"></i>
-              <strong>Copyright： </strong>
-              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-            </li>
-          </ul>
-        </div>
-        
-    <footer class="article-footer">
-      
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
           
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
 <div class="share-btn">
       <span class="share-sns share-outer">
         <i class="ri-share-forward-line"></i>
@@ -294,29 +296,24 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2020/05/02/pytorch_learning/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ihuyi.xyz/2020/05/02/pytorch_learning/" alt="微信分享二维码">
     </div>
 </div>
 
-<div id="share-mask"></div>
-      
-      
+<div id="share-mask"></div>  
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deeplearning/" rel="tag">deeplearning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pytorch/" rel="tag">pytorch</a></li></ul>
 
-
     </footer>
-
   </div>
 
-  
-  
+   
   <nav class="article-nav">
     
-      <a href="/2021/01/07/src/w0_background/intro/" class="article-nav-link">
+      <a href="/2021/01/07/src/syllabus.md/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            src/w0_background/intro
+            (no title)
           
         </div>
       </a>
@@ -329,43 +326,99 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
     
   </nav>
 
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
 
-  
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
 
-  
-  
-  
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
 
-  
-  
-  
-  
-  
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
 
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
 </article>
+
 </section>
       <footer class="footer">
   <div class="outer">
-    <ul class="list-inline">
+    <ul>
       <li>
-        &copy;
-        2020-2021
-        huyi
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> huyi
       </li>
+    </ul>
+    <ul>
       <li>
         
-        Powered by
         
         
-        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
-    <ul class="list-inline">
+    <ul>
       <li>
         
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
       </li>
+    </ul>
+    <ul>
       
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
       <li>
         <!-- cnzz统计 -->
         
@@ -373,7 +426,6 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
     </ul>
   </div>
 </footer>
-
       <div class="float_btns">
         <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
@@ -412,19 +464,19 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/logs/">日志</a>
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2020/about">关于我</a>
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://pan.huyiph.xyz" target="_blank" rel="noopener">网盘</a>
+      <a class="nav-item-link" href="/friends">友链</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://aria.huyiph.xyz" target="_blank" rel="noopener">aria2</a>
+      <a class="nav-item-link" href="/2019/about">关于我</a>
     </li>
     
   </ul>
@@ -452,12 +504,6 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
 </div>
 </div>
     </aside>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
     <div id="mask"></div>
 
 <!-- #reward -->
@@ -467,13 +513,13 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
   <div class="reward-box">
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
       <span class="reward-type">支付宝</span>
     </div>
     
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
       <span class="reward-type">微信</span>
     </div>
     
@@ -481,57 +527,38 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
 </div>
     
 <script src="/js/jquery-2.0.3.min.js"></script>
-
-
+ 
 <script src="/js/lazyload.min.js"></script>
 
-
-<script>
-  try {
-    var typed = new Typed("#subtitle", {
-      strings: ['----------------------', '', ''],
-      startDelay: 0,
-      typeSpeed: 200,
-      loop: true,
-      backSpeed: 100,
-      showCursor: true
-    });
-  } catch (err) {
-  }
-
-</script>
-
-
-
-
+<!-- Tocbot -->
+ 
 <script src="/js/tocbot.min.js"></script>
 
 <script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
   tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
     hasInnerContainers: true,
     scrollSmooth: true,
-    scrollContainer: 'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto'
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
   });
 </script>
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
 <script src="/dist/main.js"></script>
 
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     <!-- Background of PhotoSwipe. 
@@ -636,10 +663,9 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
         })
     }
     viewer_init()
-</script>
-
-
-<script type="text/x-mathjax-config">
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
       tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -659,37 +685,103 @@ estimated w     [-0.980341  2.014139]</code></pre><h3 id="Neural-Network-Basics-
 <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
   var ayerConfig = {
-    mathjax: true
-  }
+    mathjax: true,
+  };
 </script>
 
-
-
+<!-- Katex -->
+ 
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         
+            <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css">
+        
     
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
 
+<!-- ClickBoom1 -->
 
-
-
-<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
-
-
-
-
-  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
     }
-  </script>
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
 
 
     
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

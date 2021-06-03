@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en">
+  
 
-
-<head>
-  <meta charset="utf-8" />
-    
-  <meta name="description" content="demon" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-     O
-  </title>
-  <meta name="generator" content="hexo-theme-yilia-plus">
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="demon" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> O</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
 <link rel="stylesheet" href="/dist/main.css">
 
-  
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
 <link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-  
-  
-
-  
-
+      <!-- mermaid -->
+      
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+    <link rel="alternate" href="/atom.xml" title="O" type="application/atom+xml">
 </head>
-
+  </html>
 </html>
+
 
 <body>
   <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
     <main class="content on">
       <section class="outer">
-  <article id="page-" class="article article-type-page" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
+  <article
+  id="page-"
+  class="article article-type-page"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
   <div class="article-inner">
-    
-
-    
-
-    
-
-    
+       
     <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"><span class="keyword">from</span> matplotlib.collections <span class="keyword">import</span> LineCollection</span><br><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap, BoundaryNorm</span><br><span class="line"><span class="keyword">import</span> scipy.linalg <span class="keyword">as</span> la</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set the path to a folder containing data files, to work with filters as well.</span></span><br><span class="line">data_folder = (</span><br><span class="line">    <span class="string">"data/"</span> <span class="keyword">if</span> os.path.exists(<span class="string">"data"</span>) <span class="keyword">and</span> os.path.isdir(<span class="string">"data"</span>) <span class="keyword">else</span> <span class="string">"../../data/"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_kitaev_chain</span><span class="params">(L=<span class="number">10</span>)</span>:</span></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line">    syst = kwant.Builder()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> p.disorder:</span><br><span class="line">            <span class="keyword">return</span> (p.m + <span class="number">2</span> * p.t) * pauli.sz</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            rand = p.disorder * kwant.digest.gauss(str(site.tag), p.salt)</span><br><span class="line">            <span class="keyword">return</span> (p.m + rand + <span class="number">2</span> * p.t) * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hop</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.sz - <span class="number">1j</span> * p.delta * pauli.sy</span><br><span class="line"></span><br><span class="line">    syst[(lat(i) <span class="keyword">for</span> i <span class="keyword">in</span> range(L))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hop</span><br><span class="line"></span><br><span class="line">    sym = kwant.TranslationalSymmetry((<span class="number">1</span>,))</span><br><span class="line">    lead = kwant.Builder(sym)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The leads are precalculated.</span></span><br><span class="line">    lead[lat(<span class="number">0</span>)] = onsite</span><br><span class="line">    lead[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hop</span><br><span class="line"></span><br><span class="line">    syst.attach_lead(lead)</span><br><span class="line">    syst.attach_lead(lead.reversed())</span><br><span class="line">    syst = syst.finalized()</span><br><span class="line">    syst = syst.precalculate(</span><br><span class="line">        params=dict(p=SimpleNamespace(t=<span class="number">1.0</span>, m=<span class="number">0.0</span>, delta=<span class="number">1.0</span>, disorder=<span class="number">0</span>))</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">phase_diagram</span><span class="params">(L, ms, p, num_average=<span class="number">100</span>)</span>:</span></span><br><span class="line">    syst = make_kitaev_chain(L)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Adjust the reflection phase such that it's 0 for trivial system.</span></span><br><span class="line">    trivial = SimpleNamespace(m=<span class="number">10.0</span>, t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>, disorder=<span class="number">0</span>, salt=<span class="string">""</span>)</span><br><span class="line">    phase = kwant.smatrix(syst, params=dict(p=trivial)).data[<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">    phase /= abs(phase)</span><br><span class="line">    data = []</span><br><span class="line">    <span class="keyword">for</span> p.m <span class="keyword">in</span> ms:</span><br><span class="line">        qt = []</span><br><span class="line">        <span class="keyword">for</span> p.salt <span class="keyword">in</span> map(str, range(num_average)):</span><br><span class="line">            s = kwant.smatrix(syst, params=dict(p=p)).data</span><br><span class="line">            qt.append(((s[<span class="number">0</span>, <span class="number">0</span>] / phase).real, abs(s[<span class="number">0</span>, <span class="number">1</span>]) ** <span class="number">2</span>))</span><br><span class="line">        qt = np.mean(qt, axis=<span class="number">0</span>)</span><br><span class="line">        data.append(qt)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> np.array(data).T</span><br></pre></td></tr></table></figure>
+       
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">&quot;../../code&quot;</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"><span class="keyword">from</span> matplotlib.collections <span class="keyword">import</span> LineCollection</span><br><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap, BoundaryNorm</span><br><span class="line"><span class="keyword">import</span> scipy.linalg <span class="keyword">as</span> la</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set the path to a folder containing data files, to work with filters as well.</span></span><br><span class="line">data_folder = (</span><br><span class="line">    <span class="string">&quot;data/&quot;</span> <span class="keyword">if</span> os.path.exists(<span class="string">&quot;data&quot;</span>) <span class="keyword">and</span> os.path.isdir(<span class="string">&quot;data&quot;</span>) <span class="keyword">else</span> <span class="string">&quot;../../data/&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_kitaev_chain</span>(<span class="params">L=<span class="number">10</span></span>):</span></span><br><span class="line">    lat = kwant.lattice.chain()</span><br><span class="line">    syst = kwant.Builder()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span>(<span class="params">site, p</span>):</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> p.disorder:</span><br><span class="line">            <span class="keyword">return</span> (p.m + <span class="number">2</span> * p.t) * pauli.sz</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            rand = p.disorder * kwant.digest.gauss(<span class="built_in">str</span>(site.tag), p.salt)</span><br><span class="line">            <span class="keyword">return</span> (p.m + rand + <span class="number">2</span> * p.t) * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hop</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        <span class="keyword">return</span> -p.t * pauli.sz - <span class="number">1j</span> * p.delta * pauli.sy</span><br><span class="line"></span><br><span class="line">    syst[(lat(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(L))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hop</span><br><span class="line"></span><br><span class="line">    sym = kwant.TranslationalSymmetry((<span class="number">1</span>,))</span><br><span class="line">    lead = kwant.Builder(sym)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The leads are precalculated.</span></span><br><span class="line">    lead[lat(<span class="number">0</span>)] = onsite</span><br><span class="line">    lead[kwant.HoppingKind((<span class="number">1</span>,), lat)] = hop</span><br><span class="line"></span><br><span class="line">    syst.attach_lead(lead)</span><br><span class="line">    syst.attach_lead(lead.<span class="built_in">reversed</span>())</span><br><span class="line">    syst = syst.finalized()</span><br><span class="line">    syst = syst.precalculate(</span><br><span class="line">        params=<span class="built_in">dict</span>(p=SimpleNamespace(t=<span class="number">1.0</span>, m=<span class="number">0.0</span>, delta=<span class="number">1.0</span>, disorder=<span class="number">0</span>))</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">phase_diagram</span>(<span class="params">L, ms, p, num_average=<span class="number">100</span></span>):</span></span><br><span class="line">    syst = make_kitaev_chain(L)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Adjust the reflection phase such that it&#x27;s 0 for trivial system.</span></span><br><span class="line">    trivial = SimpleNamespace(m=<span class="number">10.0</span>, t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>, disorder=<span class="number">0</span>, salt=<span class="string">&quot;&quot;</span>)</span><br><span class="line">    phase = kwant.smatrix(syst, params=<span class="built_in">dict</span>(p=trivial)).data[<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">    phase /= <span class="built_in">abs</span>(phase)</span><br><span class="line">    data = []</span><br><span class="line">    <span class="keyword">for</span> p.m <span class="keyword">in</span> ms:</span><br><span class="line">        qt = []</span><br><span class="line">        <span class="keyword">for</span> p.salt <span class="keyword">in</span> <span class="built_in">map</span>(<span class="built_in">str</span>, <span class="built_in">range</span>(num_average)):</span><br><span class="line">            s = kwant.smatrix(syst, params=<span class="built_in">dict</span>(p=p)).data</span><br><span class="line">            qt.append(((s[<span class="number">0</span>, <span class="number">0</span>] / phase).real, <span class="built_in">abs</span>(s[<span class="number">0</span>, <span class="number">1</span>]) ** <span class="number">2</span>))</span><br><span class="line">        qt = np.mean(qt, axis=<span class="number">0</span>)</span><br><span class="line">        data.append(qt)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> np.array(data).T</span><br></pre></td></tr></table></figure>
 
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>The scaling flow of topological insulators is introduced by Alexander Altland from the University of Cologne</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"8gkERY6hXTU"</span>, src_location=<span class="string">"9.2-intro"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">&quot;8gkERY6hXTU&quot;</span>, src_location=<span class="string">&quot;9.2-intro&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <h1 id="A-toy-model-for-two-parameter-scaling-the-disordered-Kitaev-chain"><a href="#A-toy-model-for-two-parameter-scaling-the-disordered-Kitaev-chain" class="headerlink" title="A toy model for two-parameter scaling: the disordered Kitaev chain"></a>A toy model for two-parameter scaling: the disordered Kitaev chain</h1><p>Before we learn what happens to topological insulators in the presence of disorder, let’s decide on a specific example for concreteness.</p>
 <p>Topology makes the behavior of disordered systems richer, however a careful simulation of properties of disordered topological insulators may take weeks, since we need not only to take large system sizes (we need to consider the lengths much larger than mean free path), but also we need to average over disorder.</p>
@@ -72,7 +79,7 @@
 <p>Whenever $\langle Q\rangle = \pm 1$, we know that the system is in one of the two insulating phases and there is no reflection whatsoever.</p>
 <p>Let’s try the most obvious thing and see what happens to  $\langle Q\rangle$, as we increase disorder strength.</p>
 <p>So below we see $\mathcal{Q}$ averaged over 100 different realizations in a disordered Kitaev chain with 30 sites as we gradually increase $U$:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> os.path.exists(data_folder + <span class="string">"first_plot_data_ms.dat"</span>) <span class="keyword">and</span> os.path.exists(</span><br><span class="line">    data_folder + <span class="string">"first_plot_data_qs.dat"</span></span><br><span class="line">):</span><br><span class="line">    ms = np.loadtxt(data_folder + <span class="string">"first_plot_data_ms.dat"</span>)</span><br><span class="line">    qs = np.loadtxt(data_folder + <span class="string">"first_plot_data_qs.dat"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="comment"># This cell generates data</span></span><br><span class="line">    p = SimpleNamespace(t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>)</span><br><span class="line">    ms = np.linspace(<span class="number">-0.5</span>, <span class="number">0.5</span>, <span class="number">50</span>)</span><br><span class="line">    qs = [phase_diagram(<span class="number">30</span>, ms, p)[<span class="number">0</span>] <span class="keyword">for</span> p.disorder <span class="keyword">in</span> np.linspace(<span class="number">0</span>, <span class="number">0.8</span>, <span class="number">10</span>)]</span><br><span class="line">    np.savetxt(data_folder + <span class="string">"first_plot_data_ms.dat"</span>, ms)</span><br><span class="line">    np.savetxt(data_folder + <span class="string">"first_plot_data_qs.dat"</span>, qs)</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">6</span>, <span class="number">4</span>))</span><br><span class="line">ax.set_prop_cycle(<span class="string">"alpha"</span>, np.linspace(<span class="number">0</span>, <span class="number">1</span>, len(qs)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> q <span class="keyword">in</span> qs:</span><br><span class="line">    ax.plot(ms, q)</span><br><span class="line"></span><br><span class="line">ax.set_xlabel(<span class="string">"$m$"</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">r"$\langle Q \rangle$"</span>)</span><br><span class="line"></span><br><span class="line">evals = [<span class="number">-0.4</span>, <span class="number">0</span>, <span class="number">0.4</span>]</span><br><span class="line">ax.set_xticks(evals)</span><br><span class="line">ax.set_xticklabels([<span class="string">"$&#123;0&#125;$"</span>.format(i) <span class="keyword">for</span> i <span class="keyword">in</span> evals])</span><br><span class="line"></span><br><span class="line">evals = [<span class="number">-1</span>, <span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">ax.set_yticks(evals)</span><br><span class="line">ax.set_yticklabels([<span class="string">"$&#123;0&#125;$"</span>.format(i) <span class="keyword">for</span> i <span class="keyword">in</span> evals])</span><br><span class="line"></span><br><span class="line">ax.set_xlim(<span class="number">-0.4</span>, <span class="number">0.4</span>)</span><br><span class="line">ax.set_ylim(<span class="number">-1.1</span>, <span class="number">1.1</span>)</span><br><span class="line"></span><br><span class="line">ax.hlines(<span class="number">0</span>, ax.get_xlim()[<span class="number">0</span>], ax.get_xlim()[<span class="number">1</span>], linestyles=<span class="string">"dashed"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> os.path.exists(data_folder + <span class="string">&quot;first_plot_data_ms.dat&quot;</span>) <span class="keyword">and</span> os.path.exists(</span><br><span class="line">    data_folder + <span class="string">&quot;first_plot_data_qs.dat&quot;</span></span><br><span class="line">):</span><br><span class="line">    ms = np.loadtxt(data_folder + <span class="string">&quot;first_plot_data_ms.dat&quot;</span>)</span><br><span class="line">    qs = np.loadtxt(data_folder + <span class="string">&quot;first_plot_data_qs.dat&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="comment"># This cell generates data</span></span><br><span class="line">    p = SimpleNamespace(t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>)</span><br><span class="line">    ms = np.linspace(-<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">50</span>)</span><br><span class="line">    qs = [phase_diagram(<span class="number">30</span>, ms, p)[<span class="number">0</span>] <span class="keyword">for</span> p.disorder <span class="keyword">in</span> np.linspace(<span class="number">0</span>, <span class="number">0.8</span>, <span class="number">10</span>)]</span><br><span class="line">    np.savetxt(data_folder + <span class="string">&quot;first_plot_data_ms.dat&quot;</span>, ms)</span><br><span class="line">    np.savetxt(data_folder + <span class="string">&quot;first_plot_data_qs.dat&quot;</span>, qs)</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">6</span>, <span class="number">4</span>))</span><br><span class="line">ax.set_prop_cycle(<span class="string">&quot;alpha&quot;</span>, np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="built_in">len</span>(qs)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> q <span class="keyword">in</span> qs:</span><br><span class="line">    ax.plot(ms, q)</span><br><span class="line"></span><br><span class="line">ax.set_xlabel(<span class="string">&quot;$m$&quot;</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">r&quot;$\langle Q \rangle$&quot;</span>)</span><br><span class="line"></span><br><span class="line">evals = [-<span class="number">0.4</span>, <span class="number">0</span>, <span class="number">0.4</span>]</span><br><span class="line">ax.set_xticks(evals)</span><br><span class="line">ax.set_xticklabels([<span class="string">&quot;$&#123;0&#125;$&quot;</span>.<span class="built_in">format</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> evals])</span><br><span class="line"></span><br><span class="line">evals = [-<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">ax.set_yticks(evals)</span><br><span class="line">ax.set_yticklabels([<span class="string">&quot;$&#123;0&#125;$&quot;</span>.<span class="built_in">format</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> evals])</span><br><span class="line"></span><br><span class="line">ax.set_xlim(-<span class="number">0.4</span>, <span class="number">0.4</span>)</span><br><span class="line">ax.set_ylim(-<span class="number">1.1</span>, <span class="number">1.1</span>)</span><br><span class="line"></span><br><span class="line">ax.hlines(<span class="number">0</span>, ax.get_xlim()[<span class="number">0</span>], ax.get_xlim()[<span class="number">1</span>], linestyles=<span class="string">&quot;dashed&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>(Darker color corresponds to larger $U$.)</p>
 <p>What you see is that far away from the transition, when the gap in the clean limit is very large, disorder does not matter. Around the transition, the average value of $\mathcal{Q}$ changes from $-1$ and $+1$.</p>
@@ -81,9 +88,9 @@
 <li>It makes the width of the region where the transition happens larger. This we can understand relatively well, in a finite system adding fluctuations just means we can be (un)lucky and get an opposite value of the topological invariant.</li>
 <li>It shifts the separation point between trivial and topological phases towards positive $m$. This looks much more curious: if we start with a trivial and insulating system and add disorder, it appears we can make this system topological!</li>
 </ul>
-<p>The second effect, despite looking mysterious, appears just because the disorder changes the effective values of the Hamiltonian parameters. For small $U$, this can be understood in terms of the <a href="https://en.wikipedia.org/wiki/Born_approximation" target="_blank" rel="noopener">Born approximation</a>, which allows to compute <em>effective</em> disorder-averaged band structure parameters, given the properties of disorder. The lowest order correction to $m$ for the disorder Kitaev chain is simply $m_\textrm{eff} - m \sim -U^2$, and weak disorder indeed drives the system to a topologically nontrivial state by lowering the effective value of the mass.</p>
+<p>The second effect, despite looking mysterious, appears just because the disorder changes the effective values of the Hamiltonian parameters. For small $U$, this can be understood in terms of the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Born_approximation">Born approximation</a>, which allows to compute <em>effective</em> disorder-averaged band structure parameters, given the properties of disorder. The lowest order correction to $m$ for the disorder Kitaev chain is simply $m_\textrm{eff} - m \sim -U^2$, and weak disorder indeed drives the system to a topologically nontrivial state by lowering the effective value of the mass.</p>
 <p>Since this phenomenon appears with disorder, it was initially dubbed “topological Anderson insulator”. This name is certainly not accurate: the band structure parameters approach the effective ones on the length scale of mean free path, and before the Anderson scaling flow begins.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">r"What would happen if instead of $\det r$ we use $sign \det r$ for invariant?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"We would get a step function instead of a smooth curve."</span>,</span><br><span class="line">    <span class="string">r"Not well-defined because $\det r$ becomes complex."</span>,</span><br><span class="line">    <span class="string">"The $Q=\pm 1$ plateaus cancel and give $Q=0$."</span>,</span><br><span class="line">    <span class="string">"The curve is qualitatively the same."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">r"Each disorder realization get $\textrm&#123;det&#125; r\sim \pm 1$ except near the transition. So adding sign doesn't affect "</span></span><br><span class="line">    <span class="string">"the invariant for most disorder realizations. The intermediate values result from averaging over different "</span></span><br><span class="line">    <span class="string">"realizations."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">r&quot;What would happen if instead of $\det r$ we use $sign \det r$ for invariant?&quot;</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">&quot;We would get a step function instead of a smooth curve.&quot;</span>,</span><br><span class="line">    <span class="string">r&quot;Not well-defined because $\det r$ becomes complex.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;The $Q=\pm 1$ plateaus cancel and give $Q=0$.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;The curve is qualitatively the same.&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">r&quot;Each disorder realization get $\textrm&#123;det&#125; r\sim \pm 1$ except near the transition. So adding sign doesn&#x27;t affect &quot;</span></span><br><span class="line">    <span class="string">&quot;the invariant for most disorder realizations. The intermediate values result from averaging over different &quot;</span></span><br><span class="line">    <span class="string">&quot;realizations.&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">3</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Two-parameter-scaling-in-one-dimension"><a href="#Two-parameter-scaling-in-one-dimension" class="headerlink" title="Two parameter scaling in one dimension"></a>Two parameter scaling in one dimension</h1><p>Speaking of the scaling flow: the scaling hypothesis appears to be very powerful, does the topology have any impact on it?</p>
 <p>We can understand some limits. First of all, if $g\gg 1$, the system is a metal, and there can hardly be any trace of topology left. However when $g \lesssim 1$, the system can become one out of several topologically distinct types of insulators, and we can expect some sort of transition between different insulating phases.</p>
@@ -101,7 +108,7 @@
 </li>
 </ul>
 <p>Here’s what we get:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> os.path.exists(data_folder + <span class="string">"scaling_data_qs.dat"</span>) <span class="keyword">and</span> os.path.exists(</span><br><span class="line">    data_folder + <span class="string">"scaling_data_ts.dat"</span></span><br><span class="line">):</span><br><span class="line">    qs = np.loadtxt(data_folder + <span class="string">"scaling_data_qs.dat"</span>)</span><br><span class="line">    ts = np.loadtxt(data_folder + <span class="string">"scaling_data_ts.dat"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    p = SimpleNamespace(t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>, disorder=<span class="number">0.8</span>)</span><br><span class="line">    Ls = np.array(np.logspace(np.log10(<span class="number">10</span>), np.log10(<span class="number">180</span>), <span class="number">6</span>), dtype=int)</span><br><span class="line">    ms = [np.sign(x) * x ** <span class="number">2</span> + <span class="number">0.2</span> <span class="keyword">for</span> x <span class="keyword">in</span> np.linspace(<span class="number">-1</span>, <span class="number">1</span>, <span class="number">40</span>)]</span><br><span class="line">    qs, ts = zip(*[phase_diagram(int(L), ms, p, num_average=<span class="number">1000</span>) <span class="keyword">for</span> L <span class="keyword">in</span> Ls])</span><br><span class="line">    np.savetxt(data_folder + <span class="string">"scaling_data_qs.dat"</span>, qs)</span><br><span class="line">    np.savetxt(data_folder + <span class="string">"scaling_data_ts.dat"</span>, ts)</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">6</span>, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line">npoints = qs.shape[<span class="number">0</span>]</span><br><span class="line">X, Y = qs.T, ts.T</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x, y <span class="keyword">in</span> zip(X, Y):</span><br><span class="line">    points = np.array([x, y]).T.reshape(<span class="number">-1</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    segments = np.concatenate([points[:<span class="number">-1</span>], points[<span class="number">1</span>:]], axis=<span class="number">1</span>)</span><br><span class="line">    lc = LineCollection(</span><br><span class="line">        segments, cmap=<span class="string">"gist_heat_r"</span>, norm=matplotlib.colors.Normalize(<span class="number">0</span>, npoints + <span class="number">1</span>)</span><br><span class="line">    )</span><br><span class="line">    lc.set_array(np.array(list(range(<span class="number">1</span>, npoints + <span class="number">1</span>))))</span><br><span class="line">    ax.add_collection(lc)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ax.set_xlim(<span class="number">-1</span>, <span class="number">1</span>)</span><br><span class="line">ax.set_ylim(<span class="number">0</span>, <span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">ax.set_xlabel(<span class="string">r"$\langle Q \rangle$"</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">r"$\langle T \rangle$"</span>)</span><br><span class="line"></span><br><span class="line">evals = [<span class="number">-1</span>, <span class="number">-0.5</span>, <span class="number">0</span>, <span class="number">0.5</span>, <span class="number">1</span>]</span><br><span class="line">ax.set_xticks(evals)</span><br><span class="line">ax.set_xticklabels([<span class="string">"$&#123;0&#125;$"</span>.format(i) <span class="keyword">for</span> i <span class="keyword">in</span> evals])</span><br><span class="line"></span><br><span class="line">evals = [<span class="number">0.0</span>, <span class="number">0.25</span>, <span class="number">0.50</span>]</span><br><span class="line">ax.set_yticks(evals)</span><br><span class="line">ax.set_yticklabels([<span class="string">"$&#123;0&#125;$"</span>.format(i) <span class="keyword">for</span> i <span class="keyword">in</span> evals]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> os.path.exists(data_folder + <span class="string">&quot;scaling_data_qs.dat&quot;</span>) <span class="keyword">and</span> os.path.exists(</span><br><span class="line">    data_folder + <span class="string">&quot;scaling_data_ts.dat&quot;</span></span><br><span class="line">):</span><br><span class="line">    qs = np.loadtxt(data_folder + <span class="string">&quot;scaling_data_qs.dat&quot;</span>)</span><br><span class="line">    ts = np.loadtxt(data_folder + <span class="string">&quot;scaling_data_ts.dat&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    p = SimpleNamespace(t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>, disorder=<span class="number">0.8</span>)</span><br><span class="line">    Ls = np.array(np.logspace(np.log10(<span class="number">10</span>), np.log10(<span class="number">180</span>), <span class="number">6</span>), dtype=<span class="built_in">int</span>)</span><br><span class="line">    ms = [np.sign(x) * x ** <span class="number">2</span> + <span class="number">0.2</span> <span class="keyword">for</span> x <span class="keyword">in</span> np.linspace(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">40</span>)]</span><br><span class="line">    qs, ts = <span class="built_in">zip</span>(*[phase_diagram(<span class="built_in">int</span>(L), ms, p, num_average=<span class="number">1000</span>) <span class="keyword">for</span> L <span class="keyword">in</span> Ls])</span><br><span class="line">    np.savetxt(data_folder + <span class="string">&quot;scaling_data_qs.dat&quot;</span>, qs)</span><br><span class="line">    np.savetxt(data_folder + <span class="string">&quot;scaling_data_ts.dat&quot;</span>, ts)</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">6</span>, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line">npoints = qs.shape[<span class="number">0</span>]</span><br><span class="line">X, Y = qs.T, ts.T</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x, y <span class="keyword">in</span> <span class="built_in">zip</span>(X, Y):</span><br><span class="line">    points = np.array([x, y]).T.reshape(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    segments = np.concatenate([points[:-<span class="number">1</span>], points[<span class="number">1</span>:]], axis=<span class="number">1</span>)</span><br><span class="line">    lc = LineCollection(</span><br><span class="line">        segments, cmap=<span class="string">&quot;gist_heat_r&quot;</span>, norm=matplotlib.colors.Normalize(<span class="number">0</span>, npoints + <span class="number">1</span>)</span><br><span class="line">    )</span><br><span class="line">    lc.set_array(np.array(<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>, npoints + <span class="number">1</span>))))</span><br><span class="line">    ax.add_collection(lc)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ax.set_xlim(-<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">ax.set_ylim(<span class="number">0</span>, <span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">ax.set_xlabel(<span class="string">r&quot;$\langle Q \rangle$&quot;</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">r&quot;$\langle T \rangle$&quot;</span>)</span><br><span class="line"></span><br><span class="line">evals = [-<span class="number">1</span>, -<span class="number">0.5</span>, <span class="number">0</span>, <span class="number">0.5</span>, <span class="number">1</span>]</span><br><span class="line">ax.set_xticks(evals)</span><br><span class="line">ax.set_xticklabels([<span class="string">&quot;$&#123;0&#125;$&quot;</span>.<span class="built_in">format</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> evals])</span><br><span class="line"></span><br><span class="line">evals = [<span class="number">0.0</span>, <span class="number">0.25</span>, <span class="number">0.50</span>]</span><br><span class="line">ax.set_yticks(evals)</span><br><span class="line">ax.set_yticklabels([<span class="string">&quot;$&#123;0&#125;$&quot;</span>.<span class="built_in">format</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> evals]);</span><br></pre></td></tr></table></figure>
 
 <p>The lines have a direction, which tells us how $\langle Q \rangle$ and $\langle T \rangle$ change as we increase $L$. In the plot above, $L$ is increasing in going from bright to dark colors.</p>
 <p>The first and the most important observation we can make is that the lines do not intersect, which confirms the scaling hypothesis.</p>
@@ -111,7 +118,7 @@
 <p>We now understand better why two parameter scaling is necessary in the presence of a topological invariant. Even in the presence of disorder, there can be topologically distinct insulating phases. Therefore, saying that every system flows to an insulator is not enough anymore. Including the average topological invariant as a second scaling parameter allows to predict towards <em>which</em> insulating phase the system will flow.</p>
 <p>The flow, we just calculated is in fact valid for all one-dimensional topological insulators and superconductors. In the case of a $\mathbb{Z}$ invariant, the saddle points are located at $(\langle \mathcal{Q} \rangle, \langle T\rangle) = (n+1/2, 0)$.</p>
 <p>It is important to notice that one important result of the standard scaling theory regarding one dimensional system remains true: in the plot above all lines flow to no transmission, or in other words there are no metallic phases in the flow diagram.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"What does the 2 parameter flow diagram predict about the infinite size limit?"</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Always topological for all parameters."</span>,</span><br><span class="line">    <span class="string">"There's a localized topological and non-topological phase separated by a transition point."</span>,</span><br><span class="line">    <span class="string">"Always localized for every parameter."</span>,</span><br><span class="line">    <span class="string">"Almost always conducting except at a transition point."</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The phase is determined by the long length (i.e. dark part of the figure) which is almost always in small T"</span></span><br><span class="line">    <span class="string">"i.e. supporting localized states. Here the states either flow to $Q=+1$ or $Q=-1$ (non-top or top respectively) "</span></span><br><span class="line">    <span class="string">"except near $Q=0$ has a slower decay."</span></span><br><span class="line">)</span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">&quot;What does the 2 parameter flow diagram predict about the infinite size limit?&quot;</span></span><br><span class="line">)</span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">&quot;Always topological for all parameters.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;There&#x27;s a localized topological and non-topological phase separated by a transition point.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Always localized for every parameter.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Almost always conducting except at a transition point.&quot;</span>,</span><br><span class="line">]</span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">&quot;The phase is determined by the long length (i.e. dark part of the figure) which is almost always in small T&quot;</span></span><br><span class="line">    <span class="string">&quot;i.e. supporting localized states. Here the states either flow to $Q=+1$ or $Q=-1$ (non-top or top respectively) &quot;</span></span><br><span class="line">    <span class="string">&quot;except near $Q=0$ has a slower decay.&quot;</span></span><br><span class="line">)</span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question, answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Critical-point"><a href="#Critical-point" class="headerlink" title="Critical point"></a>Critical point</h1><p>The scaling flow of 1D topological insulators can be solved exactly, and especially for our system we can very easily derive some of its properties.</p>
 <p>The behavior of the disordered Kitaev chain close to the phase transition can be understood within an effective Dirac Hamiltonian in the continuum limit. The Hamiltonian is similar to the one, we studied in week one when we were concerned with a domain wall</p>
@@ -129,41 +136,41 @@
 <p>$$Q=r = \tanh\alpha,.$$</p>
 <p>We see that the topological transition happens when $\alpha=0$. That is, to model the transition, we think of $m(x)$ as a random function of $x$ which can take positive and negative values with equal probabilities. </p>
 <p>The details of the probability distribution for $m(x)$ are not very important as long as the distribution is characterized by a finite correlation length $\xi \ll L$ - that is, values of $m$ at points more distant than $\xi$ are statistically uncorrelated. </p>
-<p>If this is the case, $\alpha$ is the sum of an order $\sim L/\xi$ of uncorrelated values of $m$. By using the <a href="http://en.wikipedia.org/wiki/Central_limit_theorem" target="_blank" rel="noopener">central limit theorem</a>, we can say that $\alpha$ is a normally distributed variable with zero mean and a variance growing linearly in $L$. Since $\alpha$ is a random variable, so is the transmission probability $T=|t^2|=\cosh^{-2}(\alpha)$. From the probability distribution of $\alpha$, we can obtain the scaling behavior of $T$ as</p>
+<p>If this is the case, $\alpha$ is the sum of an order $\sim L/\xi$ of uncorrelated values of $m$. By using the <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Central_limit_theorem">central limit theorem</a>, we can say that $\alpha$ is a normally distributed variable with zero mean and a variance growing linearly in $L$. Since $\alpha$ is a random variable, so is the transmission probability $T=|t^2|=\cosh^{-2}(\alpha)$. From the probability distribution of $\alpha$, we can obtain the scaling behavior of $T$ as</p>
 <p>$$<br>\left\langle T \right \rangle \propto 1/\sqrt{L},.<br>$$</p>
 <h1 id="Two-parameter-scaling-in-higher-dimensions"><a href="#Two-parameter-scaling-in-higher-dimensions" class="headerlink" title="Two parameter scaling in higher dimensions"></a>Two parameter scaling in higher dimensions</h1><p>Just like the regular scaling flow, the topological one is also richer in $d&gt;1$.</p>
 <p>The oldest known example of the two parameter flow is unsurprisingly the quantum Hall effect. The flow looks similar to what we just calculated in 1D, here:</p>
 <p><img src="/src/w9_disorder/topoflow.htm/Three_Dimensional_RG_Flowdiagram_of_the_QHE.png" alt></p>
-<p>By Wout Neutkens (Own work) <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons</p>
+<p>By Wout Neutkens (Own work) <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</p>
 <p>The axes are the same as before - the horizontal one is the topological invariant given by $\sigma_H$, and the vertical axis the longitudinal conductance. The saddle point separating the different topological phases is now elevated to a finite critical conductance, which is known to be around $0.5-0.6$ conductance quanta.</p>
 <p>Metallic phases are the final part that we need to consider. The appearance of those at high conductance is governed by the same rules as without the topological invariant. The reason for this is that the topological effects are all $\mathcal{O}(1)$ corrections to conductance, and are therefore only important at $g\sim 1$.</p>
 <p>An extra attractive metallic fixed point can make the flow diagram more complicated. For example, the metallic phase can completely separate the two insulating phases and eliminate the fixed point. What happens in each particular case is not always certain, and is still an open research topic.</p>
-<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"NY6wPiH0E9E"</span>, src_location=<span class="string">"9.2-summary"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">&quot;NY6wPiH0E9E&quot;</span>, src_location=<span class="string">&quot;9.2-summary&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Questions about what you just learned? Ask them below!</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Topological scaling"</span>)</span><br></pre></td></tr></table></figure>
-
-      
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">&quot;Questions&quot;</span>, <span class="string">&quot;Topological scaling&quot;</span>)</span><br></pre></td></tr></table></figure>
+ 
       <!-- reward -->
       
     </div>
     
+
+    <!-- copyright -->
     
-      <!-- copyright -->
-      
-        <div class="declare">
-          <ul class="post-copyright">
-            <li>
-              <i class="ri-copyright-line"></i>
-              <strong>Copyright： </strong>
-              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-            </li>
-          </ul>
-        </div>
-        
-    <footer class="article-footer">
-      
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
           
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
 <div class="share-btn">
       <span class="share-sns share-outer">
         <i class="ri-share-forward-line"></i>
@@ -206,55 +213,107 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/src/w9_disorder/topoflow.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ihuyi.xyz/src/w9_disorder/topoflow.html" alt="微信分享二维码">
     </div>
 </div>
 
-<div id="share-mask"></div>
-      
-      
-
+<div id="share-mask"></div>  
     </footer>
-
   </div>
 
-  
-  
+   
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
 
-  
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
 
-  
-  
-  
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
 
-  
-  
-  
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
 
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+    
 </article>
+
 </section>
       <footer class="footer">
   <div class="outer">
-    <ul class="list-inline">
+    <ul>
       <li>
-        &copy;
-        2020-2021
-        huyi
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> huyi
       </li>
+    </ul>
+    <ul>
       <li>
         
-        Powered by
         
         
-        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
-    <ul class="list-inline">
+    <ul>
       <li>
         
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
       </li>
+    </ul>
+    <ul>
       
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
       <li>
         <!-- cnzz统计 -->
         
@@ -262,7 +321,6 @@
     </ul>
   </div>
 </footer>
-
       <div class="float_btns">
         <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
@@ -301,19 +359,19 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/logs/">日志</a>
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2020/about">关于我</a>
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://pan.huyiph.xyz" target="_blank" rel="noopener">网盘</a>
+      <a class="nav-item-link" href="/friends">友链</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://aria.huyiph.xyz" target="_blank" rel="noopener">aria2</a>
+      <a class="nav-item-link" href="/2019/about">关于我</a>
     </li>
     
   </ul>
@@ -341,12 +399,6 @@
 </div>
 </div>
     </aside>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
     <div id="mask"></div>
 
 <!-- #reward -->
@@ -356,13 +408,13 @@
   <div class="reward-box">
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
       <span class="reward-type">支付宝</span>
     </div>
     
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
       <span class="reward-type">微信</span>
     </div>
     
@@ -370,39 +422,22 @@
 </div>
     
 <script src="/js/jquery-2.0.3.min.js"></script>
-
-
+ 
 <script src="/js/lazyload.min.js"></script>
 
-
-<script>
-  try {
-    var typed = new Typed("#subtitle", {
-      strings: ['----------------------', '', ''],
-      startDelay: 0,
-      typeSpeed: 200,
-      loop: true,
-      backSpeed: 100,
-      showCursor: true
-    });
-  } catch (err) {
-  }
-
-</script>
-
-
-
-
+<!-- Tocbot -->
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
 <script src="/dist/main.js"></script>
 
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     <!-- Background of PhotoSwipe. 
@@ -507,10 +542,9 @@
         })
     }
     viewer_init()
-</script>
-
-
-<script type="text/x-mathjax-config">
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
       tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -530,37 +564,103 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
   var ayerConfig = {
-    mathjax: true
-  }
+    mathjax: true,
+  };
 </script>
 
-
-
+<!-- Katex -->
+ 
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         
+            <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css">
+        
     
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
 
+<!-- ClickBoom1 -->
 
-
-
-<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
-
-
-
-
-  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
     }
-  </script>
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
 
 
     
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

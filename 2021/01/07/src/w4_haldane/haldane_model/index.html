@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en">
+  
 
-
-<head>
-  <meta charset="utf-8" />
-    
-  <meta name="description" content="demon" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-    src/w4_haldane/haldane_model |  O
-  </title>
-  <meta name="generator" content="hexo-theme-yilia-plus">
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="demon" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> O</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
 <link rel="stylesheet" href="/dist/main.css">
 
-  
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
 <link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-  
-  
-
-  
-
+      <!-- mermaid -->
+      
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+    <link rel="alternate" href="/atom.xml" title="O" type="application/atom+xml">
 </head>
-
+  </html>
 </html>
+
 
 <body>
   <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
     <main class="content on">
       <section class="outer">
-  <article id="post-src/w4_haldane/haldane_model" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
+  <article
+  id="post-src/w4_haldane/haldane_model"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
   <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  src/w4_haldane/haldane_model
-</h1>
- 
-
-    </header>
-    
-
-    
+     
     <div class="article-meta">
       <a href="/2021/01/07/src/w4_haldane/haldane_model/" class="article-date">
   <time datetime="2021-01-07T09:11:06.843Z" itemprop="datePublished">2021-01-07</time>
-</a>
-      
-      
-      
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">4.9k</span>
+            <span class="post-count">5.1k</span>
         </span>
     </span>
 
@@ -75,39 +77,29 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">30 min</span>
+            <span class="post-count">31 min</span>
         </span>
     </span>
 </div>
-
-      
+ 
     </div>
-    
-
-    
-    
+      
     <div class="tocbot"></div>
 
 
 
 
-
-    
-
-    
+  
     <div class="article-entry" itemprop="articleBody">
-      
-      
+       
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">&quot;../../code&quot;</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"></span><br><span class="line">%output size=<span class="number">150</span> fig=<span class="string">&#x27;png&#x27;</span></span><br><span class="line">pi_ticks = [(-np.pi, <span class="string">r&quot;$-\pi$&quot;</span>), (<span class="number">0</span>, <span class="string">&quot;0&quot;</span>), (np.pi, <span class="string">r&quot;$\pi$&quot;</span>)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">haldane</span>(<span class="params">w=<span class="number">20</span>, boundary=<span class="string">&quot;zigzag&quot;</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape_zigzag</span>(<span class="params">pos</span>):</span></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">0.5</span> / np.sqrt(<span class="number">3</span>) - <span class="number">0.1</span> &lt;= pos[<span class="number">1</span>] &lt; np.sqrt(<span class="number">3</span>) * w / <span class="number">2</span> + <span class="number">0.01</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape_armchair</span>(<span class="params">pos</span>):</span></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span> &lt;= pos[<span class="number">0</span>] &lt; w</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span>(<span class="params">site, p</span>):</span></span><br><span class="line">        <span class="keyword">if</span> site.family == a:</span><br><span class="line">            <span class="keyword">return</span> p.m</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> -p.m</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nn_hopping</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        <span class="keyword">return</span> p.t</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nnn_hopping</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1j</span> * p.t_2</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.honeycomb()</span><br><span class="line">    a, b = lat.sublattices</span><br><span class="line">    nnn_hoppings_a = (((-<span class="number">1</span>, <span class="number">0</span>), a, a), ((<span class="number">0</span>, <span class="number">1</span>), a, a), ((<span class="number">1</span>, -<span class="number">1</span>), a, a))</span><br><span class="line">    nnn_hoppings_b = (((<span class="number">1</span>, <span class="number">0</span>), b, b), ((<span class="number">0</span>, -<span class="number">1</span>), b, b), ((-<span class="number">1</span>, <span class="number">1</span>), b, b))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> boundary == <span class="string">&quot;zigzag&quot;</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>)))</span><br><span class="line">        syst[lat.shape(ribbon_shape_zigzag, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    <span class="keyword">elif</span> boundary == <span class="string">&quot;armchair&quot;</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">0</span>, np.sqrt(<span class="number">3</span>))))</span><br><span class="line">        syst[lat.shape(ribbon_shape_armchair, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line"></span><br><span class="line">    syst[lat.neighbors()] = nn_hopping</span><br><span class="line">    syst[</span><br><span class="line">        [kwant.builder.HoppingKind(*hopping) <span class="keyword">for</span> hopping <span class="keyword">in</span> nnn_hoppings_a]</span><br><span class="line">    ] = nnn_hopping</span><br><span class="line">    syst[</span><br><span class="line">        [kwant.builder.HoppingKind(*hopping) <span class="keyword">for</span> hopping <span class="keyword">in</span> nnn_hoppings_b]</span><br><span class="line">    ] = nnn_hopping</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Qi_Wu_Zhang</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span>(<span class="params">site, p</span>):</span></span><br><span class="line">        <span class="keyword">return</span> -p.mu * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopx</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">0.5j</span> * p.delta * pauli.sy - p.t * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopy</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1j</span> * p.gamma * pauli.sx - p.gamma * pauli.sz</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square()</span><br><span class="line"></span><br><span class="line">    syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">    syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopx</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">berry_curvature</span>(<span class="params">syst, p, ks, num_filled_bands=<span class="number">1</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;Berry curvature of a system.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    -----------</span></span><br><span class="line"><span class="string">    sys : kwant.Builder</span></span><br><span class="line"><span class="string">        A 2D infinite system.</span></span><br><span class="line"><span class="string">    p : SimpleNamespace</span></span><br><span class="line"><span class="string">        The arguments expected by the system.</span></span><br><span class="line"><span class="string">    ks : 1D array-like</span></span><br><span class="line"><span class="string">        Values of momentum grid to be used for Berry curvature calculation.</span></span><br><span class="line"><span class="string">    num_filled_bands : int</span></span><br><span class="line"><span class="string">        The number of filled bands.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    --------</span></span><br><span class="line"><span class="string">    bc : 2D array</span></span><br><span class="line"><span class="string">        Berry curvature on each square in a `ks x ks` grid.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># Calculate an array of eigenvectors.</span></span><br><span class="line">    B = np.array(syst.symmetry.periods).T</span><br><span class="line">    A = B @ np.linalg.inv(B.T @ B)</span><br><span class="line"></span><br><span class="line">    syst = kwant.wraparound.wraparound(syst).finalized()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">energy</span>(<span class="params">kx, ky</span>):</span></span><br><span class="line">        k = np.array([kx, ky])</span><br><span class="line">        kx, ky = np.linalg.solve(A, k)</span><br><span class="line">        H = syst.hamiltonian_submatrix(params=<span class="built_in">dict</span>(p=p, k_x=kx, k_y=ky), sparse=<span class="literal">False</span>)</span><br><span class="line">        <span class="keyword">return</span> scipy.linalg.eigh(H)[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    vectors = np.array(</span><br><span class="line">        [[energy(kx, ky)[:, :num_filled_bands] <span class="keyword">for</span> kx <span class="keyword">in</span> ks] <span class="keyword">for</span> ky <span class="keyword">in</span> ks]</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The actual Berry curvature calculation</span></span><br><span class="line">    vectors_x = np.roll(vectors, <span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line">    vectors_xy = np.roll(vectors_x, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">    vectors_y = np.roll(vectors, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    shifted_vecs = [vectors, vectors_x, vectors_xy, vectors_y]</span><br><span class="line"></span><br><span class="line">    v_shape = vectors.shape</span><br><span class="line"></span><br><span class="line">    shifted_vecs = [i.reshape(-<span class="number">1</span>, v_shape[-<span class="number">2</span>], v_shape[-<span class="number">1</span>]) <span class="keyword">for</span> i <span class="keyword">in</span> shifted_vecs]</span><br><span class="line"></span><br><span class="line">    dets = np.ones(<span class="built_in">len</span>(shifted_vecs[<span class="number">0</span>]), dtype=<span class="built_in">complex</span>)</span><br><span class="line">    <span class="keyword">for</span> vec, shifted <span class="keyword">in</span> <span class="built_in">zip</span>(shifted_vecs, np.roll(shifted_vecs, <span class="number">1</span>, <span class="number">0</span>)):</span><br><span class="line">        dets *= [np.linalg.det(a.T.conj() @ b) <span class="keyword">for</span> a, b <span class="keyword">in</span> <span class="built_in">zip</span>(vec, shifted)]</span><br><span class="line">    bc = np.angle(dets).reshape(<span class="built_in">int</span>(np.sqrt(<span class="built_in">len</span>(dets))), -<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    bc = (bc + np.pi / <span class="number">2</span>) % (np.pi) - np.pi / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> bc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_berry_curvature</span>(<span class="params">syst, p, ks=<span class="literal">None</span>, title=<span class="literal">None</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> ks <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        ks = np.linspace(-np.pi, np.pi, <span class="number">150</span>, endpoint=<span class="literal">False</span>)</span><br><span class="line">    bc = berry_curvature(syst, p, ks)[<span class="number">1</span>:-<span class="number">1</span>, <span class="number">1</span>:-<span class="number">1</span>]</span><br><span class="line">    vmax = <span class="built_in">max</span>(np.<span class="built_in">abs</span>(bc).<span class="built_in">min</span>(), np.<span class="built_in">abs</span>(bc).<span class="built_in">max</span>())</span><br><span class="line">    kwargs = &#123;</span><br><span class="line">        <span class="string">&quot;bounds&quot;</span>: (ks.<span class="built_in">min</span>(), ks.<span class="built_in">min</span>(), ks.<span class="built_in">max</span>(), ks.<span class="built_in">max</span>()),</span><br><span class="line">        <span class="string">&quot;kdims&quot;</span>: [<span class="string">r&quot;$k_x$&quot;</span>, <span class="string">r&quot;$k_y$&quot;</span>],</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">callable</span>(title):</span><br><span class="line">        kwargs[<span class="string">&quot;label&quot;</span>] = title(p)</span><br><span class="line"></span><br><span class="line">    plot = &#123;<span class="string">&quot;xticks&quot;</span>: pi_ticks, <span class="string">&quot;yticks&quot;</span>: pi_ticks&#125;</span><br><span class="line">    style = &#123;<span class="string">&quot;clims&quot;</span>: [-vmax, vmax]&#125;</span><br><span class="line">    <span class="keyword">return</span> holoviews.Image(bc, **kwargs).opts(plot=plot, style=style)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">title</span>(<span class="params">p</span>):</span></span><br><span class="line">    title = <span class="string">r&quot;$t=&#123;:.2&#125;$, $t_2=&#123;:.2&#125;$, $M=&#123;:.2&#125;$&quot;</span></span><br><span class="line">    <span class="keyword">return</span> title.<span class="built_in">format</span>(p.t, p.t_2, p.m)</span><br></pre></td></tr></table></figure>
 
-      
-      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"></span><br><span class="line">%output size=<span class="number">150</span> fig=<span class="string">'png'</span></span><br><span class="line">pi_ticks = [(-np.pi, <span class="string">r"$-\pi$"</span>), (<span class="number">0</span>, <span class="string">"0"</span>), (np.pi, <span class="string">r"$\pi$"</span>)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">haldane</span><span class="params">(w=<span class="number">20</span>, boundary=<span class="string">"zigzag"</span>)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape_zigzag</span><span class="params">(pos)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-0.5</span> / np.sqrt(<span class="number">3</span>) - <span class="number">0.1</span> &lt;= pos[<span class="number">1</span>] &lt; np.sqrt(<span class="number">3</span>) * w / <span class="number">2</span> + <span class="number">0.01</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape_armchair</span><span class="params">(pos)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span> &lt;= pos[<span class="number">0</span>] &lt; w</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> site.family == a:</span><br><span class="line">            <span class="keyword">return</span> p.m</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> -p.m</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nn_hopping</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> p.t</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nnn_hopping</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1j</span> * p.t_2</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.honeycomb()</span><br><span class="line">    a, b = lat.sublattices</span><br><span class="line">    nnn_hoppings_a = (((<span class="number">-1</span>, <span class="number">0</span>), a, a), ((<span class="number">0</span>, <span class="number">1</span>), a, a), ((<span class="number">1</span>, <span class="number">-1</span>), a, a))</span><br><span class="line">    nnn_hoppings_b = (((<span class="number">1</span>, <span class="number">0</span>), b, b), ((<span class="number">0</span>, <span class="number">-1</span>), b, b), ((<span class="number">-1</span>, <span class="number">1</span>), b, b))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> boundary == <span class="string">"zigzag"</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>)))</span><br><span class="line">        syst[lat.shape(ribbon_shape_zigzag, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    <span class="keyword">elif</span> boundary == <span class="string">"armchair"</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">0</span>, np.sqrt(<span class="number">3</span>))))</span><br><span class="line">        syst[lat.shape(ribbon_shape_armchair, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line"></span><br><span class="line">    syst[lat.neighbors()] = nn_hopping</span><br><span class="line">    syst[</span><br><span class="line">        [kwant.builder.HoppingKind(*hopping) <span class="keyword">for</span> hopping <span class="keyword">in</span> nnn_hoppings_a]</span><br><span class="line">    ] = nnn_hopping</span><br><span class="line">    syst[</span><br><span class="line">        [kwant.builder.HoppingKind(*hopping) <span class="keyword">for</span> hopping <span class="keyword">in</span> nnn_hoppings_b]</span><br><span class="line">    ] = nnn_hopping</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Qi_Wu_Zhang</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -p.mu * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopx</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-0.5j</span> * p.delta * pauli.sy - p.t * pauli.sz</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopy</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1j</span> * p.gamma * pauli.sx - p.gamma * pauli.sz</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square()</span><br><span class="line"></span><br><span class="line">    syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">    syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopx</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">berry_curvature</span><span class="params">(syst, p, ks, num_filled_bands=<span class="number">1</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Berry curvature of a system.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">    -----------</span></span><br><span class="line"><span class="string">    sys : kwant.Builder</span></span><br><span class="line"><span class="string">        A 2D infinite system.</span></span><br><span class="line"><span class="string">    p : SimpleNamespace</span></span><br><span class="line"><span class="string">        The arguments expected by the system.</span></span><br><span class="line"><span class="string">    ks : 1D array-like</span></span><br><span class="line"><span class="string">        Values of momentum grid to be used for Berry curvature calculation.</span></span><br><span class="line"><span class="string">    num_filled_bands : int</span></span><br><span class="line"><span class="string">        The number of filled bands.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">    --------</span></span><br><span class="line"><span class="string">    bc : 2D array</span></span><br><span class="line"><span class="string">        Berry curvature on each square in a `ks x ks` grid.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># Calculate an array of eigenvectors.</span></span><br><span class="line">    B = np.array(syst.symmetry.periods).T</span><br><span class="line">    A = B @ np.linalg.inv(B.T @ B)</span><br><span class="line"></span><br><span class="line">    syst = kwant.wraparound.wraparound(syst).finalized()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">energy</span><span class="params">(kx, ky)</span>:</span></span><br><span class="line">        k = np.array([kx, ky])</span><br><span class="line">        kx, ky = np.linalg.solve(A, k)</span><br><span class="line">        H = syst.hamiltonian_submatrix(params=dict(p=p, k_x=kx, k_y=ky), sparse=<span class="literal">False</span>)</span><br><span class="line">        <span class="keyword">return</span> scipy.linalg.eigh(H)[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    vectors = np.array(</span><br><span class="line">        [[energy(kx, ky)[:, :num_filled_bands] <span class="keyword">for</span> kx <span class="keyword">in</span> ks] <span class="keyword">for</span> ky <span class="keyword">in</span> ks]</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The actual Berry curvature calculation</span></span><br><span class="line">    vectors_x = np.roll(vectors, <span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line">    vectors_xy = np.roll(vectors_x, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">    vectors_y = np.roll(vectors, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    shifted_vecs = [vectors, vectors_x, vectors_xy, vectors_y]</span><br><span class="line"></span><br><span class="line">    v_shape = vectors.shape</span><br><span class="line"></span><br><span class="line">    shifted_vecs = [i.reshape(<span class="number">-1</span>, v_shape[<span class="number">-2</span>], v_shape[<span class="number">-1</span>]) <span class="keyword">for</span> i <span class="keyword">in</span> shifted_vecs]</span><br><span class="line"></span><br><span class="line">    dets = np.ones(len(shifted_vecs[<span class="number">0</span>]), dtype=complex)</span><br><span class="line">    <span class="keyword">for</span> vec, shifted <span class="keyword">in</span> zip(shifted_vecs, np.roll(shifted_vecs, <span class="number">1</span>, <span class="number">0</span>)):</span><br><span class="line">        dets *= [np.linalg.det(a.T.conj() @ b) <span class="keyword">for</span> a, b <span class="keyword">in</span> zip(vec, shifted)]</span><br><span class="line">    bc = np.angle(dets).reshape(int(np.sqrt(len(dets))), <span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line">    bc = (bc + np.pi / <span class="number">2</span>) % (np.pi) - np.pi / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> bc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_berry_curvature</span><span class="params">(syst, p, ks=None, title=None)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> ks <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        ks = np.linspace(-np.pi, np.pi, <span class="number">150</span>, endpoint=<span class="literal">False</span>)</span><br><span class="line">    bc = berry_curvature(syst, p, ks)[<span class="number">1</span>:<span class="number">-1</span>, <span class="number">1</span>:<span class="number">-1</span>]</span><br><span class="line">    vmax = max(np.abs(bc).min(), np.abs(bc).max())</span><br><span class="line">    kwargs = &#123;</span><br><span class="line">        <span class="string">"bounds"</span>: (ks.min(), ks.min(), ks.max(), ks.max()),</span><br><span class="line">        <span class="string">"kdims"</span>: [<span class="string">r"$k_x$"</span>, <span class="string">r"$k_y$"</span>],</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> callable(title):</span><br><span class="line">        kwargs[<span class="string">"label"</span>] = title(p)</span><br><span class="line"></span><br><span class="line">    plot = &#123;<span class="string">"xticks"</span>: pi_ticks, <span class="string">"yticks"</span>: pi_ticks&#125;</span><br><span class="line">    style = &#123;<span class="string">"clims"</span>: [-vmax, vmax]&#125;</span><br><span class="line">    <span class="keyword">return</span> holoviews.Image(bc, **kwargs).opts(plot=plot, style=style)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">title</span><span class="params">(p)</span>:</span></span><br><span class="line">    title = <span class="string">r"$t=&#123;:.2&#125;$, $t_2=&#123;:.2&#125;$, $M=&#123;:.2&#125;$"</span></span><br><span class="line">    <span class="keyword">return</span> title.format(p.t, p.t_2, p.m)</span><br></pre></td></tr></table></figure>
-
-<h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>Duncan Haldane from Princeton University will teach us about an interesting two dimensional toy-model which he <a href="http://faculty.washington.edu/cobden/papers/haldane88.pdf" target="_blank" rel="noopener">introduced</a> in 1988, and which has become a prototype for the anomalous quantum Hall effect.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"7nVO4uMm-do"</span>, src_location=<span class="string">"4.2-intro"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>Duncan Haldane from Princeton University will teach us about an interesting two dimensional toy-model which he <a target="_blank" rel="noopener" href="http://faculty.washington.edu/cobden/papers/haldane88.pdf">introduced</a> in 1988, and which has become a prototype for the anomalous quantum Hall effect.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">&quot;7nVO4uMm-do&quot;</span>, src_location=<span class="string">&quot;4.2-intro&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>We will now study the model in detail, starting from the beginning.  Along the way, we will also learn about the Chern number, the bulk topological invariant of a quantum Hall state.</p>
 <h1 id="Dirac-cones-in-graphene"><a href="#Dirac-cones-in-graphene" class="headerlink" title="Dirac cones in graphene"></a>Dirac cones in graphene</h1><p>In the last chapter we saw how it is possible to obtain a quantum Hall state by coupling one-dimensional systems. At the end, our recipe was to first obtain a Dirac cone, add a mass term to it and finally to make this mass change sign. Following this recipe we were able to obtain chiral edge states without applying an external magnetic field.</p>
-<p>There is a real (and a very important) two-dimensional system which has Dirac cones: <a href="http://en.wikipedia.org/wiki/Graphene" target="_blank" rel="noopener">graphene</a>. So in this chapter we will take graphene and make it into a topological system with chiral edge states.</p>
+<p>There is a real (and a very important) two-dimensional system which has Dirac cones: <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Graphene">graphene</a>. So in this chapter we will take graphene and make it into a topological system with chiral edge states.</p>
 <p>Graphene is a single layer of carbon atoms arranged in a honeycomb lattice. It is a triangular lattice with two atoms per unit cell, type $A$ and type $B$, represented by red and blue sites in the figure:</p>
 <p><img src="/2021/01/07/src/w4_haldane/haldane_model/graphene.svg" alt></p>
 <p>Hence, the wave function in a unit cell can be written as a vector $(\Psi_A, \Psi_B)^T$ of amplitudes on the two sites $A$ and $B$. Taking a simple tight-binding model where electrons can hop between neighboring sites with hopping strength $t$, one obtains the Bloch Hamiltonian:</p>
@@ -117,7 +109,7 @@
 <p>Here $\mathbf{a}_i$ are the three vectors in the figure, connecting nearest neighbors of the lattice [we set the lattice spacing to one, so that for instance $\mathbf{a}_1=(1,0)$].  Introducing a set of Pauli matrices $\sigma$ which act on the sublattice degree of freedom, we can write the Hamiltonian in a compact form as</p>
 <p>$$H_0(\mathbf{k}) = t_1,\sum_i,\left[\sigma_x,\cos(\mathbf{k}\cdot\mathbf{a}_i)-\sigma_y ,\sin(\mathbf{k}\cdot\mathbf{a}_i)\right],.$$</p>
 <p>The energy spectrum $E(\mathbf{k}) = \pm ,\left|h(\mathbf{k})\right|$ gives rise to the famous band structure of graphene, with the two bands touching at the six corners of the Brillouin zone:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, t_2=<span class="number">0.0</span>, m=<span class="number">0.0</span>, phi=np.pi / <span class="number">2</span>)</span><br><span class="line">syst = haldane(boundary=<span class="string">"infinite"</span>)</span><br><span class="line">k = (<span class="number">4</span> / <span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">150</span>)</span><br><span class="line">spectrum(syst, p, k_x=k, k_y=k, title=title)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, t_2=<span class="number">0.0</span>, m=<span class="number">0.0</span>, phi=np.pi / <span class="number">2</span>)</span><br><span class="line">syst = haldane(boundary=<span class="string">&quot;infinite&quot;</span>)</span><br><span class="line">k = (<span class="number">4</span> / <span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">150</span>)</span><br><span class="line">spectrum(syst, p, k_x=k, k_y=k, title=title)</span><br></pre></td></tr></table></figure>
 
 <p>Only two of these six Dirac cones are really distinct, the ones at $\mathbf{K}=(2\pi/3, 2\pi/3\sqrt{3})$ and $\mathbf{K}’=(2\pi/3, -2\pi/3\sqrt{3})$. All the others can be obtained by adding some reciprocal lattice vector to $\mathbf{K}$ and $\mathbf{K}’$.</p>
 <h1 id="Discrete-symmetries-of-graphene"><a href="#Discrete-symmetries-of-graphene" class="headerlink" title="Discrete symmetries of graphene"></a>Discrete symmetries of graphene</h1><p>The symmetries of graphene were discussed intensively in the video, so let’s review them.</p>
@@ -149,16 +141,16 @@
 <p>$$<br>H(\mathbf{k}) = H_0(\mathbf{k})+ M\sigma_z + 2t_2\sum_i,\sigma_z,\sin(\mathbf{k}\cdot\mathbf{b}_i),.<br>$$</p>
 <p>The last term changes sign under time-reversal symmetry, breaking it. This is the Hamiltonian of the Haldane model.</p>
 <p>Let’s see what happens to the system when these special second neighbor hoppings are turned on:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, m=<span class="number">0.2</span>, phi=np.pi / <span class="number">2</span>, t_2=<span class="literal">None</span>)</span><br><span class="line">syst = haldane(boundary=<span class="string">"infinite"</span>)</span><br><span class="line">k = (<span class="number">4</span> / <span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">101</span>)</span><br><span class="line">kwargs = &#123;<span class="string">"k_x"</span>: k, <span class="string">"k_y"</span>: k, <span class="string">"title"</span>: title&#125;</span><br><span class="line">t_2s = np.linspace(<span class="number">0</span>, <span class="number">0.10</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.t_2: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.t_2 <span class="keyword">in</span> t_2s&#125;, kdims=[<span class="string">r"$t_2$"</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, m=<span class="number">0.2</span>, phi=np.pi / <span class="number">2</span>, t_2=<span class="literal">None</span>)</span><br><span class="line">syst = haldane(boundary=<span class="string">&quot;infinite&quot;</span>)</span><br><span class="line">k = (<span class="number">4</span> / <span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">101</span>)</span><br><span class="line">kwargs = &#123;<span class="string">&quot;k_x&quot;</span>: k, <span class="string">&quot;k_y&quot;</span>: k, <span class="string">&quot;title&quot;</span>: title&#125;</span><br><span class="line">t_2s = np.linspace(<span class="number">0</span>, <span class="number">0.10</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.t_2: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.t_2 <span class="keyword">in</span> t_2s&#125;, kdims=[<span class="string">r&quot;$t_2$&quot;</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <p>When $t_2=0$ and at a finite $M$, the system is in a boring gapped phase, generically without zero energy states. As you heard in the video, there might be zero energy states for some specific termination of the lattice, but these are not particularly interesting.</p>
 <p>Adding a small $t_2$ initially does not change the situation, but when $t_2$ passes through a value $\pm M/3\sqrt{3}$ the gap closes and changes sign. Importantly, the gap closes <em>only at one of the two Dirac points</em>: at $\mathbf{K}’$ for $t_2=M/3\sqrt{3}$ and at $\mathbf{K}$ for $t_2=-M/3\sqrt{3}$.</p>
 <p>And when it does, chiral edge states appear! We can see this by looking at the one-dimensional band structure of a ribbon of graphene. To convince you that they are of topological origin, let’s look at the bandstructure for ribbons with two different lattice terminations: armchair and zigzag. In a zigzag ribbon, $\mathbf{K}$ and $\mathbf{K}’$ correspond to different momenta parallel to the ribbon direction, while in an armchair one they correspond to the same one.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">'svg'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ribbon_bandstructure</span><span class="params">(t_2, boundary)</span>:</span></span><br><span class="line">    p = SimpleNamespace(t=<span class="number">1.0</span>, t_2=t_2, m=<span class="number">0.2</span>, phi=np.pi / <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> boundary == <span class="string">"zigzag"</span>:</span><br><span class="line">        syst = haldane(w=<span class="number">20</span>, boundary=<span class="string">"zigzag"</span>)</span><br><span class="line">    <span class="keyword">elif</span> boundary == <span class="string">"armchair"</span>:</span><br><span class="line">        syst = haldane(w=<span class="number">20</span>, boundary=<span class="string">"armchair"</span>,)</span><br><span class="line"></span><br><span class="line">    style = &#123;</span><br><span class="line">        <span class="string">"k_x"</span>: np.linspace(-np.pi, np.pi, <span class="number">101</span>),</span><br><span class="line">        <span class="string">"xdim"</span>: <span class="string">r"$k$"</span>,</span><br><span class="line">        <span class="string">"ydim"</span>: <span class="string">r"$E/t$"</span>,</span><br><span class="line">        <span class="string">"xticks"</span>: pi_ticks,</span><br><span class="line">        <span class="string">"yticks"</span>: [<span class="number">-3</span>, <span class="number">0</span>, <span class="number">3</span>],</span><br><span class="line">        <span class="string">"ylims"</span>: [<span class="number">-3.2</span>, <span class="number">3.2</span>],</span><br><span class="line">        <span class="string">"title"</span>: title,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> spectrum(syst, p, **style)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">t_2s = np.linspace(<span class="number">0</span>, <span class="number">0.5</span>, <span class="number">20</span>)</span><br><span class="line">boundaries = [<span class="string">"zigzag"</span>, <span class="string">"armchair"</span>]</span><br><span class="line">plots = &#123;</span><br><span class="line">    (t_2, boundary): ribbon_bandstructure(t_2, boundary)</span><br><span class="line">    <span class="keyword">for</span> t_2 <span class="keyword">in</span> t_2s</span><br><span class="line">    <span class="keyword">for</span> boundary <span class="keyword">in</span> boundaries</span><br><span class="line">&#125;</span><br><span class="line">holoviews.HoloMap(plots, kdims=[<span class="string">r"$t_2$"</span>, <span class="string">"Boundary"</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">&#x27;svg&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ribbon_bandstructure</span>(<span class="params">t_2, boundary</span>):</span></span><br><span class="line">    p = SimpleNamespace(t=<span class="number">1.0</span>, t_2=t_2, m=<span class="number">0.2</span>, phi=np.pi / <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> boundary == <span class="string">&quot;zigzag&quot;</span>:</span><br><span class="line">        syst = haldane(w=<span class="number">20</span>, boundary=<span class="string">&quot;zigzag&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> boundary == <span class="string">&quot;armchair&quot;</span>:</span><br><span class="line">        syst = haldane(w=<span class="number">20</span>, boundary=<span class="string">&quot;armchair&quot;</span>,)</span><br><span class="line"></span><br><span class="line">    style = &#123;</span><br><span class="line">        <span class="string">&quot;k_x&quot;</span>: np.linspace(-np.pi, np.pi, <span class="number">101</span>),</span><br><span class="line">        <span class="string">&quot;xdim&quot;</span>: <span class="string">r&quot;$k$&quot;</span>,</span><br><span class="line">        <span class="string">&quot;ydim&quot;</span>: <span class="string">r&quot;$E/t$&quot;</span>,</span><br><span class="line">        <span class="string">&quot;xticks&quot;</span>: pi_ticks,</span><br><span class="line">        <span class="string">&quot;yticks&quot;</span>: [-<span class="number">3</span>, <span class="number">0</span>, <span class="number">3</span>],</span><br><span class="line">        <span class="string">&quot;ylims&quot;</span>: [-<span class="number">3.2</span>, <span class="number">3.2</span>],</span><br><span class="line">        <span class="string">&quot;title&quot;</span>: title,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> spectrum(syst, p, **style)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">t_2s = np.linspace(<span class="number">0</span>, <span class="number">0.5</span>, <span class="number">20</span>)</span><br><span class="line">boundaries = [<span class="string">&quot;zigzag&quot;</span>, <span class="string">&quot;armchair&quot;</span>]</span><br><span class="line">plots = &#123;</span><br><span class="line">    (t_2, boundary): ribbon_bandstructure(t_2, boundary)</span><br><span class="line">    <span class="keyword">for</span> t_2 <span class="keyword">in</span> t_2s</span><br><span class="line">    <span class="keyword">for</span> boundary <span class="keyword">in</span> boundaries</span><br><span class="line">&#125;</span><br><span class="line">holoviews.HoloMap(plots, kdims=[<span class="string">r&quot;$t_2$&quot;</span>, <span class="string">&quot;Boundary&quot;</span>])</span><br></pre></td></tr></table></figure>
 
 <p>The appearance of edge states means that graphene has entered a topological phase after the gap closing. This phase is akin to the quantum Hall phase - the edge states are of the same kind. However, as Duncan Haldane explained in the introduction, it is realized without a strong magnetic field.</p>
 <p>As you know, this means we have created a <strong>Chern insulator</strong>. The reason for this name will become obvious in the second part of the lecture.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"What happens if we take a Haldane model in the topological phase and turn "</span></span><br><span class="line">    <span class="string">"on a weak magnetic field?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"Magnetic field introduces Landau levels, which change the number of edge states."</span>,</span><br><span class="line">    <span class="string">"Since the magnetic field is weak, nothing changes as long as it doesn't close the gap"</span>,</span><br><span class="line">    <span class="string">"The bulk gap closes and there are no edge states anymore."</span>,</span><br><span class="line">    <span class="string">"The gap doesn't close but the edge states may change direction "</span></span><br><span class="line">    <span class="string">"of propagation, depending on the sign of magnetic field."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = <span class="string">"Topological robustness is still present, so the number of edge states cannot change unless the gap closes."</span></span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">&quot;What happens if we take a Haldane model in the topological phase and turn &quot;</span></span><br><span class="line">    <span class="string">&quot;on a weak magnetic field?&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">&quot;Magnetic field introduces Landau levels, which change the number of edge states.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Since the magnetic field is weak, nothing changes as long as it doesn&#x27;t close the gap&quot;</span>,</span><br><span class="line">    <span class="string">&quot;The bulk gap closes and there are no edge states anymore.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;The gap doesn&#x27;t close but the edge states may change direction &quot;</span></span><br><span class="line">    <span class="string">&quot;of propagation, depending on the sign of magnetic field.&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = <span class="string">&quot;Topological robustness is still present, so the number of edge states cannot change unless the gap closes.&quot;</span></span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Pumping-in-terms-of-Berry-phase"><a href="#Pumping-in-terms-of-Berry-phase" class="headerlink" title="Pumping in terms of Berry phase"></a>Pumping in terms of Berry phase</h1><p>Last week we understood the quantum Hall effect in terms of a pumping argument that we attributed to Laughlin.</p>
 <p>Our pumping argument involved putting our system on a cylinder and adiabatically pumping a magnetic flux $\Phi$ through the cylinder so that the Hamiltonian returns to itself. The flux enters the Hamiltonian through minimal substitution as $H(\mathbf{k})\rightarrow H(\mathbf{k}+e\mathbf{A})$ where ${\bf A}=\hat{\mathbf{y}},\Phi/L$.</p>
@@ -170,7 +162,7 @@
 <p>$$\gamma(C) = \oint_C,\mathbf{A}(\mathbf{k}),\cdot d\mathbf{k},.$$</p>
 <p>Here, $\mathbf{A}(\mathbf{k})=i\left\langle,\psi(\mathbf{k}) ,|,\nabla_\mathbf{k},\psi(\mathbf{k})\right\rangle$ is a vector with two complex entries, which are obtained by taking the derivatives of $\left|\psi(\mathbf{k})\right\rangle$ with respect to $k_x$ and $k_y$ and then taking the inner product with $\left\langle\psi(\mathbf{k})\right|$. This vector goes by the rather obscure name of Berry connection. In our example, the final quantum state at the end of the cycle is thus</p>
 <p>$$\exp,\left[i\gamma(k_x)\right],\exp,\left(-i \int_0^T E[\mathbf{k}(t)],d t\right),\left|\psi(\mathbf{k})\right\rangle,.$$</p>
-<p>We have made explicit the fact that $\gamma$ in our case may depend on $k_x$. We will not derive the formula for the Berry phase, something which can be done directly from the Schrödinger equation, see for instance <a href="http://arxiv.org/abs/0907.2021" target="_blank" rel="noopener">here</a>. What is important to know about $\gamma$ is that it is a <strong>geometric phase</strong>: its value depends on the path $C$ but not on how the path is performed in time, so not on the particular expression for $\mathbf{k}(t)$. We’ll soon see that sometimes it can have an even stronger, topological character.  </p>
+<p>We have made explicit the fact that $\gamma$ in our case may depend on $k_x$. We will not derive the formula for the Berry phase, something which can be done directly from the Schrödinger equation, see for instance <a target="_blank" rel="noopener" href="http://arxiv.org/abs/0907.2021">here</a>. What is important to know about $\gamma$ is that it is a <strong>geometric phase</strong>: its value depends on the path $C$ but not on how the path is performed in time, so not on the particular expression for $\mathbf{k}(t)$. We’ll soon see that sometimes it can have an even stronger, topological character.  </p>
 <h2 id="Flux-pumping"><a href="#Flux-pumping" class="headerlink" title="Flux pumping"></a>Flux pumping</h2><p>The phase $\gamma(k_x)$ must bear information about the charge pumped during an adiabatic cycle over $k_y$. Now we take advantage of pumped charge being invariant as long as the energy gap is preserved. This means that we have the freedom to change the energy dispersion $E(k_x,k_y)$ arbitrarily, as long as we do not close the gap.</p>
 <p>It is convenient to make the energy dispersion completely flat along the $k_x$ direction for $k_y=0$, analogous to the case of Landau levels. In this way, since at fixed $k_y$ all the wave functions have the same energy, we can choose our initial quantum state to be localized in a single unit cell in the $x$ direction,</p>
 <p>$$\left|\psi(n,t=0)\right\rangle=\int_0^{2\pi} dk_x, e^{i k_x n},\left|\psi(k_x, k_y=0)\right\rangle,.$$</p>
@@ -210,44 +202,44 @@
 <p>The $t_2=0$ Brillouin zone is “sandwiched“ between the two gap closings: it has opposite curvature for the two Dirac points, and a total Chern number of zero.</p>
 <p>The Brillouin zones for $|t_2|&gt;M/(3\sqrt{3})$, on the other hand, have Berry curvature with the same sign for both Dirac points, and a total Chern number equal to $\pm 1$.</p>
 <p>To see this more clearly, we can compute the Berry curvature numerically and plot it over the whole Brillouin zone as a function of $t_2$:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, m=<span class="number">0.2</span>, phi=np.pi / <span class="number">2</span>, t_2=<span class="literal">None</span>)</span><br><span class="line">syst = haldane(boundary=<span class="string">"infinite"</span>)</span><br><span class="line">kwargs = &#123;<span class="string">"title"</span>: title, <span class="string">"ks"</span>: np.linspace(<span class="number">-2</span> * np.pi, <span class="number">2</span> * np.pi, <span class="number">150</span>, endpoint=<span class="literal">False</span>)&#125;</span><br><span class="line">t_2s = np.linspace(<span class="number">-0.1</span>, <span class="number">0.1</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.t_2: plot_berry_curvature(syst, p, **kwargs) <span class="keyword">for</span> p.t_2 <span class="keyword">in</span> t_2s&#125;, kdims=[<span class="string">r"$t_2$"</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, m=<span class="number">0.2</span>, phi=np.pi / <span class="number">2</span>, t_2=<span class="literal">None</span>)</span><br><span class="line">syst = haldane(boundary=<span class="string">&quot;infinite&quot;</span>)</span><br><span class="line">kwargs = &#123;<span class="string">&quot;title&quot;</span>: title, <span class="string">&quot;ks&quot;</span>: np.linspace(-<span class="number">2</span> * np.pi, <span class="number">2</span> * np.pi, <span class="number">150</span>, endpoint=<span class="literal">False</span>)&#125;</span><br><span class="line">t_2s = np.linspace(-<span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.t_2: plot_berry_curvature(syst, p, **kwargs) <span class="keyword">for</span> p.t_2 <span class="keyword">in</span> t_2s&#125;, kdims=[<span class="string">r&quot;$t_2$&quot;</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">"How does time-reversal symmetry influence the Berry curvature?"</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The Berry curvature breaks time-reversal, so it must be zero if time-reversal is present."</span>,</span><br><span class="line">    <span class="string">"Time reversal symmetry doesn't constrain Berry curvature at all."</span>,</span><br><span class="line">    <span class="string">"There is no constraint, only the integral of Berry curvature (Chern number) should be zero."</span>,</span><br><span class="line">    <span class="string">"The Berry curvature and momentum change sign under time-reversal, so that the Berry curvature "</span></span><br><span class="line">    <span class="string">"at one momentum becomes opposite to the Berry curvature at opposite momentum."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(question=question, answers=answers, correct_answer=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">question = <span class="string">&quot;How does time-reversal symmetry influence the Berry curvature?&quot;</span></span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">&quot;The Berry curvature breaks time-reversal, so it must be zero if time-reversal is present.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Time reversal symmetry doesn&#x27;t constrain Berry curvature at all.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;There is no constraint, only the integral of Berry curvature (Chern number) should be zero.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;The Berry curvature and momentum change sign under time-reversal, so that the Berry curvature &quot;</span></span><br><span class="line">    <span class="string">&quot;at one momentum becomes opposite to the Berry curvature at opposite momentum.&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(question=question, answers=answers, correct_answer=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 
 <p>You can see that the Berry curvature is really located around the Dirac points. Around $t_2=0$, the two Dirac points give canceling contributions. After a gap closing however, the contribution of one of the two Dirac points changes sign, so that the two add to $\pm 1$ instead of canceling each other.</p>
 <p>From both the plots above, you can also infer that each Dirac point always contributes a Berry curvature equal to $\pm 1/2$, depending on the sign of the mass in the effective Dirac Hamiltonian. We always obtain an integer number because the number of Dirac points in the Brillouin zone is even. It also implies that when the gap changes sign at a Dirac point, the Chern number changes by exactly one!</p>
 <p>At the same time it’s important to know that the particular distribution of the Berry curvature depends on all the details of the eigenstates of the Hamiltonian, so it changes a lot from model to model. And in fact, it is a special feature of the Haldane model that the Berry curvature is focused around two distinct points in the Brillouin zone.</p>
 <p>For instance, here is a slider plot for the Berry curvature for the quantum Hall lattice model studied in the previous chapter.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>, gamma=<span class="number">-0.5</span>, mu=<span class="literal">None</span>)</span><br><span class="line">syst = Qi_Wu_Zhang()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">title_Qi</span><span class="params">(p)</span>:</span></span><br><span class="line">    title = <span class="string">r"$t=&#123;:.2&#125;$, $\mu=&#123;:.2&#125;$, $\Delta=&#123;:.2&#125;$, $\gamma=&#123;:.2&#125;$"</span></span><br><span class="line">    <span class="keyword">return</span> title.format(p.t, p.mu, p.delta, p.gamma)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kwargs = &#123;<span class="string">"title"</span>: title_Qi&#125;</span><br><span class="line">mus = np.linspace(<span class="number">-2</span>, <span class="number">0</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.mu: plot_berry_curvature(syst, p, **kwargs) <span class="keyword">for</span> p.mu <span class="keyword">in</span> mus&#125;, kdims=[<span class="string">r"$\mu$"</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">p = SimpleNamespace(t=<span class="number">1.0</span>, delta=<span class="number">1.0</span>, gamma=-<span class="number">0.5</span>, mu=<span class="literal">None</span>)</span><br><span class="line">syst = Qi_Wu_Zhang()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">title_Qi</span>(<span class="params">p</span>):</span></span><br><span class="line">    title = <span class="string">r&quot;$t=&#123;:.2&#125;$, $\mu=&#123;:.2&#125;$, $\Delta=&#123;:.2&#125;$, $\gamma=&#123;:.2&#125;$&quot;</span></span><br><span class="line">    <span class="keyword">return</span> title.<span class="built_in">format</span>(p.t, p.mu, p.delta, p.gamma)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kwargs = &#123;<span class="string">&quot;title&quot;</span>: title_Qi&#125;</span><br><span class="line">mus = np.linspace(-<span class="number">2</span>, <span class="number">0</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(</span><br><span class="line">    &#123;p.mu: plot_berry_curvature(syst, p, **kwargs) <span class="keyword">for</span> p.mu <span class="keyword">in</span> mus&#125;, kdims=[<span class="string">r&quot;$\mu$&quot;</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <p>You can see that for $\mu &lt; -2t - 2\gamma$ there is a net curvature, and that when $\mu = -2t - 2\gamma$ some flux of opposite sign appears at $k_x = k_y=0$, the Dirac point, which leaves no net curvature and leads to a change in the Chern number. This is the signature of the topological transition seen from the Berry curvature.</p>
-<h1 id="Summary-extending-the-model-to-spinful-electrons-and-photons"><a href="#Summary-extending-the-model-to-spinful-electrons-and-photons" class="headerlink" title="Summary: extending the model to spinful electrons and photons"></a>Summary: extending the model to spinful electrons and photons</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"0gxE68kvdmw"</span>, src_location=<span class="string">"4.2-summary"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="Summary-extending-the-model-to-spinful-electrons-and-photons"><a href="#Summary-extending-the-model-to-spinful-electrons-and-photons" class="headerlink" title="Summary: extending the model to spinful electrons and photons"></a>Summary: extending the model to spinful electrons and photons</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">&quot;0gxE68kvdmw&quot;</span>, src_location=<span class="string">&quot;4.2-summary&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p><strong>Questions about what you just learned? Ask them below!</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"Haldane model"</span>)</span><br></pre></td></tr></table></figure>
-
-      
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">&quot;Questions&quot;</span>, <span class="string">&quot;Haldane model&quot;</span>)</span><br></pre></td></tr></table></figure>
+ 
       <!-- reward -->
       
     </div>
     
+
+    <!-- copyright -->
     
-      <!-- copyright -->
-      
-        <div class="declare">
-          <ul class="post-copyright">
-            <li>
-              <i class="ri-copyright-line"></i>
-              <strong>Copyright： </strong>
-              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-            </li>
-          </ul>
-        </div>
-        
-    <footer class="article-footer">
-      
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
           
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
 <div class="share-btn">
       <span class="share-sns share-outer">
         <i class="ri-share-forward-line"></i>
@@ -290,76 +282,127 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w4_haldane/haldane_model/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ihuyi.xyz/2021/01/07/src/w4_haldane/haldane_model/" alt="微信分享二维码">
     </div>
 </div>
 
-<div id="share-mask"></div>
-      
-      
-
+<div id="share-mask"></div>  
     </footer>
-
   </div>
 
-  
-  
+   
   <nav class="article-nav">
     
       <a href="/2021/01/07/src/w4_haldane/w4_assignments/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            src/w4_haldane/w4_assignments
+            (no title)
           
         </div>
       </a>
     
     
-      <a href="/2021/01/07/src/w4_haldane/QHE_lattice/" class="article-nav-link">
+      <a href="/2021/01/07/src/w4_haldane/ComputingChern/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">src/w4_haldane/QHE_lattice</div>
+        <div class="article-nav-title"></div>
       </a>
     
   </nav>
 
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
 
-  
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
 
-  
-  
-  
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
 
-  
-  
-  
-  
-  
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
 
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
 </article>
+
 </section>
       <footer class="footer">
   <div class="outer">
-    <ul class="list-inline">
+    <ul>
       <li>
-        &copy;
-        2020-2021
-        huyi
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> huyi
       </li>
+    </ul>
+    <ul>
       <li>
         
-        Powered by
         
         
-        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
-    <ul class="list-inline">
+    <ul>
       <li>
         
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
       </li>
+    </ul>
+    <ul>
       
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
       <li>
         <!-- cnzz统计 -->
         
@@ -367,7 +410,6 @@
     </ul>
   </div>
 </footer>
-
       <div class="float_btns">
         <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
@@ -406,19 +448,19 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/logs/">日志</a>
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2020/about">关于我</a>
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://pan.huyiph.xyz" target="_blank" rel="noopener">网盘</a>
+      <a class="nav-item-link" href="/friends">友链</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://aria.huyiph.xyz" target="_blank" rel="noopener">aria2</a>
+      <a class="nav-item-link" href="/2019/about">关于我</a>
     </li>
     
   </ul>
@@ -446,12 +488,6 @@
 </div>
 </div>
     </aside>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
     <div id="mask"></div>
 
 <!-- #reward -->
@@ -461,13 +497,13 @@
   <div class="reward-box">
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
       <span class="reward-type">支付宝</span>
     </div>
     
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
       <span class="reward-type">微信</span>
     </div>
     
@@ -475,57 +511,38 @@
 </div>
     
 <script src="/js/jquery-2.0.3.min.js"></script>
-
-
+ 
 <script src="/js/lazyload.min.js"></script>
 
-
-<script>
-  try {
-    var typed = new Typed("#subtitle", {
-      strings: ['----------------------', '', ''],
-      startDelay: 0,
-      typeSpeed: 200,
-      loop: true,
-      backSpeed: 100,
-      showCursor: true
-    });
-  } catch (err) {
-  }
-
-</script>
-
-
-
-
+<!-- Tocbot -->
+ 
 <script src="/js/tocbot.min.js"></script>
 
 <script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
   tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
     hasInnerContainers: true,
     scrollSmooth: true,
-    scrollContainer: 'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto'
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
   });
 </script>
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
 <script src="/dist/main.js"></script>
 
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     <!-- Background of PhotoSwipe. 
@@ -630,10 +647,9 @@
         })
     }
     viewer_init()
-</script>
-
-
-<script type="text/x-mathjax-config">
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
       tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -653,37 +669,103 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
   var ayerConfig = {
-    mathjax: true
-  }
+    mathjax: true,
+  };
 </script>
 
-
-
+<!-- Katex -->
+ 
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         
+            <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css">
+        
     
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
 
+<!-- ClickBoom1 -->
 
-
-
-<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
-
-
-
-
-  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
     }
-  </script>
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
 
 
     
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en">
+  
 
-
-<head>
-  <meta charset="utf-8" />
-    
-  <meta name="description" content="demon" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-    src/w5_qshe/fermion_parity_pump |  O
-  </title>
-  <meta name="generator" content="hexo-theme-yilia-plus">
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="demon" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> O</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
 <link rel="stylesheet" href="/dist/main.css">
 
-  
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
 <link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-  
-  
-
-  
-
+      <!-- mermaid -->
+      
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+    <link rel="alternate" href="/atom.xml" title="O" type="application/atom+xml">
 </head>
-
+  </html>
 </html>
+
 
 <body>
   <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
     <main class="content on">
       <section class="outer">
-  <article id="post-src/w5_qshe/fermion_parity_pump" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
+  <article
+  id="post-src/w5_qshe/fermion_parity_pump"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
   <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  src/w5_qshe/fermion_parity_pump
-</h1>
- 
-
-    </header>
-    
-
-    
+     
     <div class="article-meta">
       <a href="/2021/01/07/src/w5_qshe/fermion_parity_pump/" class="article-date">
   <time datetime="2021-01-07T09:11:06.844Z" itemprop="datePublished">2021-01-07</time>
-</a>
-      
-      
-      
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">7.2k</span>
+            <span class="post-count">7.4k</span>
         </span>
     </span>
 
@@ -75,39 +77,29 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">45 min</span>
+            <span class="post-count">46 min</span>
         </span>
     </span>
 </div>
-
-      
+ 
     </div>
-    
-
-    
-    
+      
     <div class="tocbot"></div>
 
 
 
 
-
-    
-
-    
+  
     <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">"../../code"</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line">%output size = <span class="number">150</span></span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> cm</span><br><span class="line"></span><br><span class="line">bhz_parameters = &#123;</span><br><span class="line">    <span class="string">"topo"</span>: &#123;<span class="string">"A"</span>: <span class="number">0.5</span>, <span class="string">"B"</span>: <span class="number">1.00</span>, <span class="string">"D"</span>: <span class="number">0.0</span>, <span class="string">"M"</span>: <span class="number">1.0</span>, <span class="string">"del_z"</span>: <span class="number">0.0</span>&#125;,</span><br><span class="line">    <span class="string">"triv"</span>: &#123;<span class="string">"A"</span>: <span class="number">0.5</span>, <span class="string">"B"</span>: <span class="number">1.00</span>, <span class="string">"D"</span>: <span class="number">0.0</span>, <span class="string">"M"</span>: <span class="number">-1.0</span>, <span class="string">"del_z"</span>: <span class="number">0.0</span>&#125;,</span><br><span class="line">    <span class="string">"topo2"</span>: &#123;<span class="string">"A"</span>: <span class="number">0.5</span>, <span class="string">"B"</span>: <span class="number">1.00</span>, <span class="string">"D"</span>: <span class="number">0.3</span>, <span class="string">"M"</span>: <span class="number">1.0</span>, <span class="string">"del_z"</span>: <span class="number">0.0</span>&#125;,</span><br><span class="line">    <span class="string">"slowed"</span>: &#123;<span class="string">"A"</span>: <span class="number">0.05</span>, <span class="string">"B"</span>: <span class="number">0.08</span>, <span class="string">"D"</span>: <span class="number">0.15</span>, <span class="string">"M"</span>: <span class="number">-0.3</span>, <span class="string">"del_z"</span>: <span class="number">0.5</span>&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Onsite and hoppings for bhz model</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">onsite</span><span class="params">(site, p)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (p.M - <span class="number">4</span> * p.B) * pauli.s0sz - <span class="number">4</span> * p.D * pauli.s0s0 + p.del_z * pauli.sysy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hopx</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> p.B * pauli.s0sz + p.D * pauli.s0s0 + <span class="number">1j</span> * p.A * pauli.szsx</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hopy</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> p.B * pauli.s0sz + p.D * pauli.s0s0 - <span class="number">1j</span> * p.A * pauli.s0sy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bhz</span><span class="params">(w=<span class="number">20</span>)</span>:</span></span><br><span class="line">    <span class="string">""" Make ribbon system with bhz model.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    slowed parameters are used on the edge for finite size system.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    lat = kwant.lattice.square()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping_x</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        x1, y1 = site1.pos</span><br><span class="line">        x2, y2 = site2.pos</span><br><span class="line">        <span class="keyword">return</span> hopx(site1, site2, p) * np.exp(<span class="number">-0.5j</span> * p.Bz * (x1 - x2) * (y1 + y2))</span><br><span class="line"></span><br><span class="line">    slowed_par = SimpleNamespace(Bz=<span class="number">0</span>, **bhz_parameters[<span class="string">"slowed"</span>])</span><br><span class="line">    <span class="keyword">if</span> w <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">        syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopping_x</span><br><span class="line">        syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>)))</span><br><span class="line">        syst[(lat(<span class="number">0</span>, i) <span class="keyword">for</span> i <span class="keyword">in</span> range(w))] = onsite</span><br><span class="line">        syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopping_x</span><br><span class="line">        syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line"></span><br><span class="line">        syst[lat(<span class="number">0</span>, <span class="number">-1</span>)] = <span class="keyword">lambda</span> site, p: onsite(site, slowed_par)</span><br><span class="line">        syst[lat(<span class="number">1</span>, <span class="number">-1</span>), lat(<span class="number">0</span>, <span class="number">-1</span>)] = <span class="keyword">lambda</span> site1, site2, p: hopping_x(</span><br><span class="line">            site1, site2, slowed_par</span><br><span class="line">        )</span><br><span class="line">        syst[lat(<span class="number">0</span>, <span class="number">0</span>), lat(<span class="number">0</span>, <span class="number">-1</span>)] = hopy</span><br><span class="line"></span><br><span class="line">        syst[lat(<span class="number">0</span>, w)] = <span class="keyword">lambda</span> site, p: onsite(site, slowed_par)</span><br><span class="line">        syst[lat(<span class="number">1</span>, w), lat(<span class="number">0</span>, w)] = <span class="keyword">lambda</span> site1, site2, p: hopping_x(</span><br><span class="line">            site1, site2, slowed_par</span><br><span class="line">        )</span><br><span class="line">        syst[lat(<span class="number">0</span>, w), lat(<span class="number">0</span>, w - <span class="number">1</span>)] = hopy</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bhz_cylinder</span><span class="params">(w=<span class="number">3</span>)</span>:</span></span><br><span class="line">    <span class="string">""" Make cylinder system with bhz model. """</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">        (x, y) = pos</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span> &lt;= y &lt; w</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square(norbs=<span class="number">4</span>)</span><br><span class="line">    sym = kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>))</span><br><span class="line">    syst = kwant.Builder(sym)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping_x</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        x1, y1 = site1.pos</span><br><span class="line">        x2, y2 = site2.pos</span><br><span class="line">        <span class="keyword">return</span> hopx(site1, site2, p) * np.exp(<span class="number">-0.5j</span> * p.Bz * (x1 - x2) * (y1 + y2))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopy_phase</span><span class="params">(site1, site2, p)</span>:</span></span><br><span class="line">        x1, y1 = site1.pos</span><br><span class="line">        x2, y2 = site2.pos</span><br><span class="line">        <span class="keyword">return</span> hopy(site1, site2, p) * np.exp(<span class="number">1j</span> * p.ky)</span><br><span class="line"></span><br><span class="line">    syst[lat.shape(ribbon_shape, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopping_x</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, -w + <span class="number">1</span>), lat)] = hopy_phase</span><br><span class="line"></span><br><span class="line">    syst[lat(<span class="number">0</span>, <span class="number">0</span>)] = onsite</span><br><span class="line">    syst[lat(<span class="number">0</span>, w - <span class="number">1</span>)] = onsite</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_lead</span><span class="params">(t, trs=None)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">        (x, y) = pos</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span> &lt;= y &lt; <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square(norbs=<span class="number">4</span>)</span><br><span class="line">    sym = kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>))</span><br><span class="line">    syst = kwant.Builder(sym, time_reversal=<span class="number">1j</span> * pauli.sys0)</span><br><span class="line"></span><br><span class="line">    syst[lat.shape(ribbon_shape, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">1.8</span> * t * pauli.s0sz</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = -t * pauli.s0sz</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_scatter_sys</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shape</span><span class="params">(pos)</span>:</span></span><br><span class="line">        x, y = pos</span><br><span class="line">        <span class="keyword">return</span> (x == <span class="number">0</span>) * (<span class="number">0</span> &lt;= y &lt; <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square(norbs=<span class="number">4</span>)</span><br><span class="line">    syst = kwant.Builder()</span><br><span class="line">    syst[lat.shape(shape, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line"></span><br><span class="line">    lead_cylinder = bhz_cylinder()</span><br><span class="line">    lead = make_lead(<span class="number">1.0</span>)</span><br><span class="line">    syst.attach_lead(lead.reversed())</span><br><span class="line">    syst.attach_lead(lead_cylinder)</span><br><span class="line">    syst = syst.finalized()</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">scattering_det_pfaff</span><span class="params">(syst, p)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pfaffian</span><span class="params">(syst, p, ky)</span>:</span></span><br><span class="line">        p.ky = ky</span><br><span class="line">        smat = kwant.smatrix(syst, energy=<span class="number">0.0</span>, params=dict(p=p)).data</span><br><span class="line">        <span class="comment"># since we get relatively large numerical errors we project the matrix on</span></span><br><span class="line">        <span class="comment"># the space of antisymmetric matrices</span></span><br><span class="line">        smat = <span class="number">0.5</span> * (smat - smat.T)</span><br><span class="line">        <span class="keyword">return</span> pf.pfaffian(smat)</span><br><span class="line"></span><br><span class="line">    pfaff = [pfaffian(syst, p, <span class="number">0</span>), pfaffian(syst, p, np.pi)]</span><br><span class="line"></span><br><span class="line">    ks = np.linspace(<span class="number">0.0</span>, np.pi, <span class="number">50</span>)</span><br><span class="line">    det = [np.linalg.det(kwant.smatrix(syst, energy=<span class="number">0.0</span>, params=dict(p=p)).data) <span class="keyword">for</span> p.ky <span class="keyword">in</span> ks]</span><br><span class="line">    det = np.array(det)</span><br><span class="line"></span><br><span class="line">    phase = np.angle(pfaff[<span class="number">0</span>]) + <span class="number">0.5</span> * np.cumsum(np.angle(det[<span class="number">1</span>:] / det[:<span class="number">-1</span>]))</span><br><span class="line">    kdims = [<span class="string">"$k_y$"</span>, <span class="string">"phase"</span>]</span><br><span class="line">    plot = holoviews.Path((ks[<span class="number">1</span>:], phase), kdims=kdims).opts(style=&#123;<span class="string">"color"</span>: <span class="string">"b"</span>&#125;)</span><br><span class="line">    plot *= holoviews.Points(([<span class="number">0</span>, np.pi], np.angle(pfaff)), kdims=kdims).opts(</span><br><span class="line">        style=&#123;<span class="string">"color"</span>: <span class="string">"g"</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    xlims, ylims = slice(<span class="number">-0.2</span>, np.pi + <span class="number">0.2</span>), slice(-np.pi - <span class="number">0.2</span>, np.pi + <span class="number">0.2</span>)</span><br><span class="line">    pi_ticks = [(-np.pi, <span class="string">r"$-\pi$"</span>), (<span class="number">0</span>, <span class="string">"$0$"</span>), (np.pi, <span class="string">r"$\pi$"</span>)]</span><br><span class="line">    ticks = &#123;<span class="string">"xticks"</span>: [(<span class="number">0</span>, <span class="string">"0"</span>), (np.pi, <span class="string">"$\pi$"</span>)], <span class="string">"yticks"</span>: pi_ticks&#125;</span><br><span class="line">    <span class="keyword">return</span> plot.relabel(<span class="string">"Winding"</span>, depth=<span class="number">1</span>)[xlims, ylims].opts(plot=ticks)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">title</span><span class="params">(p)</span>:</span></span><br><span class="line">    title = <span class="string">r"$A=&#123;:.2&#125;$, $B=&#123;:.2&#125;$, $D=&#123;:.2&#125;$, $M=&#123;:.2&#125;$"</span></span><br><span class="line">    <span class="keyword">return</span> title.format(p.A, p.B, p.D, p.M)</span><br></pre></td></tr></table></figure>
+       
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.append(<span class="string">&quot;../../code&quot;</span>)</span><br><span class="line"><span class="keyword">from</span> init_mooc_nb <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">init_notebook()</span><br><span class="line">%output size = <span class="number">150</span></span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> cm</span><br><span class="line"></span><br><span class="line">bhz_parameters = &#123;</span><br><span class="line">    <span class="string">&quot;topo&quot;</span>: &#123;<span class="string">&quot;A&quot;</span>: <span class="number">0.5</span>, <span class="string">&quot;B&quot;</span>: <span class="number">1.00</span>, <span class="string">&quot;D&quot;</span>: <span class="number">0.0</span>, <span class="string">&quot;M&quot;</span>: <span class="number">1.0</span>, <span class="string">&quot;del_z&quot;</span>: <span class="number">0.0</span>&#125;,</span><br><span class="line">    <span class="string">&quot;triv&quot;</span>: &#123;<span class="string">&quot;A&quot;</span>: <span class="number">0.5</span>, <span class="string">&quot;B&quot;</span>: <span class="number">1.00</span>, <span class="string">&quot;D&quot;</span>: <span class="number">0.0</span>, <span class="string">&quot;M&quot;</span>: -<span class="number">1.0</span>, <span class="string">&quot;del_z&quot;</span>: <span class="number">0.0</span>&#125;,</span><br><span class="line">    <span class="string">&quot;topo2&quot;</span>: &#123;<span class="string">&quot;A&quot;</span>: <span class="number">0.5</span>, <span class="string">&quot;B&quot;</span>: <span class="number">1.00</span>, <span class="string">&quot;D&quot;</span>: <span class="number">0.3</span>, <span class="string">&quot;M&quot;</span>: <span class="number">1.0</span>, <span class="string">&quot;del_z&quot;</span>: <span class="number">0.0</span>&#125;,</span><br><span class="line">    <span class="string">&quot;slowed&quot;</span>: &#123;<span class="string">&quot;A&quot;</span>: <span class="number">0.05</span>, <span class="string">&quot;B&quot;</span>: <span class="number">0.08</span>, <span class="string">&quot;D&quot;</span>: <span class="number">0.15</span>, <span class="string">&quot;M&quot;</span>: -<span class="number">0.3</span>, <span class="string">&quot;del_z&quot;</span>: <span class="number">0.5</span>&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Onsite and hoppings for bhz model</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">onsite</span>(<span class="params">site, p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> (p.M - <span class="number">4</span> * p.B) * pauli.s0sz - <span class="number">4</span> * p.D * pauli.s0s0 + p.del_z * pauli.sysy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hopx</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> p.B * pauli.s0sz + p.D * pauli.s0s0 + <span class="number">1j</span> * p.A * pauli.szsx</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hopy</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> p.B * pauli.s0sz + p.D * pauli.s0s0 - <span class="number">1j</span> * p.A * pauli.s0sy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bhz</span>(<span class="params">w=<span class="number">20</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot; Make ribbon system with bhz model.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    slowed parameters are used on the edge for finite size system.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    lat = kwant.lattice.square()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping_x</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        x1, y1 = site1.pos</span><br><span class="line">        x2, y2 = site2.pos</span><br><span class="line">        <span class="keyword">return</span> hopx(site1, site2, p) * np.exp(-<span class="number">0.5j</span> * p.Bz * (x1 - x2) * (y1 + y2))</span><br><span class="line"></span><br><span class="line">    slowed_par = SimpleNamespace(Bz=<span class="number">0</span>, **bhz_parameters[<span class="string">&quot;slowed&quot;</span>])</span><br><span class="line">    <span class="keyword">if</span> w <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry(*lat.prim_vecs))</span><br><span class="line">        syst[lat.shape(<span class="keyword">lambda</span> pos: <span class="literal">True</span>, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">        syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopping_x</span><br><span class="line">        syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        syst = kwant.Builder(kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>)))</span><br><span class="line">        syst[(lat(<span class="number">0</span>, i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(w))] = onsite</span><br><span class="line">        syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopping_x</span><br><span class="line">        syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line"></span><br><span class="line">        syst[lat(<span class="number">0</span>, -<span class="number">1</span>)] = <span class="keyword">lambda</span> site, p: onsite(site, slowed_par)</span><br><span class="line">        syst[lat(<span class="number">1</span>, -<span class="number">1</span>), lat(<span class="number">0</span>, -<span class="number">1</span>)] = <span class="keyword">lambda</span> site1, site2, p: hopping_x(</span><br><span class="line">            site1, site2, slowed_par</span><br><span class="line">        )</span><br><span class="line">        syst[lat(<span class="number">0</span>, <span class="number">0</span>), lat(<span class="number">0</span>, -<span class="number">1</span>)] = hopy</span><br><span class="line"></span><br><span class="line">        syst[lat(<span class="number">0</span>, w)] = <span class="keyword">lambda</span> site, p: onsite(site, slowed_par)</span><br><span class="line">        syst[lat(<span class="number">1</span>, w), lat(<span class="number">0</span>, w)] = <span class="keyword">lambda</span> site1, site2, p: hopping_x(</span><br><span class="line">            site1, site2, slowed_par</span><br><span class="line">        )</span><br><span class="line">        syst[lat(<span class="number">0</span>, w), lat(<span class="number">0</span>, w - <span class="number">1</span>)] = hopy</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bhz_cylinder</span>(<span class="params">w=<span class="number">3</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot; Make cylinder system with bhz model. &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape</span>(<span class="params">pos</span>):</span></span><br><span class="line">        (x, y) = pos</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span> &lt;= y &lt; w</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square(norbs=<span class="number">4</span>)</span><br><span class="line">    sym = kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>))</span><br><span class="line">    syst = kwant.Builder(sym)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopping_x</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        x1, y1 = site1.pos</span><br><span class="line">        x2, y2 = site2.pos</span><br><span class="line">        <span class="keyword">return</span> hopx(site1, site2, p) * np.exp(-<span class="number">0.5j</span> * p.Bz * (x1 - x2) * (y1 + y2))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hopy_phase</span>(<span class="params">site1, site2, p</span>):</span></span><br><span class="line">        x1, y1 = site1.pos</span><br><span class="line">        x2, y2 = site2.pos</span><br><span class="line">        <span class="keyword">return</span> hopy(site1, site2, p) * np.exp(<span class="number">1j</span> * p.ky)</span><br><span class="line"></span><br><span class="line">    syst[lat.shape(ribbon_shape, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = hopping_x</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, -w + <span class="number">1</span>), lat)] = hopy_phase</span><br><span class="line"></span><br><span class="line">    syst[lat(<span class="number">0</span>, <span class="number">0</span>)] = onsite</span><br><span class="line">    syst[lat(<span class="number">0</span>, w - <span class="number">1</span>)] = onsite</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_lead</span>(<span class="params">t, trs=<span class="literal">None</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ribbon_shape</span>(<span class="params">pos</span>):</span></span><br><span class="line">        (x, y) = pos</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span> &lt;= y &lt; <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square(norbs=<span class="number">4</span>)</span><br><span class="line">    sym = kwant.TranslationalSymmetry((<span class="number">1</span>, <span class="number">0</span>))</span><br><span class="line">    syst = kwant.Builder(sym, time_reversal=<span class="number">1j</span> * pauli.sys0)</span><br><span class="line"></span><br><span class="line">    syst[lat.shape(ribbon_shape, (<span class="number">0</span>, <span class="number">0</span>))] = <span class="number">1.8</span> * t * pauli.s0sz</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">1</span>, <span class="number">0</span>), lat)] = -t * pauli.s0sz</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_scatter_sys</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shape</span>(<span class="params">pos</span>):</span></span><br><span class="line">        x, y = pos</span><br><span class="line">        <span class="keyword">return</span> (x == <span class="number">0</span>) * (<span class="number">0</span> &lt;= y &lt; <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    lat = kwant.lattice.square(norbs=<span class="number">4</span>)</span><br><span class="line">    syst = kwant.Builder()</span><br><span class="line">    syst[lat.shape(shape, (<span class="number">0</span>, <span class="number">0</span>))] = onsite</span><br><span class="line">    syst[kwant.HoppingKind((<span class="number">0</span>, <span class="number">1</span>), lat)] = hopy</span><br><span class="line"></span><br><span class="line">    lead_cylinder = bhz_cylinder()</span><br><span class="line">    lead = make_lead(<span class="number">1.0</span>)</span><br><span class="line">    syst.attach_lead(lead.<span class="built_in">reversed</span>())</span><br><span class="line">    syst.attach_lead(lead_cylinder)</span><br><span class="line">    syst = syst.finalized()</span><br><span class="line">    <span class="keyword">return</span> syst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">scattering_det_pfaff</span>(<span class="params">syst, p</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pfaffian</span>(<span class="params">syst, p, ky</span>):</span></span><br><span class="line">        p.ky = ky</span><br><span class="line">        smat = kwant.smatrix(syst, energy=<span class="number">0.0</span>, params=<span class="built_in">dict</span>(p=p)).data</span><br><span class="line">        <span class="comment"># since we get relatively large numerical errors we project the matrix on</span></span><br><span class="line">        <span class="comment"># the space of antisymmetric matrices</span></span><br><span class="line">        smat = <span class="number">0.5</span> * (smat - smat.T)</span><br><span class="line">        <span class="keyword">return</span> pf.pfaffian(smat)</span><br><span class="line"></span><br><span class="line">    pfaff = [pfaffian(syst, p, <span class="number">0</span>), pfaffian(syst, p, np.pi)]</span><br><span class="line"></span><br><span class="line">    ks = np.linspace(<span class="number">0.0</span>, np.pi, <span class="number">50</span>)</span><br><span class="line">    det = [np.linalg.det(kwant.smatrix(syst, energy=<span class="number">0.0</span>, params=<span class="built_in">dict</span>(p=p)).data) <span class="keyword">for</span> p.ky <span class="keyword">in</span> ks]</span><br><span class="line">    det = np.array(det)</span><br><span class="line"></span><br><span class="line">    phase = np.angle(pfaff[<span class="number">0</span>]) + <span class="number">0.5</span> * np.cumsum(np.angle(det[<span class="number">1</span>:] / det[:-<span class="number">1</span>]))</span><br><span class="line">    kdims = [<span class="string">&quot;$k_y$&quot;</span>, <span class="string">&quot;phase&quot;</span>]</span><br><span class="line">    plot = holoviews.Path((ks[<span class="number">1</span>:], phase), kdims=kdims).opts(style=&#123;<span class="string">&quot;color&quot;</span>: <span class="string">&quot;b&quot;</span>&#125;)</span><br><span class="line">    plot *= holoviews.Points(([<span class="number">0</span>, np.pi], np.angle(pfaff)), kdims=kdims).opts(</span><br><span class="line">        style=&#123;<span class="string">&quot;color&quot;</span>: <span class="string">&quot;g&quot;</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    xlims, ylims = <span class="built_in">slice</span>(-<span class="number">0.2</span>, np.pi + <span class="number">0.2</span>), <span class="built_in">slice</span>(-np.pi - <span class="number">0.2</span>, np.pi + <span class="number">0.2</span>)</span><br><span class="line">    pi_ticks = [(-np.pi, <span class="string">r&quot;$-\pi$&quot;</span>), (<span class="number">0</span>, <span class="string">&quot;$0$&quot;</span>), (np.pi, <span class="string">r&quot;$\pi$&quot;</span>)]</span><br><span class="line">    ticks = &#123;<span class="string">&quot;xticks&quot;</span>: [(<span class="number">0</span>, <span class="string">&quot;0&quot;</span>), (np.pi, <span class="string">&quot;$\pi$&quot;</span>)], <span class="string">&quot;yticks&quot;</span>: pi_ticks&#125;</span><br><span class="line">    <span class="keyword">return</span> plot.relabel(<span class="string">&quot;Winding&quot;</span>, depth=<span class="number">1</span>)[xlims, ylims].opts(plot=ticks)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">title</span>(<span class="params">p</span>):</span></span><br><span class="line">    title = <span class="string">r&quot;$A=&#123;:.2&#125;$, $B=&#123;:.2&#125;$, $D=&#123;:.2&#125;$, $M=&#123;:.2&#125;$&quot;</span></span><br><span class="line">    <span class="keyword">return</span> title.<span class="built_in">format</span>(p.A, p.B, p.D, p.M)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Charles Kane from the University of Pennsylvania will introduce today’s lecture on two dimensional topological insulators with time-reversal symmetry.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"n5oUQvvsYd0"</span>, src_location=<span class="string">"5.1-intro"</span>, res=<span class="string">"360"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">&quot;n5oUQvvsYd0&quot;</span>, src_location=<span class="string">&quot;5.1-intro&quot;</span>, res=<span class="string">&quot;360&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <h1 id="Adding-symmetry-to-a-topological-insulator"><a href="#Adding-symmetry-to-a-topological-insulator" class="headerlink" title="Adding symmetry to a topological insulator"></a>Adding symmetry to a topological insulator</h1><p>In general, there are different approaches to discover new types of topological systems.</p>
 <p>We have already used a very powerful method to make a Kitaev chain and the Chern insulator model. We started from guessing what kind of model to use for the edge, such that it is impossible to obtain without the bulk. Then we combined many such edges (dots for the Kitaev chain and wires for the Chern insulator) and tailored the coupling between them to leave exactly the type of model that we want on one edge.</p>
-<p>A very skilled researcher in topology (or more specifically <a href="https://en.wikipedia.org/wiki/K-theory" target="_blank" rel="noopener">K-theory</a>) may also just calculate the expected topological classification of a system starting only from its dimensionality and symmetries. This is also a powerful method, but often it’s too hard and requires a very high skills in math.</p>
+<p>A very skilled researcher in topology (or more specifically <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/K-theory">K-theory</a>) may also just calculate the expected topological classification of a system starting only from its dimensionality and symmetries. This is also a powerful method, but often it’s too hard and requires a very high skills in math.</p>
 <p>Another approach that we can undertake is to start with one topological Hamiltonian and see what happens if we force the Hamiltonian to have some extra symmetry. This is the approach we will use in this chapter.</p>
 <p>Let’s start from a simple example involving something which we already know, a quantum dot with the Hamiltonian $H_0$. We know that there is a topological invariant, the number of filled energy levels.</p>
 <p>Now we can ask what happens if we force the dot to have a particle-hole symmetry. The Hamiltonian becomes</p>
@@ -143,13 +135,13 @@
 <p>So if $\mathcal{T}^2=1$, the scattering matrix is symmetric ($S=S^T$), while if $\mathcal{T}^2=-1$, it is antisymmetric ($S=-S^T$).</p>
 <p>What does this imply if we try to set $t=t’=0$?</p>
 <p>If $S=S^T$, it turns out there is really nothing special we can tell. However, if $S=-S^T$ and $t=t’=0$, the $N\times N$ reflection matrix must be both unitary, $r^\dagger r=1$, and antisymmetric, $r=-r^T$.</p>
-<p>If $N$ is odd, this isn’t possible at all, since any odd-dimensional antisymmetric matrix <a href="https://en.wikipedia.org/wiki/Skew-symmetric_matrix#Spectral_theory" target="_blank" rel="noopener">must have</a> a single zero eigenvalue, while unitary matrices only have eigenvalues with unit norm!</p>
+<p>If $N$ is odd, this isn’t possible at all, since any odd-dimensional antisymmetric matrix <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Skew-symmetric_matrix#Spectral_theory">must have</a> a single zero eigenvalue, while unitary matrices only have eigenvalues with unit norm!</p>
 <p>We are forced to conclude that it is impossible to have $r$ unitary, and therefore it is impossible to have $t=0$ in this case. Furthermore, this zero eigenvalue of $r$ means that there is always a single mode that is transmitted with unit probability.</p>
 <p>This is the discovery that Charles Kane described in the introductory video. We can quickly check it by randomly selecting an antisymmetric scattering matrix with odd $N$, like the following one with $N=3$,</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">N = <span class="number">3</span></span><br><span class="line">np.random.seed(<span class="number">12</span>)</span><br><span class="line">S = kwant.rmt.circular(N * <span class="number">2</span>, sym=<span class="string">"AII"</span>)</span><br><span class="line"></span><br><span class="line">pprint_matrix(S)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">N = <span class="number">3</span></span><br><span class="line">np.random.seed(<span class="number">12</span>)</span><br><span class="line">S = kwant.rmt.circular(N * <span class="number">2</span>, sym=<span class="string">&quot;AII&quot;</span>)</span><br><span class="line"></span><br><span class="line">pprint_matrix(S)</span><br></pre></td></tr></table></figure>
 
 <p>and looking at the eigenvalues of $r^\dagger r$ and $t^\dagger t$:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">r = S[:N, :N]</span><br><span class="line">print(<span class="string">"Reflection eigenvalues"</span>)</span><br><span class="line">pprint_matrix(np.linalg.eigvalsh(r @ r.T.conj()))</span><br><span class="line"></span><br><span class="line">t = S[:N, N:]</span><br><span class="line">print(<span class="string">"Transmission eigenvalues"</span>)</span><br><span class="line">pprint_matrix(np.linalg.eigvalsh(t @ t.T.conj())[::<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">r = S[:N, :N]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Reflection eigenvalues&quot;</span>)</span><br><span class="line">pprint_matrix(np.linalg.eigvalsh(r @ r.T.conj()))</span><br><span class="line"></span><br><span class="line">t = S[:N, N:]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Transmission eigenvalues&quot;</span>)</span><br><span class="line">pprint_matrix(np.linalg.eigvalsh(t @ t.T.conj())[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>We conclude that if $\mathcal{T}^2=-1$ and the number of edge states going in one direction is odd, they cannot be gapped out, and the system is topological. On the other hand, if there is an even number of such edge states, they can be gapped out. Since these are the only two options, the integer invariant of a Chern insulator is reduced to a $\pm 1$ invariant in the presence of time reversal symmetry. These topologically protected, counterpropagating edge states are often referred to as <strong>helical edge states</strong>.</p>
@@ -168,7 +160,7 @@
 <p>However, counterpropagating edge states have to have exactly opposite spin due to Kramers degeneracy. This means that there may be a net spin current across the sample, orthogonal to the applied voltage.</p>
 <p>In particular, let’s again make the simple assumption that the spin projection along some axis is conserved. Then, in the figure above, all modes colored in red have spin up, and all modes colored in blue have spin down. So terminal 1 distributes electrons coming out of it according to their spin: all electrons with spin up end up in terminal 4, and all those with spin down in terminal 3. The system has a quantized spin current between terminals 3 and 4, hence the name “quantum spin Hall effect”.</p>
 <p>However, the quantized spin Hall current is not a general property of a quantum spin Hall insulator. Here, it arises because we have combined time reversal symmetry with a spin conservation law, and as we learned in the first week, conservation laws are boring from a topological point of view.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"Consider the simple case where spin is conserved. "</span></span><br><span class="line">    <span class="string">"In the quantum spin Hall bar system above, what happens if, instead of applying a voltage between terminals 1 and 2, "</span></span><br><span class="line">    <span class="string">"you manage to apply a *spin-polarized* current between terminals 1 and 2?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The system will develop an opposite spin-polarized current to compensate the effect."</span>,</span><br><span class="line">    <span class="string">"A spin-polarized current will develop between terminals 3 and 4."</span>,</span><br><span class="line">    <span class="string">"A voltage difference will develop between terminals 3 and 4."</span>,</span><br><span class="line">    <span class="string">"It is impossible to apply such a current unless the bulk gap closes."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"The spin-polarized current will create an electron population imbalance between terminals 3 and 4. "</span></span><br><span class="line">    <span class="string">"Hence, similar to the Hall effect, a voltage will develop orthogonal to the current."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">2</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">&quot;Consider the simple case where spin is conserved. &quot;</span></span><br><span class="line">    <span class="string">&quot;In the quantum spin Hall bar system above, what happens if, instead of applying a voltage between terminals 1 and 2, &quot;</span></span><br><span class="line">    <span class="string">&quot;you manage to apply a *spin-polarized* current between terminals 1 and 2?&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">&quot;The system will develop an opposite spin-polarized current to compensate the effect.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;A spin-polarized current will develop between terminals 3 and 4.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;A voltage difference will develop between terminals 3 and 4.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;It is impossible to apply such a current unless the bulk gap closes.&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">&quot;The spin-polarized current will create an electron population imbalance between terminals 3 and 4. &quot;</span></span><br><span class="line">    <span class="string">&quot;Hence, similar to the Hall effect, a voltage will develop orthogonal to the current.&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">2</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h1 id="A-model-for-the-quantum-spin-Hall-insulator"><a href="#A-model-for-the-quantum-spin-Hall-insulator" class="headerlink" title="A model for the quantum spin Hall insulator"></a>A model for the quantum spin Hall insulator</h1><p>There is an important model which can be used to describe quantum spin Hall insulators, known as the <strong>Bernevig-Hughes-Zhang model</strong> or, in short, BHZ model. In essence, this model is equivalent to two copies of the Chern insulator Hamiltonian on the square lattice that we studied in the fourth week.</p>
 <p>The BHZ Hamiltonian takes the form</p>
@@ -178,7 +170,7 @@
 <p>Here $\pmb\sigma = (\sigma_x, \sigma_y, \sigma_z)$ is a vector of Pauli matrices acting on the electron/hole degree of freedom (the original two bands of the Chern insulator), $\epsilon(\mathbf{k}) = C - D(k_x^2+k_y^2)$, the vector $\mathbf{d} = [A k_x, -A k_y, M(\mathbf{k})]$, and<br>$M(\mathbf{k}) = M - B(k_x^2+k_y^2)$.</p>
 <p>You can see that it is basically two copies of the massive Dirac Hamiltonian we used to study Chern insulators. In particular, there is a linear coupling in momentum between the holes and the electrons. The gap in the Hamiltonian is given by the term $M(\mathbf{k})$, a momentum-dependent effective mass.</p>
 <p>By changing the sign of $M$ from negative to positive, you get a gap closing at $\mathbf{k}=\pmb{0}$:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">'png'</span></span><br><span class="line">p = SimpleNamespace(Bz=<span class="number">0.0</span>, **bhz_parameters[<span class="string">"topo2"</span>])</span><br><span class="line">syst = bhz(w=<span class="literal">None</span>)</span><br><span class="line">k = (<span class="number">4</span> / <span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">101</span>)</span><br><span class="line">kwargs = &#123;<span class="string">"k_x"</span>: k, <span class="string">"k_y"</span>: k, <span class="string">"title"</span>: title&#125;</span><br><span class="line">Ms = np.linspace(<span class="number">-1</span>, <span class="number">1</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(&#123;p.M: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.M <span class="keyword">in</span> Ms&#125;, kdims=[<span class="string">r"$M$"</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">&#x27;png&#x27;</span></span><br><span class="line">p = SimpleNamespace(Bz=<span class="number">0.0</span>, **bhz_parameters[<span class="string">&quot;topo2&quot;</span>])</span><br><span class="line">syst = bhz(w=<span class="literal">None</span>)</span><br><span class="line">k = (<span class="number">4</span> / <span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">101</span>)</span><br><span class="line">kwargs = &#123;<span class="string">&quot;k_x&quot;</span>: k, <span class="string">&quot;k_y&quot;</span>: k, <span class="string">&quot;title&quot;</span>: title&#125;</span><br><span class="line">Ms = np.linspace(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">11</span>)</span><br><span class="line">holoviews.HoloMap(&#123;p.M: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.M <span class="keyword">in</span> Ms&#125;, kdims=[<span class="string">r&quot;$M$&quot;</span>])</span><br></pre></td></tr></table></figure>
 
 <p>This gap closing turns your trivial insulator into a topologically non-trivial quantum spin Hall insulator.</p>
 <p>In the rest of this lecture, we will use the BHZ model as a toy-model to illustrate the behavior of a quantum spin Hall insulator using numerical examples. The BHZ model, however, is more than a toy-model, and it can be used to capture the behavior of some real semiconducting materials. For this reason, the BHZ model will be a main protagonist in the next chapter, where we will discuss real materials and the experimental evidence for the quantum spin Hall effect.</p>
@@ -191,7 +183,7 @@
 <p>You also learned that in a cylinder of finite circumference $L$, the momenta of the allowed edge states are quantized at values determined by the flux.</p>
 <p>To make things more simple, you may actually imagine that the circumference of the cylinder is just a single unit cell long. We then have only one allowed value of the momentum $k$ along the edge, which is exactly proportional to the flux threaded through the cylinder, $k = 2\pi \Phi/\Phi_0$.</p>
 <p>So let’s look at the energy spectrum of a cylinder as a function of $k$ (or equivalently $\Phi$), and compare a cylinder in the quantum spin Hall phase with a cylinder in the trivial insulating phase.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">half_pi_ticks = [(<span class="number">0</span>, <span class="string">"$0$"</span>), (np.pi / <span class="number">2</span>, <span class="string">r"$\pi/2$"</span>), (np.pi, <span class="string">r"$\pi$"</span>)]</span><br><span class="line">style = &#123;</span><br><span class="line">    <span class="string">"k_x"</span>: np.linspace(<span class="number">0</span>, np.pi, <span class="number">101</span>),</span><br><span class="line">    <span class="string">"xdim"</span>: <span class="string">r"$k$"</span>,</span><br><span class="line">    <span class="string">"ydim"</span>: <span class="string">r"$E$"</span>,</span><br><span class="line">    <span class="string">"xticks"</span>: half_pi_ticks,</span><br><span class="line">    <span class="string">"yticks"</span>: np.linspace(<span class="number">-2</span>, <span class="number">2</span>, <span class="number">9</span>),</span><br><span class="line">    <span class="string">"xlims"</span>: [<span class="number">0</span>, np.pi],</span><br><span class="line">    <span class="string">"ylims"</span>: [<span class="number">-2</span>, <span class="number">2</span>],</span><br><span class="line">    <span class="string">"title"</span>: title,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">syst = bhz(<span class="number">20</span>)</span><br><span class="line">p1 = SimpleNamespace(Bz=<span class="number">0</span>, **bhz_parameters[<span class="string">"topo"</span>])</span><br><span class="line">p2 = SimpleNamespace(Bz=<span class="number">0</span>, **bhz_parameters[<span class="string">"triv"</span>])</span><br><span class="line"></span><br><span class="line">(</span><br><span class="line">    spectrum(syst, p1, **style).relabel(<span class="string">"Topological"</span>) * holoviews.HLine(<span class="number">0</span>)</span><br><span class="line">    + spectrum(syst, p2, **style).relabel(<span class="string">"Trivial"</span>) * holoviews.HLine(<span class="number">0</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">half_pi_ticks = [(<span class="number">0</span>, <span class="string">&quot;$0$&quot;</span>), (np.pi / <span class="number">2</span>, <span class="string">r&quot;$\pi/2$&quot;</span>), (np.pi, <span class="string">r&quot;$\pi$&quot;</span>)]</span><br><span class="line">style = &#123;</span><br><span class="line">    <span class="string">&quot;k_x&quot;</span>: np.linspace(<span class="number">0</span>, np.pi, <span class="number">101</span>),</span><br><span class="line">    <span class="string">&quot;xdim&quot;</span>: <span class="string">r&quot;$k$&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ydim&quot;</span>: <span class="string">r&quot;$E$&quot;</span>,</span><br><span class="line">    <span class="string">&quot;xticks&quot;</span>: half_pi_ticks,</span><br><span class="line">    <span class="string">&quot;yticks&quot;</span>: np.linspace(-<span class="number">2</span>, <span class="number">2</span>, <span class="number">9</span>),</span><br><span class="line">    <span class="string">&quot;xlims&quot;</span>: [<span class="number">0</span>, np.pi],</span><br><span class="line">    <span class="string">&quot;ylims&quot;</span>: [-<span class="number">2</span>, <span class="number">2</span>],</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: title,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">syst = bhz(<span class="number">20</span>)</span><br><span class="line">p1 = SimpleNamespace(Bz=<span class="number">0</span>, **bhz_parameters[<span class="string">&quot;topo&quot;</span>])</span><br><span class="line">p2 = SimpleNamespace(Bz=<span class="number">0</span>, **bhz_parameters[<span class="string">&quot;triv&quot;</span>])</span><br><span class="line"></span><br><span class="line">(</span><br><span class="line">    spectrum(syst, p1, **style).relabel(<span class="string">&quot;Topological&quot;</span>) * holoviews.HLine(<span class="number">0</span>)</span><br><span class="line">    + spectrum(syst, p2, **style).relabel(<span class="string">&quot;Trivial&quot;</span>) * holoviews.HLine(<span class="number">0</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <p>In both cases you see that at $k=0$ there are isolated pairs of states with degenerate energies, between the valence and conduction bands. The Fermi energy is set at $E=0$, in the middle of the gap between conduction and valence bands. These states are the Kramers pairs at the edges - one pair for the topological case, two for the trivial case.<br>You also see the splitting of Kramers pairs as soon as $k$ goes away from zero. This is because $k = 0$ is a time-reversal invariant point, a point in momentum space that is mapped to itself by time-reversal symmetry.</p>
 <p>The plot ends at $k=\pi$ (that is, $\Phi=h/2e$), which is another time-reversal invariant point. Indeed, time-reversal symmetry sends $\Phi\to-\Phi$, but for $\Phi=h/2e$ this corresponds exactly to adding or subtracting a flux quantum. Hence, all the physical properties of the system remain unchanged under the action of time-reversal for this value of the flux. And indeed you can see that all levels meet again and form Kramers pairs.</p>
@@ -213,14 +205,14 @@
 <p>We can however compute $\sqrt{\det[r(k)]}$ for all the intermediate values of $k$. To get rid of the sign ambiguity of the square root, we require that $\sqrt{\det[r(k)]}$ is continuous for all $k$, and that $\sqrt{\det[r(0)]} = \textrm{Pf}[r(0)]$. This only gives a unique answer if $\det r \neq 0$ for all $k$.</p>
 <p>This gives us a curve which starts at $\textrm{Pf}[r(0)]$ and ends at either $\textrm{Pf}[r(\pi)]$ or $-\textrm{Pf}[r(\pi)]$. These two cases distinguish the trivial and nontrivial systems.</p>
 <p>In the plot below, we show how this trajectory changes for our cylinder geometry as the BHZ model is driven through the topological phase transition. In the right panel, the green dots give you the phase of $\textrm{Pf}[r(0)]$ and $\textrm{Pf}[r(\pi)]$, and the blue line the phase of $\det[r(k)]$.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">'png'</span></span><br><span class="line">p = SimpleNamespace(a=<span class="number">1.0</span>, Bz=<span class="number">0.0</span>, ky=<span class="literal">None</span>, **bhz_parameters[<span class="string">"topo2"</span>])</span><br><span class="line">syst = bhz(w=<span class="literal">None</span>)</span><br><span class="line">scat_syst = make_scatter_sys()</span><br><span class="line">k = (<span class="number">4</span> / <span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">101</span>)</span><br><span class="line">kwargs = &#123;<span class="string">"k_x"</span>: k, <span class="string">"k_y"</span>: k, <span class="string">"title"</span>: title&#125;</span><br><span class="line">Ms = np.linspace(<span class="number">-1</span>, <span class="number">1</span>, <span class="number">11</span>)</span><br><span class="line">(</span><br><span class="line">    holoviews.HoloMap(&#123;p.M: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.M <span class="keyword">in</span> Ms&#125;, kdims=[<span class="string">r"$M$"</span>])</span><br><span class="line">    + holoviews.HoloMap(</span><br><span class="line">        &#123;p.M: scattering_det_pfaff(scat_syst, p) <span class="keyword">for</span> p.M <span class="keyword">in</span> Ms&#125;, kdims=[<span class="string">r"$M$"</span>]</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">%%output fig=<span class="string">&#x27;png&#x27;</span></span><br><span class="line">p = SimpleNamespace(a=<span class="number">1.0</span>, Bz=<span class="number">0.0</span>, ky=<span class="literal">None</span>, **bhz_parameters[<span class="string">&quot;topo2&quot;</span>])</span><br><span class="line">syst = bhz(w=<span class="literal">None</span>)</span><br><span class="line">scat_syst = make_scatter_sys()</span><br><span class="line">k = (<span class="number">4</span> / <span class="number">3</span>) * np.linspace(-np.pi, np.pi, <span class="number">101</span>)</span><br><span class="line">kwargs = &#123;<span class="string">&quot;k_x&quot;</span>: k, <span class="string">&quot;k_y&quot;</span>: k, <span class="string">&quot;title&quot;</span>: title&#125;</span><br><span class="line">Ms = np.linspace(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">11</span>)</span><br><span class="line">(</span><br><span class="line">    holoviews.HoloMap(&#123;p.M: spectrum(syst, p, **kwargs) <span class="keyword">for</span> p.M <span class="keyword">in</span> Ms&#125;, kdims=[<span class="string">r&quot;$M$&quot;</span>])</span><br><span class="line">    + holoviews.HoloMap(</span><br><span class="line">        &#123;p.M: scattering_det_pfaff(scat_syst, p) <span class="keyword">for</span> p.M <span class="keyword">in</span> Ms&#125;, kdims=[<span class="string">r&quot;$M$&quot;</span>]</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <p>We now have a quantity equal to $\pm 1$, which cannot change continuously unless there’s a gap closing (when there’s a gap closing, $\det r$ becomes equal to $0$). It is relatively hard to prove that this invariant counts the pumping of fermion parity, but if you’re interested, check out this paper:</p>
 <ul>
 <li>arXiv:1107.2215</li>
 </ul>
 <p>From reading the paper, or just from the above discussion, you see that it takes a lot of effort to derive an explicit expression for a topological invariant. Even though it is a hard task, sometimes one can guess the right result (one of us was indeed able to guess the above expression for $Q$ before it was known). Other times, one can invoke some simplification and obtain some important insight. This is what we will do in the next unit.</p>
-<h1 id="A-simplification-inversion-symmetry"><a href="#A-simplification-inversion-symmetry" class="headerlink" title="A simplification: inversion symmetry"></a>A simplification: inversion symmetry</h1><p>As just mentioned, topological invariants in higher dimensions are often difficult to write down and evaluate in the general case. Luckily, in the presence of <a href="http://en.wikipedia.org/wiki/Parity_%28physics%29#Effect_of_spatial_inversion_on_some_variables_of_classical_physics" target="_blank" rel="noopener">inversion symmetry</a> - which reverses the lattice coordinates with respect to a symmetry center - the topological condition can be stated in rather simple terms.<br>This turns out to be quite useful to describe most topological materials, which happen to have crystal structure with inversion symmetry.</p>
+<h1 id="A-simplification-inversion-symmetry"><a href="#A-simplification-inversion-symmetry" class="headerlink" title="A simplification: inversion symmetry"></a>A simplification: inversion symmetry</h1><p>As just mentioned, topological invariants in higher dimensions are often difficult to write down and evaluate in the general case. Luckily, in the presence of <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Parity_%28physics%29#Effect_of_spatial_inversion_on_some_variables_of_classical_physics">inversion symmetry</a> - which reverses the lattice coordinates with respect to a symmetry center - the topological condition can be stated in rather simple terms.<br>This turns out to be quite useful to describe most topological materials, which happen to have crystal structure with inversion symmetry.</p>
 <p>From our earlier discussion, we know that a system is a time-reversal invariant topological insulator if it has an odd number of helical edge states. We will now see how we can find an expression for the bulk topological invariant, using inversion symmetry and bulk-boundary correspondence.</p>
 <p>So let’s consider a two-dimensional Bloch Hamiltonian $H(\mathbf{k})$ with both inversion and time-reversal symmetry. Inversion symmetry has a unitary operator $\mathcal{P}$ which maps $\mathbf{k}\rightarrow -\mathbf{k}$ and satisfies $\mathcal{P}^2=1$. If we have both inversion symmetry $\mathcal{P}$ and time-reversal $\mathcal{T}$, we get an anti-unitary symmetry $\mathcal{T}\otimes\mathcal{P}$, which preserves $\mathbf{k}$ and squares to $-1$.</p>
 <blockquote>
@@ -262,34 +254,34 @@
 <p>Thus, by looking at smooth domain walls we are able to establish a connection between the topological invariant in the presence of time-reversal and inversion symmetry, and the existence of helical edge states and fermion-parity pumping that characterizes the two dimensional topological insulator.</p>
 <p>As a bonus, thanks to the previous arguments we can begin to understand how to look for two-dimensional topological insulators among real materials, or how to create them. The main idea is to generate a “band-inversion” between an even and an odd parity band at a TRIM.</p>
 <p>Such a band inversion is not impossible to achieve in real materials, and can be captured using the BHZ model. But let’s leave this to the next lecture.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">"What is the value of the parity invariant $Q$ if you stack together two quantum spin Hall systems  "</span></span><br><span class="line">    <span class="string">"in the topological phase (i.e., both with $Q=-1$)?"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">"The system has edge states and is therefore topologically non-trivial."</span>,</span><br><span class="line">    <span class="string">"The total number of odd parity occupied orbitals must be even, so you get $Q=1$."</span>,</span><br><span class="line">    <span class="string">"It depends on whether the helical states in the two layers have same "</span></span><br><span class="line">    <span class="string">"or opposite spin for a given direction."</span>,</span><br><span class="line">    <span class="string">"The invariant depends on the number of edge Dirac points at $k$ away from 0."</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">"Both layers have $Q=-1$ and hence an odd number of odd parity orbitals. Therefore, by combining the layers  "</span></span><br><span class="line">    <span class="string">"we get an even number of odd parity orbitals. Hence $Q$, which is the parity of odd parity orbitals must be "</span></span><br><span class="line">    <span class="string">"$Q=1$."</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">question = (</span><br><span class="line">    <span class="string">&quot;What is the value of the parity invariant $Q$ if you stack together two quantum spin Hall systems  &quot;</span></span><br><span class="line">    <span class="string">&quot;in the topological phase (i.e., both with $Q=-1$)?&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">answers = [</span><br><span class="line">    <span class="string">&quot;The system has edge states and is therefore topologically non-trivial.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;The total number of odd parity occupied orbitals must be even, so you get $Q=1$.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;It depends on whether the helical states in the two layers have same &quot;</span></span><br><span class="line">    <span class="string">&quot;or opposite spin for a given direction.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;The invariant depends on the number of edge Dirac points at $k$ away from 0.&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">explanation = (</span><br><span class="line">    <span class="string">&quot;Both layers have $Q=-1$ and hence an odd number of odd parity orbitals. Therefore, by combining the layers  &quot;</span></span><br><span class="line">    <span class="string">&quot;we get an even number of odd parity orbitals. Hence $Q$, which is the parity of odd parity orbitals must be &quot;</span></span><br><span class="line">    <span class="string">&quot;$Q=1$.&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MoocMultipleChoiceAssessment(</span><br><span class="line">    question=question, answers=answers, correct_answer=<span class="number">1</span>, explanation=explanation</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">"ft9ppqqLhH4"</span>, src_location=<span class="string">"5.1-summary"</span>, res=<span class="string">"360"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocVideo(<span class="string">&quot;ft9ppqqLhH4&quot;</span>, src_location=<span class="string">&quot;5.1-summary&quot;</span>, res=<span class="string">&quot;360&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p><strong>Questions about what you just learned? Ask them below!</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">"Questions"</span>, <span class="string">"QSHE - theory"</span>)</span><br></pre></td></tr></table></figure>
-
-      
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MoocDiscussion(<span class="string">&quot;Questions&quot;</span>, <span class="string">&quot;QSHE - theory&quot;</span>)</span><br></pre></td></tr></table></figure>
+ 
       <!-- reward -->
       
     </div>
     
+
+    <!-- copyright -->
     
-      <!-- copyright -->
-      
-        <div class="declare">
-          <ul class="post-copyright">
-            <li>
-              <i class="ri-copyright-line"></i>
-              <strong>Copyright： </strong>
-              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-            </li>
-          </ul>
-        </div>
-        
-    <footer class="article-footer">
-      
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
           
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
 <div class="share-btn">
       <span class="share-sns share-outer">
         <i class="ri-share-forward-line"></i>
@@ -332,27 +324,22 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://huyiph.xyz/2021/01/07/src/w5_qshe/fermion_parity_pump/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ihuyi.xyz/2021/01/07/src/w5_qshe/fermion_parity_pump/" alt="微信分享二维码">
     </div>
 </div>
 
-<div id="share-mask"></div>
-      
-      
-
+<div id="share-mask"></div>  
     </footer>
-
   </div>
 
-  
-  
+   
   <nav class="article-nav">
     
-      <a href="/2021/01/07/src/w5_qshe/w5_assignments/" class="article-nav-link">
+      <a href="/2021/01/07/src/w5_qshe/qshe_experiments/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            src/w5_qshe/w5_assignments
+            (no title)
           
         </div>
       </a>
@@ -360,48 +347,104 @@
     
       <a href="/2021/01/07/src/w4_haldane/w4_assignments/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">src/w4_haldane/w4_assignments</div>
+        <div class="article-nav-title"></div>
       </a>
     
   </nav>
 
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
 
-  
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
 
-  
-  
-  
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
 
-  
-  
-  
-  
-  
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
 
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
 </article>
+
 </section>
       <footer class="footer">
   <div class="outer">
-    <ul class="list-inline">
+    <ul>
       <li>
-        &copy;
-        2020-2021
-        huyi
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> huyi
       </li>
+    </ul>
+    <ul>
       <li>
         
-        Powered by
         
         
-        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
-    <ul class="list-inline">
+    <ul>
       <li>
         
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
       </li>
+    </ul>
+    <ul>
       
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
       <li>
         <!-- cnzz统计 -->
         
@@ -409,7 +452,6 @@
     </ul>
   </div>
 </footer>
-
       <div class="float_btns">
         <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
@@ -448,19 +490,19 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/logs/">日志</a>
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2020/about">关于我</a>
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://pan.huyiph.xyz" target="_blank" rel="noopener">网盘</a>
+      <a class="nav-item-link" href="/friends">友链</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://aria.huyiph.xyz" target="_blank" rel="noopener">aria2</a>
+      <a class="nav-item-link" href="/2019/about">关于我</a>
     </li>
     
   </ul>
@@ -488,12 +530,6 @@
 </div>
 </div>
     </aside>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
     <div id="mask"></div>
 
 <!-- #reward -->
@@ -503,13 +539,13 @@
   <div class="reward-box">
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
       <span class="reward-type">支付宝</span>
     </div>
     
     
     <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
       <span class="reward-type">微信</span>
     </div>
     
@@ -517,57 +553,38 @@
 </div>
     
 <script src="/js/jquery-2.0.3.min.js"></script>
-
-
+ 
 <script src="/js/lazyload.min.js"></script>
 
-
-<script>
-  try {
-    var typed = new Typed("#subtitle", {
-      strings: ['----------------------', '', ''],
-      startDelay: 0,
-      typeSpeed: 200,
-      loop: true,
-      backSpeed: 100,
-      showCursor: true
-    });
-  } catch (err) {
-  }
-
-</script>
-
-
-
-
+<!-- Tocbot -->
+ 
 <script src="/js/tocbot.min.js"></script>
 
 <script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
   tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
     hasInnerContainers: true,
     scrollSmooth: true,
-    scrollContainer: 'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto'
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
   });
 </script>
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
 <script src="/dist/main.js"></script>
 
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     <!-- Background of PhotoSwipe. 
@@ -672,10 +689,9 @@
         })
     }
     viewer_init()
-</script>
-
-
-<script type="text/x-mathjax-config">
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
       tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -695,37 +711,103 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
   var ayerConfig = {
-    mathjax: true
-  }
+    mathjax: true,
+  };
 </script>
 
-
-
+<!-- Katex -->
+ 
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         
+            <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css">
+        
     
+ 
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
 
+<!-- ClickBoom1 -->
 
-
-
-<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
-
-
-
-
-  <script src='https://unpkg.com/mermaid@v8.4.8/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
     }
-  </script>
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
 
 
     
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
